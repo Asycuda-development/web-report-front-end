@@ -4,6 +4,7 @@
 
 ### Install Tools for development of this Project
 
+- [Node.js](https://nodejs.org/en/download/prebuilt-installer)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
 - [Postman](https://www.postman.com/downloads/)
 - [Git](https://git-scm.com/downloads)
@@ -43,6 +44,7 @@
 - [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
 - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+
 
 ### Development
 
