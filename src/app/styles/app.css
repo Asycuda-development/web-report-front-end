@@ -1,0 +1,42 @@
+.text-white .p-menuitem-text {
+    color: #ffffff !important;
+}
+
+.text-white .p-menuitem-link:hover span {
+    color: #6c757d !important;
+}
+
+.text-white .p-menuitem-link:focus span {
+    color: #6c757d !important;
+}
+
+.text-white .p-menuitem-link:focus-within span {
+    color: #6c757d !important;
+}
+
+.text-white .p-menuitem-link:focus-visible span {
+    color: #6c757d !important;
+}
+
+.text-white .p-menuitem-link:active span {
+    color: #6c757d !important;
+}
+
+.p-megamenu-panel .p-menuitem-text {
+    color: #6c757d !important;
+}
+
+
+
+.tabbar-item-hidden {
+    /* display: none !important; */
+}
+
+.p-megamenu-panel {
+    max-width: 84vw !important;
+    overflow: hidden;
+}
+
+.p-megamenu .p-submenu-list {
+    /* display: grid; */
+}
