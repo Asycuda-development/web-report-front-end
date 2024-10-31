@@ -14,6 +14,7 @@ import setupAxiosInterceptors from './config/axios-interceptor';
 import { Condition } from './components/base-component';
 import Loading from './components/MatxLoading';
 import { routes } from './navigations';
+import DPS_4550 from './views/report/DPS_4550';
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -106,6 +107,15 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Transit_4250 />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path={routes.DPS_4550}
+            element={
+              <PrivateRoute>
+                <DPS_4550 />
               </PrivateRoute>
             }
           />
