@@ -25,7 +25,7 @@ function DPS_4550() {
   const handleSubmit = async (data: SearchData) => {
     console.log(data)
     try {
-      const res = await axios.post('/report4550/DpsReport4550', {
+      const res = await axios.post('/reporting/DpsReport4550', {
         ...data,
         type: data.customsProcedure,
         customsCode: data.CustomsCode
