@@ -15,7 +15,7 @@ import { Condition } from './components/base-component';
 import Loading from './components/MatxLoading';
 import { routes } from './navigations';
 import DPS_4550 from './views/report/DPS_4550';
-
+import DPS_4551 from './views/report/DPS_4551';
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
@@ -116,6 +116,15 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DPS_4550 />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path={routes.DPS_4551}
+            element={
+              <PrivateRoute>
+                <DPS_4551 />
               </PrivateRoute>
             }
           />
