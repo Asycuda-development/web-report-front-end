@@ -75,7 +75,7 @@ function DPS_4551() {
             <Column filter filterField='asmtNo' field={'asmtNo'} header={'Assessment Number'} />
             <Column field={'astDate'} header={'Assessment Date'} />
             <Column field={'rcptDate'} header={'Receipt Date'} />
-            <Column field={'bankNam'} header={'Bank Name'} />
+            <Column style={{ minWidth: "10rem" }} field={'bankNam'} header={'Bank Name'} />
             <Column field={'licCod'} header={'Lic_Code'} />
             <Column field={'txtFre'} header={'Text_Fer'} />
             {/*  <Column style={{ minWidth: "14rem" }} field={'goodsDescription'} header={'Goods Description'} />
@@ -90,7 +90,7 @@ function DPS_4551() {
             {/* <Column field={'decName'} header={'Declarant Name'} />*/}
             
             <Column  filter filterField= 'companyTin' field={'companyTin'} header={'Company TIN'} />
-            <Column field={'cmpNam'} header={'Company Name'} />
+            <Column style={{ minWidth: "10rem" }} field={'cmpNam'} header={'Company Name'} />
             <Column style={{ minWidth: "12rem" }} field={'finNam'} header={'Financial Name'} />
             <Column filter filterField='finCod' field={'fisCod'} header={'Financial Code'} />
             <Column field={'countryDest'} header={'Country Destination Name'} />
