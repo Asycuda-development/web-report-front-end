@@ -1,20 +1,21 @@
 import { CssBaseline } from '@mui/material';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { MatxTheme } from './components';
-import { PrivateRoute } from './auth/private-routes';
 import { PrimeReactProvider } from 'primereact/api';
-import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
+import 'primereact/resources/themes/saga-blue/theme.css';
 import { lazy, useEffect, useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { PrivateRoute } from './auth/private-routes';
+import { MatxTheme } from './components';
+import { Condition } from './components/base-component';
 import Loadable from './components/Loadable';
 import MatxLayout from './components/MatxLayout/MatxLayout';
-import OverallReport from './views/report/report';
-import { useUser } from './contexts/JWTAuthContext';
-import setupAxiosInterceptors from './config/axios-interceptor';
-import { Condition } from './components/base-component';
 import Loading from './components/MatxLoading';
+import setupAxiosInterceptors from './config/axios-interceptor';
+import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
 import DPS_4550 from './views/report/DPS_4550';
+import DPS_4551 from './views/report/DPS_4551';
+import OverallReport from './views/report/report';
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -116,6 +117,15 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DPS_4550 />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path={routes.DPS_4551}
+            element={
+              <PrivateRoute>
+                <DPS_4551 />
               </PrivateRoute>
             }
           />

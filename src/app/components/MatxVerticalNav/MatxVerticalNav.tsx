@@ -224,15 +224,15 @@
 
 // export default React.memo(MatxVerticalNav);
 
-import React from 'react';
+import classNames from 'classnames';
 import { MegaMenu } from 'primereact/megamenu';
 import { MenuItem } from 'primereact/menuitem';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { routes } from 'src/app/navigations';
-import classNames from 'classnames';
 import { checkAuthorities } from 'src/app/auth/private-routes';
-import { useUser } from '../../contexts/JWTAuthContext';
+import { routes } from 'src/app/navigations';
 import { AUTHORITIES } from 'src/app/utils/constant';
+import { useUser } from '../../contexts/JWTAuthContext';
 const MatxVerticalNav = () => {
   const navigation = useNavigate();
   const { user } = useUser();
@@ -361,6 +361,18 @@ const MatxVerticalNav = () => {
                 label: 'DPS Report 4550',
                 command: () => {
                   navigation(routes.DPS_4550);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4551_DPS
+                  ])
+                }),
+                label: 'DPS Report 4551',
+                command: () => {
+                  navigation(routes.DPS_4551);
                 }
               }
             ]
