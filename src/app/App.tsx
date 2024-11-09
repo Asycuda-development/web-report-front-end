@@ -121,7 +121,7 @@ const AuthLayout = () => {
             }
           />
 
-<Route
+          <Route
             path={routes.DPS_4551}
             element={
               <PrivateRoute>

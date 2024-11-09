@@ -2,6 +2,8 @@ export const routes = {
   revenue4150: '/revenue4150',
 
   transit_4250: '/transit_4250',
+  DPS_4551: '/DPS_4551',
+
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
   all: '*',
