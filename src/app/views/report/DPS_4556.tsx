@@ -42,7 +42,6 @@ function DPS_4556() {
                      showStartDate 
                      showEndDate
                     ShowTinNumber
-                    showExemptionType
                     showCustomsProcedure
                     showRegDate
                     showAssesDate
@@ -77,10 +76,11 @@ function DPS_4556() {
                         <Column filter filterField='brokerTin' field={'brokerTin'} header={'Broker Tin'} />
                         <Column style={{ minWidth: '10rem' }} field={'decNam'} header={'Declarant Name'} />
                         <Column filter filterField='companyTin' field={'companyTin'} header={'Company Tin'} />
-                        <Column field={'cmpNam'} header={'Company Name'} />
+                        <Column style={{minWidth: "12rem"}} field={'cmpNam'} header={'Company Name'} />
                         <Column style={{ minWidth: '14rem' }} field={'finNam'} header={'Financial Name'} />
-                        <Column field={'countryDest'} header={'Destination Country Name'} />
-                        <Column filter filterField="countryExport" field={'countryExport'} header={'Country of Export Name'} />
+                        <Column field={'cmpFisCod'} header={'Financial Code'} />
+                        <Column style={{minWidth: "12rem"}} filter filterField="countryDest" field={'countryDest'} header={'Destination Country Name'} />
+                        <Column style={{minWidth: "12rem"}} filter filterField="countryExport" field={'countryExport'} header={'Country of Export Name'} />
                         <Column field={'countryOrg'} header={'Country of Origin'} />
                         <Column field={'lorryTotal'} header={'Lorry Total'} />
                         <Column field={'declarationValueCurrency'} header={'Declaration Value Currency'} />
