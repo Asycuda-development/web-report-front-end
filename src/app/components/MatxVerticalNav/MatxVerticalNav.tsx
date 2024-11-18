@@ -375,6 +375,19 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4551);
                 }
+              },
+
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4557_DPS
+                  ])
+                }),
+                label: 'DPS Report 4557',
+                command: () => {
+                  navigation(routes.DPS_4557);
+                }
               }
             ]
           }
