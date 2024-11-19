@@ -15,6 +15,7 @@ export interface SearchData {
   startDate?: string;
   endDate?: string;
   companyTin?: number;
+  HsCode?: number;
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -45,7 +46,7 @@ export const ReportHeaderInputs = ({
   ShowTinNumber,
   showCustomsProcedure,
   showExemptionType,
-  showCustomsList
+  showCustomsList,
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
