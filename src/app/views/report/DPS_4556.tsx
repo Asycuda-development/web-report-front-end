@@ -37,7 +37,7 @@ function DPS_4556() {
 
     return (
         <Container>
-            <SimpleCard title="DPS_4556">
+            <SimpleCard title="DPS Report Based on SAD Financial Code.">
                 <ReportHeaderInputs
                      showStartDate 
                      showEndDate
@@ -78,9 +78,8 @@ function DPS_4556() {
                         <Column filter filterField='companyTin' field={'companyTin'} header={'Company Tin'} />
                         <Column style={{minWidth: "12rem"}} field={'cmpNam'} header={'Company Name'} />
                         <Column style={{ minWidth: '14rem' }} field={'finNam'} header={'Financial Name'} />
-                        <Column field={'cmpFisCod'} header={'Financial Code'} />
-                        <Column style={{minWidth: "12rem"}} filter filterField="countryDest" field={'countryDest'} header={'Destination Country Name'} />
-                        <Column style={{minWidth: "12rem"}} filter filterField="countryExport" field={'countryExport'} header={'Country of Export Name'} />
+                        <Column field={'countryDest'} header={'Destination Country Name'} />
+                        <Column filter filterField="countryExport" field={'countryExport'} header={'Country of Export Name'} />
                         <Column field={'countryOrg'} header={'Country of Origin'} />
                         <Column field={'lorryTotal'} header={'Lorry Total'} />
                         <Column field={'declarationValueCurrency'} header={'Declaration Value Currency'} />
