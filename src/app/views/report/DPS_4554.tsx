@@ -80,7 +80,7 @@ function DPS_4554() {
             <Column field={'hsCode'} header={'hsCode'} />
             <Column field={'cpc'} header={'cpc'} />
             <Column style={{ minWidth: "20rem" }} field={'dsc'} header={'Goods Description'} />
-            <Column style={{ minWidth: "20rem" }} field={'gdsDs3'} header={'Goods Additional Description'} />
+            <Column style={{ minWidth: "25rem" }} field={'gdsDs3'} header={'Goods Additional Description'} />
             <Column style={{ minWidth: "20rem" }} field={'pckMrk1'} header={'Package Mark1'} />
             <Column field={'pckMrk2'} header={'Package Mark2'} />
             <Column field={'taxAmt'} header={'TAX_AMT'} />
@@ -90,7 +90,7 @@ function DPS_4554() {
             <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker TIN'} />
             <Column style={{minWidth: "12rem"}} field={'decNam'} header={'Declarant Name'} />
             <Column field={'companyTin'} header={'Company TIN'} />
-            <Column style={{minWidth: "12rem"}} field={'cmpNam'} header={'Company Name'} />
+            <Column style={{minWidth: "15rem"}} field={'cmpNam'} header={'Company Name'} />
             <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial Name'} />
             <Column style={{minWidth: "12rem"}} field={'countryDest'} header={'Country Destination Name'} />
             <Column style={{minWidth: "12rem"}} field={'countryExport'} header={'Country Export Name'} />
