@@ -121,8 +121,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
-          <Route
+             <Route
             path={routes.DPS_4551}
             element={
               <PrivateRoute>
@@ -130,6 +129,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+
            <Route
             path={routes.DPS_4556}
             element={
