@@ -42,7 +42,6 @@ function DPS_4555() {
           showStartDate
           showEndDate
           ShowTinNumber
-          showExemptionType
           showCustomsProcedure
           showRegDate
           showAssesDate
@@ -77,7 +76,7 @@ function DPS_4555() {
             <Column style={{minWidth: "12rem"}} field={'decNam'} header={'Declarant Name'} />
             <Column field={'companyTin'} header={'Company TIN'} />
             <Column field={'cmpFisCod'} header={'CMP_FIS_COD'} />
-            <Column style={{minWidth: "12rem"}} field={'cmpNam'} header={'Company Name'} />
+            <Column style={{minWidth: "15rem"}} field={'cmpNam'} header={'Company Name'} />
             <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial Name'} />
             <Column style={{minWidth: "12rem"}} field={'countryDest'} header={'Country Destination Name'} />
             <Column style={{minWidth: "12rem"}} field={'countryExport'} header={'Country Export Name'} />
