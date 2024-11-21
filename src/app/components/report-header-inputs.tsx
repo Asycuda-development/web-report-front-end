@@ -15,7 +15,7 @@ export interface SearchData {
   startDate?: string;
   endDate?: string;
   companyTin?: number;
-  HsCode?: number;
+  hsCode?: number;
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -26,11 +26,13 @@ interface ReportHeaderInputsProps {
   showRegDate?: boolean,
   showAssesDate?: boolean,
   showPayDate?: boolean,
+  showOperationDate?: boolean,
   showStartDate?: boolean;
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
   showCustomsProcedure?: boolean;
   showCustomsList?: boolean;
+  ShowHsCode?: boolean;
   showExemptionType?: boolean;
   tabelRef: any;
 }
@@ -41,12 +43,14 @@ export const ReportHeaderInputs = ({
   showRegDate,
   showAssesDate,
   showPayDate,
+  showOperationDate,
   showStartDate,
   showEndDate,
   ShowTinNumber,
   showCustomsProcedure,
   showExemptionType,
   showCustomsList,
+  ShowHsCode,
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
@@ -54,6 +58,7 @@ export const ReportHeaderInputs = ({
   const [customsProcedure, setCustomsProcedure] = useState<string>('');
   const [exemptedStatus, setExemptedStatus] = useState<string>('');
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
+  const [hsCode, setHsCode] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
 
@@ -75,12 +80,14 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus) {
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode
+    ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus]);
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode
+  ]);
 
   const formatData = () => {
     return {
@@ -88,11 +95,15 @@ export const ReportHeaderInputs = ({
       ...(showStartDate && { startDate }),
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
+      ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
+
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
       ...(showExemptionType && {
         exemptedStatus: exemptedStatus === 'all' ? null : exemptedStatus
+      
+
       }),
       ...(showCustomsList && { CustomsCode: customsCode })
     };
@@ -117,6 +128,12 @@ export const ReportHeaderInputs = ({
           <Col xs={6} md={4} lg={2} xl={2}>
             <RadioButton inputId="dateType3" value="PaymentDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'PaymentDate'} />
             <label htmlFor="dateType3" style={{ marginLeft: "0.3em" }}>Payment Date</label>
+          </Col>
+        </Condition>
+        <Condition condition={showOperationDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType4" value="OperationDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'OperationDate'} />
+            <label htmlFor="dateType4" style={{ marginLeft: "0.3em" }}>OperationDate</label>
           </Col>
         </Condition>
       </Row>
@@ -206,6 +223,20 @@ export const ReportHeaderInputs = ({
               setCustomsCode(e.target.value);
             }}
           />
+          <Condition condition={ShowHsCode}>
+          <NumberInput
+            label="HS_Code"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={hsCode}
+            onChange={(e) => {
+              setHsCode(e.target.value);
+            }}
+          />
+        </Condition>
+
         </Condition>
         <Col xs={6} md={4} lg={4} xl={3}>
           <div style={{ display: 'flex', flexDirection: 'row' }}>

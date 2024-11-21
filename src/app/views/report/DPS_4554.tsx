@@ -42,12 +42,14 @@ function DPS_4554() {
           showStartDate
           showEndDate
           ShowTinNumber
-          showExemptionType
+          //showExemptionType
           showCustomsProcedure
           showRegDate
           showAssesDate
           showPayDate
+         // showOperationDate
           showCustomsList
+          ShowHsCode
           onSearch={handleSubmit}
           tabelRef={tableRef}
         />

@@ -73,10 +73,10 @@ function DPS_4555() {
             <Column field={'rcptDate'} header={'Receipt Date'} />
             <Column style={{minWidth: "12rem"}} field={'bankNam'} header={'Bank Name'} />
             <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker TIN'} />
-            <Column style={{minWidth: "12rem"}} field={'decNam'} header={'Declarant Name'} />
+            <Column style={{minWidth: "20rem"}} field={'decNam'} header={'Declarant Name'} />
             <Column field={'companyTin'} header={'Company TIN'} />
             <Column field={'cmpFisCod'} header={'CMP_FIS_COD'} />
-            <Column style={{minWidth: "15rem"}} field={'cmpNam'} header={'Company Name'} />
+            <Column style={{minWidth: "20rem"}} field={'cmpNam'} header={'Company Name'} />
             <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial Name'} />
             <Column style={{minWidth: "12rem"}} field={'countryDest'} header={'Country Destination Name'} />
             <Column style={{minWidth: "12rem"}} field={'countryExport'} header={'Country Export Name'} />

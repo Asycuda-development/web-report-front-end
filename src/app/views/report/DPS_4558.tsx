@@ -37,12 +37,13 @@ function DPS_4558() {
 
     return (
         <Container>
-            <SimpleCard title="DPS Report Based on SAD Financial Code.">
+            <SimpleCard title="DPS_4558">
                 <ReportHeaderInputs
                      showStartDate 
                      showEndDate
                     ShowTinNumber
                     showCustomsProcedure
+                    showExemptionType
                     showRegDate
                     showAssesDate
                     showPayDate
@@ -60,17 +61,17 @@ function DPS_4558() {
                         stripedRows
                         showGridlines
                     >
-                        <Column filter filterField="sadYear" field={'sadYear'} header={'SAD_YEAR'} />
-                        <Column filter filterField="sadOffice" field={'sadOffice'} header={'SAD_OFFICE'} />
+                        <Column field={'sadYear'} header={'SAD_YEAR'} />
+                        <Column field={'sadOffice'} header={'SAD_OFFICE'} />
                         <Column filter filterField="sadRegNo" field={'sadRegNo'} header={'SAD_REG_NO'} />
                         <Column style={{ minWidth: '10rem' }} field={'sadRegDate'} header={'SAD_REG_DATE'} />
-                        <Column field={'ideRcpNo'} header={'IDE_RCP_NO'} />
+                        <Column filter filterField='items'field={'ideRcpNo'} header={'IDE_RCP_NO'} />
                         <Column field={'ideRcpDat'} header={'IDE_RCP_DAT'} />
-                        <Column field={'ideAstNo'} header={'IDE_AST_NO'} />
+                        <Column filter filterField='items'field={'ideAstNo'} header={'IDE_AST_NO'} />
                         <Column filter filterField='ideAstDat' field={'ideAstDat'} header={'IDE_AST_DAT'} />
                         <Column filter filterField='Status'field={'Status'} header={'STATUS'} />
                         <Column filter filterField='brokerTin' field={'brokerTin'} header={'BROKER_TIN'} />
-                        <Column style={{ minWidth: '20rem' }} field={'decNam'} header={'DEC_NAM'} />
+                        <Column filter filterField='items'style={{ minWidth: '20rem' }} field={'decNam'} header={'DEC_NAM'} />
                         <Column filter filterField='companyTin' field={'companyTin'} header={'COMPANY_TIN'} />
                         <Column style={{ minWidth: '25rem' }} field={'cmpNam'} header={'CMP_NAM'} />
                         <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
