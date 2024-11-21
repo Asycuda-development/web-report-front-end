@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Row, Col, Condition, DatePicker, NumberInput, Dropdown } from './base-component';
 import { LoadingButton } from '@mui/lab';
 import { CustomsProcedure } from './customs-procedure';
@@ -18,25 +18,27 @@ export interface SearchData {
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
+  HsCode?: number;
 }
 interface ReportHeaderInputsProps {
   onChage?: (e: SearchData) => void;
   onSearch?: (e: SearchData) => void;
-  showRegDate?: boolean,
-  showAssesDate?: boolean,
-  showPayDate?: boolean,
+  showRegDate?: boolean;
+  showAssesDate?: boolean;
+  showPayDate?: boolean;
   showStartDate?: boolean;
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
   showCustomsProcedure?: boolean;
   showCustomsList?: boolean;
   showExemptionType?: boolean;
+  showHsCode?: boolean;
   tabelRef: any;
 }
 export const ReportHeaderInputs = ({
   tabelRef,
-  onChage = () => { },
-  onSearch = () => { },
+  onChage = () => {},
+  onSearch = () => {},
   showRegDate,
   showAssesDate,
   showPayDate,
@@ -45,6 +47,7 @@ export const ReportHeaderInputs = ({
   ShowTinNumber,
   showCustomsProcedure,
   showExemptionType,
+  showHsCode,
   showCustomsList
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
@@ -55,7 +58,7 @@ export const ReportHeaderInputs = ({
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [customsCode, setCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
-
+  const [HsCode, setHsCode] = useState<string>('');
   useEffect(() => {
     if (showCustomsList === true) {
       axios.get('reporting/customs-list').then(({ data }: { data: Array<CustomsInterface> }) => {
@@ -74,12 +77,20 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus) {
+    if (
+      startDate ||
+      endDate ||
+      companyTin ||
+      customsProcedure ||
+      dateType ||
+      exemptedStatus ||
+      HsCode
+    ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
-    console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus]);
+    console.log(dateType);
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus, HsCode]);
 
   const formatData = () => {
     return {
@@ -87,6 +98,7 @@ export const ReportHeaderInputs = ({
       ...(showStartDate && { startDate }),
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
+      ...(showHsCode && { HsCode: parseInt(HsCode) }),
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
@@ -102,24 +114,44 @@ export const ReportHeaderInputs = ({
       <Row>
         <Condition condition={showRegDate}>
           <Col xs={6} md={4} lg={2} xl={2}>
-            <RadioButton inputId="dateType1" value="RegDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'RegDate'} />
-            <label htmlFor="dateType1" style={{ marginLeft: "0.3em" }}>Registration Date</label>
+            <RadioButton
+              inputId="dateType1"
+              value="RegDate"
+              onChange={(e) => setDateType(e.value)}
+              checked={dateType === 'RegDate'}
+            />
+            <label htmlFor="dateType1" style={{ marginLeft: '0.3em' }}>
+              Registration Date
+            </label>
           </Col>
         </Condition>
         <Condition condition={showAssesDate}>
           <Col xs={6} md={4} lg={2} xl={2}>
-            <RadioButton inputId="dateType2" value="AssessDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'AssessDate'} />
-            <label htmlFor="dateType2" style={{ marginLeft: "0.3em" }}>Assessement Date</label>
+            <RadioButton
+              inputId="dateType2"
+              value="AssessDate"
+              onChange={(e) => setDateType(e.value)}
+              checked={dateType === 'AssessDate'}
+            />
+            <label htmlFor="dateType2" style={{ marginLeft: '0.3em' }}>
+              Assessement Date
+            </label>
           </Col>
         </Condition>
         <Condition condition={showPayDate}>
           <Col xs={6} md={4} lg={2} xl={2}>
-            <RadioButton inputId="dateType3" value="PaymentDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'PaymentDate'} />
-            <label htmlFor="dateType3" style={{ marginLeft: "0.3em" }}>Payment Date</label>
+            <RadioButton
+              inputId="dateType3"
+              value="PaymentDate"
+              onChange={(e) => setDateType(e.value)}
+              checked={dateType === 'PaymentDate'}
+            />
+            <label htmlFor="dateType3" style={{ marginLeft: '0.3em' }}>
+              Payment Date
+            </label>
           </Col>
         </Condition>
       </Row>
-
 
       <Row>
         <Condition condition={showStartDate}>
@@ -163,6 +195,20 @@ export const ReportHeaderInputs = ({
           />
         </Condition>
 
+        <Condition condition={showHsCode}>
+          <NumberInput
+            label="HS Number"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={HsCode}
+            onChange={(e) => {
+              setHsCode(e.target.value);
+            }}
+          />
+        </Condition>
+
         <Condition condition={showCustomsProcedure}>
           <CustomsProcedure
             id="CustomsProcedure"
@@ -189,6 +235,9 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+
+        <Condition condition={showHsCode}></Condition>
+
         <Condition condition={showCustomsList}>
           <Dropdown
             id="CustomsLis"
