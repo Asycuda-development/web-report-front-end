@@ -73,7 +73,7 @@ function DPS_4558() {
                         <Column filter filterField='brokerTin' field={'brokerTin'} header={'BROKER_TIN'} />
                         <Column filter filterField='items'style={{ minWidth: '20rem' }} field={'decNam'} header={'DEC_NAM'} />
                         <Column filter filterField='companyTin' field={'companyTin'} header={'COMPANY_TIN'} />
-                        <Column style={{ minWidth: '25rem' }} field={'cmpNam'} header={'CMP_NAM'} />
+                        <Column style={{ minWidth: '24rem' }} field={'cmpNam'} header={'CMP_NAM'} />
                         <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
                         <Column field={'finCod'} header={'FIN_COD'} />
                         <Column filter filterField='items' field={'items'} header={'ITEMS'} />
