@@ -78,11 +78,11 @@ function DPS_4561() {
                         <Column style={{ minWidth: '20rem' }} field={'operationDate'} header={'OPERATION_DATE'} />
                         <Column field={'cmpCode'} header={'CMP_CODE'} />
                         <Column filter filterField='cmpName' field={'cmpName'} header={'CMP_NAME'} />
-                        <Column style={{ minWidth: '40rem' }} field={'decCod'} header={'DEC_COD'} />
-                        <Column filter filterField='decName' field={'decName'} header={'DEC_NAME'} />
+                        <Column style={{ minWidth: '20rem' }} field={'decCod'} header={'DEC_COD'} />
+                        <Column style={{ minWidth: '20rem' }}filter filterField='decName' field={'decName'} header={'DEC_NAME'} />
                         <Column style={{minWidth: "12rem"}} field={'firstColor'} header={'FIRST_COLOR'} />
                         <Column style={{ minWidth: '14rem' }} field={'finCod'} header={'FIN_COD'} />
-                        <Column field={'finNam'} header={'FIN_NAM'} />
+                        <Column style={{ minWidth: '20rem' }}field={'finNam'} header={'FIN_NAM'} />
                     </DataTable>
                 </Box>
             </SimpleCard>
