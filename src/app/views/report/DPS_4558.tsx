@@ -39,8 +39,8 @@ function DPS_4558() {
         <Container>
             <SimpleCard title="DPS_4558">
                 <ReportHeaderInputs
-                     showStartDate 
-                     showEndDate
+                    showStartDate 
+                    showEndDate
                     ShowTinNumber
                     showCustomsProcedure
                     showExemptionType
