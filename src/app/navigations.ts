@@ -11,6 +11,7 @@ export const routes = {
   DPS_4555: '/DpsReport4555',
   DPS_4558: '/DpsReport4558',
   DPS_4561: '/DpsReport4561',
+  DPS_4564: '/DpsReport4564',
   all: '*',
   base: '/*',
   Dashboard: '/dashboard',
