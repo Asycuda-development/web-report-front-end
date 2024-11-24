@@ -2,7 +2,7 @@ import { LoadingButton } from '@mui/lab';
 import axios from 'axios';
 import { RadioButton } from 'primereact/radiobutton';
 import { useEffect, useState } from 'react';
-import { Col, Condition, DatePicker, Dropdown, NumberInput, Row } from './base-component';
+import { Col, Condition, DatePicker, Dropdown, NumberInput, Row,TextInput } from './base-component';
 import { CustomsProcedure } from './customs-procedure';
 import { ExemptedType } from './Exemptiontype';
 
@@ -16,6 +16,7 @@ export interface SearchData {
   endDate?: string;
   companyTin?: number;
   hsCode?: number;
+  goodsCategory?:String;
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -34,6 +35,7 @@ interface ReportHeaderInputsProps {
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
+  showGoods?: boolean;
   tabelRef: any;
 }
 export const ReportHeaderInputs = ({
@@ -49,6 +51,7 @@ export const ReportHeaderInputs = ({
   ShowTinNumber,
   showCustomsProcedure,
   showExemptionType,
+  showGoods,
   showCustomsList,
   ShowHsCode,
 }: ReportHeaderInputsProps) => {
@@ -59,6 +62,7 @@ export const ReportHeaderInputs = ({
   const [exemptedStatus, setExemptedStatus] = useState<string>('');
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [hsCode, setHsCode] = useState<string>('');
+  const [goods, setgoods] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
 
@@ -80,13 +84,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods
   ]);
 
   const formatData = () => {
@@ -96,7 +100,7 @@ export const ReportHeaderInputs = ({
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
       ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
-
+      ...(showGoods && {goodsCategory:goods}),
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
@@ -163,6 +167,19 @@ export const ReportHeaderInputs = ({
             value={endDate}
             onChange={(e) => {
               setEndDate(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showGoods}>
+          <NumberInput
+            label="Goods"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={goods}
+            onChange={(e) => {
+              setgoods(e.target.value);
             }}
           />
         </Condition>
