@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Col, Condition, DatePicker, Dropdown, NumberInput, Row,TextInput } from './base-component';
 import { CustomsProcedure } from './customs-procedure';
 import { ExemptedType } from './Exemptiontype';
+//checked
 
 interface CustomsInterface {
   CustomsName: string;

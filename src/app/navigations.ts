@@ -1,3 +1,4 @@
+import DPS_4560 from "./views/report/DPS_4560";
 import DPS_4561 from "./views/report/DPS_4561";
 import DPS_4562 from "./views/report/DPS_4562";
 import DPS_4565 from "./views/report/DPS_4565";
@@ -20,6 +21,7 @@ export const routes = {
   DPS_4565: '/DpsReport4565',
   DPS_4566: '/DpsReport4566',
   DPS_4562: '/DpsReport4562',
+  DPS_4560: '/DpsReport4560',
   all: '*',
   base: '/*',
   Dashboard: '/dashboard',
