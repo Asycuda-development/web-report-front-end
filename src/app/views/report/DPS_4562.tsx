@@ -42,6 +42,7 @@ function DPS_4562() {
                 <ReportHeaderInputs
                     showStartDate 
                     showEndDate
+                    showUserName
                     //ShowTinNumber
                    //showCustomsProcedure
                    // showExemptionType

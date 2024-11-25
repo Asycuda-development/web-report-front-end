@@ -17,6 +17,7 @@ export interface SearchData {
   companyTin?: number;
   hsCode?: number;
   goodsCategory?:String;
+  UserName?:String;
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -36,6 +37,7 @@ interface ReportHeaderInputsProps {
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
   showGoods?: boolean;
+  showUserName?:boolean;
   tabelRef: any;
 }
 export const ReportHeaderInputs = ({
@@ -52,6 +54,7 @@ export const ReportHeaderInputs = ({
   showCustomsProcedure,
   showExemptionType,
   showGoods,
+  showUserName,
   showCustomsList,
   ShowHsCode,
 }: ReportHeaderInputsProps) => {
@@ -63,6 +66,7 @@ export const ReportHeaderInputs = ({
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [hsCode, setHsCode] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
+  const [username, setUserName] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
 
@@ -84,13 +88,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username
   ]);
 
   const formatData = () => {
@@ -101,6 +105,7 @@ export const ReportHeaderInputs = ({
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
       ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
       ...(showGoods && {goodsCategory:goods}),
+      ...(showUserName && {userName:username}),
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
@@ -182,8 +187,22 @@ export const ReportHeaderInputs = ({
               setgoods(e.target.value);
             }}
           />
+          
         </Condition>
-
+        <Condition condition={showUserName}>
+          <TextInput
+            label="Username"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={username}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+          
+        </Condition>
         <Condition condition={ShowTinNumber}>
           <NumberInput
             label="Tin Number"
