@@ -2,7 +2,8 @@ import { LoadingButton } from '@mui/lab';
 import axios from 'axios';
 import { RadioButton } from 'primereact/radiobutton';
 import { useEffect, useState } from 'react';
-import { Col, Condition, DatePicker, Dropdown, NumberInput, Row,TextInput } from './base-component';
+import { Col, Condition, DatePicker, Dropdown, NumberInput, Row, TextInput } from './base-component';
+import { Stautes } from './base-component/status';
 import { CustomsProcedure } from './customs-procedure';
 import { ExemptedType } from './Exemptiontype';
 //checked
@@ -22,6 +23,7 @@ export interface SearchData {
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
+  status?: string;
 }
 interface ReportHeaderInputsProps {
   onChage?: (e: SearchData) => void;
@@ -37,6 +39,7 @@ interface ReportHeaderInputsProps {
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
+  showStatus?: boolean;
   showGoods?: boolean;
   showUserName?:boolean;
   tabelRef: any;
@@ -54,6 +57,7 @@ export const ReportHeaderInputs = ({
   ShowTinNumber,
   showCustomsProcedure,
   showExemptionType,
+  showStatus,
   showGoods,
   showUserName,
   showCustomsList,
@@ -64,6 +68,7 @@ export const ReportHeaderInputs = ({
   const [companyTin, setCompanyTin] = useState<string>('');
   const [customsProcedure, setCustomsProcedure] = useState<string>('');
   const [exemptedStatus, setExemptedStatus] = useState<string>('');
+  const [status, setStatus] = useState<string>('');
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [hsCode, setHsCode] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
@@ -89,13 +94,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status
   ]);
 
   const formatData = () => {
@@ -112,6 +117,11 @@ export const ReportHeaderInputs = ({
       }),
       ...(showExemptionType && {
         exemptedStatus: exemptedStatus === 'all' ? null : exemptedStatus
+      
+
+      }),
+      ...(showStatus && {
+        status
       
 
       }),
@@ -243,7 +253,23 @@ export const ReportHeaderInputs = ({
               setExemptedStatus(e.target.value);
             }}
           />
+          
         </Condition>
+        <Condition condition={showStatus}>
+          <Stautes
+            id="CMP_Status"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={status}
+            onChange={(e) => {
+              setStatus(e.target.value);
+            }}
+          />
+          
+        </Condition>
+        
         <Condition condition={showCustomsList}>
           <Dropdown
             id="CustomsLis"
