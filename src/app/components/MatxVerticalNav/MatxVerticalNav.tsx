@@ -400,6 +400,42 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4553);
                 }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4575_DPS
+                  ])
+                }),
+                label: 'DPS Report 4575',
+                command: () => {
+                  navigation(routes.DPS_4575);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4572_DPS
+                  ])
+                }),
+                label: 'DPS Report 4572',
+                command: () => {
+                  navigation(routes.DPS_4572);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4573_DPS
+                  ])
+                }),
+                label: 'DPS Report 4573',
+                command: () => {
+                  navigation(routes.DPS_4573);
+                }
               }
             ]
           }

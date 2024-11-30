@@ -1,7 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Row, Col, Condition, DatePicker, NumberInput, Dropdown } from './base-component';
+import {
+  Row,
+  Col,
+  Condition,
+  DatePicker,
+  NumberInput,
+  Dropdown,
+  TextInput
+} from './base-component';
 import { LoadingButton } from '@mui/lab';
 import { CustomsProcedure } from './customs-procedure';
+import { BasedOn } from './based_On';
 import axios from 'axios';
 import { RadioButton } from 'primereact/radiobutton';
 import { ExemptedType } from './Exemptiontype';
@@ -10,15 +19,19 @@ interface CustomsInterface {
   CustomsName: string;
   CustomsCode: string;
 }
+
 export interface SearchData {
   dateType?: string;
   startDate?: string;
   endDate?: string;
   companyTin?: number;
   customsProcedure?: string | null;
+  basedOn?: string;
   CustomsCode?: string;
   exemptionType?: string;
-  HsCode?: number;
+  hsCode?: number;
+  userName?: string;
+  basedonvalue?: number;
 }
 interface ReportHeaderInputsProps {
   onChage?: (e: SearchData) => void;
@@ -30,11 +43,15 @@ interface ReportHeaderInputsProps {
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
   showCustomsProcedure?: boolean;
+  showbasedon?: boolean;
   showCustomsList?: boolean;
   showExemptionType?: boolean;
   showHsCode?: boolean;
+  showUserName?: boolean;
+  showbasedonvalue?: boolean;
   tabelRef: any;
 }
+
 export const ReportHeaderInputs = ({
   tabelRef,
   onChage = () => {},
@@ -48,6 +65,9 @@ export const ReportHeaderInputs = ({
   showCustomsProcedure,
   showExemptionType,
   showHsCode,
+  showUserName,
+  showbasedon,
+  showbasedonvalue,
   showCustomsList
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
@@ -58,7 +78,10 @@ export const ReportHeaderInputs = ({
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [customsCode, setCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
-  const [HsCode, setHsCode] = useState<string>('');
+  const [hsCode, setHsCode] = useState<string>('');
+  const [userName, setUserName] = useState<string>('');
+  const [basedon, setBasedOn] = useState<string>('');
+  const [basedonvalue, setBasedOnValue] = useState<string>('');
   useEffect(() => {
     if (showCustomsList === true) {
       axios.get('reporting/customs-list').then(({ data }: { data: Array<CustomsInterface> }) => {
@@ -72,9 +95,17 @@ export const ReportHeaderInputs = ({
   }, [showCustomsList]);
 
   const handleSearch = () => {
+    console.log('basedon : ', basedon);
+    console.log('basedonvalue: ', basedonvalue);
+    if (basedon && !basedonvalue) {
+      alert('Please Insert a value for the selected Based_On Option.');
+      return;
+    }
     const formattedData = formatData();
 
+    console.log('searching with', formatData);
     onSearch(formattedData);
+    console.log('searching with', formatData);
   };
   useEffect(() => {
     if (
@@ -84,13 +115,26 @@ export const ReportHeaderInputs = ({
       customsProcedure ||
       dateType ||
       exemptedStatus ||
-      HsCode
+      hsCode ||
+      userName ||
+      basedon ||
+      basedonvalue
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
-    console.log(dateType);
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus, HsCode]);
+  }, [
+    startDate,
+    endDate,
+    companyTin,
+    customsProcedure,
+    dateType,
+    exemptedStatus,
+    hsCode,
+    userName,
+    basedon,
+    basedonvalue
+  ]);
 
   const formatData = () => {
     return {
@@ -98,7 +142,10 @@ export const ReportHeaderInputs = ({
       ...(showStartDate && { startDate }),
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
-      ...(showHsCode && { HsCode: parseInt(HsCode) }),
+      ...(showHsCode && { hsCode: parseInt(hsCode) }),
+      ...(showUserName && { userName }),
+      ...(showbasedon && { basedon }),
+      ...(showbasedonvalue && basedon && { [basedon]: parseInt(basedonvalue) }),
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
@@ -202,13 +249,26 @@ export const ReportHeaderInputs = ({
             md={4}
             lg={4}
             xl={3}
-            value={HsCode}
+            value={hsCode}
             onChange={(e) => {
               setHsCode(e.target.value);
             }}
           />
         </Condition>
 
+        <Condition condition={showUserName}>
+          <TextInput
+            label="userName"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={userName}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+        </Condition>
         <Condition condition={showCustomsProcedure}>
           <CustomsProcedure
             id="CustomsProcedure"
@@ -222,6 +282,33 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+
+        <Condition condition={showbasedon}>
+          <BasedOn
+            id="BasedOn"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={basedon}
+            onChange={(e: any) => {
+              setBasedOn(e.target.value);
+              setBasedOnValue('');
+            }}
+          />
+        </Condition>
+        <Condition condition={showbasedonvalue}>
+          <Col xs={6} md={4} lg={4} xl={3}>
+            <NumberInput
+              label="Based On Value"
+              value={basedonvalue}
+              onChange={(e) => {
+                setBasedOnValue(e.target.value);
+              }}
+            />
+          </Col>
+        </Condition>
+
         <Condition condition={showExemptionType}>
           <ExemptedType
             id="Exemption Type"
@@ -235,8 +322,6 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
-
-        <Condition condition={showHsCode}></Condition>
 
         <Condition condition={showCustomsList}>
           <Dropdown
