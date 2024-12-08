@@ -43,12 +43,12 @@ function DPS_4578() {
           showStartDate
           showEndDate
           //ShowTinNumber
-         // showExemptionType
+          // showExemptionType
           //showCustomsProcedure
           showRegDate
-         // showAssesDate
-         // showPayDate
-         // showOperationDate
+          // showAssesDate
+          // showPayDate
+          // showOperationDate
           showCustomsList
           //ShowHsCode
           //showGoods

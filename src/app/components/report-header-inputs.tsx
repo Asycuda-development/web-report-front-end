@@ -17,6 +17,7 @@ export interface SearchData {
   startDate?: string;
   endDate?: string;
   companyTin?: number;
+  RegisterNo?: number;
   hsCode?: number;
   goodsCategory?:String;
   UserName?:String;
@@ -35,6 +36,7 @@ interface ReportHeaderInputsProps {
   showStartDate?: boolean;
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
+  ShowRegisterNo?: boolean;
   showCustomsProcedure?: boolean;
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
@@ -55,6 +57,7 @@ export const ReportHeaderInputs = ({
   showStartDate,
   showEndDate,
   ShowTinNumber,
+  ShowRegisterNo,
   showCustomsProcedure,
   showExemptionType,
   showStatus,
@@ -71,6 +74,7 @@ export const ReportHeaderInputs = ({
   const [status, setStatus] = useState<string>('');
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [hsCode, setHsCode] = useState<string>('');
+  const [registerNo, setRegisterNo] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
   const [username, setUserName] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
@@ -94,13 +98,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo
   ]);
 
   const formatData = () => {
@@ -110,6 +114,7 @@ export const ReportHeaderInputs = ({
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
       ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
+      ...(ShowRegisterNo && { registerNo:parseInt(registerNo)}),
       ...(showGoods && {goodsCategory:goods}),
       ...(showUserName && {userName:username}),
       ...(showCustomsProcedure && {
@@ -224,6 +229,19 @@ export const ReportHeaderInputs = ({
             value={companyTin}
             onChange={(e) => {
               setCompanyTin(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={ShowRegisterNo}>
+          <NumberInput
+            label="Register No"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={registerNo}
+            onChange={(e) => {
+              setRegisterNo(e.target.value);
             }}
           />
         </Condition>
