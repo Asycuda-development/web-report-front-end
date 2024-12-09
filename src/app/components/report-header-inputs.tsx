@@ -6,6 +6,7 @@ import { Col, Condition, DatePicker, Dropdown, NumberInput, Row, TextInput } fro
 import { Stautes } from './base-component/status';
 import { CustomsProcedure } from './customs-procedure';
 import { ExemptedType } from './Exemptiontype';
+import{TransitType}from './Transit-type';
 //checked
 
 interface CustomsInterface {
@@ -21,6 +22,7 @@ export interface SearchData {
   hsCode?: number;
   goodsCategory?:String;
   UserName?:String;
+  transitType?:String;
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -32,12 +34,17 @@ interface ReportHeaderInputsProps {
   showRegDate?: boolean,
   showAssesDate?: boolean,
   showPayDate?: boolean,
+  showExitDate?: boolean,
+  showArrivalDate?:boolean,
+  showFinalExitDate?:boolean,
   showOperationDate?: boolean,
   showStartDate?: boolean;
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
   ShowRegisterNo?: boolean;
   showCustomsProcedure?: boolean;
+  showDestinationCustomsList?:boolean,
+  showTransitType?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
@@ -54,30 +61,38 @@ export const ReportHeaderInputs = ({
   showAssesDate,
   showPayDate,
   showOperationDate,
+  showExitDate,
+  showArrivalDate,
+  showFinalExitDate,
   showStartDate,
   showEndDate,
   ShowTinNumber,
   ShowRegisterNo,
   showCustomsProcedure,
+  showTransitType,
   showExemptionType,
   showStatus,
   showGoods,
   showUserName,
   showCustomsList,
+  showDestinationCustomsList,
   ShowHsCode,
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
   const [companyTin, setCompanyTin] = useState<string>('');
   const [customsProcedure, setCustomsProcedure] = useState<string>('');
+  const [transitType, setTransitType] = useState<string>('');
   const [exemptedStatus, setExemptedStatus] = useState<string>('');
-  const [status, setStatus] = useState<string>('');
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
+  const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
+  const [status, setStatus] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
   const [username, setUserName] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
+  const [destinationCustomsCode, setDestinationCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
 
   useEffect(() => {
@@ -88,9 +103,10 @@ export const ReportHeaderInputs = ({
           tmp.push({ ...item, CustomsName: ` ${item.CustomsCode}|${item.CustomsName}` });
         });
         setCustomsList([...tmp, { CustomsCode: '', CustomsName: 'All' }]);
+        setDestinationCustomsList([...tmp, { CustomsCode: '', CustomsName: 'All' }]);
       });
     }
-  }, [showCustomsList]);
+  }, [showCustomsList,showDestinationCustomsList]);
 
   const handleSearch = () => {
     const formattedData = formatData();
@@ -98,13 +114,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType
   ]);
 
   const formatData = () => {
@@ -121,7 +137,7 @@ export const ReportHeaderInputs = ({
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
       ...(showExemptionType && {
-        exemptedStatus: exemptedStatus === 'all' ? null : exemptedStatus
+        exemptedStatus
       
 
       }),
@@ -130,7 +146,13 @@ export const ReportHeaderInputs = ({
       
 
       }),
-      ...(showCustomsList && { CustomsCode: customsCode })
+      ...(showTransitType && {
+        transitType
+      
+
+      }),
+      ...(showCustomsList && { CustomsCode: customsCode }),
+      ...(showDestinationCustomsList && { desCusCode: destinationCustomsCode })
     };
   };
 
@@ -153,6 +175,24 @@ export const ReportHeaderInputs = ({
           <Col xs={6} md={4} lg={2} xl={2}>
             <RadioButton inputId="dateType3" value="PaymentDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'PaymentDate'} />
             <label htmlFor="dateType3" style={{ marginLeft: "0.3em" }}>Payment Date</label>
+          </Col>
+        </Condition>
+        <Condition condition={showExitDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType4" value="ExitDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'ExitDate'} />
+            <label htmlFor="dateType4" style={{ marginLeft: "0.3em" }}>ExitDate</label>
+          </Col>
+        </Condition>
+        <Condition condition={showArrivalDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType5" value="ArrDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'ArrDate'} />
+            <label htmlFor="dateType5" style={{ marginLeft: "0.3em" }}>ArrivalDate</label>
+          </Col>
+        </Condition>
+        <Condition condition={showArrivalDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType6" value="FinExitDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'FinExitDate'} />
+            <label htmlFor="dateType6" style={{ marginLeft: "0.3em" }}>FinalExitDate</label>
           </Col>
         </Condition>
         <Condition condition={showOperationDate}>
@@ -259,6 +299,19 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+        <Condition condition={showTransitType}>
+          <TransitType
+            id="TransitType"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={transitType}
+            onChange={(e) => {
+              setTransitType(e.target.value);
+            }}
+          />
+        </Condition>
         <Condition condition={showExemptionType}>
           <ExemptedType
             id="Exemption Type"
@@ -299,11 +352,30 @@ export const ReportHeaderInputs = ({
             optionLabel="CustomsName"
             optionValue="CustomsCode"
             value={customsCode}
-            options={customsList}
+            options={destinationCustomsList}
             onChange={(e) => {
               setCustomsCode(e.target.value);
             }}
           />
+          </Condition>
+        <Condition condition={showDestinationCustomsList}>
+          <Dropdown
+            id="CustomsLisD"
+            label="Destination Customs List"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            optionLabel="CustomsName"
+            optionValue="CustomsCode"
+            value={destinationCustomsCode}
+            options={customsList}
+            onChange={(e) => {
+              setDestinationCustomsCode(e.target.value);
+            }}
+          />
+          </Condition>
+          
           <Condition condition={ShowHsCode}>
           <NumberInput
             label="HS_Code"
@@ -318,7 +390,6 @@ export const ReportHeaderInputs = ({
           />
         </Condition>
 
-        </Condition>
         <Col xs={6} md={4} lg={4} xl={3}>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <div style={{ marginInline: '2px' }}>
