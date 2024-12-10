@@ -7,6 +7,8 @@ import { Stautes } from './base-component/status';
 import { CustomsProcedure } from './customs-procedure';
 import { ExemptedType } from './Exemptiontype';
 import{TransitType}from './Transit-type';
+import{Status2} from './status1'
+import { BasedOn } from './based';
 //checked
 
 interface CustomsInterface {
@@ -23,6 +25,8 @@ export interface SearchData {
   goodsCategory?:String;
   UserName?:String;
   transitType?:String;
+  status1?:String,
+  based1?:String
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -45,6 +49,8 @@ interface ReportHeaderInputsProps {
   showCustomsProcedure?: boolean;
   showDestinationCustomsList?:boolean,
   showTransitType?:boolean,
+  showStatus1?:boolean,
+  showbased1?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
@@ -70,6 +76,8 @@ export const ReportHeaderInputs = ({
   ShowRegisterNo,
   showCustomsProcedure,
   showTransitType,
+  showStatus1,
+  showbased1,
   showExemptionType,
   showStatus,
   showGoods,
@@ -87,6 +95,8 @@ export const ReportHeaderInputs = ({
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
   const [status, setStatus] = useState<string>('');
+  const [based1, setBased1] = useState<string>('');
+  const [status1, setStatus1] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
@@ -114,13 +124,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1
   ]);
 
   const formatData = () => {
@@ -148,6 +158,16 @@ export const ReportHeaderInputs = ({
       }),
       ...(showTransitType && {
         transitType
+      
+
+      }),
+      ...(showStatus1 && {
+        truckStatus:status1
+      
+
+      }),
+      ...(showbased1 && {
+       basedOn: based1
       
 
       }),
@@ -309,6 +329,32 @@ export const ReportHeaderInputs = ({
             value={transitType}
             onChange={(e) => {
               setTransitType(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showStatus1}>
+          <Status2
+            id="Status"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={status1}
+            onChange={(e) => {
+              setStatus1(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showbased1}>
+          <BasedOn
+            id="Based On"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={based1}
+            onChange={(e) => {
+              setBased1(e.target.value);
             }}
           />
         </Condition>
