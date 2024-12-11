@@ -411,7 +411,7 @@ const MatxVerticalNav = () => {
                   navigation(routes.DPS_4555);
                 }
               },
-              {
+            {/* {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -470,7 +470,7 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4564);
                 }
-              },
+            }*/},
               {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -540,6 +540,17 @@ const MatxVerticalNav = () => {
                 label: 'DPS Report 4586',
                 command: () => {
                   navigation(routes.DPS_4586);
+                }
+              },   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4590_DPS
+                  ])
+                }),
+                label: 'DPS Report 4590',
+                command: () => {
+                  navigation(routes.DPS_4590);
                 }
               },  {
                 className: classNames({

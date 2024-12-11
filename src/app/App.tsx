@@ -15,25 +15,26 @@ import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
 import DPS_4550 from './views/report/DPS_4550';
 import DPS_4551 from './views/report/DPS_4551';
-import OverallReport from './views/report/report';
-import DPS_4556 from './views/report/DPS_4556';
 import DPS_4554 from './views/report/DPS_4554';
 import DPS_4555 from './views/report/DPS_4555';
+import DPS_4556 from './views/report/DPS_4556';
 import DPS_4558 from './views/report/DPS_4558';
+import DPS_4559 from './views/report/DPS_4559';
+import DPS_4560 from './views/report/DPS_4560';
 import DPS_4561 from './views/report/DPS_4561';
+import DPS_4562 from './views/report/DPS_4562';
+import DPS_4563 from './views/report/DPS_4563';
 import DPS_4564 from './views/report/DPS_4564';
-import DPS_4571 from './views/report/DPS_4571';
 import DPS_4565 from './views/report/DPS_4565';
 import DPS_4566 from './views/report/DPS_4566';
-import DPS_4562 from './views/report/DPS_4562';
-import DPS_4560 from './views/report/DPS_4560';
-import DPS_4559 from './views/report/DPS_4559';
-import DPS_4563 from './views/report/DPS_4563';
-import DPS_4578 from './views/report/DPS_4578';
+import DPS_4571 from './views/report/DPS_4571';
 import DPS_4576 from './views/report/DPS_4576';
-import DPS_4585 from './views/report/DPS_4585';
+import DPS_4578 from './views/report/DPS_4578';
 import DPS_4584 from './views/report/DPS_4584';
+import DPS_4585 from './views/report/DPS_4585';
 import DPS_4586 from './views/report/DPS_4586';
+import DPS_4590 from './views/report/DPS_4590';
+import OverallReport from './views/report/report';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -277,6 +278,14 @@ const AuthLayout = () => {
             }
           />
                <Route
+            path={routes.DPS_4590}
+            element={
+              <PrivateRoute>
+                <DPS_4590 />
+              </PrivateRoute>
+            }
+          />
+               <Route
             path={routes.DPS_4584}
             element={
               <PrivateRoute>
@@ -300,6 +309,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+
           
 
           <Route path={routes.all} element={<Navigate to={routes.Dashboard} />} />
