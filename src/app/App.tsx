@@ -33,6 +33,7 @@ import DPS_4578 from './views/report/DPS_4578';
 import DPS_4576 from './views/report/DPS_4576';
 import DPS_4585 from './views/report/DPS_4585';
 import DPS_4584 from './views/report/DPS_4584';
+import DPS_4586 from './views/report/DPS_4586';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -264,6 +265,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DPS_4585 />
+              </PrivateRoute>
+            }
+          />
+               <Route
+            path={routes.DPS_4586}
+            element={
+              <PrivateRoute>
+                <DPS_4586 />
               </PrivateRoute>
             }
           />
