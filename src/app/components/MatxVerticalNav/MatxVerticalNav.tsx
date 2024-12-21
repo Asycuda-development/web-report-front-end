@@ -417,6 +417,18 @@ const MatxVerticalNav = () => {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4580_DPS
+                  ])
+                }),
+                label: 'DPS Report 4580',
+                command: () => {
+                  navigation(routes.DPS_4580);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
                     AUTHORITIES.Report_4572_DPS
                   ])
                 }),
@@ -436,7 +448,93 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4573);
                 }
+              },
+
+              // {
+              //   className: classNames({
+              //     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+              //       AUTHORITIES.ADMIN,
+              //       AUTHORITIES.Report_4587_DPS
+              //     ])
+              //   }),
+              //   label: 'DPS Report 4587',
+              //   command: () => {
+              //     navigation(routes.DPS_4587);
+              //   }
+              // }
+              // {
+              //   className: classNames({
+              //     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+              //       AUTHORITIES.ADMIN,
+              //       AUTHORITIES.Report_4588_DPS
+              //     ])
+              //   }),
+              //   label: 'DPS Report 4588',
+              //   command: () => {
+              //     navigation(routes.DPS_4588);
+              //   }
+              // }
+              // ,
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4589_DPS
+                  ])
+                }),
+                label: 'DPS Report 4589',
+                command: () => {
+                  navigation(routes.DPS_4589);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4593_DPS
+                  ])
+                }),
+                label: 'DPS Report 4593',
+                command: () => {
+                  navigation(routes.DPS_4593);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.Report_4595_DPS
+                  ])
+                }),
+                label: 'DPS Report 4595',
+                command: () => {
+                  navigation(routes.DPS_4595);
+                }
               }
+              // {
+              //   className: classNames({
+              //     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+              //       AUTHORITIES.ADMIN,
+              //       AUTHORITIES.Report_4596_DPS
+              //     ])
+              //   }),
+              //   label: 'DPS Report 4596',
+              //   command: () => {
+              //     navigation(routes.DPS_4596);
+              //   }
+              // }
+              // {
+              //   className: classNames({
+              //     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+              //       AUTHORITIES.ADMIN,
+              //       AUTHORITIES.Report_4599_DPS
+              //     ])
+              //   }),
+              //   label: 'DPS Report 4599',
+              //   command: () => {
+              //     navigation(routes.DPS_4599);
+              //   }
+              // }
             ]
           }
         ],

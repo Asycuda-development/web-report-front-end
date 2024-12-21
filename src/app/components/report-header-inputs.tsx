@@ -25,6 +25,7 @@ export interface SearchData {
   startDate?: string;
   endDate?: string;
   companyTin?: number;
+  serPrt?: number;
   customsProcedure?: string | null;
   basedOn?: string;
   CustomsCode?: string;
@@ -32,6 +33,7 @@ export interface SearchData {
   hsCode?: number;
   userName?: string;
   basedonvalue?: number;
+  containerNumber?: string;
 }
 interface ReportHeaderInputsProps {
   onChage?: (e: SearchData) => void;
@@ -49,6 +51,8 @@ interface ReportHeaderInputsProps {
   showHsCode?: boolean;
   showUserName?: boolean;
   showbasedonvalue?: boolean;
+  showserPrt?: boolean;
+  showcontainerNumber?: boolean;
   tabelRef: any;
 }
 
@@ -68,6 +72,8 @@ export const ReportHeaderInputs = ({
   showUserName,
   showbasedon,
   showbasedonvalue,
+  showserPrt,
+  showcontainerNumber,
   showCustomsList
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
@@ -81,6 +87,8 @@ export const ReportHeaderInputs = ({
   const [hsCode, setHsCode] = useState<string>('');
   const [userName, setUserName] = useState<string>('');
   const [basedon, setBasedOn] = useState<string>('');
+  const [serPrt, setserPrt] = useState<string>('');
+  const [containerNumber, setContainerNumber] = useState<string>('');
   const [basedonvalue, setBasedOnValue] = useState<string>('');
   useEffect(() => {
     if (showCustomsList === true) {
@@ -118,7 +126,9 @@ export const ReportHeaderInputs = ({
       hsCode ||
       userName ||
       basedon ||
-      basedonvalue
+      basedonvalue ||
+      containerNumber ||
+      serPrt
     ) {
       const formattedData = formatData();
       onChage(formattedData);
@@ -133,7 +143,9 @@ export const ReportHeaderInputs = ({
     hsCode,
     userName,
     basedon,
-    basedonvalue
+    basedonvalue,
+    containerNumber,
+    serPrt
   ]);
 
   const formatData = () => {
@@ -145,6 +157,8 @@ export const ReportHeaderInputs = ({
       ...(showHsCode && { hsCode: parseInt(hsCode) }),
       ...(showUserName && { userName }),
       ...(showbasedon && { basedon }),
+      ...(showserPrt && { serPrt: parseInt(serPrt) }),
+      ...(showcontainerNumber && { container_Number: containerNumber }),
       ...(showbasedonvalue && basedon && { [basedon]: parseInt(basedonvalue) }),
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
@@ -241,6 +255,19 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+        <Condition condition={showserPrt}>
+          <NumberInput
+            label="serPrt"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={serPrt}
+            onChange={(e) => {
+              setserPrt(e.target.value);
+            }}
+          />
+        </Condition>
 
         <Condition condition={showHsCode}>
           <NumberInput
@@ -266,6 +293,20 @@ export const ReportHeaderInputs = ({
             value={userName}
             onChange={(e) => {
               setUserName(e.target.value);
+            }}
+          />
+        </Condition>
+
+        <Condition condition={showcontainerNumber}>
+          <TextInput
+            label="Container_NO"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={containerNumber}
+            onChange={(e) => {
+              setContainerNumber(e.target.value);
             }}
           />
         </Condition>

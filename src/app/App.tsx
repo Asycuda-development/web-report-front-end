@@ -21,6 +21,14 @@ import DPS_4553 from './views/report/DPS_4553';
 import DPS_4573 from './views/report/DPS_4573';
 import DPS_4572 from './views/report/DPS_4572';
 import DPS_4575 from './views/report/DPS_4575';
+import DPS_4580 from './views/report/DPS_4580';
+import DPS_4587 from './views/report/DPS_4587';
+import DPS_4588 from './views/report/DPS_4588';
+import DPS_4589 from './views/report/DPS_4589';
+import DPS_4593 from './views/report/DPS_4593';
+import DPS_4595 from './views/report/DPS_4595';
+import DPS_4596 from './views/report/DPS_4596';
+import DPS_4599 from './views/report/DPS-4599';
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
@@ -97,7 +105,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.revenue4150}
             element={
@@ -106,7 +113,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.transit_4250}
             element={
@@ -115,7 +121,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.DPS_4550}
             element={
@@ -124,7 +129,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.DPS_4551}
             element={
@@ -133,7 +137,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.DPS_4557}
             element={
@@ -174,7 +177,70 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
+          <Route
+            path={routes.DPS_4580}
+            element={
+              <PrivateRoute>
+                <DPS_4580 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4587}
+            element={
+              <PrivateRoute>
+                <DPS_4587 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4588}
+            element={
+              <PrivateRoute>
+                <DPS_4588 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4589}
+            element={
+              <PrivateRoute>
+                <DPS_4589 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4593}
+            element={
+              <PrivateRoute>
+                <DPS_4593 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4595}
+            element={
+              <PrivateRoute>
+                <DPS_4595 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4596}
+            element={
+              <PrivateRoute>
+                <DPS_4596 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4599}
+            element={
+              <PrivateRoute>
+                <DPS_4599 />
+              </PrivateRoute>
+            }
+          />
           <Route
             path={routes.Roles}
             element={
@@ -183,7 +249,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route path={routes.all} element={<Navigate to={routes.Dashboard} />} />
         </Routes>
       </MatxLayout>

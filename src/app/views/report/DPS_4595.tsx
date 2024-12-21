@@ -34,12 +34,13 @@ const EmptyDataMessage = styled('p')({
   transform: 'translate(-50%, -50%)'
 });
 
-function DPS_4557() {
+function DPS_4595() {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('Report generating');
   const [emptyDataMessage, setEmptyDataMessage] = useState('');
+
   useEffect(() => {
     if (isLoading) {
       const interval = setInterval(() => {
@@ -64,7 +65,7 @@ function DPS_4557() {
     try {
       setIsLoading(true);
       setLoadingMessage('Report fenerating');
-      const res = await axios.post('/reporting/DpsReport4557', {
+      const res = await axios.post('/reporting/DpsReport4595', {
         ...data,
         type: data.customsProcedure,
         customsCode: data.CustomsCode
@@ -85,17 +86,14 @@ function DPS_4557() {
 
   return (
     <Container>
-      <SimpleCard title="DPS_4557">
+      <SimpleCard title="DPS_4595">
         <ReportHeaderInputs
           showStartDate
           showEndDate
-          ShowTinNumber
-          //    showExemptionType
           showCustomsProcedure
-          showRegDate
-          showAssesDate
-          showPayDate
           showCustomsList
+          showHsCode
+          showExemptionType
           onSearch={handleSubmit}
           tabelRef={tableRef}
         />
@@ -119,72 +117,32 @@ function DPS_4557() {
               stripedRows
               showGridlines
             >
+              <Column field={'sad_Type'} header={'sad_Type'} />
+              <Column filter filterField={'bcp'} field={'bcp'} header={'Border Custom'} />
+              <Column field={'icd'} header={'ICD'} />
               <Column
                 filter
-                filterField="ide_typ_sad"
-                style={{ textAlign: 'center' }}
-                field={'ide_typ_sad'}
-                header={'Identification Type SAD'}
+                filterField="country_Export"
+                field={'country_Export'}
+                header={'Country_Export'}
               />
-              <Column field={'tpt_cuo_nam'} header={'Border Cusutom Name'} />
-              <Column field={'ide_cuo_nam'} header={'IDE Custom Name'} />
-              <Column field={'ide_cuo_cod'} header={'IDE Custom Code'} />
-              <Column field={'Item_total'} header={'Total Item'} />
+              <Column field={'country_Dest'} header={'country_Dest'} />
+              <Column field={'hsCode'} header={'HS_Code'} />
+              <Column field={'tsc'} header={'TSC'} />
               <Column
+                style={{ minWidth: '16rem', textAlign: 'center' }}
                 filter
-                filterField="Reg_No"
-                style={{ minWidth: '4rem', textAlign: 'center' }}
-                field={'Reg_No'}
-                header={'Register No'}
+                filterField={'dsc'}
+                field={'dsc'}
+                header={'DSC'}
               />
-              <Column field={'Reg_Date'} header={'Register Date'} />
-              <Column field={'ASMT_No'} header={'ASMT No'} />
-              <Column field={'AST_Date'} header={'AST Date'} />
-              <Column field={'RCPT_No'} header={'RCPT No'} />
-              <Column field={'RCPT_Date'} header={'RCPT Date '} />
-              <Column
-                filter
-                filterField="bank_nam"
-                style={{ minWidth: '8rem', textAlign: 'center' }}
-                field={'bank_nam'}
-                header={'Bank Name'}
-              />
-              <Column filter filterField="Broker_TIN" field={'Broker_TIN'} header={'Broker TIN'} />
-              <Column field={'dec_nam'} header={'DEC Name'} />
-              <Column
-                filter
-                filterField="Company_TIN"
-                style={{ textAlign: 'center' }}
-                field={'Company_TIN'}
-                header={'Company TIN'}
-              />
-              <Column style={{ minWidth: '12rem' }} field={'cmp_nam'} header={'Company Name'} />
-              <Column field={'CMP_EXP_TIN'} header={'CMP EXP TIN'} />
-              <Column style={{ minWidth: '10rem' }} field={'cmp_exp_nam'} header={'cmp exp Name'} />
-              <Column
-                style={{ minWidth: '10rem', textAlign: 'center' }}
-                field={'fin_nam'}
-                header={'Finantial Name'}
-              />
-              <Column field={'fis_cod'} header={'Fisical Code'} />
-              <Column field={'Country_Dest'} header={'Destination Country'} />
-              <Column field={'Country_Export'} header={'Country Export'} />
-              <Column field={'Country_Org'} header={'Country Orgine'} />
-              <Column
-                style={{ textAlign: 'center' }}
-                field={'Lorry_Total'}
-                header={'Total Lorry'}
-              />
-              <Column field={'Item_Value_currency'} header={'Item Value Currency'} />
-              <Column field={'Item_Value_Afs'} header={'Item Value Afs'} />
-              <Column style={{ textAlign: 'center' }} field={'Item_Taxes'} header={'Item Tax'} />
-              <Column filter filterField="status" field={'status'} header={'Status'} />
-              <Column style={{ textAlign: 'center' }} field={'pk1'} header={'packing1'} />
-              <Column field={'pk2'} header={'packing2'} />
-              <Column field={'cap'} header={'CAP'} />
-              <Column field={'hscode'} header={'H_S Code'} />
-              <Column field={'netwgt'} header={'netwgt'} />
-              <Column field={'grswgt'} header={'grswgt'} />
+              <Column field={'item_Net_Weight'} header={'Item_Net_Weight'} />
+              <Column field={'item_Value_currency'} header={'Item_Value_currency'} />
+              <Column field={'item_Value_Afs'} header={'Item_Value_Afs'} />
+              <Column field={'tax_Rate'} header={'Tax_Rate'} />
+              <Column field={'tax_Code'} header={'Tax_Code'} />
+              <Column field={'tax_Base'} header={'Tax_Base'} />
+              <Column field={'code_Tax_Amount'} header={'Code_Tax_Amount'} />
             </DataTable>
           )}
         </Box>
@@ -193,4 +151,4 @@ function DPS_4557() {
   );
 }
 
-export default DPS_4557;
+export default DPS_4595;
