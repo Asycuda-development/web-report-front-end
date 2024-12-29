@@ -51,5 +51,6 @@ export const AUTHORITIES = {
   REPORT_4590_DPS: 'REPORT:4590-DPS',
   REPORT_4591_DPS: 'REPORT:4591-DPS',
   REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
-  RevenueReport4157_1400:'RevenueReport4157_1400'
+  RevenueReport4157_1400:'RevenueReport4157_1400',
+  RevenueReport4158:'RevenueReport4158'
 };
