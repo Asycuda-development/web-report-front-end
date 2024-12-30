@@ -53,5 +53,6 @@ export const AUTHORITIES = {
   REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
   RevenueReport4157_1400:'RevenueReport4157_1400',
   RevenueReport4159:'/RevenueReport4159',
+  RevenueReport4153_1400:'/RevenueReport4153_1400',
   RevenueReport4158:'RevenueReport4158'
 };
