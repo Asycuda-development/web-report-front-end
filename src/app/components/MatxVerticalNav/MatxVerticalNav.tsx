@@ -715,6 +715,17 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.RevenueReport4153_1400);
                 }
+              },    {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4154,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4154',
+                command: () => {
+                  navigation(routes.RevenueReport4154);
+                }
               }
             ]
           }

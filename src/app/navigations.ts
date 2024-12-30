@@ -7,6 +7,7 @@ export const routes = {
   RevenueReport4159:'/RevenueReport4159',
   RevenueReport4153_1400:'/RevenueReport4153_1400',
   RevenueReport4153:'/RevenueReport4153',
+  RevenueReport4154:'/RevenueReport4154',
   transit_4250: '/transit_4250',
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
