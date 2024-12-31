@@ -60,5 +60,6 @@ export const AUTHORITIES = {
   RevenueReport4154:'/RevenueReport4154',
   RevenueReport4160:'/RevenueReport4160',
   RevenueReport4163:'/RevenueReport4163',
+  RevenueReport4164_1400:'/RevenueReport4164_1400',
   RevenueReport4158:'RevenueReport4158'
 };
