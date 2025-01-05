@@ -1,4 +1,5 @@
 import RevenueReport4153 from "../views/report/RevenueReport4153";
+import RevenueReport4161 from "../views/report/RevenueReport4161";
 
 export const topBarHeight = 64;
 export const sideNavWidth = 205;
@@ -60,6 +61,8 @@ export const AUTHORITIES = {
   RevenueReport4154:'/RevenueReport4154',
   RevenueReport4160:'/RevenueReport4160',
   RevenueReport4163:'/RevenueReport4163',
+  RevenueReport4161:'/RevenueReport4161',
+  RevenueReport4162:'/RevenueReport4162',
   RevenueReport4164_1400:'/RevenueReport4164_1400',
   RevenueReport4158:'RevenueReport4158'
 };

@@ -9,6 +9,7 @@ import { ExemptedType } from './Exemptiontype';
 import{TransitType}from './Transit-type';
 import{Status2} from './status1'
 import { BasedOn } from './based';
+import { ModOfPayment } from './ModOfPayment';
 //checked
 
 interface CustomsInterface {
@@ -26,6 +27,7 @@ export interface SearchData {
   UserName?:String;
   transitType?:String;
   status1?:String,
+  modeOfPay?:String;
   based1?:String
   customsProcedure?: string | null;
   CustomsCode?: string;
@@ -50,6 +52,7 @@ interface ReportHeaderInputsProps {
   showDestinationCustomsList?:boolean,
   showTransitType?:boolean,
   showStatus1?:boolean,
+  ShowModOfPayment?:boolean,
   showbased1?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
@@ -78,6 +81,7 @@ export const ReportHeaderInputs = ({
   showTransitType,
   showStatus1,
   showbased1,
+  ShowModOfPayment,
   showExemptionType,
   showStatus,
   showGoods,
@@ -96,6 +100,7 @@ export const ReportHeaderInputs = ({
   const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
   const [status, setStatus] = useState<string>('');
   const [based1, setBased1] = useState<string>('');
+  const [modofpayment, setModOfPayment] = useState<string>('');
   const [status1, setStatus1] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
@@ -124,13 +129,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1||modofpayment
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1,modofpayment
   ]);
 
   const formatData = () => {
@@ -168,6 +173,9 @@ export const ReportHeaderInputs = ({
       }),
       ...(showbased1 && {
        basedOn: based1
+      }),
+      ...(ShowModOfPayment && {
+        modeOfPay: modofpayment
       
 
       }),
@@ -355,6 +363,19 @@ export const ReportHeaderInputs = ({
             value={based1}
             onChange={(e) => {
               setBased1(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={ShowModOfPayment}>
+          <ModOfPayment
+            id="Mod Of payments"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={modofpayment}
+            onChange={(e) => {
+              setModOfPayment(e.target.value);
             }}
           />
         </Condition>
