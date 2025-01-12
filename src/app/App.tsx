@@ -29,6 +29,15 @@ import DPS_4593 from './views/report/DPS_4593';
 import DPS_4595 from './views/report/DPS_4595';
 import DPS_4596 from './views/report/DPS_4596';
 import DPS_4599 from './views/report/DPS-4599';
+//////////////////////////////////////////////////////
+////////////  Revenue Reprots Import  ///////////////
+////////////////////////////////////////////////////
+import Revenue_4151 from './views/report/Revenue_4151';
+import Revenue_4155 from './views/report/Revenue_4155';
+import Revenue_4165 from './views/report/Revenue_4165';
+import Revenue_4171 from './views/report/Revenue_4171';
+import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
+import Revenue_4172 from './views/report/Revenue_4172';
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
@@ -81,6 +90,11 @@ const AuthLayout = () => {
     <>
       <MatxLayout>
         <Routes>
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Dashboard Reprots Routes  /////////////
+            ////////////////////////////////////////////////////
+          }
           <Route
             path={routes.Dashboard}
             element={
@@ -105,6 +119,11 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Revenue Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
+          }
           <Route
             path={routes.revenue4150}
             element={
@@ -114,6 +133,60 @@ const AuthLayout = () => {
             }
           />
           <Route
+            path={routes.revenue4151}
+            element={
+              <PrivateRoute>
+                <Revenue_4151 />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path={routes.revenue4155}
+            element={
+              <PrivateRoute>
+                <Revenue_4155 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4165}
+            element={
+              <PrivateRoute>
+                <Revenue_4165 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4171}
+            element={
+              <PrivateRoute>
+                <Revenue_4171 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4171_1400}
+            element={
+              <PrivateRoute>
+                <Revenue_4171_1400 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4172}
+            element={
+              <PrivateRoute>
+                <Revenue_4172 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Transit Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
             path={routes.transit_4250}
             element={
               <PrivateRoute>
@@ -121,6 +194,11 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+          {
+            //////////////////////////////////////////////////////
+            ////////////    DPS Reprots Routes    ///////////////
+            ////////////////////////////////////////////////////
+          }
           <Route
             path={routes.DPS_4550}
             element={
@@ -241,6 +319,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path={routes.Roles}
             element={

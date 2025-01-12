@@ -584,6 +584,78 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.revenue4150);
                 }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4151_REVENUE,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4151- Revenue',
+                command: () => {
+                  navigation(routes.revenue4151);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4155_REVENUE,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4155- Revenue',
+                command: () => {
+                  navigation(routes.revenue4155);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4165_REVENUE,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4165- Revenue',
+                command: () => {
+                  navigation(routes.revenue4165);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4171_REVENUE,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4171- Revenue',
+                command: () => {
+                  navigation(routes.revenue4171);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4171_1400_REVENUE,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4171_1400- Revenue',
+                command: () => {
+                  navigation(routes.revenue4171_1400);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4172_REVENUE,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4172- Revenue',
+                command: () => {
+                  navigation(routes.revenue4172);
+                }
               }
             ]
           }

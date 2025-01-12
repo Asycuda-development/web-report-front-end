@@ -14,6 +14,8 @@ import { BasedOn } from './based_On';
 import axios from 'axios';
 import { RadioButton } from 'primereact/radiobutton';
 import { ExemptedType } from './Exemptiontype';
+import { InputText } from 'primereact/inputtext';
+import { string } from 'prop-types';
 
 interface CustomsInterface {
   CustomsName: string;
@@ -34,6 +36,7 @@ export interface SearchData {
   userName?: string;
   basedonvalue?: number;
   containerNumber?: string;
+  taxCode?: string;
 }
 interface ReportHeaderInputsProps {
   onChage?: (e: SearchData) => void;
@@ -49,10 +52,12 @@ interface ReportHeaderInputsProps {
   showCustomsList?: boolean;
   showExemptionType?: boolean;
   showHsCode?: boolean;
+  showTaxCode?: boolean;
   showUserName?: boolean;
   showbasedonvalue?: boolean;
   showserPrt?: boolean;
   showcontainerNumber?: boolean;
+
   tabelRef: any;
 }
 
@@ -69,6 +74,7 @@ export const ReportHeaderInputs = ({
   showCustomsProcedure,
   showExemptionType,
   showHsCode,
+  showTaxCode,
   showUserName,
   showbasedon,
   showbasedonvalue,
@@ -85,11 +91,13 @@ export const ReportHeaderInputs = ({
   const [customsCode, setCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
   const [hsCode, setHsCode] = useState<string>('');
+  const [taxCode, setTaxtCode] = useState<string>('');
   const [userName, setUserName] = useState<string>('');
   const [basedon, setBasedOn] = useState<string>('');
   const [serPrt, setserPrt] = useState<string>('');
   const [containerNumber, setContainerNumber] = useState<string>('');
   const [basedonvalue, setBasedOnValue] = useState<string>('');
+
   useEffect(() => {
     if (showCustomsList === true) {
       axios.get('reporting/customs-list').then(({ data }: { data: Array<CustomsInterface> }) => {
@@ -103,8 +111,6 @@ export const ReportHeaderInputs = ({
   }, [showCustomsList]);
 
   const handleSearch = () => {
-    console.log('basedon : ', basedon);
-    console.log('basedonvalue: ', basedonvalue);
     if (basedon && !basedonvalue) {
       alert('Please Insert a value for the selected Based_On Option.');
       return;
@@ -124,6 +130,7 @@ export const ReportHeaderInputs = ({
       dateType ||
       exemptedStatus ||
       hsCode ||
+      taxCode ||
       userName ||
       basedon ||
       basedonvalue ||
@@ -141,6 +148,7 @@ export const ReportHeaderInputs = ({
     dateType,
     exemptedStatus,
     hsCode,
+    taxCode,
     userName,
     basedon,
     basedonvalue,
@@ -155,6 +163,7 @@ export const ReportHeaderInputs = ({
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
       ...(showHsCode && { hsCode: parseInt(hsCode) }),
+      ...(showTaxCode && { taxCode }),
       ...(showUserName && { userName }),
       ...(showbasedon && { basedon }),
       ...(showserPrt && { serPrt: parseInt(serPrt) }),
@@ -271,7 +280,7 @@ export const ReportHeaderInputs = ({
 
         <Condition condition={showHsCode}>
           <NumberInput
-            label="HS Number"
+            label="HS_Code"
             xs={6}
             md={4}
             lg={4}
@@ -279,6 +288,19 @@ export const ReportHeaderInputs = ({
             value={hsCode}
             onChange={(e) => {
               setHsCode(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showTaxCode}>
+          <TextInput
+            label="taxCode"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={taxCode}
+            onChange={(e) => {
+              setTaxtCode(e.target.value);
             }}
           />
         </Condition>
