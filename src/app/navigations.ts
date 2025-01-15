@@ -1,4 +1,4 @@
-import DPS_4591 from "./views/report/DPS_4591";
+import TransitReport4267 from "./views/report/TransitReport4267";
 
 export const routes = {
   revenue4150: '/revenue4150',
@@ -13,7 +13,17 @@ export const routes = {
   RevenueReport4164_1400:'/RevenueReport4164_1400',
   RevenueReport4161:'/RevenueReport4161',
   RevenueReport4162:'/RevenueReport4162',
+  RevenueReport4173:'/RevenueReport4173',
+  RevenueReport48101:'/RevenueReport48101',
+  RevenueReport48100:'/RevenueReport48100',
+  TransitReport4257:'/TransitReport4257',
   transit_4250: '/transit_4250',
+  TransitReport4258: '/TransitReport4258',
+  TransitReport4259: '/TransitReport4259',
+  TransitReport4265:'/TransitReport4265',
+  TransitReport4266:'/TransitReport4266',
+  TransitReport4267:'/TransitReport4267',
+  TransitReport4268:'/TransitReport4268',
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
   DPS_4556: '/DpsReport4556',

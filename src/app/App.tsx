@@ -34,19 +34,29 @@ import DPS_4584 from './views/report/DPS_4584';
 import DPS_4585 from './views/report/DPS_4585';
 import DPS_4586 from './views/report/DPS_4586';
 import DPS_4590 from './views/report/DPS_4590';
-import OverallReport from './views/report/report';
 import DPS_4591 from './views/report/DPS_4591';
+import OverallReport from './views/report/report';
+import RevenueReport4153 from './views/report/RevenueReport4153';
+import RevenueReport4153_1400 from './views/report/RevenueReport4153_1400';
+import RevenueReport4154 from './views/report/RevenueReport4154';
 import RevenueReport4157_1400 from './views/report/RevenueReport4157_1400';
 import RevenueReport4158 from './views/report/RevenueReport4158';
 import RevenueReport4159 from './views/report/RevenueReport4159';
-import RevenueReport4153_1400 from './views/report/RevenueReport4153_1400';
-import RevenueReport4153 from './views/report/RevenueReport4153';
-import RevenueReport4154 from './views/report/RevenueReport4154';
 import RevenueReport4160 from './views/report/RevenueReport4160';
-import RevenueReport4163 from './views/report/RevenueReport4163';
-import RevenueReport4164_1400 from './views/report/RevenueReport4164_1400';
 import RevenueReport4161 from './views/report/RevenueReport4161';
 import RevenueReport4162 from './views/report/RevenueReport4162';
+import RevenueReport4163 from './views/report/RevenueReport4163';
+import RevenueReport4164_1400 from './views/report/RevenueReport4164_1400';
+import RevenueReport4173 from './views/report/RevenueReport4173';
+import RevenueReport48100 from './views/report/RevenueReport48100';
+import RevenueReport48101 from './views/report/RevenueReport48101';
+import TransitReport4257 from './views/report/TransitReport4257';
+import TransitReport4258 from './views/report/TransitReport4258';
+import TransitReport4259 from './views/report/TransitReport4259';
+import TransitReport4265 from './views/report/TransitReport4265';
+import TransitReport4266 from './views/report/TransitReport4266';
+import TransitReport4267 from './views/report/TransitReport4267';
+import TransitReport4268 from './views/report/TransitReport4268';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -222,12 +232,92 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+            <Route
+            path={routes.RevenueReport4173}
+            element={
+              <PrivateRoute>
+                <RevenueReport4173 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.RevenueReport48101}
+            element={
+              <PrivateRoute>
+                <RevenueReport48101 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.RevenueReport48100}
+            element={
+              <PrivateRoute>
+                <RevenueReport48100 />
+              </PrivateRoute>
+            }
+          />
 
           <Route
             path={routes.transit_4250}
             element={
               <PrivateRoute>
                 <Transit_4250 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4257}
+            element={
+              <PrivateRoute>
+                <TransitReport4257 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4258}
+            element={
+              <PrivateRoute>
+                <TransitReport4258 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4259}
+            element={
+              <PrivateRoute>
+                <TransitReport4259 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4265}
+            element={
+              <PrivateRoute>
+                <TransitReport4265 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4266}
+            element={
+              <PrivateRoute>
+                <TransitReport4266 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4267}
+            element={
+              <PrivateRoute>
+                <TransitReport4267 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4268}
+            element={
+              <PrivateRoute>
+                <TransitReport4268 />
               </PrivateRoute>
             }
           />

@@ -1,5 +1,4 @@
-import RevenueReport4153 from "../views/report/RevenueReport4153";
-import RevenueReport4161 from "../views/report/RevenueReport4161";
+import TransitReport4267 from "../views/report/TransitReport4267";
 
 export const topBarHeight = 64;
 export const sideNavWidth = 205;
@@ -53,6 +52,13 @@ export const AUTHORITIES = {
   REPORT_4586_DPS: 'REPORT:4586-DPS',
   REPORT_4590_DPS: 'REPORT:4590-DPS',
   REPORT_4591_DPS: 'REPORT:4591-DPS',
+  TransitReport4257:'/TransitReport4257',
+  TransitReport4258:'/TransitReport4258',
+  TransitReport4259:'/TransitReport4259',
+  TransitReport4265:'/TransitReport4265',
+  TransitReport4266:'/TransitReport4266',
+  TransitReport4268:'/TransitReport4268',
+  TransitReport4267:'/TransitReport4267',
   REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
   RevenueReport4157_1400:'RevenueReport4157_1400',
   RevenueReport4159:'/RevenueReport4159',
@@ -63,6 +69,9 @@ export const AUTHORITIES = {
   RevenueReport4163:'/RevenueReport4163',
   RevenueReport4161:'/RevenueReport4161',
   RevenueReport4162:'/RevenueReport4162',
+  RevenueReport4173:'/RevenueReport4173',
+  RevenueReport48101:'/RevenueReport48101',
+  RevenueReport48100:'/RevenueReport48100',
   RevenueReport4164_1400:'/RevenueReport4164_1400',
   RevenueReport4158:'RevenueReport4158'
 };

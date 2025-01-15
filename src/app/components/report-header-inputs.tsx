@@ -10,6 +10,8 @@ import{TransitType}from './Transit-type';
 import{Status2} from './status1'
 import { BasedOn } from './based';
 import { ModOfPayment } from './ModOfPayment';
+import { TransitType2 } from './Transit2';
+import { BasedOn2 } from './BasedOn2';
 //checked
 
 interface CustomsInterface {
@@ -26,9 +28,11 @@ export interface SearchData {
   goodsCategory?:String;
   UserName?:String;
   transitType?:String;
+  transitType2?:String;
   status1?:String,
   modeOfPay?:String;
-  based1?:String
+  based1?:String;
+  basedOn2?:String;
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
@@ -42,6 +46,8 @@ interface ReportHeaderInputsProps {
   showPayDate?: boolean,
   showExitDate?: boolean,
   showArrivalDate?:boolean,
+  showValidationDate?:boolean,
+  showDepartureDate?:boolean,
   showFinalExitDate?:boolean,
   showOperationDate?: boolean,
   showStartDate?: boolean;
@@ -51,9 +57,11 @@ interface ReportHeaderInputsProps {
   showCustomsProcedure?: boolean;
   showDestinationCustomsList?:boolean,
   showTransitType?:boolean,
+  showTransitType2?:boolean,
   showStatus1?:boolean,
   ShowModOfPayment?:boolean,
   showbased1?:boolean,
+  showBasedOn2?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
@@ -72,6 +80,8 @@ export const ReportHeaderInputs = ({
   showOperationDate,
   showExitDate,
   showArrivalDate,
+  showValidationDate,
+  showDepartureDate,
   showFinalExitDate,
   showStartDate,
   showEndDate,
@@ -79,8 +89,10 @@ export const ReportHeaderInputs = ({
   ShowRegisterNo,
   showCustomsProcedure,
   showTransitType,
+  showTransitType2,
   showStatus1,
   showbased1,
+  showBasedOn2,
   ShowModOfPayment,
   showExemptionType,
   showStatus,
@@ -95,11 +107,13 @@ export const ReportHeaderInputs = ({
   const [companyTin, setCompanyTin] = useState<string>('');
   const [customsProcedure, setCustomsProcedure] = useState<string>('');
   const [transitType, setTransitType] = useState<string>('');
+  const [transitType2, setTransitType2] = useState<string>('');
   const [exemptedStatus, setExemptedStatus] = useState<string>('');
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
   const [status, setStatus] = useState<string>('');
   const [based1, setBased1] = useState<string>('');
+  const [based2, setBased2] = useState<string>('');
   const [modofpayment, setModOfPayment] = useState<string>('');
   const [status1, setStatus1] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
@@ -129,13 +143,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1||modofpayment
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1||modofpayment||transitType2||based2
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1,modofpayment
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1,modofpayment,transitType2,based2
   ]);
 
   const formatData = () => {
@@ -162,9 +176,13 @@ export const ReportHeaderInputs = ({
 
       }),
       ...(showTransitType && {
-        transitType
+        transitType:transitType
       
 
+      }),
+      ...(showTransitType2 && {
+        transitType:transitType2
+    
       }),
       ...(showStatus1 && {
         truckStatus:status1
@@ -173,6 +191,9 @@ export const ReportHeaderInputs = ({
       }),
       ...(showbased1 && {
        basedOn: based1
+      }),
+      ...(showBasedOn2 && {
+       basedOn: based2
       }),
       ...(ShowModOfPayment && {
         modeOfPay: modofpayment
@@ -217,10 +238,22 @@ export const ReportHeaderInputs = ({
             <label htmlFor="dateType5" style={{ marginLeft: "0.3em" }}>ArrivalDate</label>
           </Col>
         </Condition>
-        <Condition condition={showArrivalDate}>
+        <Condition condition={showValidationDate}>
           <Col xs={6} md={4} lg={2} xl={2}>
-            <RadioButton inputId="dateType6" value="FinExitDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'FinExitDate'} />
-            <label htmlFor="dateType6" style={{ marginLeft: "0.3em" }}>FinalExitDate</label>
+            <RadioButton inputId="dateType6" value="ValidDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'ValidDate'} />
+            <label htmlFor="dateType6" style={{ marginLeft: "0.3em" }}>ValidationDate</label>
+          </Col>
+        </Condition>
+        <Condition condition={showFinalExitDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType7" value="FinExitDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'FinExitDate'} />
+            <label htmlFor="dateType7" style={{ marginLeft: "0.3em" }}>FinalExitDate</label>
+          </Col>
+        </Condition>
+        <Condition condition={showDepartureDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType8" value="DepDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'DepDate'} />
+            <label htmlFor="dateType8" style={{ marginLeft: "0.3em" }}>DepartureDate</label>
           </Col>
         </Condition>
         <Condition condition={showOperationDate}>
@@ -340,6 +373,19 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+        <Condition condition={showTransitType2}>
+          <TransitType2
+            id="TransitType"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={transitType2}
+            onChange={(e) => {
+              setTransitType2(e.target.value);
+            }}
+          />
+        </Condition>
         <Condition condition={showStatus1}>
           <Status2
             id="Status"
@@ -363,6 +409,19 @@ export const ReportHeaderInputs = ({
             value={based1}
             onChange={(e) => {
               setBased1(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showBasedOn2}>
+          <BasedOn
+            id="Based On"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={based2}
+            onChange={(e) => {
+              setBased2(e.target.value);
             }}
           />
         </Condition>
