@@ -25,6 +25,8 @@ export interface SearchData {
   companyTin?: number;
   RegisterNo?: number;
   hsCode?: number;
+  ForeignRegNo?:number;
+  NumPalate?:number;
   goodsCategory?:String;
   UserName?:String;
   transitType?:String;
@@ -64,6 +66,8 @@ interface ReportHeaderInputsProps {
   showBasedOn2?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
+  showNumPalate?:boolean;
+  showForeignRegNo?:boolean;
   showExemptionType?: boolean;
   showStatus?: boolean;
   showGoods?: boolean;
@@ -87,6 +91,7 @@ export const ReportHeaderInputs = ({
   showEndDate,
   ShowTinNumber,
   ShowRegisterNo,
+  showForeignRegNo,
   showCustomsProcedure,
   showTransitType,
   showTransitType2,
@@ -101,6 +106,7 @@ export const ReportHeaderInputs = ({
   showCustomsList,
   showDestinationCustomsList,
   ShowHsCode,
+  showNumPalate,
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
@@ -118,6 +124,8 @@ export const ReportHeaderInputs = ({
   const [status1, setStatus1] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
+  const [foreignRegNo, setForeignRegNo] = useState<string>('');
+  const [numPalate, setNumPalate] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
   const [username, setUserName] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
@@ -143,13 +151,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1||modofpayment||transitType2||based2
+    if (startDate || endDate || companyTin || customsProcedure || dateType ||numPalate|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1,modofpayment,transitType2,based2
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,numPalate,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
   ]);
 
   const formatData = () => {
@@ -160,6 +168,8 @@ export const ReportHeaderInputs = ({
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
       ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
       ...(ShowRegisterNo && { registerNo:parseInt(registerNo)}),
+      ...(showForeignRegNo && { foreignRegNo:parseInt(foreignRegNo)}),
+      ...(showNumPalate && { numPalate:parseInt(numPalate)}),
       ...(showGoods && {goodsCategory:goods}),
       ...(showUserName && {userName:username}),
       ...(showCustomsProcedure && {
@@ -343,6 +353,32 @@ export const ReportHeaderInputs = ({
             value={registerNo}
             onChange={(e) => {
               setRegisterNo(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showForeignRegNo}>
+          <NumberInput
+            label="ForeignRegNo"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={foreignRegNo}
+            onChange={(e) => {
+              setForeignRegNo(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showNumPalate}>
+          <NumberInput
+            label="NumPalate"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={numPalate}
+            onChange={(e) => {
+              setNumPalate(e.target.value);
             }}
           />
         </Condition>

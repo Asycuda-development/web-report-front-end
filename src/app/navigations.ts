@@ -1,4 +1,6 @@
 import TransitReport4267 from "./views/report/TransitReport4267";
+import TransitReport4275 from "./views/report/TransitReport4275";
+import TransitReport4276 from "./views/report/TransitReport4276";
 
 export const routes = {
   revenue4150: '/revenue4150',
@@ -24,6 +26,10 @@ export const routes = {
   TransitReport4266:'/TransitReport4266',
   TransitReport4267:'/TransitReport4267',
   TransitReport4268:'/TransitReport4268',
+  TransitReport4275:'/TransitReport4275',
+  TransitReport4276:'/TransitReport4276',
+  TransitReport4277:'/TransitReport4277',
+  TransitReport4278:'/TransitReport4278',
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
   DPS_4556: '/DpsReport4556',

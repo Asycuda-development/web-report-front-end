@@ -1,4 +1,6 @@
 import TransitReport4267 from "../views/report/TransitReport4267";
+import TransitReport4275 from "../views/report/TransitReport4275";
+import TransitReport4276 from "../views/report/TransitReport4276";
 
 export const topBarHeight = 64;
 export const sideNavWidth = 205;
@@ -59,6 +61,10 @@ export const AUTHORITIES = {
   TransitReport4266:'/TransitReport4266',
   TransitReport4268:'/TransitReport4268',
   TransitReport4267:'/TransitReport4267',
+  TransitReport4275:'/TransitReport4275',
+  TransitReport4276:'/TransitReport4276',
+  TransitReport4277:'/TransitReport4277',
+  TransitReport4278:'/TransitReport4278',
   REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
   RevenueReport4157_1400:'RevenueReport4157_1400',
   RevenueReport4159:'/RevenueReport4159',

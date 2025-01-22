@@ -712,6 +712,50 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.TransitReport4268);
                 }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4275,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4275',
+                command: () => {
+                  navigation(routes.TransitReport4275);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4276,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4276',
+                command: () => {
+                  navigation(routes.TransitReport4276);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4277,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4277',
+                command: () => {
+                  navigation(routes.TransitReport4277);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4278,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4278',
+                command: () => {
+                  navigation(routes.TransitReport4278);
+                }
               }
             ]
           }

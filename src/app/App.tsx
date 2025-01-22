@@ -57,6 +57,10 @@ import TransitReport4265 from './views/report/TransitReport4265';
 import TransitReport4266 from './views/report/TransitReport4266';
 import TransitReport4267 from './views/report/TransitReport4267';
 import TransitReport4268 from './views/report/TransitReport4268';
+import TransitReport4275 from './views/report/TransitReport4275';
+import TransitReport4276 from './views/report/TransitReport4276';
+import TransitReport4277 from './views/report/TransitReport4277';
+import TransitReport4278 from './views/report/TransitReport4278';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -318,6 +322,38 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <TransitReport4268 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4275}
+            element={
+              <PrivateRoute>
+                <TransitReport4275 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4276}
+            element={
+              <PrivateRoute>
+                <TransitReport4276 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4277}
+            element={
+              <PrivateRoute>
+                <TransitReport4277 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4278}
+            element={
+              <PrivateRoute>
+                <TransitReport4278 />
               </PrivateRoute>
             }
           />
