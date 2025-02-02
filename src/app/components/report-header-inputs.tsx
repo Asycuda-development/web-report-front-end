@@ -12,6 +12,7 @@ import { BasedOn } from './based';
 import { ModOfPayment } from './ModOfPayment';
 import { TransitType2 } from './Transit2';
 import { BasedOn2 } from './BasedOn2';
+import { AcceptRv } from './A_R_Value';
 //checked
 
 interface CustomsInterface {
@@ -25,6 +26,7 @@ export interface SearchData {
   companyTin?: number;
   RegisterNo?: number;
   hsCode?: number;
+  farwardCod?:number;
   ForeignRegNo?:number;
   NumPalate?:number;
   goodsCategory?:String;
@@ -34,6 +36,7 @@ export interface SearchData {
   status1?:String,
   modeOfPay?:String;
   based1?:String;
+  AcceptR?:String;
   basedOn2?:String;
   customsProcedure?: string | null;
   CustomsCode?: string;
@@ -46,6 +49,8 @@ interface ReportHeaderInputsProps {
   showRegDate?: boolean,
   showAssesDate?: boolean,
   showPayDate?: boolean,
+  showLinkedDate?:boolean,
+  showCreationDate?:boolean,
   showExitDate?: boolean,
   showArrivalDate?:boolean,
   showValidationDate?:boolean,
@@ -63,9 +68,11 @@ interface ReportHeaderInputsProps {
   showStatus1?:boolean,
   ShowModOfPayment?:boolean,
   showbased1?:boolean,
+  showAcceptR?:boolean,
   showBasedOn2?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
+  showfarwarCode?:boolean;
   showNumPalate?:boolean;
   showForeignRegNo?:boolean;
   showExemptionType?: boolean;
@@ -83,6 +90,8 @@ export const ReportHeaderInputs = ({
   showPayDate,
   showOperationDate,
   showExitDate,
+  showLinkedDate,
+  showCreationDate,
   showArrivalDate,
   showValidationDate,
   showDepartureDate,
@@ -97,6 +106,7 @@ export const ReportHeaderInputs = ({
   showTransitType2,
   showStatus1,
   showbased1,
+  showAcceptR,
   showBasedOn2,
   ShowModOfPayment,
   showExemptionType,
@@ -106,6 +116,7 @@ export const ReportHeaderInputs = ({
   showCustomsList,
   showDestinationCustomsList,
   ShowHsCode,
+  showfarwarCode,
   showNumPalate,
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
@@ -119,10 +130,12 @@ export const ReportHeaderInputs = ({
   const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
   const [status, setStatus] = useState<string>('');
   const [based1, setBased1] = useState<string>('');
+  const [acceptR, setAcceptR] = useState<string>('');
   const [based2, setBased2] = useState<string>('');
   const [modofpayment, setModOfPayment] = useState<string>('');
   const [status1, setStatus1] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
+  const [farwardCod, setFarwardCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
   const [foreignRegNo, setForeignRegNo] = useState<string>('');
   const [numPalate, setNumPalate] = useState<string>('');
@@ -151,13 +164,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType ||numPalate|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
+    if (startDate || endDate || companyTin ||acceptR ||customsProcedure || dateType ||numPalate||farwardCod|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,numPalate,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
+  }, [startDate, endDate, companyTin, customsProcedure,acceptR, dateType, exemptedStatus,numPalate,farwardCod,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
   ]);
 
   const formatData = () => {
@@ -167,6 +180,7 @@ export const ReportHeaderInputs = ({
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
       ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
+      ...(showfarwarCode && { forwarderCode:parseInt(farwardCod)}),
       ...(ShowRegisterNo && { registerNo:parseInt(registerNo)}),
       ...(showForeignRegNo && { foreignRegNo:parseInt(foreignRegNo)}),
       ...(showNumPalate && { numPalate:parseInt(numPalate)}),
@@ -187,6 +201,11 @@ export const ReportHeaderInputs = ({
       }),
       ...(showTransitType && {
         transitType:transitType
+      
+
+      }),
+      ...(showAcceptR && {
+        acceptR:acceptR
       
 
       }),
@@ -264,6 +283,18 @@ export const ReportHeaderInputs = ({
           <Col xs={6} md={4} lg={2} xl={2}>
             <RadioButton inputId="dateType8" value="DepDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'DepDate'} />
             <label htmlFor="dateType8" style={{ marginLeft: "0.3em" }}>DepartureDate</label>
+          </Col>
+        </Condition>
+        <Condition condition={showLinkedDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType9" value="LinkedDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'LinkedDate'} />
+            <label htmlFor="dateType9" style={{ marginLeft: "0.3em" }}>LinkedDate</label>
+          </Col>
+        </Condition>
+        <Condition condition={showCreationDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton inputId="dateType10" value="CreationDate" onChange={(e) => setDateType(e.value)} checked={dateType === 'CreationDate'} />
+            <label htmlFor="dateType10" style={{ marginLeft: "0.3em" }}>CreationDate</label>
           </Col>
         </Condition>
         <Condition condition={showOperationDate}>
@@ -382,6 +413,19 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+        <Condition condition={showfarwarCode}>
+          <NumberInput
+            label="FarwardCode"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={farwardCod}
+            onChange={(e) => {
+              setFarwardCode(e.target.value);
+            }}
+          />
+        </Condition>
 
         <Condition condition={showCustomsProcedure}>
           <CustomsProcedure
@@ -406,6 +450,19 @@ export const ReportHeaderInputs = ({
             value={transitType}
             onChange={(e) => {
               setTransitType(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showAcceptR}>
+          <AcceptRv
+            id="Accept Roufes value"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={acceptR}
+            onChange={(e) => {
+              setAcceptR(e.target.value);
             }}
           />
         </Condition>

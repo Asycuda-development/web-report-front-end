@@ -1,6 +1,8 @@
 import TransitReport4267 from "./views/report/TransitReport4267";
 import TransitReport4275 from "./views/report/TransitReport4275";
 import TransitReport4276 from "./views/report/TransitReport4276";
+import ValuationReport4653 from "./views/report/ValuationReport4653";
+import ValuationReport4656 from "./views/report/ValuationReport4656";
 
 export const routes = {
   revenue4150: '/revenue4150',
@@ -19,6 +21,9 @@ export const routes = {
   RevenueReport48101:'/RevenueReport48101',
   RevenueReport48100:'/RevenueReport48100',
   TransitReport4257:'/TransitReport4257',
+  TransitReport4279:'/TransitReport4279',
+  TransitReport4280:'/TransitReport4280',
+  TransitReport4281:'/TransitReport4281',
   transit_4250: '/transit_4250',
   TransitReport4258: '/TransitReport4258',
   TransitReport4259: '/TransitReport4259',
@@ -30,6 +35,13 @@ export const routes = {
   TransitReport4276:'/TransitReport4276',
   TransitReport4277:'/TransitReport4277',
   TransitReport4278:'/TransitReport4278',
+  ValuationReport4652:'/ValuationReport4652',
+  ValuationReport4653:'/ValuationReport4653',
+  ValuationReport4654:'/ValuationReport4654',
+  ValuationReport4656:'/ValuationReport4656',
+  ValuationReport4657:'/ValuationReport4657',
+  ValuationReport4650:'/ValuationReport4650',
+  
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
   DPS_4556: '/DpsReport4556',

@@ -61,6 +61,15 @@ import TransitReport4275 from './views/report/TransitReport4275';
 import TransitReport4276 from './views/report/TransitReport4276';
 import TransitReport4277 from './views/report/TransitReport4277';
 import TransitReport4278 from './views/report/TransitReport4278';
+import TransitReport4279 from './views/report/TransitReport4279';
+import TransitReport4280 from './views/report/TransitReport4280';
+import TransitReport4281 from './views/report/TransitReport4281';
+import ValuationReport4652 from './views/report/ValuationReport4652';
+import ValuationReport4653 from './views/report/ValuationReport4653';
+import ValuationReport4654 from './views/report/ValuationReport4654';
+import ValuationReport4656 from './views/report/ValuationReport4656';
+import ValuationReport4657 from './views/report/ValuationReport4657';
+import ValuationReport4650 from './views/report/ValuationReport4650';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -354,6 +363,78 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <TransitReport4278 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4279}
+            element={
+              <PrivateRoute>
+                <TransitReport4279 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4280}
+            element={
+              <PrivateRoute>
+                <TransitReport4280 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.TransitReport4281}
+            element={
+              <PrivateRoute>
+                <TransitReport4281 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ValuationReport4652}
+            element={
+              <PrivateRoute>
+                <ValuationReport4652 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ValuationReport4653}
+            element={
+              <PrivateRoute>
+                <ValuationReport4653 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ValuationReport4654}
+            element={
+              <PrivateRoute>
+                <ValuationReport4654 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ValuationReport4656}
+            element={
+              <PrivateRoute>
+                <ValuationReport4656 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ValuationReport4657}
+            element={
+              <PrivateRoute>
+                <ValuationReport4657 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ValuationReport4650}
+            element={
+              <PrivateRoute>
+                <ValuationReport4650 />
               </PrivateRoute>
             }
           />

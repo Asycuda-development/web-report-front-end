@@ -756,6 +756,39 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.TransitReport4278);
                 }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4279,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4279',
+                command: () => {
+                  navigation(routes.TransitReport4279);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4280,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4280',
+                command: () => {
+                  navigation(routes.TransitReport4280);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4281,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4281',
+                command: () => {
+                  navigation(routes.TransitReport4281);
+                }
               }
             ]
           }
@@ -939,7 +972,7 @@ const MatxVerticalNav = () => {
             ]
           }
         ],
-        [
+        /*[
           {
             className: classNames({
               'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -963,7 +996,7 @@ const MatxVerticalNav = () => {
               }
             ]
           }
-        ],
+        ]*/
         [
           {
             className: classNames({
@@ -1002,6 +1035,84 @@ const MatxVerticalNav = () => {
             ]
           }
         ]
+        ,
+        [
+          {
+            className: classNames({
+              'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+            }),
+            label: 'Valuation',
+            items: [
+                  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4652,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4652',
+                command: () => {
+                  navigation(routes.ValuationReport4652);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4653,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4653',
+                command: () => {
+                  navigation(routes.ValuationReport4653);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4654,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4654',
+                command: () => {
+                  navigation(routes.ValuationReport4654);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4656,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4656',
+                command: () => {
+                  navigation(routes.ValuationReport4656);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4657,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4657',
+                command: () => {
+                  navigation(routes.ValuationReport4657);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4650,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4650',
+                command: () => {
+                  navigation(routes.ValuationReport4650);
+                }
+              }
+            ]
+          }
+        ]
       ]
     }
   ];
@@ -1016,7 +1127,7 @@ const MatxVerticalNav = () => {
       }}
       model={items}
       orientation="vertical"
-      breakpoint={'960px'}
+      breakpoint={'1060px'}
     />
   );
 };
