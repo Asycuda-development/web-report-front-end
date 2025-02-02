@@ -13,6 +13,15 @@ export const routes = {
   ////////////  Transit Reprots Routes  ///////////////
   ////////////////////////////////////////////////////
   transit_4250: '/transit_4250',
+  Transit_4251: '/transit_4251',
+  Transit_4252: '/transit_4252',
+  Transit_4270: '/transit_4270',
+  Transit_4272: '/transit_4272',
+  Transit_4274: '/transit_4274',
+  Transit_4271: '/transit_4271',
+  Transit_4282: '/transit_4282',
+  Transit_4283: '/transit_4283',
+  Transit_4284: '/transit_4284',
   //////////////////////////////////////////////////////
   ////////////     DPS  Reprots Routes  ///////////////
   ////////////////////////////////////////////////////

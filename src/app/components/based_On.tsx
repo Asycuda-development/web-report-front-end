@@ -1,4 +1,3 @@
-import React from 'react';
 import { Dropdown, DropdownProps } from './base-component';
 
 const basedOn = [

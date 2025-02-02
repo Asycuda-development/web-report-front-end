@@ -352,6 +352,9 @@ const MatxVerticalNav = () => {
                 }
               },
               {
+                //////////////////////////////////////////////////////
+                ////////////  DPS Reprots Routes  ///////////////
+                ////////////////////////////////////////////////////
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -540,6 +543,9 @@ const MatxVerticalNav = () => {
         ],
         [
           {
+            //////////////////////////////////////////////////////
+            ////////////  Transit Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
             className: classNames({
               'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                 AUTHORITIES.REPORT_4250_TRANSIT,
@@ -559,12 +565,123 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.transit_4250);
                 }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4251_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4251- Transit',
+                command: () => {
+                  navigation(routes.Transit_4251);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4252_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4252- Transit',
+                command: () => {
+                  navigation(routes.Transit_4252);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4270_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4270- Transit',
+                command: () => {
+                  navigation(routes.Transit_4270);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4272_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4272- Transit',
+                command: () => {
+                  navigation(routes.Transit_4272);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4271_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4271- Transit',
+                command: () => {
+                  navigation(routes.Transit_4271);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4274_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4274- Transit',
+                command: () => {
+                  navigation(routes.Transit_4274);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4282_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4282- Transit',
+                command: () => {
+                  navigation(routes.Transit_4282);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4283_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4283- Transit',
+                command: () => {
+                  navigation(routes.Transit_4283);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.REPORT_4284_TRANSIT,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4284- Transit',
+                command: () => {
+                  navigation(routes.Transit_4284);
+                }
               }
             ]
           }
         ],
         [
           {
+            //////////////////////////////////////////////////////
+            ////////////  Revenue Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
             className: classNames({
               'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                 AUTHORITIES.REPORT_4150_REVENUE,
@@ -704,12 +821,31 @@ const MatxVerticalNav = () => {
             ]
           }
         ],
+        // [
+        //   {
+        //     className: classNames({
+        //       'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+        //     }),
+        //     label: 'Manifest',
+        //     items: [
+        //       {
+        //         className: classNames({
+        //           'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+        //         }),
+        //         label: 'Sigtas Report',
+        //         command: () => {
+        //           navigation('/dashboard');
+        //         }
+        //       }
+        //     ]
+        //   }
+        // ],
         [
           {
             className: classNames({
               'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
             }),
-            label: 'Manifest',
+            label: 'jjjj',
             items: [
               {
                 className: classNames({

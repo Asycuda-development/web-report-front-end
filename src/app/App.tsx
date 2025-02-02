@@ -38,6 +38,18 @@ import Revenue_4165 from './views/report/Revenue_4165';
 import Revenue_4171 from './views/report/Revenue_4171';
 import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
 import Revenue_4172 from './views/report/Revenue_4172';
+//////////////////////////////////////////////////////
+////////////  Transit Reprots Import  ///////////////
+////////////////////////////////////////////////////
+import Transit_4251 from './views/report/Transit_4251';
+import Transit_4252 from './views/report/Transit_4252';
+import Transit_4270 from './views/report/Transit_4270';
+import Transit_4272 from './views/report/Transit_4272';
+import Transit_4274 from './views/report/Transit_4274';
+import Transit_4282 from './views/report/Transit_4282';
+import Transit_4271 from './views/report/Transit_4271';
+import Transit_4283 from './views/report/Transit_4283';
+import Transit_4284 from './views/report/Transit_4284';
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
@@ -140,7 +152,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.revenue4155}
             element={
@@ -191,6 +202,78 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Transit_4250 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4251}
+            element={
+              <PrivateRoute>
+                <Transit_4251 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4252}
+            element={
+              <PrivateRoute>
+                <Transit_4252 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4270}
+            element={
+              <PrivateRoute>
+                <Transit_4270 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4271}
+            element={
+              <PrivateRoute>
+                <Transit_4271 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4272}
+            element={
+              <PrivateRoute>
+                <Transit_4272 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4274}
+            element={
+              <PrivateRoute>
+                <Transit_4274 />
+              </PrivateRoute>
+            }
+          />{' '}
+          <Route
+            path={routes.Transit_4282}
+            element={
+              <PrivateRoute>
+                <Transit_4282 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4283}
+            element={
+              <PrivateRoute>
+                <Transit_4283 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4284}
+            element={
+              <PrivateRoute>
+                <Transit_4284 />
               </PrivateRoute>
             }
           />
@@ -319,7 +402,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.Roles}
             element={
