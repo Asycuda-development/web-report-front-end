@@ -13,6 +13,10 @@ import { ModOfPayment } from './ModOfPayment';
 import { TransitType2 } from './Transit2';
 import { BasedOn2 } from './BasedOn2';
 import { AcceptRv } from './A_R_Value';
+import { OpreationName } from './OpreationName';
+import { BasedOnCondation } from './BasedOnCondation';
+import { InputNumber } from 'primereact/inputnumber';
+import { InputText } from 'primereact/inputtext';
 //checked
 
 interface CustomsInterface {
@@ -26,6 +30,7 @@ export interface SearchData {
   companyTin?: number;
   RegisterNo?: number;
   hsCode?: number;
+  ExemptionRepNo?:number;
   farwardCod?:number;
   ForeignRegNo?:number;
   NumPalate?:number;
@@ -34,8 +39,12 @@ export interface SearchData {
   transitType?:String;
   transitType2?:String;
   status1?:String,
+  OpreationOptionValuation?:boolean,
+  OpreationOptionValuationValue?:boolean,
   modeOfPay?:String;
   based1?:String;
+  basedOnExemption?:String;
+  basedOnExemptionValue?:String;
   AcceptR?:String;
   basedOn2?:String;
   customsProcedure?: string | null;
@@ -66,12 +75,17 @@ interface ReportHeaderInputsProps {
   showTransitType?:boolean,
   showTransitType2?:boolean,
   showStatus1?:boolean,
+  showOpreationOptionValuation?:boolean,
+  showOpreationOptionValuationValue?:boolean,
   ShowModOfPayment?:boolean,
   showbased1?:boolean,
   showAcceptR?:boolean,
   showBasedOn2?:boolean,
+  showBasedOnExemption?:boolean,
+  showBasedOnExemptionValue?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
+  showExemptionRepNo?:boolean;
   showfarwarCode?:boolean;
   showNumPalate?:boolean;
   showForeignRegNo?:boolean;
@@ -105,7 +119,11 @@ export const ReportHeaderInputs = ({
   showTransitType,
   showTransitType2,
   showStatus1,
+  showOpreationOptionValuation,
+  showOpreationOptionValuationValue,
   showbased1,
+  showBasedOnExemption,
+  showBasedOnExemptionValue,
   showAcceptR,
   showBasedOn2,
   ShowModOfPayment,
@@ -116,6 +134,7 @@ export const ReportHeaderInputs = ({
   showCustomsList,
   showDestinationCustomsList,
   ShowHsCode,
+  showExemptionRepNo,
   showfarwarCode,
   showNumPalate,
 }: ReportHeaderInputsProps) => {
@@ -130,11 +149,17 @@ export const ReportHeaderInputs = ({
   const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
   const [status, setStatus] = useState<string>('');
   const [based1, setBased1] = useState<string>('');
+  const [basedOnExemption, setBasedOnExemption] = useState<string>('');
+  const [basedOnExemptionValue, setBasedOnExemptionValue] = useState<string>('');
+
   const [acceptR, setAcceptR] = useState<string>('');
   const [based2, setBased2] = useState<string>('');
   const [modofpayment, setModOfPayment] = useState<string>('');
   const [status1, setStatus1] = useState<string>('');
+  const [opreationOptionValuation, setOpreationOptionValuation] = useState<string>('');
+  const [opreationOptionValuationValue, setOpreationOptionValuationValue] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
+  const [exemptionRepNo, setExemptionRepNo] = useState<string>('');
   const [farwardCod, setFarwardCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
   const [foreignRegNo, setForeignRegNo] = useState<string>('');
@@ -164,13 +189,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin ||acceptR ||customsProcedure || dateType ||numPalate||farwardCod|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
+    if (startDate || endDate || companyTin ||acceptR ||customsProcedure ||exemptionRepNo||basedOnExemption||opreationOptionValuation||opreationOptionValuationValue|| dateType ||numPalate||farwardCod|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure,acceptR, dateType, exemptedStatus,numPalate,farwardCod,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
+  }, [startDate, endDate, companyTin, customsProcedure,acceptR,exemptionRepNo, dateType,opreationOptionValuation,basedOnExemption,opreationOptionValuationValue, exemptedStatus,numPalate,farwardCod,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
   ]);
 
   const formatData = () => {
@@ -218,11 +243,25 @@ export const ReportHeaderInputs = ({
       
 
       }),
+      ...(showOpreationOptionValuation && {
+        BasedOn:opreationOptionValuation
+      
+
+      }),
+      ...(showOpreationOptionValuationValue && {
+        basedOnValue:opreationOptionValuationValue
+      
+
+      }),
       ...(showbased1 && {
        basedOn: based1
       }),
       ...(showBasedOn2 && {
        basedOn: based2
+      }),
+      ...(showBasedOnExemption && { basedOn: basedOnExemption
+      }),
+      ...(showBasedOnExemptionValue && { basedOnValue: basedOnExemptionValue
       }),
       ...(ShowModOfPayment && {
         modeOfPay: modofpayment
@@ -492,6 +531,32 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
+        <Condition condition={showOpreationOptionValuation}>
+          <OpreationName
+            id="Opreation Name"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={opreationOptionValuation}
+            onChange={(e) => {
+              setOpreationOptionValuation(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showOpreationOptionValuationValue}>
+          <NumberInput
+            id="Opreation Name value"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={opreationOptionValuationValue}
+            onChange={(e) => {
+              setOpreationOptionValuationValue(e.target.value);
+            }}
+          />
+        </Condition>
         <Condition condition={showbased1}>
           <BasedOn
             id="Based On"
@@ -515,6 +580,32 @@ export const ReportHeaderInputs = ({
             value={based2}
             onChange={(e) => {
               setBased2(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showBasedOnExemption}>
+          <BasedOnCondation
+            id="Based On Cndation"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={basedOnExemption}
+            onChange={(e) => {
+              setBasedOnExemption(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showBasedOnExemptionValue}>
+          <NumberInput
+            id="BasedOn Value"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={basedOnExemptionValue}
+            onChange={(e) => {
+              setBasedOnExemptionValue(e.target.value);
             }}
           />
         </Condition>
@@ -605,6 +696,19 @@ export const ReportHeaderInputs = ({
             value={hsCode}
             onChange={(e) => {
               setHsCode(e.target.value);
+            }}
+          />
+        </Condition>
+          <Condition condition={showExemptionRepNo}>
+          <NumberInput
+            label="Exemption RepNo"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={exemptionRepNo}
+            onChange={(e) => {
+              setExemptionRepNo(e.target.value);
             }}
           />
         </Condition>

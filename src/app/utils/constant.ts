@@ -1,3 +1,4 @@
+import SelectivityReport4356 from "../views/report/SelectivityReport4356";
 import TransitReport4267 from "../views/report/TransitReport4267";
 import TransitReport4275 from "../views/report/TransitReport4275";
 import TransitReport4276 from "../views/report/TransitReport4276";
@@ -74,6 +75,16 @@ export const AUTHORITIES = {
   ValuationReport4656:'/ValuationReport4656',
   ValuationReport4657:'/ValuationReport4657',
   ValuationReport4650:'/ValuationReport4650',
+  ValuationReport4658:'/ValuationReport4658',
+  ExemptionReport4750:'/ExemptionReport4750',
+  ExemptionReport4752:'/ExemptionReport4752',
+  SelectivityReport4350:'/SelectivityReport4350',
+  SelectivityReport4351:'/SelectivityReport4351',
+  SelectivityReport4352:'/SelectivityReport4352',
+  SelectivityReport4353:'/SelectivityReport4353',
+  SelectivityReport4354:'/SelectivityReport4354',
+  SelectivityReport4355:'/SelectivityReport4355',
+  SelectivityReport4356:'/SelectivityReport4356',
   REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
   RevenueReport4157_1400:'RevenueReport4157_1400',
   RevenueReport4159:'/RevenueReport4159',

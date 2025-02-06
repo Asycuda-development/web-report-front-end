@@ -70,6 +70,16 @@ import ValuationReport4654 from './views/report/ValuationReport4654';
 import ValuationReport4656 from './views/report/ValuationReport4656';
 import ValuationReport4657 from './views/report/ValuationReport4657';
 import ValuationReport4650 from './views/report/ValuationReport4650';
+import ValuationReport4658 from './views/report/ValuationReport4658';
+import ExemptionReport4750 from './views/report/ExemptionReport4750';
+import ExemptionReport4752 from './views/report/ExemptionReport4752';
+import SelectivityReport4350 from './views/report/SelectivityReport4350';
+import SelectivityReport4351 from './views/report/SelectivityReport4351';
+import SelectivityReport4352 from './views/report/SelectivityReport4352';
+import SelectivityReport4353 from './views/report/SelectivityReport4353';
+import SelectivityReport4354 from './views/report/SelectivityReport4354';
+import SelectivityReport4355 from './views/report/SelectivityReport4355';
+import SelectivityReport4356 from './views/report/SelectivityReport4356';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -438,6 +448,87 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+          <Route
+            path={routes.ValuationReport4658}
+            element={
+              <PrivateRoute>
+                <ValuationReport4658 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ExemptionReport4750}
+            element={
+              <PrivateRoute>
+                <ExemptionReport4750 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.ExemptionReport4752}
+            element={
+              <PrivateRoute>
+                <ExemptionReport4752 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.SelectivityReport4350}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4350 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.SelectivityReport4351}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4351 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.SelectivityReport4352}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4352 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.SelectivityReport4353}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4353 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.SelectivityReport4354}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4354 />
+              </PrivateRoute>
+            }
+          />
+           <Route
+            path={routes.SelectivityReport4355}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4355 />
+              </PrivateRoute>
+            }
+          />
+              <Route
+            path={routes.SelectivityReport4356}
+            element={
+              <PrivateRoute>
+                <SelectivityReport4356 />
+              </PrivateRoute>
+            }
+          />
+
 
           <Route
             path={routes.DPS_4550}

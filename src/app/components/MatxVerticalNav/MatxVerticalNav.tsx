@@ -1006,11 +1006,73 @@ const MatxVerticalNav = () => {
             items: [
               {
                 className: classNames({
-                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4350,
+                    AUTHORITIES.ADMIN])
                 }),
-                label: 'Sigtas Report',
+                label: 'SelectivityReport4350',
                 command: () => {
-                  navigation('/dashboard');
+                  navigation(routes.SelectivityReport4350);
+                }
+              }  ,   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4351,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4351',
+                command: () => {
+                  navigation(routes.SelectivityReport4351);
+                }
+              },   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4352,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4352',
+                command: () => {
+                  navigation(routes.SelectivityReport4352);
+                }
+              },   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4353,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4353',
+                command: () => {
+                  navigation(routes.SelectivityReport4353);
+                }
+              },   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4354,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4354',
+                command: () => {
+                  navigation(routes.SelectivityReport4354);
+                }
+              },   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4355,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4355',
+                command: () => {
+                  navigation(routes.SelectivityReport4355);
+                }
+              },   {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4356,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4356',
+                command: () => {
+                  navigation(routes.SelectivityReport4356);
                 }
               }
             ]
@@ -1023,15 +1085,7 @@ const MatxVerticalNav = () => {
             }),
             label: 'Manifest',
             items: [
-              {
-                className: classNames({
-                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
-                }),
-                label: 'Sigtas Report',
-                command: () => {
-                  navigation('/dashboard');
-                }
-              }
+           
             ]
           }
         ]
@@ -1108,6 +1162,39 @@ const MatxVerticalNav = () => {
                 label: 'ValuationReport4650',
                 command: () => {
                   navigation(routes.ValuationReport4650);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4658,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4658',
+                command: () => {
+                  navigation(routes.ValuationReport4658);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ExemptionReport4750,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ExemptionReport4750',
+                command: () => {
+                  navigation(routes.ExemptionReport4750);
+                }
+              },     {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ExemptionReport4752,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ExemptionReport4752',
+                command: () => {
+                  navigation(routes.ExemptionReport4752);
                 }
               }
             ]
