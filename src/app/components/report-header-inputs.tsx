@@ -29,7 +29,9 @@ export interface SearchData {
   endDate?: string;
   companyTin?: number;
   RegisterNo?: number;
+  TirepdNum?:number;
   hsCode?: number;
+  LocationCode?:number;
   ExemptionRepNo?:number;
   farwardCod?:number;
   ForeignRegNo?:number;
@@ -69,6 +71,7 @@ interface ReportHeaderInputsProps {
   showStartDate?: boolean;
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
+  showTirepdNum?:boolean;
   ShowRegisterNo?: boolean;
   showCustomsProcedure?: boolean;
   showDestinationCustomsList?:boolean,
@@ -85,6 +88,7 @@ interface ReportHeaderInputsProps {
   showBasedOnExemptionValue?:boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
+  showLocationCode?:boolean;
   showExemptionRepNo?:boolean;
   showfarwarCode?:boolean;
   showNumPalate?:boolean;
@@ -113,6 +117,7 @@ export const ReportHeaderInputs = ({
   showStartDate,
   showEndDate,
   ShowTinNumber,
+  showTirepdNum,
   ShowRegisterNo,
   showForeignRegNo,
   showCustomsProcedure,
@@ -134,6 +139,7 @@ export const ReportHeaderInputs = ({
   showCustomsList,
   showDestinationCustomsList,
   ShowHsCode,
+  showLocationCode,
   showExemptionRepNo,
   showfarwarCode,
   showNumPalate,
@@ -151,7 +157,6 @@ export const ReportHeaderInputs = ({
   const [based1, setBased1] = useState<string>('');
   const [basedOnExemption, setBasedOnExemption] = useState<string>('');
   const [basedOnExemptionValue, setBasedOnExemptionValue] = useState<string>('');
-
   const [acceptR, setAcceptR] = useState<string>('');
   const [based2, setBased2] = useState<string>('');
   const [modofpayment, setModOfPayment] = useState<string>('');
@@ -159,6 +164,8 @@ export const ReportHeaderInputs = ({
   const [opreationOptionValuation, setOpreationOptionValuation] = useState<string>('');
   const [opreationOptionValuationValue, setOpreationOptionValuationValue] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
+  const [tirepdNum, setTirepdNum] = useState<string>('');
+  const [locationCode, setLocationCode] = useState<string>('');
   const [exemptionRepNo, setExemptionRepNo] = useState<string>('');
   const [farwardCod, setFarwardCode] = useState<string>('');
   const [registerNo, setRegisterNo] = useState<string>('');
@@ -189,13 +196,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin ||acceptR ||customsProcedure ||exemptionRepNo||basedOnExemption||opreationOptionValuation||opreationOptionValuationValue|| dateType ||numPalate||farwardCod|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
+    if (startDate || endDate || companyTin ||acceptR ||tirepdNum||locationCode||customsProcedure ||exemptionRepNo||basedOnExemption||opreationOptionValuation||opreationOptionValuationValue|| dateType ||numPalate||farwardCod|| exemptedStatus ||hsCode||goods||username||status||registerNo||foreignRegNo||transitType||status1||based1||modofpayment||transitType2||based2
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure,acceptR,exemptionRepNo, dateType,opreationOptionValuation,basedOnExemption,opreationOptionValuationValue, exemptedStatus,numPalate,farwardCod,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
+  }, [startDate, endDate, companyTin, customsProcedure,acceptR,tirepdNum,locationCode,exemptionRepNo, dateType,opreationOptionValuation,basedOnExemption,opreationOptionValuationValue, exemptedStatus,numPalate,farwardCod,hsCode,goods,username,status,registerNo,foreignRegNo,transitType,status1,based1,modofpayment,transitType2,based2
   ]);
 
   const formatData = () => {
@@ -207,6 +214,7 @@ export const ReportHeaderInputs = ({
       ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
       ...(showfarwarCode && { forwarderCode:parseInt(farwardCod)}),
       ...(ShowRegisterNo && { registerNo:parseInt(registerNo)}),
+      ...(showTirepdNum && { tirepdNum:parseInt(tirepdNum)}),
       ...(showForeignRegNo && { foreignRegNo:parseInt(foreignRegNo)}),
       ...(showNumPalate && { numPalate:parseInt(numPalate)}),
       ...(showGoods && {goodsCategory:goods}),
@@ -409,6 +417,20 @@ export const ReportHeaderInputs = ({
             xl={3}
             value={companyTin}
             onChange={(e) => {
+              setCompanyTin(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showTirepdNum}>
+          <NumberInput
+            label="TirepdNum"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={tirepdNum}
+            onChange={(e) => {
+              setTirepdNum(e.target.value);
               setCompanyTin(e.target.value);
             }}
           />
@@ -696,6 +718,19 @@ export const ReportHeaderInputs = ({
             value={hsCode}
             onChange={(e) => {
               setHsCode(e.target.value);
+            }}
+          />
+        </Condition>
+          <Condition condition={showLocationCode}>
+          <TextInput
+            label="Transit Shed Code"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={locationCode}
+            onChange={(e) => {
+              setLocationCode(e.target.value);
             }}
           />
         </Condition>

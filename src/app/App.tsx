@@ -80,6 +80,9 @@ import SelectivityReport4353 from './views/report/SelectivityReport4353';
 import SelectivityReport4354 from './views/report/SelectivityReport4354';
 import SelectivityReport4355 from './views/report/SelectivityReport4355';
 import SelectivityReport4356 from './views/report/SelectivityReport4356';
+import ManifestReport4450 from './views/report/ManifestReport4450';
+import DataExchangeReport5053 from './views/report/DataExchangeReport5053';
+import DataExchangeReport5054 from './views/report/DataExchangeReport5054';
 
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
@@ -525,6 +528,30 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <SelectivityReport4356 />
+              </PrivateRoute>
+            }
+          />
+               <Route
+            path={routes.ManifestReport4450}
+            element={
+              <PrivateRoute>
+                <ManifestReport4450 />
+              </PrivateRoute>
+            }
+          />
+               <Route
+            path={routes.DataExchangeReport5053}
+            element={
+              <PrivateRoute>
+                <DataExchangeReport5053 />
+              </PrivateRoute>
+            }
+          />
+               <Route
+            path={routes.DataExchangeReport5054}
+            element={
+              <PrivateRoute>
+                <DataExchangeReport5054 />
               </PrivateRoute>
             }
           />

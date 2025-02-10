@@ -1085,7 +1085,40 @@ const MatxVerticalNav = () => {
             }),
             label: 'Manifest',
             items: [
-           
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ManifestReport4450,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ManifestReport4450',
+                command: () => {
+                  navigation(routes.ManifestReport4450);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.DataExchangeReport5053,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'DataExchangeReport5053',
+                command: () => {
+                  navigation(routes.DataExchangeReport5053);
+                }
+              },  {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.DataExchangeReport5054,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'DataExchangeReport5054',
+                command: () => {
+                  navigation(routes.DataExchangeReport5054);
+                }
+              }
             ]
           }
         ]

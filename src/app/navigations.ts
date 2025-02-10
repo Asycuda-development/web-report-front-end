@@ -51,6 +51,9 @@ export const routes = {
   SelectivityReport4354:'/SelectivityReport4354',
   SelectivityReport4355:'/SelectivityReport4355',
   SelectivityReport4356:'/SelectivityReport4356',
+  ManifestReport4450:'/ManifestReport4450',
+  DataExchangeReport5053:'/DataExchangeReport5053',
+  DataExchangeReport5054:'/DataExchangeReport5054',
   
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
