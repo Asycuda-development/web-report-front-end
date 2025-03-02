@@ -225,6 +225,7 @@
 // export default React.memo(MatxVerticalNav);
 
 import classNames from 'classnames';
+import './MegaMenu.css'
 import { MegaMenu } from 'primereact/megamenu';
 import { MenuItem } from 'primereact/menuitem';
 import React from 'react';
@@ -411,7 +412,7 @@ const MatxVerticalNav = () => {
                   navigation(routes.DPS_4555);
                 }
               },
-            {/* {
+              {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -470,7 +471,7 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4564);
                 }
-            }*/},
+              },
               {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -496,7 +497,7 @@ const MatxVerticalNav = () => {
                 }
               }
               ,
-               {
+              {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -519,7 +520,7 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4565);
                 }
-              },   {
+              }, {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -530,7 +531,7 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4585);
                 }
-              },   {
+              }, {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -541,7 +542,7 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4586);
                 }
-              },   {
+              }, {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
@@ -552,7 +553,7 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.DPS_4590);
                 }
-              },  {
+              }, {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
