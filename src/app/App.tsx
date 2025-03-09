@@ -14,6 +14,14 @@ import setupAxiosInterceptors from './config/axios-interceptor';
 import { Condition } from './components/base-component';
 import Loading from './components/MatxLoading';
 import { routes } from './navigations';
+//////////////////////////////////////////////////////
+//////////////  Selectivity Reprots Import  /////////
+////////////////////////////////////////////////////
+import Selectivity_4360 from './views/report/Selectivity_4360';
+import Selectivity_4361 from './views/report/Selectivity_4361';
+//////////////////////////////////////////////////////
+//////////////  DPS Reprots Import  /////////////////
+////////////////////////////////////////////////////
 import DPS_4550 from './views/report/DPS_4550';
 import DPS_4551 from './views/report/DPS_4551';
 import DPS_4557 from './views/report/DPS_4557';
@@ -29,6 +37,18 @@ import DPS_4593 from './views/report/DPS_4593';
 import DPS_4595 from './views/report/DPS_4595';
 import DPS_4596 from './views/report/DPS_4596';
 import DPS_4599 from './views/report/DPS-4599';
+//////////////////////////////////////////////////////
+/////////  DataExchange Reprots Import  /////////////
+////////////////////////////////////////////////////
+import DataExchange_5050 from './views/report/DataExchange_5050';
+import DataExchange_5051 from './views/report/DataExchange_5051';
+
+//////////////////////////////////////////////////////
+////////////  Exemption Reprots Import  //////////////
+////////////////////////////////////////////////////
+import Exemption_4753 from './views/report/Exemption_4753';
+import Exemption_4754 from './views/report/Exemption_4754';
+import Exemption_4755 from './views/report/Exemption_4755';
 //////////////////////////////////////////////////////
 ////////////  Revenue Reprots Import  ///////////////
 ////////////////////////////////////////////////////
@@ -128,6 +148,35 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <OverallReport />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Exemption Reprots Routes  //////////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
+            path={routes.Exemption_4753}
+            element={
+              <PrivateRoute>
+                <Exemption_4753 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Exemption_4754}
+            element={
+              <PrivateRoute>
+                <Exemption_4754 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Exemption_4755}
+            element={
+              <PrivateRoute>
+                <Exemption_4755 />
               </PrivateRoute>
             }
           />
@@ -399,6 +448,48 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DPS_4599 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            //////////   DataExchange Reprots Routes    /////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
+            path={routes.DataExchange_5050}
+            element={
+              <PrivateRoute>
+                <DataExchange_5050 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DataExchange_5051}
+            element={
+              <PrivateRoute>
+                <DataExchange_5051 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            //////////   Selectivity  Reprots Routes    /////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
+            path={routes.Selectivity_4360}
+            element={
+              <PrivateRoute>
+                <Selectivity_4360 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Selectivity_4361}
+            element={
+              <PrivateRoute>
+                <Selectivity_4361 />
               </PrivateRoute>
             }
           />

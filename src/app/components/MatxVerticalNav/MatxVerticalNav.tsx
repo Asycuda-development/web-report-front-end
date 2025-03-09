@@ -798,6 +798,30 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation('/dashboard');
                 }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.Report_5050_DataExchange,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '5050- DataExchange',
+                command: () => {
+                  navigation('/DataExchangeReport5050');
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.Report_5051_DataExchange,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '5051- DataExchange',
+                command: () => {
+                  navigation('/DataExchangeReport5051');
+                }
               }
             ]
           }
@@ -816,6 +840,24 @@ const MatxVerticalNav = () => {
                 label: 'Sigtas Report',
                 command: () => {
                   navigation('/dashboard');
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+                }),
+                label: '4360-Selectivity',
+                command: () => {
+                  navigation('/SelectivityReport4360');
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+                }),
+                label: '4361-Selectivity',
+                command: () => {
+                  navigation('/SelectivityReport4361');
                 }
               }
             ]
@@ -842,10 +884,13 @@ const MatxVerticalNav = () => {
         // ],
         [
           {
+            //////////////////////////////////////////////////////
+            ////////////  Revenue Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
             className: classNames({
               'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
             }),
-            label: 'jjjj',
+            label: 'Exemption',
             items: [
               {
                 className: classNames({
@@ -854,6 +899,42 @@ const MatxVerticalNav = () => {
                 label: 'Sigtas Report',
                 command: () => {
                   navigation('/dashboard');
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.Report_4753_Exemption,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4753- Exemption',
+                command: () => {
+                  navigation(routes.Exemption_4753);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.Report_4754_Exemption,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4754- Exemption',
+                command: () => {
+                  navigation(routes.Exemption_4754);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.Report_4755_Exemption,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: '4755- Exemption',
+                command: () => {
+                  navigation(routes.Exemption_4755);
                 }
               }
             ]

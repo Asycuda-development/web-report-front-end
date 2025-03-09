@@ -1,7 +1,21 @@
+import DataExchange5050 from './views/report/DataExchange_5050';
+import Exemption_4753 from './views/report/Exemption_4753';
+
 export const routes = {
   //////////////////////////////////////////////////////
   ////////////  Revenue Reprots Routes  ///////////////
   ////////////////////////////////////////////////////
+  DataExchange_5050: '/DataExchangeReport5050',
+  DataExchange_5051: '/DataExchangeReport5051',
+  //////////////////////////////////////////////////////
+  ////////////  Selectivity Reprots Routes  ///////////////
+  ////////////////////////////////////////////////////
+  Selectivity_4360: '/SelectivityReport4360',
+  Selectivity_4361: '/SelectivityReport4361',
+  //////////////////////////////////////////////////////
+  ////////////  Revenue Reprots Routes  ///////////////
+  ////////////////////////////////////////////////////
+
   revenue4150: '/revenue4150',
   revenue4151: '/revenue4151',
   revenue4155: '/revenue4155',
@@ -32,7 +46,6 @@ export const routes = {
   DPS_4575: '/DPS_4575',
   DPS_4580: '/DPS_4580',
   DPS_4587: '/DPS_4587',
-
   DPS_4572: '/DPS_4572',
   DPS_4588: '/DPS_4588',
   DPS_4589: '/DPS_4589',
@@ -41,6 +54,13 @@ export const routes = {
   DPS_4596: '/DPS_4596',
   DPS_4599: '/DPS_4599',
   DPS_4550: '/DpsReport4550',
+  //////////////////////////////////////////////////////
+  ////////////     Exemption  Reprots Routes  //////////
+  ////////////////////////////////////////////////////
+  Exemption_4753: '/Exemption_4753',
+  Exemption_4754: '/Exemption_4754',
+  Exemption_4755: '/Exemption_4755',
+
   all: '*',
   base: '/*',
   Dashboard: '/dashboard',
