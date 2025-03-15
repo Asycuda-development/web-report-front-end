@@ -27,7 +27,8 @@ function DPS_4554() {
     try {
       const res = await axios.post('/reporting/DpsReport4554', {
         ...data,
-        type: data.customsProcedure,
+        
+        
         customsCode: data.CustomsCode
       });
 

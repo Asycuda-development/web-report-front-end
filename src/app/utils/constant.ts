@@ -1,3 +1,8 @@
+import SelectivityReport4356 from "../views/report/SelectivityReport4356";
+import TransitReport4267 from "../views/report/TransitReport4267";
+import TransitReport4275 from "../views/report/TransitReport4275";
+import TransitReport4276 from "../views/report/TransitReport4276";
+
 export const topBarHeight = 64;
 export const sideNavWidth = 205;
 export const navbarHeight = 60;
@@ -49,5 +54,53 @@ export const AUTHORITIES = {
   REPORT_4584_DPS: 'REPORT:4584-DPS',
   REPORT_4586_DPS: 'REPORT:4586-DPS',
   REPORT_4590_DPS: 'REPORT:4590-DPS',
-  REPORT_4150_REVENUE: 'REPORT:4150-REVENUE'
+  REPORT_4591_DPS: 'REPORT:4591-DPS',
+  TransitReport4257:'/TransitReport4257',
+  TransitReport4258:'/TransitReport4258',
+  TransitReport4259:'/TransitReport4259',
+  TransitReport4265:'/TransitReport4265',
+  TransitReport4266:'/TransitReport4266',
+  TransitReport4268:'/TransitReport4268',
+  TransitReport4267:'/TransitReport4267',
+  TransitReport4275:'/TransitReport4275',
+  TransitReport4276:'/TransitReport4276',
+  TransitReport4277:'/TransitReport4277',
+  TransitReport4278:'/TransitReport4278',
+  TransitReport4279:'/TransitReport4279',
+  TransitReport4280:'/TransitReport4280',
+  TransitReport4281:'/TransitReport4281',
+  ValuationReport4652:'/ValuationReport4652',
+  ValuationReport4653:'/ValuationReport4653',
+  ValuationReport4654:'/ValuationReport4654',
+  ValuationReport4656:'/ValuationReport4656',
+  ValuationReport4657:'/ValuationReport4657',
+  ValuationReport4650:'/ValuationReport4650',
+  ValuationReport4658:'/ValuationReport4658',
+  ExemptionReport4750:'/ExemptionReport4750',
+  ExemptionReport4752:'/ExemptionReport4752',
+  SelectivityReport4350:'/SelectivityReport4350',
+  SelectivityReport4351:'/SelectivityReport4351',
+  SelectivityReport4352:'/SelectivityReport4352',
+  SelectivityReport4353:'/SelectivityReport4353',
+  SelectivityReport4354:'/SelectivityReport4354',
+  SelectivityReport4355:'/SelectivityReport4355',
+  SelectivityReport4356:'/SelectivityReport4356',
+  ManifestReport4450:'/ManifestReport4450',
+  DataExchangeReport5053:'/DataExchangeReport5053',
+  DataExchangeReport5054:'/DataExchangeReport5054',
+  REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
+  RevenueReport4157_1400:'RevenueReport4157_1400',
+  RevenueReport4159:'/RevenueReport4159',
+  RevenueReport4153_1400:'/RevenueReport4153_1400',
+  RevenueReport4153:'/RevenueReport4153',
+  RevenueReport4154:'/RevenueReport4154',
+  RevenueReport4160:'/RevenueReport4160',
+  RevenueReport4163:'/RevenueReport4163',
+  RevenueReport4161:'/RevenueReport4161',
+  RevenueReport4162:'/RevenueReport4162',
+  RevenueReport4173:'/RevenueReport4173',
+  RevenueReport48101:'/RevenueReport48101',
+  RevenueReport48100:'/RevenueReport48100',
+  RevenueReport4164_1400:'/RevenueReport4164_1400',
+  RevenueReport4158:'RevenueReport4158'
 };

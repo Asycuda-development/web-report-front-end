@@ -557,6 +557,17 @@ const MatxVerticalNav = () => {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4591_DPS
+                  ])
+                }),
+                label: 'DPS Report 4591',
+                command: () => {
+                  navigation(routes.DPS_4591);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ADMIN,
                     AUTHORITIES.REPORT_4584_DPS
                   ])
                 }),
@@ -625,6 +636,160 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.transit_4250);
                 }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4257,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4257',
+                command: () => {
+                  navigation(routes.TransitReport4257);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4258,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4258',
+                command: () => {
+                  navigation(routes.TransitReport4258);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4259,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4259',
+                command: () => {
+                  navigation(routes.TransitReport4259);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4265,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4265',
+                command: () => {
+                  navigation(routes.TransitReport4265);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4266,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4266',
+                command: () => {
+                  navigation(routes.TransitReport4266);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4267,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4267',
+                command: () => {
+                  navigation(routes.TransitReport4267);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4268,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4268',
+                command: () => {
+                  navigation(routes.TransitReport4268);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4275,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4275',
+                command: () => {
+                  navigation(routes.TransitReport4275);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4276,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4276',
+                command: () => {
+                  navigation(routes.TransitReport4276);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4277,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4277',
+                command: () => {
+                  navigation(routes.TransitReport4277);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4278,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4278',
+                command: () => {
+                  navigation(routes.TransitReport4278);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4279,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4279',
+                command: () => {
+                  navigation(routes.TransitReport4279);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4280,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4280',
+                command: () => {
+                  navigation(routes.TransitReport4280);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.TransitReport4281,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'TransitReport4281',
+                command: () => {
+                  navigation(routes.TransitReport4281);
+                }
               }
             ]
           }
@@ -650,11 +815,165 @@ const MatxVerticalNav = () => {
                 command: () => {
                   navigation(routes.revenue4150);
                 }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4157_1400,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'Revenue4157_1400',
+                command: () => {
+                  navigation(routes.RevenueReport4157_1400);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4158,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4158',
+                command: () => {
+                  navigation(routes.RevenueReport4158);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4159,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4159',
+                command: () => {
+                  navigation(routes.RevenueReport4159);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4153_1400,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4153_1400',
+                command: () => {
+                  navigation(routes.RevenueReport4153_1400);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4153_1400,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4153',
+                command: () => {
+                  navigation(routes.RevenueReport4153_1400);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4154,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4154',
+                command: () => {
+                  navigation(routes.RevenueReport4154);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4160,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4160',
+                command: () => {
+                  navigation(routes.RevenueReport4160);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4163,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4163',
+                command: () => {
+                  navigation(routes.RevenueReport4163);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4164_1400,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4164_1400',
+                command: () => {
+                  navigation(routes.RevenueReport4164_1400);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4161,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4161',
+                command: () => {
+                  navigation(routes.RevenueReport4161);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4162,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4162',
+                command: () => {
+                  navigation(routes.RevenueReport4162);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport4173,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport4173',
+                command: () => {
+                  navigation(routes.RevenueReport4173);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport48101,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport48101',
+                command: () => {
+                  navigation(routes.RevenueReport48100);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.RevenueReport48100,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'RevenueReport48100',
+                command: () => {
+                  navigation(routes.RevenueReport48100);
+                }
               }
             ]
           }
         ],
-        [
+        /*[
           {
             className: classNames({
               'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -678,7 +997,7 @@ const MatxVerticalNav = () => {
               }
             ]
           }
-        ],
+        ]*/
         [
           {
             className: classNames({
@@ -688,11 +1007,73 @@ const MatxVerticalNav = () => {
             items: [
               {
                 className: classNames({
-                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4350,
+                    AUTHORITIES.ADMIN])
                 }),
-                label: 'Sigtas Report',
+                label: 'SelectivityReport4350',
                 command: () => {
-                  navigation('/dashboard');
+                  navigation(routes.SelectivityReport4350);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4351,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4351',
+                command: () => {
+                  navigation(routes.SelectivityReport4351);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4352,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4352',
+                command: () => {
+                  navigation(routes.SelectivityReport4352);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4353,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4353',
+                command: () => {
+                  navigation(routes.SelectivityReport4353);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4354,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4354',
+                command: () => {
+                  navigation(routes.SelectivityReport4354);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4355,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4355',
+                command: () => {
+                  navigation(routes.SelectivityReport4355);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.SelectivityReport4356,
+                    AUTHORITIES.ADMIN])
+                }),
+                label: 'SelectivityReport4356',
+                command: () => {
+                  navigation(routes.SelectivityReport4356);
                 }
               }
             ]
@@ -707,11 +1088,147 @@ const MatxVerticalNav = () => {
             items: [
               {
                 className: classNames({
-                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ManifestReport4450,
+                    AUTHORITIES.ADMIN
+                  ])
                 }),
-                label: 'Sigtas Report',
+                label: 'ManifestReport4450',
                 command: () => {
-                  navigation('/dashboard');
+                  navigation(routes.ManifestReport4450);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.DataExchangeReport5053,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'DataExchangeReport5053',
+                command: () => {
+                  navigation(routes.DataExchangeReport5053);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.DataExchangeReport5054,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'DataExchangeReport5054',
+                command: () => {
+                  navigation(routes.DataExchangeReport5054);
+                }
+              }
+            ]
+          }
+        ]
+        ,
+        [
+          {
+            className: classNames({
+              'tabbar-item-hidden': !checkAuthorities(user.authorities, [AUTHORITIES.ADMIN])
+            }),
+            label: 'Valuation',
+            items: [
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4652,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4652',
+                command: () => {
+                  navigation(routes.ValuationReport4652);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4653,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4653',
+                command: () => {
+                  navigation(routes.ValuationReport4653);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4654,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4654',
+                command: () => {
+                  navigation(routes.ValuationReport4654);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4656,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4656',
+                command: () => {
+                  navigation(routes.ValuationReport4656);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4657,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4657',
+                command: () => {
+                  navigation(routes.ValuationReport4657);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4650,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4650',
+                command: () => {
+                  navigation(routes.ValuationReport4650);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ValuationReport4658,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ValuationReport4658',
+                command: () => {
+                  navigation(routes.ValuationReport4658);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ExemptionReport4750,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ExemptionReport4750',
+                command: () => {
+                  navigation(routes.ExemptionReport4750);
+                }
+              }, {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.ExemptionReport4752,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'ExemptionReport4752',
+                command: () => {
+                  navigation(routes.ExemptionReport4752);
                 }
               }
             ]
@@ -731,7 +1248,7 @@ const MatxVerticalNav = () => {
       }}
       model={items}
       orientation="vertical"
-      breakpoint={'960px'}
+      breakpoint={'1060px'}
     />
   );
 };
