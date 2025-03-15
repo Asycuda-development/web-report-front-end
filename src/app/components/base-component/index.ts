@@ -5,3 +5,4 @@ export * from './text-input';
 export * from './col';
 export * from './row';
 export * from './condition';
+export * from './BasedOn';

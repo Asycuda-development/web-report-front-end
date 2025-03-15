@@ -2,18 +2,22 @@ import { LoadingButton } from '@mui/lab';
 import axios from 'axios';
 import { RadioButton } from 'primereact/radiobutton';
 import { useEffect, useState } from 'react';
-import { Col, Condition, DatePicker, Dropdown, NumberInput, Row, TextInput } from './base-component';
+import { Col, Condition, DatePicker, Dropdown, NumberInput, Row, TextInput, BasedOn } from './base-component';
 import { Stautes } from './base-component/status';
 import { CustomsProcedure } from './customs-procedure';
 import { ExemptedType } from './Exemptiontype';
-import{TransitType}from './Transit-type';
-import{Status2} from './status1'
-import { BasedOn } from './based';
+import { TransitType } from './Transit-type';
+import { Status2 } from './status1'
+import { ConditionForBasedOn } from './base-component/conditionForBasedOn';
 //checked
 
 interface CustomsInterface {
   CustomsName: string;
   CustomsCode: string;
+}
+interface basedOnsInterface {
+  label: string;
+  name: string;
 }
 export interface SearchData {
   dateType?: string;
@@ -22,47 +26,52 @@ export interface SearchData {
   companyTin?: number;
   RegisterNo?: number;
   hsCode?: number;
-  goodsCategory?:String;
-  UserName?:String;
-  transitType?:String;
-  status1?:String,
-  based1?:String
+  goodsCategory?: String;
+  UserName?: String;
+  transitType?: String;
+  status1?: String,
+  based1?: String
   customsProcedure?: string | null;
   CustomsCode?: string;
   exemptionType?: string;
   status?: string;
+  basedOnValue?: string;
+  basedOn?: string;
 }
 interface ReportHeaderInputsProps {
   onChage?: (e: SearchData) => void;
   onSearch?: (e: SearchData) => void;
+  basedOnOptions?: Array<basedOnsInterface>,
   showRegDate?: boolean,
   showAssesDate?: boolean,
   showPayDate?: boolean,
   showExitDate?: boolean,
-  showArrivalDate?:boolean,
-  showFinalExitDate?:boolean,
+  showArrivalDate?: boolean,
+  showFinalExitDate?: boolean,
   showOperationDate?: boolean,
   showStartDate?: boolean;
   showEndDate?: boolean;
   ShowTinNumber?: boolean;
   ShowRegisterNo?: boolean;
   showCustomsProcedure?: boolean;
-  showDestinationCustomsList?:boolean,
-  showTransitType?:boolean,
-  showStatus1?:boolean,
-  showbased1?:boolean,
+  showDestinationCustomsList?: boolean,
+  showTransitType?: boolean,
+  showStatus1?: boolean,
+  showbased1?: boolean,
   showCustomsList?: boolean;
   ShowHsCode?: boolean;
   showExemptionType?: boolean;
+  showBasedOn?: boolean,
   showStatus?: boolean;
   showGoods?: boolean;
-  showUserName?:boolean;
+  showUserName?: boolean;
   tabelRef: any;
 }
 export const ReportHeaderInputs = ({
   tabelRef,
   onChage = () => { },
   onSearch = () => { },
+  basedOnOptions,
   showRegDate,
   showAssesDate,
   showPayDate,
@@ -85,6 +94,7 @@ export const ReportHeaderInputs = ({
   showCustomsList,
   showDestinationCustomsList,
   ShowHsCode,
+  showBasedOn
 }: ReportHeaderInputsProps) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
@@ -95,11 +105,12 @@ export const ReportHeaderInputs = ({
   const [customsList, setCustomsList] = useState<Array<CustomsInterface>>([]);
   const [destinationCustomsList, setDestinationCustomsList] = useState<Array<CustomsInterface>>([]);
   const [status, setStatus] = useState<string>('');
-  const [based1, setBased1] = useState<string>('');
   const [status1, setStatus1] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
-  const [registerNo, setRegisterNo] = useState<string>('');
   const [goods, setgoods] = useState<string>('');
+  const [registerNo, setRegisterNo] = useState<string>('');
+  const [basedOnValue, setBasedOnValue] = useState<string>('');
+  const [basedOn, setbasedOn] = useState<string>('');
   const [username, setUserName] = useState<string>('');
   const [customsCode, setCustomsCode] = useState<string>('');
   const [destinationCustomsCode, setDestinationCustomsCode] = useState<string>('');
@@ -116,7 +127,7 @@ export const ReportHeaderInputs = ({
         setDestinationCustomsList([...tmp, { CustomsCode: '', CustomsName: 'All' }]);
       });
     }
-  }, [showCustomsList,showDestinationCustomsList]);
+  }, [showCustomsList, showDestinationCustomsList]);
 
   const handleSearch = () => {
     const formattedData = formatData();
@@ -124,13 +135,13 @@ export const ReportHeaderInputs = ({
     onSearch(formattedData);
   };
   useEffect(() => {
-    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus ||hsCode||goods||username||status||registerNo||transitType||status1||based1
+    if (startDate || endDate || companyTin || customsProcedure || dateType || exemptedStatus || hsCode || goods || username || status || registerNo || transitType || status1 || basedOn || basedOnValue
     ) {
       const formattedData = formatData();
       onChage(formattedData);
     }
     console.log(dateType)
-  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus,hsCode,goods,username,status,registerNo,transitType,status1,based1
+  }, [startDate, endDate, companyTin, customsProcedure, dateType, exemptedStatus, hsCode, goods, username, status, registerNo, transitType, status1, basedOn, basedOnValue
   ]);
 
   const formatData = () => {
@@ -139,38 +150,41 @@ export const ReportHeaderInputs = ({
       ...(showStartDate && { startDate }),
       ...(showEndDate && { endDate }),
       ...(ShowTinNumber && { companyTin: parseInt(companyTin) }),
-      ...(ShowHsCode && { hsCode:parseInt(hsCode)}),
-      ...(ShowRegisterNo && { registerNo:parseInt(registerNo)}),
-      ...(showGoods && {goodsCategory:goods}),
-      ...(showUserName && {userName:username}),
+      ...(ShowHsCode && { hsCode: parseInt(hsCode) }),
+      ...(ShowRegisterNo && { registerNo: parseInt(registerNo) }),
+      ...(showGoods && { goodsCategory: goods }),
+      ...(showUserName && { userName: username }),
       ...(showCustomsProcedure && {
         customsProcedure: customsProcedure === 'all' ? null : customsProcedure
       }),
       ...(showExemptionType && {
         exemptedStatus
-      
+
 
       }),
       ...(showStatus && {
         status
-      
+
 
       }),
       ...(showTransitType && {
         transitType
-      
+
 
       }),
       ...(showStatus1 && {
-        truckStatus:status1
-      
-
+        truckStatus: status1
       }),
-      ...(showbased1 && {
-       basedOn: based1
-      
-
+      ...(showBasedOn && {
+        basedOn,
+        basedOnValue
+        // BasedOnValue: basedOnValue
       }),
+      // ...(showbased1 && {
+      //   basedOn: based1
+
+
+      // }),
       ...(showCustomsList && { CustomsCode: customsCode }),
       ...(showDestinationCustomsList && { desCusCode: destinationCustomsCode })
     };
@@ -263,7 +277,7 @@ export const ReportHeaderInputs = ({
               setgoods(e.target.value);
             }}
           />
-          
+
         </Condition>
         <Condition condition={showUserName}>
           <TextInput
@@ -277,7 +291,7 @@ export const ReportHeaderInputs = ({
               setUserName(e.target.value);
             }}
           />
-          
+
         </Condition>
         <Condition condition={ShowTinNumber}>
           <NumberInput
@@ -345,7 +359,7 @@ export const ReportHeaderInputs = ({
             }}
           />
         </Condition>
-        <Condition condition={showbased1}>
+        {/* <Condition condition={showbased1}>
           <BasedOn
             id="Based On"
             xs={6}
@@ -357,7 +371,7 @@ export const ReportHeaderInputs = ({
               setBased1(e.target.value);
             }}
           />
-        </Condition>
+        </Condition> */}
         <Condition condition={showExemptionType}>
           <ExemptedType
             id="Exemption Type"
@@ -370,7 +384,7 @@ export const ReportHeaderInputs = ({
               setExemptedStatus(e.target.value);
             }}
           />
-          
+
         </Condition>
         <Condition condition={showStatus}>
           <Stautes
@@ -384,9 +398,27 @@ export const ReportHeaderInputs = ({
               setStatus(e.target.value);
             }}
           />
-          
+
         </Condition>
-        
+
+        <Condition condition={showBasedOn}>
+          <BasedOn
+            id='BasedOn'
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            options={basedOnOptions}
+            basedOnValue={basedOnValue}
+            value={basedOn}
+            onChange={(e) => {
+              setbasedOn(e.target.value);
+            }}
+            onChangeValue={(e) => { setBasedOnValue(e.target.value) }}
+          />
+
+        </Condition>
+
         <Condition condition={showCustomsList}>
           <Dropdown
             id="CustomsLis"
@@ -403,7 +435,7 @@ export const ReportHeaderInputs = ({
               setCustomsCode(e.target.value);
             }}
           />
-          </Condition>
+        </Condition>
         <Condition condition={showDestinationCustomsList}>
           <Dropdown
             id="CustomsLisD"
@@ -420,9 +452,9 @@ export const ReportHeaderInputs = ({
               setDestinationCustomsCode(e.target.value);
             }}
           />
-          </Condition>
-          
-          <Condition condition={ShowHsCode}>
+        </Condition>
+
+        <Condition condition={ShowHsCode}>
           <NumberInput
             label="HS_Code"
             xs={6}

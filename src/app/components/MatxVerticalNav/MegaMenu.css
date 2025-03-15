@@ -1,4 +1,5 @@
 .p-megamenu-grid {
-    height: 600px;
+    height: 700px;
     overflow: auto;
+    z-index: 60;
 }

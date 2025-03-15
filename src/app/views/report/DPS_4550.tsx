@@ -6,6 +6,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { Toast } from 'primereact/toast';
 
 // checked
 
@@ -21,12 +22,22 @@ const Container = styled('div')(({ theme }) => ({
 function DPS_4550() {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
+  const toastRef: any = useRef(null);
 
   useEffect(() => { }, []);
 
   const handleSubmit = async (data: SearchData) => {
-    console.log(data)
+    console.log(data.basedOn, data, data.basedOnValue, data.startDate, data.companyTin, data.customsProcedure)
     try {
+      if (data.basedOn && !data.basedOnValue) {
+        console.log('first')
+        toastRef.current.show({
+          severity: 'error',
+          summary: 'Based On Value',
+          detail: 'Based On Value is required when Based On is selected, please try again.'
+        });
+        return
+      }
       const res = await axios.post('/reporting/DpsReport4550', {
         ...data,
         type: data.customsProcedure,
@@ -36,6 +47,10 @@ function DPS_4550() {
       setReportData(res.data);
     } catch (error) { }
   };
+  const basedOnOptions = [{
+    label: 'declarant',
+    name: 'declarant'
+  }]
   //
   return (
     <Container>
@@ -46,6 +61,8 @@ function DPS_4550() {
           ShowTinNumber
           showExemptionType
           showCustomsProcedure
+          showBasedOn
+          basedOnOptions={basedOnOptions}
           showRegDate
           showAssesDate
           showPayDate
@@ -143,6 +160,7 @@ function DPS_4550() {
           </DataTable>
         </Box>
       </SimpleCard>
+      <Toast ref={toastRef} />
     </Container>
   );
 };
