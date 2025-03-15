@@ -13,8 +13,56 @@ import Loading from './components/MatxLoading';
 import setupAxiosInterceptors from './config/axios-interceptor';
 import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
+import Selectivity_4360 from './views/report/Selectivity_4360';
+import Selectivity_4361 from './views/report/Selectivity_4361';
 import DPS_4550 from './views/report/DPS_4550';
 import DPS_4551 from './views/report/DPS_4551';
+import DPS_4557 from './views/report/DPS_4557';
+import DPS_4553 from './views/report/DPS_4553';
+import DPS_4573 from './views/report/DPS_4573';
+import DPS_4572 from './views/report/DPS_4572';
+import DPS_4575 from './views/report/DPS_4575';
+import DPS_4580 from './views/report/DPS_4580';
+import DPS_4587 from './views/report/DPS_4587';
+import DPS_4588 from './views/report/DPS_4588';
+import DPS_4589 from './views/report/DPS_4589';
+import DPS_4593 from './views/report/DPS_4593';
+import DPS_4595 from './views/report/DPS_4595';
+import DPS_4596 from './views/report/DPS_4596';
+import DPS_4599 from './views/report/DPS-4599';
+//////////////////////////////////////////////////////
+/////////  DataExchange Reprots Import  /////////////
+////////////////////////////////////////////////////
+import DataExchange_5050 from './views/report/DataExchange_5050';
+import DataExchange_5051 from './views/report/DataExchange_5051';
+
+//////////////////////////////////////////////////////
+////////////  Exemption Reprots Import  //////////////
+////////////////////////////////////////////////////
+import Exemption_4753 from './views/report/Exemption_4753';
+import Exemption_4754 from './views/report/Exemption_4754';
+import Exemption_4755 from './views/report/Exemption_4755';
+//////////////////////////////////////////////////////
+////////////  Revenue Reprots Import  ///////////////
+////////////////////////////////////////////////////
+import Revenue_4151 from './views/report/Revenue_4151';
+import Revenue_4155 from './views/report/Revenue_4155';
+import Revenue_4165 from './views/report/Revenue_4165';
+import Revenue_4171 from './views/report/Revenue_4171';
+import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
+import Revenue_4172 from './views/report/Revenue_4172';
+//////////////////////////////////////////////////////
+////////////  Transit Reprots Import  ///////////////
+////////////////////////////////////////////////////
+import Transit_4251 from './views/report/Transit_4251';
+import Transit_4252 from './views/report/Transit_4252';
+import Transit_4270 from './views/report/Transit_4270';
+import Transit_4272 from './views/report/Transit_4272';
+import Transit_4274 from './views/report/Transit_4274';
+import Transit_4282 from './views/report/Transit_4282';
+import Transit_4271 from './views/report/Transit_4271';
+import Transit_4283 from './views/report/Transit_4283';
+import Transit_4284 from './views/report/Transit_4284';
 import DPS_4554 from './views/report/DPS_4554';
 import DPS_4555 from './views/report/DPS_4555';
 import DPS_4556 from './views/report/DPS_4556';
@@ -137,6 +185,11 @@ const AuthLayout = () => {
     <>
       <MatxLayout>
         <Routes>
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Dashboard Reprots Routes  /////////////
+            ////////////////////////////////////////////////////
+          }
           <Route
             path={routes.Dashboard}
             element={
@@ -161,7 +214,40 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Exemption Reprots Routes  //////////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
+            path={routes.Exemption_4753}
+            element={
+              <PrivateRoute>
+                <Exemption_4753 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Exemption_4754}
+            element={
+              <PrivateRoute>
+                <Exemption_4754 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Exemption_4755}
+            element={
+              <PrivateRoute>
+                <Exemption_4755 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Revenue Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
+          }
           <Route
             path={routes.revenue4150}
             element={
@@ -170,7 +256,59 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
+            path={routes.revenue4151}
+            element={
+              <PrivateRoute>
+                <Revenue_4151 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4155}
+            element={
+              <PrivateRoute>
+                <Revenue_4155 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4165}
+            element={
+              <PrivateRoute>
+                <Revenue_4165 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4171}
+            element={
+              <PrivateRoute>
+                <Revenue_4171 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4171_1400}
+            element={
+              <PrivateRoute>
+                <Revenue_4171_1400 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.revenue4172}
+            element={
+              <PrivateRoute>
+                <Revenue_4172 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            ////////////  Transit Reprots Routes  ///////////////
+            ////////////////////////////////////////////////////
+          }            <Route
             path={routes.RevenueReport4157_1400}
             element={
               <PrivateRoute>
@@ -178,7 +316,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4158}
             element={
               <PrivateRoute>
@@ -186,7 +324,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4159}
             element={
               <PrivateRoute>
@@ -194,7 +332,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4153_1400}
             element={
               <PrivateRoute>
@@ -202,7 +340,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4153}
             element={
               <PrivateRoute>
@@ -210,7 +348,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4154}
             element={
               <PrivateRoute>
@@ -218,7 +356,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4160}
             element={
               <PrivateRoute>
@@ -226,7 +364,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4163}
             element={
               <PrivateRoute>
@@ -234,7 +372,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4164_1400}
             element={
               <PrivateRoute>
@@ -242,7 +380,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4161}
             element={
               <PrivateRoute>
@@ -250,7 +388,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4162}
             element={
               <PrivateRoute>
@@ -258,7 +396,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport4173}
             element={
               <PrivateRoute>
@@ -266,7 +404,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport48101}
             element={
               <PrivateRoute>
@@ -274,7 +412,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.RevenueReport48100}
             element={
               <PrivateRoute>
@@ -292,6 +430,82 @@ const AuthLayout = () => {
             }
           />
           <Route
+            path={routes.Transit_4251}
+            element={
+              <PrivateRoute>
+                <Transit_4251 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4252}
+            element={
+              <PrivateRoute>
+                <Transit_4252 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4270}
+            element={
+              <PrivateRoute>
+                <Transit_4270 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4271}
+            element={
+              <PrivateRoute>
+                <Transit_4271 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4272}
+            element={
+              <PrivateRoute>
+                <Transit_4272 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4274}
+            element={
+              <PrivateRoute>
+                <Transit_4274 />
+              </PrivateRoute>
+            }
+          />{' '}
+          <Route
+            path={routes.Transit_4282}
+            element={
+              <PrivateRoute>
+                <Transit_4282 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4283}
+            element={
+              <PrivateRoute>
+                <Transit_4283 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4284}
+            element={
+              <PrivateRoute>
+                <Transit_4284 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            ////////////    DPS Reprots Routes    ///////////////
+            ////////////////////////////////////////////////////
+          }          <Route
             path={routes.TransitReport4257}
             element={
               <PrivateRoute>
@@ -515,7 +729,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path={routes.SelectivityReport4355}
             element={
               <PrivateRoute>
@@ -523,7 +737,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-              <Route
+          <Route
             path={routes.SelectivityReport4356}
             element={
               <PrivateRoute>
@@ -531,7 +745,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.ManifestReport4450}
             element={
               <PrivateRoute>
@@ -539,7 +753,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.DataExchangeReport5053}
             element={
               <PrivateRoute>
@@ -547,7 +761,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.DataExchangeReport5054}
             element={
               <PrivateRoute>
@@ -565,7 +779,8 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-             <Route
+
+          <Route
             path={routes.DPS_4551}
             element={
               <PrivateRoute>
@@ -573,8 +788,153 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
-           <Route
+          <Route
+            path={routes.DPS_4557}
+            element={
+              <PrivateRoute>
+                <DPS_4557 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4553}
+            element={
+              <PrivateRoute>
+                <DPS_4553 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4572}
+            element={
+              <PrivateRoute>
+                <DPS_4572 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4573}
+            element={
+              <PrivateRoute>
+                <DPS_4573 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4575}
+            element={
+              <PrivateRoute>
+                <DPS_4575 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4580}
+            element={
+              <PrivateRoute>
+                <DPS_4580 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4587}
+            element={
+              <PrivateRoute>
+                <DPS_4587 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4588}
+            element={
+              <PrivateRoute>
+                <DPS_4588 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4589}
+            element={
+              <PrivateRoute>
+                <DPS_4589 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4593}
+            element={
+              <PrivateRoute>
+                <DPS_4593 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4595}
+            element={
+              <PrivateRoute>
+                <DPS_4595 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4596}
+            element={
+              <PrivateRoute>
+                <DPS_4596 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DPS_4599}
+            element={
+              <PrivateRoute>
+                <DPS_4599 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            //////////   DataExchange Reprots Routes    /////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
+            path={routes.DataExchange_5050}
+            element={
+              <PrivateRoute>
+                <DataExchange_5050 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DataExchange_5051}
+            element={
+              <PrivateRoute>
+                <DataExchange_5051 />
+              </PrivateRoute>
+            }
+          />
+          {
+            //////////////////////////////////////////////////////
+            //////////   Selectivity  Reprots Routes    /////////
+            ////////////////////////////////////////////////////
+          }
+          <Route
+            path={routes.Selectivity_4360}
+            element={
+              <PrivateRoute>
+                <Selectivity_4360 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Selectivity_4361}
+            element={
+              <PrivateRoute>
+                <Selectivity_4361 />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path={routes.DPS_4556}
             element={
               <PrivateRoute>
@@ -582,7 +942,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path={routes.DPS_4554}
             element={
               <PrivateRoute>
@@ -590,7 +950,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path={routes.DPS_4555}
             element={
               <PrivateRoute>
@@ -598,7 +958,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.DPS_4558}
             element={
               <PrivateRoute>
@@ -606,7 +966,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.DPS_4559}
             element={
               <PrivateRoute>
@@ -614,7 +974,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-              <Route
+          <Route
             path={routes.DPS_4560}
             element={
               <PrivateRoute>
@@ -622,7 +982,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.DPS_4561}
             element={
               <PrivateRoute>
@@ -630,7 +990,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path={routes.DPS_4562}
             element={
               <PrivateRoute>
@@ -638,7 +998,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-             <Route
+          <Route
             path={routes.DPS_4563}
             element={
               <PrivateRoute>
@@ -646,7 +1006,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-            <Route
+          <Route
             path={routes.DPS_4564}
             element={
               <PrivateRoute>
@@ -654,7 +1014,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path={routes.DPS_4565}
             element={
               <PrivateRoute>
@@ -662,7 +1022,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path={routes.DPS_4566}
             element={
               <PrivateRoute>
@@ -670,7 +1030,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-             <Route
+          <Route
             path={routes.DPS_4571}
             element={
               <PrivateRoute>
@@ -678,7 +1038,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-              <Route
+          <Route
             path={routes.DPS_4576}
             element={
               <PrivateRoute>
@@ -686,7 +1046,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.DPS_4585}
             element={
               <PrivateRoute>
@@ -694,7 +1054,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.DPS_4586}
             element={
               <PrivateRoute>
@@ -702,7 +1062,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.DPS_4590}
             element={
               <PrivateRoute>
@@ -710,7 +1070,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-             <Route
+          <Route
             path={routes.DPS_4591}
             element={
               <PrivateRoute>
@@ -718,7 +1078,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-               <Route
+          <Route
             path={routes.DPS_4584}
             element={
               <PrivateRoute>
@@ -726,7 +1086,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-             <Route
+          <Route
             path={routes.DPS_4578}
             element={
               <PrivateRoute>
@@ -742,8 +1102,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
-          
 
           <Route path={routes.all} element={<Navigate to={routes.Dashboard} />} />
         </Routes>
