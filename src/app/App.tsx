@@ -140,7 +140,7 @@ const JwtLogin = Loadable(lazy(() => import('./views/sessions/JwtLogin')));
 const JwtRegister = Loadable(lazy(() => import('../app/views/sessions/JwtRegister')));
 const ForgotPassword = Loadable(lazy(() => import('./views/sessions/ForgotPassword')));
 
-const Revenue4150 = Loadable(lazy(() => import('./views/report/revenue4150')));
+const Revenue4150 = Loadable(lazy(() => import('./views/report/Revenue_4150')));
 
 const Transit_4250 = Loadable(lazy(() => import('./views/report/transit_4250')));
 
