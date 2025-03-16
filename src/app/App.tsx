@@ -1,18 +1,18 @@
 import { CssBaseline } from '@mui/material';
 import { PrimeReactProvider } from 'primereact/api';
-import 'primereact/resources/primereact.min.css';
-import 'primereact/resources/themes/saga-blue/theme.css';
 import { lazy, useEffect, useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './auth/private-routes';
 import { MatxTheme } from './components';
 import { Condition } from './components/base-component';
+import { useUser } from './contexts/JWTAuthContext';
+import { routes } from './navigations';
 import Loadable from './components/Loadable';
 import MatxLayout from './components/MatxLayout/MatxLayout';
 import Loading from './components/MatxLoading';
 import setupAxiosInterceptors from './config/axios-interceptor';
-import { useUser } from './contexts/JWTAuthContext';
-import { routes } from './navigations';
+import 'primereact/resources/primereact.min.css';
+import 'primereact/resources/themes/saga-blue/theme.css';
 import Selectivity_4360 from './views/report/Selectivity_4360';
 import Selectivity_4361 from './views/report/Selectivity_4361';
 import DPS_4550 from './views/report/DPS_4550';
@@ -29,31 +29,18 @@ import DPS_4589 from './views/report/DPS_4589';
 import DPS_4593 from './views/report/DPS_4593';
 import DPS_4595 from './views/report/DPS_4595';
 import DPS_4596 from './views/report/DPS_4596';
-import DPS_4599 from './views/report/DPS-4599';
-//////////////////////////////////////////////////////
-/////////  DataExchange Reprots Import  /////////////
-////////////////////////////////////////////////////
+import DPS_4599 from './views/report/DPS_4599';
 import DataExchange_5050 from './views/report/DataExchange_5050';
 import DataExchange_5051 from './views/report/DataExchange_5051';
-
-//////////////////////////////////////////////////////
-////////////  Exemption Reprots Import  //////////////
-////////////////////////////////////////////////////
 import Exemption_4753 from './views/report/Exemption_4753';
 import Exemption_4754 from './views/report/Exemption_4754';
 import Exemption_4755 from './views/report/Exemption_4755';
-//////////////////////////////////////////////////////
-////////////  Revenue Reprots Import  ///////////////
-////////////////////////////////////////////////////
 import Revenue_4151 from './views/report/Revenue_4151';
 import Revenue_4155 from './views/report/Revenue_4155';
 import Revenue_4165 from './views/report/Revenue_4165';
 import Revenue_4171 from './views/report/Revenue_4171';
 import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
 import Revenue_4172 from './views/report/Revenue_4172';
-//////////////////////////////////////////////////////
-////////////  Transit Reprots Import  ///////////////
-////////////////////////////////////////////////////
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
 import Transit_4270 from './views/report/Transit_4270';
@@ -132,7 +119,6 @@ import ManifestReport4450 from './views/report/ManifestReport4450';
 import DataExchangeReport5053 from './views/report/DataExchangeReport5053';
 import DataExchangeReport5054 from './views/report/DataExchangeReport5054';
 
-
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
@@ -185,11 +171,6 @@ const AuthLayout = () => {
     <>
       <MatxLayout>
         <Routes>
-          {
-            //////////////////////////////////////////////////////
-            ////////////  Dashboard Reprots Routes  /////////////
-            ////////////////////////////////////////////////////
-          }
           <Route
             path={routes.Dashboard}
             element={
@@ -214,11 +195,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {
-            //////////////////////////////////////////////////////
-            ////////////  Exemption Reprots Routes  //////////////
-            ////////////////////////////////////////////////////
-          }
           <Route
             path={routes.Exemption_4753}
             element={
@@ -243,11 +219,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {
-            //////////////////////////////////////////////////////
-            ////////////  Revenue Reprots Routes  ///////////////
-            ////////////////////////////////////////////////////
-          }
           <Route
             path={routes.revenue4150}
             element={
@@ -304,11 +275,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {
-            //////////////////////////////////////////////////////
-            ////////////  Transit Reprots Routes  ///////////////
-            ////////////////////////////////////////////////////
-          }            <Route
+          <Route
             path={routes.RevenueReport4157_1400}
             element={
               <PrivateRoute>
@@ -420,7 +387,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.transit_4250}
             element={
@@ -501,11 +467,7 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {
-            //////////////////////////////////////////////////////
-            ////////////    DPS Reprots Routes    ///////////////
-            ////////////////////////////////////////////////////
-          }          <Route
+          <Route
             path={routes.TransitReport4257}
             element={
               <PrivateRoute>
@@ -769,8 +731,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
-
           <Route
             path={routes.DPS_4550}
             element={
@@ -779,7 +739,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route
             path={routes.DPS_4551}
             element={
@@ -892,11 +851,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {
-            //////////////////////////////////////////////////////
-            //////////   DataExchange Reprots Routes    /////////
-            ////////////////////////////////////////////////////
-          }
           <Route
             path={routes.DataExchange_5050}
             element={
@@ -913,11 +867,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {
-            //////////////////////////////////////////////////////
-            //////////   Selectivity  Reprots Routes    /////////
-            ////////////////////////////////////////////////////
-          }
           <Route
             path={routes.Selectivity_4360}
             element={
@@ -1102,7 +1051,6 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-
           <Route path={routes.all} element={<Navigate to={routes.Dashboard} />} />
         </Routes>
       </MatxLayout>

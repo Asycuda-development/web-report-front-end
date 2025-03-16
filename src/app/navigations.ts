@@ -1,26 +1,8 @@
-import TransitReport4267 from "./views/report/TransitReport4267";
-import TransitReport4275 from "./views/report/TransitReport4275";
-import TransitReport4276 from "./views/report/TransitReport4276";
-import ValuationReport4653 from "./views/report/ValuationReport4653";
-import ValuationReport4656 from "./views/report/ValuationReport4656";
-import DataExchange5050 from './views/report/DataExchange_5050';
-import Exemption_4753 from './views/report/Exemption_4753';
-
 export const routes = {
-  //////////////////////////////////////////////////////
-  ////////////  Revenue Reprots Routes  ///////////////
-  ////////////////////////////////////////////////////
   DataExchange_5050: '/DataExchangeReport5050',
   DataExchange_5051: '/DataExchangeReport5051',
-  //////////////////////////////////////////////////////
-  ////////////  Selectivity Reprots Routes  ///////////////
-  ////////////////////////////////////////////////////
   Selectivity_4360: '/SelectivityReport4360',
   Selectivity_4361: '/SelectivityReport4361',
-  //////////////////////////////////////////////////////
-  ////////////  Revenue Reprots Routes  ///////////////
-  ////////////////////////////////////////////////////
-
   revenue4150: '/revenue4150',
   RevenueReport4157_1400: '/RevenueReport4157_1400',
   RevenueReport4158: '/RevenueReport4158',
@@ -70,7 +52,6 @@ export const routes = {
   ManifestReport4450: '/ManifestReport4450',
   DataExchangeReport5053: '/DataExchangeReport5053',
   DataExchangeReport5054: '/DataExchangeReport5054',
-
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
   DPS_4556: '/DpsReport4556',
@@ -99,9 +80,6 @@ export const routes = {
   revenue4171: '/revenue4171',
   revenue4171_1400: '/revenue4171_1400',
   revenue4172: '/revenue4172',
-  //////////////////////////////////////////////////////
-  ////////////  Transit Reprots Routes  ///////////////
-  ////////////////////////////////////////////////////
   Transit_4251: '/transit_4251',
   Transit_4252: '/transit_4252',
   Transit_4270: '/transit_4270',
@@ -111,9 +89,6 @@ export const routes = {
   Transit_4282: '/transit_4282',
   Transit_4283: '/transit_4283',
   Transit_4284: '/transit_4284',
-  //////////////////////////////////////////////////////
-  ////////////     DPS  Reprots Routes  ///////////////
-  ////////////////////////////////////////////////////
   DPS_4557: '/DPS_4557',
   DPS_4553: '/DPS_4553',
   DPS_4573: '/DPS_4573',
@@ -127,13 +102,9 @@ export const routes = {
   DPS_4595: '/DPS_4595',
   DPS_4596: '/DPS_4596',
   DPS_4599: '/DPS_4599',
-  //////////////////////////////////////////////////////
-  ////////////     Exemption  Reprots Routes  //////////
-  ////////////////////////////////////////////////////
   Exemption_4753: '/Exemption_4753',
   Exemption_4754: '/Exemption_4754',
   Exemption_4755: '/Exemption_4755',
-
   all: '*',
   base: '/*',
   Dashboard: '/dashboard',
