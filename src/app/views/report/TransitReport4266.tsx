@@ -20,11 +20,11 @@ const TransitReport4266 = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   const handleSubmit = async (data: SearchData) => {
     try {
-        console.log(data)
+      console.log(data)
       const res = await axios.post('/reporting/TransitReport4266', {
         startDate: data.startDate,
         endDate: data.endDate,
@@ -34,7 +34,7 @@ const TransitReport4266 = () => {
       });
 
       setReportData(res.data);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
@@ -47,7 +47,11 @@ const TransitReport4266 = () => {
           //showDestinationCustomsList
           // ShowTinNumber
           // showCustomsProcedure
-          showBasedOn2
+
+          // commented for error
+          // showBasedOn2
+
+
           showRegDate
           showDepartureDate
           showTransitType2
@@ -68,7 +72,7 @@ const TransitReport4266 = () => {
             stripedRows
             showGridlines
           >
-            <Column  field={'IDE_CUO_DPA_NAM'} header={'IDE_CUO_DPA_NAM '} />
+            <Column field={'IDE_CUO_DPA_NAM'} header={'IDE_CUO_DPA_NAM '} />
             <Column field={'IDE_CUO_DES_NAM'} header={'IDE_CUO_DES_NAM'} />
             <Column field={'IDE_TYP_TRS'} header={'IDE_TYP_TRS'} />
             <Column field={'STATUS'} header={'STATUS'} />

@@ -90,8 +90,13 @@ const Exemption_4755 = () => {
           showStartDate
           showEndDate
           showCustomsList
-          showBasedOnExemption2
-          showBasedOnExemptionValue
+
+
+          // commented for error
+          // showBasedOnExemption2
+          // showBasedOnExemptionValue
+
+
           onSearch={handleSubmit}
           tabelRef={tableRef}
         />

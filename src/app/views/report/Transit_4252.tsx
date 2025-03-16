@@ -89,11 +89,21 @@ const Transit_4252 = () => {
         <ReportHeaderInputs
           showStartDate
           showEndDate
-          showBasedOnTransitvalue
+
+
+          // commented for error
+          // showBasedOnTransitvalue
+
+
           showAssesDate
           showArrivalDate
           showTransitType
-          showBasedOnTransit
+
+
+          // commented for error
+          // showBasedOnTransit
+
+
           showDestinationCustomsList
           showDepartureCustomsList
           onSearch={handleSubmit}

@@ -40,18 +40,23 @@ function DPS_4584() {
         <Container>
             <SimpleCard title="DPS_4584">
                 <ReportHeaderInputs
-                    showStartDate 
+                    showStartDate
                     showEndDate
                     //ShowTinNumber
                     //showOperationDate
-                   // showCustomsProcedure
+                    // showCustomsProcedure
                     showExitDate
                     showRegDate
-                   // showAssesDate
-                   // showPayDate
+                    // showAssesDate
+                    // showPayDate
                     showCustomsList
                     showStatus1
-                    showbased1
+
+
+                    // commented for error
+                    // showbased1
+
+
                     showDestinationCustomsList
                     showArrivalDate
                     showFinalExitDate
@@ -69,18 +74,18 @@ function DPS_4584() {
                         stripedRows
                         showGridlines
                     >
-                        <Column style={{minWidth: "12rem"}} field={'cuoNam'} header={'CUO_NAM'} />
-                        <Column  field={'icd'} header={'ICD'} />
-                        <Column  field={'companyCode'} header={'COMPANY_CODE'} />
-                        <Column  style={{minWidth: "40rem"}}field={'companyName'} header={'COMPANY_NAME'} />
+                        <Column style={{ minWidth: "12rem" }} field={'cuoNam'} header={'CUO_NAM'} />
+                        <Column field={'icd'} header={'ICD'} />
+                        <Column field={'companyCode'} header={'COMPANY_CODE'} />
+                        <Column style={{ minWidth: "40rem" }} field={'companyName'} header={'COMPANY_NAME'} />
                         <Column field={'barchalanCode'} header={'BARCHALAN_CODE'} />
-                        <Column style={{minWidth: "25rem"}}field={'barchalanName'} header={'BARCHALAN_NAME'} />
+                        <Column style={{ minWidth: "25rem" }} field={'barchalanName'} header={'BARCHALAN_NAME'} />
                         <Column field={'ruckType'} header={'TRACK_TYPE'} />
                         <Column field={'truckRegNumber'} header={'TRUCK_REGISTER_NO'} />
                         <Column field={'truckRegNbrnew'} header={'TRUCK_REGISTER_NO_NEW'} />
                         <Column field={'trailerRegNumber'} header={'TRILAR_REG_NO'} />
                         <Column field={'trailerRegNbrnew'} header={'TRILAR_REG_NO_NEW'} />
-                        <Column style={{minWidth: "20rem"}}field={'goodsDesc'} header={'GOODS_DESCRIPTION'} />
+                        <Column style={{ minWidth: "20rem" }} field={'goodsDesc'} header={'GOODS_DESCRIPTION'} />
                         <Column field={'entEmty'} header={'ENT_EMTY'} />
                         <Column field={'sadNumber'} header={'SAD_NUMBER'} />
                         <Column field={'t1dNumber'} header={'T1D_NUMBER'} />
@@ -90,7 +95,7 @@ function DPS_4584() {
                         <Column field={'weight'} header={'WEIGHT'} />
                         <Column field={'totalPackage'} header={'TOTAL_PACKAGE'} />
 
-                        <Column style={{minWidth: "12rem"}}field={'status'} header={'STATUS'} />
+                        <Column style={{ minWidth: "12rem" }} field={'status'} header={'STATUS'} />
                         <Column field={'customsRegime'} header={'CUSTOMS_REGIME'} />
                         <Column field={'regNbrYearly'} header={'REG_NBR_YEARLY'} />
                         <Column field={'regNbrDaily'} header={'REG_NBR_DAILY'} />
@@ -103,10 +108,10 @@ function DPS_4584() {
                         <Column field={'destParkingLocation'} header={'DEST_PARKING_LOCATION'} />
                         <Column field={'dstArrRem'} header={'DST_ARR_REM'} />
                         <Column field={'dstExtRem'} header={'DST_EXT_REM'} />
-                        <Column style={{minWidth: "15rem"}}field={'remarkEntry'} header={'REMARK_ENTRY'} />
+                        <Column style={{ minWidth: "15rem" }} field={'remarkEntry'} header={'REMARK_ENTRY'} />
                         <Column field={'remarkExit'} header={'REMARK_EXIT'} />
                         <Column field={'truckNationality'} header={'TRUCK_NATIONALITY'} />
-                        <Column style={{minWidth: "15rem"}}field={'prvDoc'} header={'PRV_DOC'} />
+                        <Column style={{ minWidth: "15rem" }} field={'prvDoc'} header={'PRV_DOC'} />
                     </DataTable>
                 </Box>
             </SimpleCard>
