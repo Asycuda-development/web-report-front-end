@@ -113,7 +113,7 @@ export const AUTHORITIES = {
   RevenueReport48101: '/RevenueReport48101',
   RevenueReport48100: '/RevenueReport48100',
   RevenueReport4164_1400: '/RevenueReport4164_1400',
-  RevenueReport4158: 'RevenueReport4158'
+  RevenueReport4158: 'RevenueReport4158',
   Report_4551_DPS: 'REPORT:4551-DPS',
   Report_4557_DPS: 'REPORT:4557-DPS',
   Report_4553_DPS: 'REPORT:4553-DPS',
@@ -128,20 +128,13 @@ export const AUTHORITIES = {
   Report_4595_DPS: 'REPORT:4595-DPS',
   Report_4596_DPS: 'REPORT:4596-DPS',
   Report_4599_DPS: 'REPORT:4599-DPS',
-
-  // DataExchange Reports>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   Report_5050_DataExchange: 'REPORT:5050-DataExchange',
   Report_5051_DataExchange: 'REPORT:5051-DataExchange',
-
-  // selectivity Reports>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   Report_4360_Selectivity: 'REPORT:4360-Selectivity',
   Report_4361_Selectivity: 'REPORT:4361-Selectivity',
-  // Exemtion Reports>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   Report_4753_Exemption: 'REPORT:4753-Exemption',
   Report_4754_Exemption: 'REPORT:4754-Exemption',
   Report_4755_Exemption: 'REPORT:4755-Exemption',
-  //Revenue Reports>>>>>>>>>>>>>>>>>>>>>
-  REPORT_4150_REVENUE: 'REPORT:4150-REVENUE',
   REPORT_4151_REVENUE: 'REPORT:4151-REVENUE',
   REPORT_4155_REVENUE: 'REPORT:4155-REVENUE',
   REPORT_4165_REVENUE: 'REPORT:4165-REVENUE',
