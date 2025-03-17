@@ -50,6 +50,10 @@ function DPS_4550() {
   const basedOnOptions = [{
     label: 'declarant',
     name: 'declarant'
+  },
+  {
+    label: 'i_num',
+    name: 'i_num'
   }]
   //
   return (

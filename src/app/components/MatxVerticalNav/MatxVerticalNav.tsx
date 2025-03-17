@@ -794,7 +794,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4250- Transit',
+                                label: 'REPORT_4250_TRANSIT',
                                 command: () => {
                                     navigation(routes.transit_4250);
                                 }
@@ -806,7 +806,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4251- Transit',
+                                label: 'REPORT_4251_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4251);
                                 }
@@ -818,7 +818,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4252- Transit',
+                                label: 'REPORT_4252_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4252);
                                 }
@@ -826,11 +826,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4257,
+                                        AUTHORITIES.REPORT_4257_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4257',
+                                label: 'REPORT_4257_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4257);
                                 }
@@ -838,11 +838,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4258,
+                                        AUTHORITIES.REPORT_4258_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4258',
+                                label: 'REPORT_4258_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4258);
                                 }
@@ -850,11 +850,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4259,
+                                        AUTHORITIES.REPORT_4259_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4259',
+                                label: 'REPORT_4259_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4259);
                                 }
@@ -862,11 +862,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4265,
+                                        AUTHORITIES.REPORT_4265_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4265',
+                                label: 'REPORT_4265_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4265);
                                 }
@@ -874,11 +874,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4266,
+                                        AUTHORITIES.REPORT_4266_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4266',
+                                label: 'REPORT_4266_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4266);
                                 }
@@ -886,11 +886,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4267,
+                                        AUTHORITIES.REPORT_4267_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4267',
+                                label: 'REPORT_4267_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4267);
                                 }
@@ -898,11 +898,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4268,
+                                        AUTHORITIES.REPORT_4268_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4268',
+                                label: 'REPORT_4268_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4268);
                                 }
@@ -914,7 +914,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4270- Transit',
+                                label: 'REPORT_4270_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4270);
                                 }
@@ -926,7 +926,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4271- Transit',
+                                label: 'REPORT_4271_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4271);
                                 }
@@ -938,7 +938,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4272- Transit',
+                                label: 'REPORT_4272_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4272);
                                 }
@@ -950,7 +950,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4274- Transit',
+                                label: 'REPORT_4274_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4274);
                                 }
@@ -958,11 +958,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4275,
+                                        AUTHORITIES.REPORT_4275_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4275',
+                                label: 'REPORT_4275_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4275);
                                 }
@@ -970,11 +970,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4276,
+                                        AUTHORITIES.REPORT_4276_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4276',
+                                label: 'REPORT_4276_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4276);
                                 }
@@ -982,11 +982,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4277,
+                                        AUTHORITIES.REPORT_4277_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4277',
+                                label: 'REPORT_4277_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4277);
                                 }
@@ -994,11 +994,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4278,
+                                        AUTHORITIES.REPORT_4278_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4278',
+                                label: 'REPORT_4278_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4278);
                                 }
@@ -1006,11 +1006,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4279,
+                                        AUTHORITIES.REPORT_4279_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4279',
+                                label: 'REPORT_4279_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4279);
                                 }
@@ -1018,11 +1018,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4280,
+                                        AUTHORITIES.REPORT_4280_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4280',
+                                label: 'REPORT_4280_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4280);
                                 }
@@ -1030,11 +1030,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.TransitReport4281,
+                                        AUTHORITIES.REPORT_4281_TRANSIT,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'TransitReport4281',
+                                label: 'REPORT_4281_TRANSIT',
                                 command: () => {
                                     navigation(routes.TransitReport4281);
                                 }
@@ -1046,7 +1046,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4282- Transit',
+                                label: 'REPORT_4282_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4282);
                                 }
@@ -1058,7 +1058,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4283- Transit',
+                                label: 'REPORT_4283_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4283);
                                 }
@@ -1070,7 +1070,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4284- Transit',
+                                label: 'REPORT_4284_TRANSIT',
                                 command: () => {
                                     navigation(routes.Transit_4284);
                                 }

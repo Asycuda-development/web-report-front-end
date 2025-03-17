@@ -1,7 +1,3 @@
-import SelectivityReport4356 from "../views/report/SelectivityReport4356";
-import TransitReport4267 from "../views/report/TransitReport4267";
-import TransitReport4275 from "../views/report/TransitReport4275";
-import TransitReport4276 from "../views/report/TransitReport4276";
 
 export const topBarHeight = 64;
 export const sideNavWidth = 205;
@@ -66,20 +62,20 @@ export const AUTHORITIES = {
   REPORT_4586_DPS: 'REPORT:4586-DPS',
   REPORT_4590_DPS: 'REPORT:4590-DPS',
   REPORT_4591_DPS: 'REPORT:4591-DPS',
-  TransitReport4257: '/TransitReport4257',
-  TransitReport4258: '/TransitReport4258',
-  TransitReport4259: '/TransitReport4259',
-  TransitReport4265: '/TransitReport4265',
-  TransitReport4266: '/TransitReport4266',
-  TransitReport4268: '/TransitReport4268',
-  TransitReport4267: '/TransitReport4267',
-  TransitReport4275: '/TransitReport4275',
-  TransitReport4276: '/TransitReport4276',
-  TransitReport4277: '/TransitReport4277',
-  TransitReport4278: '/TransitReport4278',
-  TransitReport4279: '/TransitReport4279',
-  TransitReport4280: '/TransitReport4280',
-  TransitReport4281: '/TransitReport4281',
+  REPORT_4257_TRANSIT: 'REPORT:4257-TRANSIT',
+  REPORT_4258_TRANSIT: 'REPORT:4258-TRANSIT',
+  REPORT_4259_TRANSIT: 'REPORT:4259-TRANSIT',
+  REPORT_4265_TRANSIT: 'REPORT:4265-TRANSIT',
+  REPORT_4266_TRANSIT: 'REPORT:4266-TRANSIT',
+  REPORT_4268_TRANSIT: 'REPORT:4268-TRANSIT',
+  REPORT_4267_TRANSIT: 'REPORT:4267-TRANSIT',
+  REPORT_4275_TRANSIT: 'REPORT:4275-TRANSIT',
+  REPORT_4276_TRANSIT: 'REPORT:4276-TRANSIT',
+  REPORT_4277_TRANSIT: 'REPORT:4277-TRANSIT',
+  REPORT_4278_TRANSIT: 'REPORT:4278-TRANSIT',
+  REPORT_4279_TRANSIT: 'REPORT:4279-TRANSIT',
+  REPORT_4280_TRANSIT: 'REPORT:4280-TRANSIT',
+  REPORT_4281_TRANSIT: 'REPORT:4281-TRANSIT',
   ValuationReport4652: '/ValuationReport4652',
   ValuationReport4653: '/ValuationReport4653',
   ValuationReport4654: '/ValuationReport4654',
