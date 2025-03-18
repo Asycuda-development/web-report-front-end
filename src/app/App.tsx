@@ -114,7 +114,7 @@ import TransitReport4281 from './views/report/REPORT_4281_TRANSIT';
 import Valuation_4650 from './views/report/Valuation_4650';
 import Valuation_4652 from './views/report/Valuation_4652';
 import Valuation_4653 from './views/report/Valuation_4653';
-import ValuationReport4654 from './views/report/ValuationReport4654';
+import Valuation_4654 from './views/report/Valuation_4654';
 import ValuationReport4656 from './views/report/ValuationReport4656';
 import ValuationReport4657 from './views/report/ValuationReport4657';
 import ValuationReport4658 from './views/report/ValuationReport4658';
@@ -604,10 +604,10 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ValuationReport4654}
+            path={routes.Valuation_4654}
             element={
               <PrivateRoute>
-                <ValuationReport4654 />
+                <Valuation_4654 />
               </PrivateRoute>
             }
           />

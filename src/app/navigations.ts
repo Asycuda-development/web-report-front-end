@@ -36,7 +36,7 @@ export const routes = {
   Valuation_4650: '/valuation-report-4650',
   Valuation_4652: '/valuation-report-4652',
   Valuation_4653: '/valuation-report-4653',
-  ValuationReport4654: '/ValuationReport4654',
+  Valuation_4654: '/valuation-report-4654',
   ValuationReport4656: '/ValuationReport4656',
   ValuationReport4657: '/ValuationReport4657',
   ValuationReport4658: '/ValuationReport4658',
