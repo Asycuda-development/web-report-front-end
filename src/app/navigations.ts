@@ -39,7 +39,7 @@ export const routes = {
   Valuation_4654: '/valuation-report-4654',
   Valuation_4656: '/valuation-report-4656',
   Valuation_4657: '/valuation-report-4657',
-  ValuationReport4658: '/ValuationReport4658',
+  Valuation_4658: '/valuation-report-4658',
   ExemptionReport4750: '/ExemptionReport4750',
   ExemptionReport4752: '/ExemptionReport4752',
   SelectivityReport4350: '/SelectivityReport4350',

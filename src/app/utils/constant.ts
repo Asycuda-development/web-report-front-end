@@ -82,7 +82,7 @@ export const AUTHORITIES = {
   REPORT_4654_VALUATION: 'REPORT:4654-VALUATION',
   REPORT_4656_VALUATION: 'REPORT:4656-VALUATION',
   REPORT_4657_VALUATION: 'REPORT:4657-VALUATION',
-  ValuationReport4658: '/ValuationReport4658',
+  REPORT_4658_VALUATION: 'REPORT:4658-VALUATION',
   ExemptionReport4750: '/ExemptionReport4750',
   ExemptionReport4752: '/ExemptionReport4752',
   SelectivityReport4350: '/SelectivityReport4350',

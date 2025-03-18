@@ -117,7 +117,7 @@ import Valuation_4653 from './views/report/Valuation_4653';
 import Valuation_4654 from './views/report/Valuation_4654';
 import Valuation_4656 from './views/report/Valuation_4656';
 import Valuation_4657 from './views/report/Valuation_4657';
-import ValuationReport4658 from './views/report/ValuationReport4658';
+import Valuation_4658 from './views/report/Valuation_4658';
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -628,10 +628,10 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ValuationReport4658}
+            path={routes.Valuation_4658}
             element={
               <PrivateRoute>
-                <ValuationReport4658 />
+                <Valuation_4658 />
               </PrivateRoute>
             }
           />
