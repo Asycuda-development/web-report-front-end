@@ -34,13 +34,11 @@ function DPS_4550() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
       }
 
-      setReportData(res.data);
     } catch (error) { }
     finally {
       setLoading(false);
