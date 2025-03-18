@@ -112,7 +112,7 @@ import TransitReport4279 from './views/report/REPORT_4279_TRANSIT';
 import TransitReport4280 from './views/report/REPORT_4280_TRANSIT';
 import TransitReport4281 from './views/report/REPORT_4281_TRANSIT';
 import Valuation_4650 from './views/report/Valuation_4650';
-import ValuationReport4652 from './views/report/ValuationReport4652';
+import Valuation_4652 from './views/report/Valuation_4652';
 import ValuationReport4653 from './views/report/ValuationReport4653';
 import ValuationReport4654 from './views/report/ValuationReport4654';
 import ValuationReport4656 from './views/report/ValuationReport4656';
@@ -580,10 +580,18 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ValuationReport4652}
+            path={routes.Valuation_4650}
             element={
               <PrivateRoute>
-                <ValuationReport4652 />
+                <Valuation_4650 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Valuation_4652}
+            element={
+              <PrivateRoute>
+                <Valuation_4652 />
               </PrivateRoute>
             }
           />
@@ -616,14 +624,6 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <ValuationReport4657 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.Valuation_4650}
-            element={
-              <PrivateRoute>
-                <Valuation_4650 />
               </PrivateRoute>
             }
           />

@@ -1522,13 +1522,25 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ValuationReport4652,
+                                        AUTHORITIES.REPORT_4650_VALUATION,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'ValuationReport4652',
+                                label: 'Valuation Report 4650',
                                 command: () => {
-                                    navigation(routes.ValuationReport4652);
+                                    navigation(routes.Valuation_4650);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4652_VALUATION,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Valuation Report 4652',
+                                command: () => {
+                                    navigation(routes.Valuation_4652);
                                 }
                             },
                             {
@@ -1577,18 +1589,6 @@ const MatxVerticalNav = () => {
                                 label: 'ValuationReport4657',
                                 command: () => {
                                     navigation(routes.ValuationReport4657);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.REPORT_4650_VALUATION,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'Valuation Report 4650',
-                                command: () => {
-                                    navigation(routes.Valuation_4650);
                                 }
                             },
                             {
