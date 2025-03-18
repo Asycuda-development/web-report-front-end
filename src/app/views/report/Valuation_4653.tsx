@@ -7,7 +7,8 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 
-const Valuation_4652 = () => {
+
+const Valuation_4653 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
@@ -17,7 +18,7 @@ const Valuation_4652 = () => {
   const handleSubmit = async (data: SearchData) => {
     try {
       setLoading(true)
-      const res = await axios.post('/reporting/ValuationReport4652', {
+      const res = await axios.post('/reporting/ValuationReport4653', {
         startDate: data.startDate,
         endDate: data.endDate,
         customsCode: data.CustomsCode,
@@ -30,19 +31,16 @@ const Valuation_4652 = () => {
         setReportData(res.data);
       }
     } catch (error) { }
-    finally {
-      setLoading(false)
-    }
+    finally { setLoading(false) }
   };
 
   return (
-    <SimpleCard title="ValuationReport4652">
+    <SimpleCard title="ValuationReport4653">
       <ReportHeaderInputs
         showStartDate
         showEndDate
-        showRegDate
-        showUserName
-        ShowHsCode
+        showCreationDate
+        showLinkedDate
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />
@@ -60,7 +58,7 @@ const Valuation_4652 = () => {
           showGridlines
         >
           <Column style={{ minWidth: "12rem" }} field={'Date_Modefication'} header={'Date_Modefication '} />
-          <Column field={'USERNAME'} header={'USERNAME'} />
+          <Column style={{ minWidth: "12rem" }} field={'USERNAME'} header={'USERNAME'} />
           <Column field={'RNK'} header={'RNK'} />
           <Column field={'HS_CODE'} header={'HS_CODE'} />
           <Column field={'IDE_HSC_NB2'} header={'IDE_HSC_NB2'} />
@@ -71,15 +69,15 @@ const Valuation_4652 = () => {
           <Column field={'Min_price'} header={'Min_price'} />
           <Column field={'GDS_MRG'} header={'GDS_MRG'} />
           <Column field={'Country_name'} header={'Country_name'} />
-          <Column field={'AVG_PER'} header={'AVG_PER'} />
+          <Column style={{ minWidth: "15rem" }} field={'AVG_PER'} header={'AVG_PER'} />
           <Column style={{ minWidth: "12rem" }} field={'Brand'} header={'Brand'} />
           <Column style={{ minWidth: "25rem" }} field={'DSC'} header={'DSC'} />
-          <Column field={'DSC1'} header={'DSC1'} />
+          <Column style={{ minWidth: "35rem" }} field={'DSC1'} header={'DSC1'} />
           <Column style={{ minWidth: "25rem" }} field={'gds_dsc'} header={'gds_dsc'} />
-          <Column field={'Formula'} header={'Formula'} />
-          <Column style={{ minWidth: "15rem" }} field={'Formula_dsc'} header={'Formula_dsc'} />
-          <Column style={{ minWidth: "12rem" }} field={'linked_value'} header={'linked_value'} />
-          <Column field={'gds_rul'} header={'gds_rul'} />
+          <Column style={{ minWidth: "rem" }} field={'Formula'} header={'Formula'} />
+          <Column field={'Formula_dsc'} header={'Formula_dsc'} />
+          <Column style={{ minWidth: "20rem" }} field={'linked_value'} header={'linked_value'} />
+          <Column style={{ minWidth: "15rem" }} field={'gds_rul'} header={'gds_rul'} />
 
         </DataTable>
       </Box>
@@ -87,4 +85,4 @@ const Valuation_4652 = () => {
   );
 };
 
-export default Valuation_4652;
+export default Valuation_4653;

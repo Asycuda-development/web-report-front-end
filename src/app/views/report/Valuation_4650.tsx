@@ -1,4 +1,4 @@
-import { Box, LinearProgress, styled } from '@mui/material';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
