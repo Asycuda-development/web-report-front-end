@@ -1,4 +1,4 @@
-import { Box, styled } from '@mui/material';
+import { Box,LinearProgress, styled } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
@@ -8,23 +8,15 @@ import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 //checked
 
-const Container = styled('div')(({ theme }) => ({
-    margin: '30px',
-    [theme.breakpoints.down('sm')]: { margin: '16px' },
-    '& .breadcrumb': {
-        marginBottom: '30px',
-        [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-    }
-}));
 
 function DPS_4560() {
     const [reportData, setReportData] = useState([]);
     const tableRef: any = useRef(null);
-
+    const [loading, setLoading] = useState(false);
     useEffect(() => { }, []);
 
     const handleSubmit = async (data: SearchData) => {
-        console.log(data);
+        setLoading(true);
         try {
             const res = await axios.post('/reporting/DpsReport4560', {
                 ...data,
@@ -32,12 +24,18 @@ function DPS_4560() {
                 customsCode: data.CustomsCode
             });
 
-            setReportData(res.data);
-        } catch (error) { }
+            if (res.data.length === 0) {
+                setReportData([]);
+            } else {
+                setReportData(res.data);
+            }
+            } catch (error) {
+            } finally {
+            setLoading(false);
+            }
     };
 
     return (
-        <Container>
             <SimpleCard title="DPS_4560">
                 <ReportHeaderInputs
                     showStartDate 
@@ -52,6 +50,9 @@ function DPS_4560() {
                     onSearch={handleSubmit}
                     tabelRef={tableRef}
                 />
+                 {loading && (
+                                 <LinearProgress />
+                                      )}
                 <Box width="100%" overflow="auto">
                     <DataTable
                         ref={tableRef}
@@ -61,6 +62,7 @@ function DPS_4560() {
                         paginator
                         stripedRows
                         showGridlines
+                        emptyMessage={'No Data Available'}
                     >
                         <Column  field={'office'} header={'OFFICE_NAME'} />
                         <Column  field={'status'} header={'STATUS'} />
@@ -69,7 +71,6 @@ function DPS_4560() {
                     </DataTable>
                 </Box>
             </SimpleCard>
-        </Container>
     );
 }
 

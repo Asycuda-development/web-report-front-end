@@ -1,4 +1,4 @@
-import { Box, styled } from '@mui/material';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
@@ -8,22 +8,16 @@ import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 //checked
 
-const Container = styled('div')(({ theme }) => ({
-    margin: '30px',
-    [theme.breakpoints.down('sm')]: { margin: '16px' },
-    '& .breadcrumb': {
-        marginBottom: '30px',
-        [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-    }
-}));
+
 
 function DPS_4563() {
     const [reportData, setReportData] = useState([]);
     const tableRef: any = useRef(null);
-
+    const [loading,setLoading]=useState(false);
     useEffect(() => { }, []);
 
     const handleSubmit = async (data: SearchData) => {
+        setLoading(true);
         console.log(data);
         try {
             const res = await axios.post('/reporting/DpsReport4563', {
@@ -32,12 +26,18 @@ function DPS_4563() {
                 customsCode: data.CustomsCode
             });
 
-            setReportData(res.data);
-        } catch (error) { }
+            if (res.data.length === 0) {
+                setReportData([]);
+            } else {
+                setReportData(res.data);
+            }
+            } catch (error) {
+            } finally {
+            setLoading(false);
+            }
     };
 
     return (
-        <Container>
             <SimpleCard title="DPS_4563">
                 <ReportHeaderInputs
                     showStartDate 
@@ -53,6 +53,9 @@ function DPS_4563() {
                     onSearch={handleSubmit}
                     tabelRef={tableRef}
                 />
+                {loading &&(
+                    <LinearProgress/>
+                )  }
                 <Box width="100%" overflow="auto">
                     <DataTable
                         ref={tableRef}
@@ -62,6 +65,7 @@ function DPS_4563() {
                         paginator
                         stripedRows
                         showGridlines
+                        emptyMessage={'No Data Available'}
                     >
                         <Column  field={'cmpCod'} header={'CMP_CODE'} />
                         <Column  field={'cmpNam'} header={'CMP_NAME'} />
@@ -76,7 +80,6 @@ function DPS_4563() {
                     </DataTable>
                 </Box>
             </SimpleCard>
-        </Container>
     );
 }
 

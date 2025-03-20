@@ -7,18 +7,12 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 
-const Container = styled('div')(({ theme }) => ({
-    margin: '30px',
-    [theme.breakpoints.down('sm')]: { margin: '16px' },
-    '& .breadcrumb': {
-        marginBottom: '30px',
-        [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-    }
-}));
+
 
 function DPS_4564() {
     const [reportData, setReportData] = useState([]);
     const tableRef: any = useRef(null);
+    const [loading,setLoading]=useState(false);
 
     useEffect(() => { }, []);
 
@@ -31,12 +25,18 @@ function DPS_4564() {
                 customsCode: data.CustomsCode
             });
 
-            setReportData(res.data);
-        } catch (error) { }
+            if (res.data.length === 0) {
+                setReportData([]);
+            } else {
+                setReportData(res.data);
+            }
+            } catch (error) {
+            } finally {
+            setLoading(false);
+            }
     };
 
     return (
-        <Container>
             <SimpleCard title="DPS_4564">
                 <ReportHeaderInputs
                     showStartDate 
@@ -60,6 +60,7 @@ function DPS_4564() {
                         paginator
                         stripedRows
                         showGridlines
+                        emptyMessage={'No Data Available'}
                     >
                         <Column  field={'sadYear'} header={'SAD_YEAR'} />
                         <Column  field={'sddOffice'} header={'SAD_OFFICE'} />
@@ -106,7 +107,6 @@ function DPS_4564() {
                     </DataTable>
                 </Box>
             </SimpleCard>
-        </Container>
     );
 }
 

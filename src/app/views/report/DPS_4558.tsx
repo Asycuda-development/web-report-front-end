@@ -1,4 +1,4 @@
-import { Box, styled } from '@mui/material';
+import { Box,LinearProgress, styled } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
@@ -8,36 +8,58 @@ import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 //checked
 
-const Container = styled('div')(({ theme }) => ({
-    margin: '30px',
-    [theme.breakpoints.down('sm')]: { margin: '16px' },
-    '& .breadcrumb': {
-        marginBottom: '30px',
-        [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-    }
-}));
+
 
 function DPS_4558() {
     const [reportData, setReportData] = useState([]);
+    const [loading, setLoading] = useState(false);
     const tableRef: any = useRef(null);
 
     useEffect(() => { }, []);
 
     const handleSubmit = async (data: SearchData) => {
-        console.log(data);
+        setLoading(true);
         try {
             const res = await axios.post('/reporting/DpsReport4558', {
                 ...data,
                 type: data.customsProcedure,
                 customsCode: data.CustomsCode
             });
-
-            setReportData(res.data);
-        } catch (error) { }
+            if (res.data.length === 0) {
+                setReportData([]);
+            } else {
+                setReportData(res.data);
+            }
+            } catch (error) {
+            } finally {
+            setLoading(false);
+            }
     };
-
+    const basedOnOptions = [{
+        label: 'declarant',
+        name: 'declarant'
+      },
+     {
+         label: 'company',
+         name: 'company'
+       },{
+         label: 'Sad_Financial',
+         name: 'Sad_Financial'
+       },{
+         label: 'Examiner',
+         name: 'Examiner'
+       },{
+         label: 'I_no',
+         name: 'I_no'
+       },{
+         label: 'P_no',
+         name: 'P_no'
+       },{
+         label: 'M_no',
+         name: 'M_no'
+       }]
     return (
-        <Container>
+        
             <SimpleCard title="DPS_4558">
                 <ReportHeaderInputs
                     showStartDate 
@@ -45,6 +67,8 @@ function DPS_4558() {
                     ShowTinNumber
                     showCustomsProcedure
                     showExemptionType
+                    showBasedOn
+                    basedOnOptions={basedOnOptions}
                     showRegDate
                     showAssesDate
                     showPayDate
@@ -52,15 +76,19 @@ function DPS_4558() {
                     onSearch={handleSubmit}
                     tabelRef={tableRef}
                 />
-                <Box width="100%" overflow="auto">
-                    <DataTable
-                        ref={tableRef}
-                        value={reportData}
-                        rows={ROWS_PER_PAGE}
-                        rowsPerPageOptions={[5, 10, 25, 50, 100]}
-                        paginator
-                        stripedRows
-                        showGridlines
+                   {loading && (
+                                    <LinearProgress />
+                                 )}
+                                <Box width="100%" overflow="auto">
+                                    <DataTable
+                                        ref={tableRef}
+                                        value={reportData}
+                                        rows={ROWS_PER_PAGE}
+                                        rowsPerPageOptions={[5, 10, 25, 50, 100]}
+                                        paginator
+                                        stripedRows
+                                        showGridlines
+                                        emptyMessage={'No Data Available'}
                     >
                         <Column field={'sadYear'} header={'SAD_YEAR'} />
                         <Column field={'sadOffice'} header={'SAD_OFFICE'} />
@@ -88,7 +116,7 @@ function DPS_4558() {
                     </DataTable>
                 </Box>
             </SimpleCard>
-        </Container>
+        
     );
 }
 

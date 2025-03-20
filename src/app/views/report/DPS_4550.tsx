@@ -34,7 +34,6 @@ function DPS_4550() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
@@ -50,11 +49,8 @@ function DPS_4550() {
   const basedOnOptions = [{
     label: 'declarant',
     name: 'declarant'
-  },
-  {
-    label: 'i_num',
-    name: 'i_num'
   }]
+  
   //
   return (
     <SimpleCard title="4550-DPS">

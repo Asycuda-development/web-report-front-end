@@ -1,4 +1,4 @@
-import { Box, styled } from '@mui/material';
+import { Box,LinearProgress, styled } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
@@ -7,23 +7,16 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 
-const Container = styled('div')(({ theme }) => ({
-    margin: '30px',
-    [theme.breakpoints.down('sm')]: { margin: '16px' },
-    '& .breadcrumb': {
-        marginBottom: '30px',
-        [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-    }
-}));
+
 
 function DPS_4561() {
     const [reportData, setReportData] = useState([]);
     const tableRef: any = useRef(null);
-
+    const [loading, setLoading]=useState(false)
     useEffect(() => { }, []);
 
     const handleSubmit = async (data: SearchData) => {
-        console.log(data);
+       setLoading(true);
         try {
             const res = await axios.post('/reporting/DpsReport4561', {
                 ...data,
@@ -31,27 +24,62 @@ function DPS_4561() {
                 customsCode: data.CustomsCode
             });
 
-            setReportData(res.data);
-        } catch (error) { }
+            if (res.data.length === 0) {
+                setReportData([]);
+            } else {
+                setReportData(res.data);
+            }
+            } catch (error) {
+            } finally {
+            setLoading(false);
+            }
     };
-
+    const basedOnOptions = [{
+        label: 'declarant',
+        name: 'declarant'
+      },
+     {
+         label: 'company',
+         name: 'company'
+       },{
+         label: 'Sad_Financial',
+         name: 'Sad_Financial'
+       },{
+         label: 'Examiner',
+         name: 'Examiner'
+       },{
+        label: 'CExaminer',
+        name: 'CExaminer'
+      },{
+         label: 'I_no',
+         name: 'I_no'
+       },{
+         label: 'P_no',
+         name: 'P_no'
+       },{
+        label: 'M_no',
+        name: 'M_no'
+      },{
+         label: 'ALL',
+         name: 'ALL'
+       }]
     return (
-        <Container>
             <SimpleCard title="DPS_4561">
                 <ReportHeaderInputs
                      showStartDate 
                      showEndDate
-                   // ShowTinNumber
                     showOperationDate
+                    showBasedOn
+                    basedOnOptions={basedOnOptions}
                     showCustomsProcedure
                     showRegDate
-                   // showAssesDate
-                   // showPayDate
                     showCustomsList
-                   
                     onSearch={handleSubmit}
                     tabelRef={tableRef}
                 />
+                {loading && (
+                         <LinearProgress />
+                          )}
                 <Box width="100%" overflow="auto">
                     <DataTable
                         ref={tableRef}
@@ -61,6 +89,7 @@ function DPS_4561() {
                         paginator
                         stripedRows
                         showGridlines
+                        emptyMessage={'No Data Available'}
                     >
                         <Column  style={{ minWidth: '10rem' }} field={'fullName'} header={'FULLNAME'} />
                         <Column  field={'sadType'} header={'SAD_TYPE'} />
@@ -87,7 +116,6 @@ function DPS_4561() {
                     </DataTable>
                 </Box>
             </SimpleCard>
-        </Container>
     );
 }
 

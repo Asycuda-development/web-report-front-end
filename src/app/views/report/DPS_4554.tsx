@@ -1,4 +1,4 @@
-import { Box, styled } from '@mui/material';
+import { Box,LinearProgress, styled } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
@@ -7,17 +7,14 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 
-const Container = styled('div')(({ theme }) => ({
-  margin: '30px',
-  [theme.breakpoints.down('sm')]: { margin: '16px' },
-  '& .breadcrumb': {
-    marginBottom: '30px',
-    [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-  }
-}));
+
+
+
+
 
 function DPS_4554() {
   const [reportData, setReportData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
 
   useEffect(() => { }, []);
@@ -25,35 +22,44 @@ function DPS_4554() {
   const handleSubmit = async (data: SearchData) => {
     console.log(data)
     try {
+      setLoading(true);
       const res = await axios.post('/reporting/DpsReport4554', {
         ...data,
-        
-        
+        type: data.customsProcedure,
         customsCode: data.CustomsCode
       });
+      if (res.data.length === 0) {
+        setReportData([]);
+      } else {
+        setReportData(res.data);
+      }
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
 
-      setReportData(res.data);
-    } catch (error) { }
   };
 
   return (
-    <Container>
+   
       <SimpleCard title="4554-DPS">
         <ReportHeaderInputs
           showStartDate
           showEndDate
           ShowTinNumber
-          //showExemptionType
           showCustomsProcedure
           showRegDate
           showAssesDate
           showPayDate
-         // showOperationDate
           showCustomsList
           ShowHsCode
           onSearch={handleSubmit}
           tabelRef={tableRef}
+          
         />
+          {loading && (
+                        <LinearProgress />
+                      )}
         <Box width="100%" overflow="auto">
           <DataTable
             ref={tableRef}
@@ -63,7 +69,9 @@ function DPS_4554() {
             paginator
             stripedRows
             showGridlines
+            emptyMessage={'No Data Available'}
           >
+            
             <Column field={'ideTypSad'} header={'SAD Type'} />
             <Column style={{minWidth: "12rem"}} field={'tptCuoNam'} header={'Transport Custom Name'} />
             <Column style={{minWidth: "12rem"}} filter filterField="ideCuoNam" field={'ideCuoNam'} header={'Custom Name'} />
@@ -123,7 +131,6 @@ function DPS_4554() {
           </DataTable>
         </Box>
       </SimpleCard>
-    </Container>
   );
 };
 

@@ -1,91 +1,38 @@
-import { SimpleCard } from '../../components';
-import { Box, styled, LinearProgress } from '@mui/material';
-import { useEffect, useState, useRef } from 'react';
-import { ROWS_PER_PAGE } from '../../utils/constant';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
+import { Column } from 'primereact/column';
+import { DataTable } from 'primereact/datatable';
+import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
-
-const Container = styled('div')(({ theme }) => ({
-  margin: '30px',
-  [theme.breakpoints.down('sm')]: { margin: '16px' },
-  '& .breadcrumb': {
-    marginBottom: '30px',
-    [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-  }
-}));
-
-const LoadingMessage = styled('p')({
-  fontSize: '45px',
-  textAlign: 'center',
-  position: 'absolute',
-  top: '68%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)'
-});
-
-const EmptyDataMessage = styled('p')({
-  fontSize: '45px',
-  textAlign: 'center',
-  position: 'absolute',
-  top: '68%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)'
-});
+import { SimpleCard } from '../../components';
+import { ROWS_PER_PAGE } from '../../utils/constant';
 
 function DPS_4553() {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [loadingMessage, setLoadingMessage] = useState('Report generating');
-  const [emptyDataMessage, setEmptyDataMessage] = useState('');
+  const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    if (isLoading) {
-      const interval = setInterval(() => {
-        setLoadingMessage((prev) => {
-          switch (prev) {
-            case 'Report is generating':
-              return 'Report is generating.';
-            case 'Report is generating.':
-              return 'Report is generating..';
-            case 'Report is generating..':
-              return 'Report is generating...';
-            default:
-              return 'Report is generating.';
-          }
-        });
-      }, 500);
-      return () => clearInterval(interval);
-    }
-  }, [isLoading]);
 
   const handleSubmit = async (data: SearchData) => {
     try {
-      setIsLoading(true);
-      setLoadingMessage('Report fenerating');
+      setLoading(true);
       const res = await axios.post('/reporting/DpsReport4553', {
         ...data,
         type: data.customsProcedure,
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setEmptyDataMessage('No Content to load');
-        console.log('event trigared!!');
         setReportData([]);
       } else {
         setReportData(res.data);
-        setEmptyDataMessage('');
       }
     } catch (error) {
     } finally {
-      setIsLoading(false);
-    }
-  };
+      setLoading(false);
+    }}
+
 
   return (
-    <Container>
       <SimpleCard title="DPS_4553">
         <ReportHeaderInputs
           showStartDate
@@ -101,17 +48,10 @@ function DPS_4553() {
           onSearch={handleSubmit}
           tabelRef={tableRef}
         />
-        {isLoading && (
-          <>
-            <LinearProgress />
-            <LoadingMessage>{loadingMessage}</LoadingMessage>
-          </>
-        )}
+        {loading && (
+                <LinearProgress />
+              )}
         <Box width="100%" overflow="auto">
-          {!isLoading && reportData.length === 0 && emptyDataMessage && (
-            <EmptyDataMessage>{emptyDataMessage}</EmptyDataMessage>
-          )}
-          {!isLoading && reportData.length > 0 && (
             <DataTable
               ref={tableRef}
               value={reportData}
@@ -120,6 +60,7 @@ function DPS_4553() {
               paginator
               stripedRows
               showGridlines
+              emptyMessage={'No Data Available'}
             >
               <Column
                 filter
@@ -177,10 +118,8 @@ function DPS_4553() {
               <Column field={'itemTaxes'} header={'Item Taxes'} />
               <Column field={'totalTaxes'} header={'Total Taxes '} />
             </DataTable>
-          )}
         </Box>
       </SimpleCard>
-    </Container>
   );
 }
 
