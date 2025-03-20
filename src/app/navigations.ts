@@ -22,7 +22,7 @@ export const routes = {
   RevenueReport48100: '/RevenueReport48100',
   Transit_4250: '/transit-report-4250',
   Transit_4251: '/transit-report-4251',
-  Transit_4252: '/transit_4252',
+  Transit_4252: '/transit-report-4252',
   Transit_4270: '/transit_4270',
   Transit_4272: '/transit_4272',
   Transit_4274: '/transit_4274',

@@ -60,7 +60,7 @@ import ExemptionReport4752 from './views/report/ExemptionReport4752';
 import ManifestReport4450 from './views/report/ManifestReport4450';
 import OverallReport from './views/report/report';
 import Transit_4251 from './views/report/Transit_4251';
-import Transit_4252 from './views/report/REPORT_4252_TRANSIT';
+import Transit_4252 from './views/report/Transit_4252';
 import TransitReport4257 from './views/report/REPORT_4257_TRANSIT';
 import TransitReport4258 from './views/report/REPORT_4258_TRANSIT';
 import TransitReport4259 from './views/report/REPORT_4259_TRANSIT';
