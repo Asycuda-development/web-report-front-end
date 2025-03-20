@@ -59,7 +59,7 @@ import ExemptionReport4750 from './views/report/ExemptionReport4750';
 import ExemptionReport4752 from './views/report/ExemptionReport4752';
 import ManifestReport4450 from './views/report/ManifestReport4450';
 import OverallReport from './views/report/report';
-import Transit_4251 from './views/report/REPORT_4251_TRANSIT';
+import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/REPORT_4252_TRANSIT';
 import TransitReport4257 from './views/report/REPORT_4257_TRANSIT';
 import TransitReport4258 from './views/report/REPORT_4258_TRANSIT';
@@ -128,7 +128,7 @@ const ForgotPassword = Loadable(lazy(() => import('./views/sessions/ForgotPasswo
 
 const Revenue4150 = Loadable(lazy(() => import('./views/report/Revenue_4150')));
 
-const Transit_4250 = Loadable(lazy(() => import('./views/report/REPORT_4250_TRANSIT')));
+const Transit_4250 = Loadable(lazy(() => import('./views/report/Transit_4250')));
 
 const Analytics = Loadable(lazy(() => import('./views/dashboard/Analytics')));
 
@@ -388,7 +388,7 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.transit_4250}
+            path={routes.Transit_4250}
             element={
               <PrivateRoute>
                 <Transit_4250 />

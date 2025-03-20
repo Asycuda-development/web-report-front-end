@@ -794,9 +794,9 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4250_TRANSIT',
+                                label: 'Transit Report 4250',
                                 command: () => {
-                                    navigation(routes.transit_4250);
+                                    navigation(routes.Transit_4250);
                                 }
                             },
                             {
@@ -806,7 +806,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4251_TRANSIT',
+                                label: 'Transit Report 4251',
                                 command: () => {
                                     navigation(routes.Transit_4251);
                                 }
