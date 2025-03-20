@@ -15,8 +15,8 @@ import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
 import DataExchange_5050 from './views/report/DataExchange_5050';
 import DataExchange_5051 from './views/report/DataExchange_5051';
-import DataExchangeReport5053 from './views/report/DataExchangeReport5053';
-import DataExchangeReport5054 from './views/report/DataExchangeReport5054';
+import DataExchange_5053 from './views/report/DataExchange_5053';
+import DataExchange_5054 from './views/report/DataExchange_5054';
 import DPS_4550 from './views/report/DPS_4550';
 import DPS_4551 from './views/report/DPS_4551';
 import DPS_4553 from './views/report/DPS_4553';
@@ -716,22 +716,6 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.DataExchangeReport5053}
-            element={
-              <PrivateRoute>
-                <DataExchangeReport5053 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.DataExchangeReport5054}
-            element={
-              <PrivateRoute>
-                <DataExchangeReport5054 />
-              </PrivateRoute>
-            }
-          />
-          <Route
             path={routes.DPS_4550}
             element={
               <PrivateRoute>
@@ -864,6 +848,22 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DataExchange_5051 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DataExchange_5053}
+            element={
+              <PrivateRoute>
+                <DataExchange_5053 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DataExchange_5054}
+            element={
+              <PrivateRoute>
+                <DataExchange_5054 />
               </PrivateRoute>
             }
           />

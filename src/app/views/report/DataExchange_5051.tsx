@@ -14,7 +14,6 @@ function DataExchange_5051() {
   const tableRef: any = useRef(null);
 
   const handleSubmit = async (data: SearchData) => {
-    console.log(data);
     try {
       setLoading(true);
       const res = await axios.post('/reporting/DataExchangeReport5051', {

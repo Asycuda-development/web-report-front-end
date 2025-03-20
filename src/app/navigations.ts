@@ -1,6 +1,8 @@
 export const routes = {
   DataExchange_5050: '/data-exchange-report-5050',
   DataExchange_5051: '/data-exchange-report-5051',
+  DataExchange_5053: '/data-exchange-report-5053',
+  DataExchange_5054: '/data-exchange-report-5054',
   Selectivity_4360: '/SelectivityReport4360',
   Selectivity_4361: '/SelectivityReport4361',
   revenue4150: '/revenue4150',
@@ -50,8 +52,6 @@ export const routes = {
   SelectivityReport4355: '/SelectivityReport4355',
   SelectivityReport4356: '/SelectivityReport4356',
   ManifestReport4450: '/ManifestReport4450',
-  DataExchangeReport5053: '/DataExchangeReport5053',
-  DataExchangeReport5054: '/DataExchangeReport5054',
   DPS_4550: '/DpsReport4550',
   DPS_4551: '/DpsReport4551',
   DPS_4556: '/DpsReport4556',
