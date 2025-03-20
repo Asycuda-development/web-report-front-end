@@ -61,8 +61,8 @@ import ManifestReport4450 from './views/report/ManifestReport4450';
 import OverallReport from './views/report/report';
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
-import TransitReport4257 from './views/report/REPORT_4257_TRANSIT';
-import TransitReport4258 from './views/report/REPORT_4258_TRANSIT';
+import Transit_4257 from './views/report/Transit_4257';
+import Transit_4258 from './views/report/Transit_4258';
 import TransitReport4259 from './views/report/REPORT_4259_TRANSIT';
 import TransitReport4265 from './views/report/REPORT_4265_TRANSIT';
 import TransitReport4266 from './views/report/REPORT_4266_TRANSIT';
@@ -412,74 +412,18 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.Transit_4270}
+            path={routes.Transit_4257}
             element={
               <PrivateRoute>
-                <Transit_4270 />
+                <Transit_4257 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.Transit_4271}
+            path={routes.Transit_4258}
             element={
               <PrivateRoute>
-                <Transit_4271 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.Transit_4272}
-            element={
-              <PrivateRoute>
-                <Transit_4272 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.Transit_4274}
-            element={
-              <PrivateRoute>
-                <Transit_4274 />
-              </PrivateRoute>
-            }
-          />{' '}
-          <Route
-            path={routes.Transit_4282}
-            element={
-              <PrivateRoute>
-                <Transit_4282 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.Transit_4283}
-            element={
-              <PrivateRoute>
-                <Transit_4283 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.Transit_4284}
-            element={
-              <PrivateRoute>
-                <Transit_4284 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.TransitReport4257}
-            element={
-              <PrivateRoute>
-                <TransitReport4257 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.TransitReport4258}
-            element={
-              <PrivateRoute>
-                <TransitReport4258 />
+                <Transit_4258 />
               </PrivateRoute>
             }
           />
@@ -544,6 +488,62 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <TransitReport4277 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4270}
+            element={
+              <PrivateRoute>
+                <Transit_4270 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4271}
+            element={
+              <PrivateRoute>
+                <Transit_4271 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4272}
+            element={
+              <PrivateRoute>
+                <Transit_4272 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4274}
+            element={
+              <PrivateRoute>
+                <Transit_4274 />
+              </PrivateRoute>
+            }
+          />{' '}
+          <Route
+            path={routes.Transit_4282}
+            element={
+              <PrivateRoute>
+                <Transit_4282 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4283}
+            element={
+              <PrivateRoute>
+                <Transit_4283 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4284}
+            element={
+              <PrivateRoute>
+                <Transit_4284 />
               </PrivateRoute>
             }
           />
