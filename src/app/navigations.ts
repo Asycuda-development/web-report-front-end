@@ -1,6 +1,6 @@
 export const routes = {
-  DataExchange_5050: '/DataExchangeReport5050',
-  DataExchange_5051: '/DataExchangeReport5051',
+  DataExchange_5050: '/data-exchange-report-5050',
+  DataExchange_5051: '/data-exchange-report-5051',
   Selectivity_4360: '/SelectivityReport4360',
   Selectivity_4361: '/SelectivityReport4361',
   revenue4150: '/revenue4150',
