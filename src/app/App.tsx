@@ -66,7 +66,8 @@ import Transit_4258 from './views/report/Transit_4258';
 import Transit_4259 from './views/report/Transit_4259';
 import Transit_4265 from './views/report/Transit_4265';
 import Transit_4266 from './views/report/Transit_4266';
-import TransitReport4267 from './views/report/REPORT_4267_TRANSIT';
+import Transit_4267 from './views/report/Transit_4267';
+import Transit_4268 from './views/report/Transit_4268';
 import Transit_4270 from './views/report/REPORT_4270_TRANSIT';
 import Transit_4271 from './views/report/REPORT_4271_TRANSIT';
 import Transit_4272 from './views/report/REPORT_4272_TRANSIT';
@@ -103,7 +104,6 @@ import SelectivityReport4353 from './views/report/SelectivityReport4353';
 import SelectivityReport4354 from './views/report/SelectivityReport4354';
 import SelectivityReport4355 from './views/report/SelectivityReport4355';
 import SelectivityReport4356 from './views/report/SelectivityReport4356';
-import TransitReport4268 from './views/report/REPORT_4268_TRANSIT';
 import TransitReport4275 from './views/report/REPORT_4275_TRANSIT';
 import TransitReport4276 from './views/report/REPORT_4276_TRANSIT';
 import TransitReport4277 from './views/report/REPORT_4277_TRANSIT';
@@ -452,18 +452,18 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.TransitReport4267}
+            path={routes.Transit_4267}
             element={
               <PrivateRoute>
-                <TransitReport4267 />
+                <Transit_4267 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.TransitReport4268}
+            path={routes.Transit_4268}
             element={
               <PrivateRoute>
-                <TransitReport4268 />
+                <Transit_4268 />
               </PrivateRoute>
             }
           />

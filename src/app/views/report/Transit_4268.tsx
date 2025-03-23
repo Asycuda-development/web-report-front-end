@@ -6,26 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
-import { Toast } from 'primereact/toast';
 
-const Transit_4266 = () => {
+const Transit_4268 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
-  const toastRef: any = useRef(null);
+
+  useEffect(() => { }, []);
 
   const handleSubmit = async (data: SearchData) => {
     try {
-      if (data.basedOn && !data.basedOnValue) {
-        toastRef.current.show({
-          severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
-        });
-        return
-      }
       setLoading(true)
-      const res = await axios.post('/reporting/TransitReport4266', {
+      const res = await axios.post('/reporting/TransitReport4268', {
         startDate: data.startDate,
         endDate: data.endDate,
         customsCode: data.CustomsCode,
@@ -37,36 +29,22 @@ const Transit_4266 = () => {
       } else {
         setReportData(res.data);
       }
+      setReportData(res.data);
     } catch (error) { }
     finally {
       setLoading(false);
     }
   };
 
-  const basedOnOptions = [{
-    label: 'Declarant',
-    name: 'declarant'
-  },
-  {
-    label: 'Company',
-    name: 'company'
-  },
-  {
-    label: 'Financial',
-    name: 'Financial'
-  }]
-
   return (
-    <SimpleCard title="Transit Report 4266">
+    <SimpleCard title="Transit Report 4268">
       <ReportHeaderInputs
         showStartDate
         showEndDate
         showCustomsList
+        showDestinationCustomsList
         showRegDate
-        showDepartureDate
         showTransitType2
-        showBasedOn
-        basedOnOptions={basedOnOptions}
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />
@@ -83,17 +61,17 @@ const Transit_4266 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'IDE_CUO_DPA_NAM'} header={'IDE_CUO_DPA_NAM '} />
-          <Column field={'IDE_CUO_DES_NAM'} header={'IDE_CUO_DES_NAM'} />
-          <Column field={'IDE_TYP_TRS'} header={'IDE_TYP_TRS'} />
-          <Column field={'STATUS'} header={'STATUS'} />
-          <Column field={'T1_cnt'} header={'T1_cnt'} />
+          <Column field={'countNo'} header={'countNo '} />
+          <Column field={'exemp'} header={'exemp'} />
+          <Column field={'ctyExp'} header={'ctyExp'} />
+          <Column field={'trsType'} header={'trsType'} />
+          <Column field={'depCod'} header={'depCod'} />
+          <Column field={'destCod'} header={'destCod'} />
           {/* <Column field={'tad_tot'} header={'Customs Value'} /> */}
         </DataTable>
       </Box>
-      <Toast ref={toastRef} />
     </SimpleCard>
   );
 };
 
-export default Transit_4266;
+export default Transit_4268;
