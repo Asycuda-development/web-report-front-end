@@ -6,14 +6,24 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { Toast } from 'primereact/toast';
 
 function DPS_45101() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const toastRef: any = useRef(null);
 
   const handleSubmit = async (data: SearchData) => {
     try {
+      if (data.basedOn && !data.basedOnValue) {
+        toastRef.current.show({
+          severity: 'error',
+          summary: 'Based On Value',
+          detail: 'Based On Value is required when Based On is selected, please try again.'
+        });
+        return
+      }
       setLoading(true);
       const res = await axios.post('/reporting/DpsReport45101', {
         ...data,
@@ -98,6 +108,7 @@ function DPS_45101() {
           <Column style={{ minWidth: "20rem" }} field={'model'} header={'model'} />
         </DataTable>
       </ Box>
+      <Toast ref={toastRef} />
     </SimpleCard>
   );
 }
