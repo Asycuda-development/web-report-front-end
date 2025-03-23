@@ -64,7 +64,7 @@ import Transit_4252 from './views/report/Transit_4252';
 import Transit_4257 from './views/report/Transit_4257';
 import Transit_4258 from './views/report/Transit_4258';
 import Transit_4259 from './views/report/Transit_4259';
-import TransitReport4265 from './views/report/REPORT_4265_TRANSIT';
+import Transit_4265 from './views/report/Transit_4265';
 import TransitReport4266 from './views/report/REPORT_4266_TRANSIT';
 import TransitReport4267 from './views/report/REPORT_4267_TRANSIT';
 import Transit_4270 from './views/report/REPORT_4270_TRANSIT';
@@ -436,10 +436,10 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.TransitReport4265}
+            path={routes.Transit_4265}
             element={
               <PrivateRoute>
-                <TransitReport4265 />
+                <Transit_4265 />
               </PrivateRoute>
             }
           />
