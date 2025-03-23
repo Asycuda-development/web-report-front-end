@@ -1,3 +1,15 @@
+import DPS_45101 from "./views/report/DPS_45101";
+import DPS_45102 from "./views/report/DPS_45102";
+import DPS_45103 from "./views/report/DPS_45103";
+import DPS_4570 from "./views/report/DPS_4570";
+import DPS_4579 from "./views/report/DPS_4579";
+import DPS_4583 from "./views/report/DPS_4583";
+import Revenue_4152 from "./views/report/Revenue_4152";
+import Revenue_4153 from "./views/report/Revenue_4153";
+import Revenue_4164 from "./views/report/Revenue_4164";
+import Revenue_4169 from "./views/report/Revenue_4169";
+import Revenue_4170 from "./views/report/Revenue_4170";
+
 export const routes = {
   DataExchange_5050: '/DataExchangeReport5050',
   DataExchange_5051: '/DataExchangeReport5051',
@@ -54,6 +66,7 @@ export const routes = {
   DataExchangeReport5054: '/DataExchangeReport5054',
   DPS_4550: '/dps-report-4550',
   DPS_4551: '/dps-report-4551',
+  DPS_4552: '/dps-report-4552',
   DPS_4556: '/dps-report-4556',
   DPS_4554: '/dps-report-4554',
   DPS_4555: '/dps-report-4555',
@@ -74,7 +87,18 @@ export const routes = {
   DPS_4586: '/dps-report-4586',
   DPS_4590: '/dps-report-4590',
   DPS_4591: '/dps-report-4591',
+  DPS_4570: '/dps-report-4570',
+  DPS_4579: '/dps-report-4579',
+  DPS_4583: '/dps-report-4583',
+  DPS_45101: '/dps-report-45101',
+  DPS_45102: '/dps-report-45102',
+  DPS_45103: '/dps-report-45103',
   revenue4151: '/revenue4151',
+  Revenue_4152: '/revenue4152',
+  Revenue_4153: '/revenue4153',
+  Revenue_4164: '/revenue4164',
+  Revenue_4169: '/revenue4169',
+  Revenue_4170: '/revenue4170',
   revenue4155: '/revenue4155',
   revenue4165: '/revenue4165',
   revenue4171: '/revenue4171',

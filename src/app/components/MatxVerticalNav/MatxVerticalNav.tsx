@@ -377,6 +377,17 @@ const MatxVerticalNav = () => {
                                 command: () => {
                                     navigation(routes.DPS_4551);
                                 }
+                            },  {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4552_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4552',
+                                command: () => {
+                                    navigation(routes.DPS_4552);
+                                }
                             },
                             {
                                 className: classNames({
@@ -545,6 +556,17 @@ const MatxVerticalNav = () => {
                                 command: () => {
                                     navigation(routes.DPS_4566);
                                 }
+                            },  {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4570_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4570',
+                                command: () => {
+                                    navigation(routes.DPS_4570);
+                                }
                             },
                             {
                                 className: classNames({
@@ -617,6 +639,17 @@ const MatxVerticalNav = () => {
                                 command: () => {
                                     navigation(routes.DPS_4578);
                                 }
+                            },{
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4579_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4579',
+                                command: () => {
+                                    navigation(routes.DPS_4579);
+                                }
                             },
                             {
                                 className: classNames({
@@ -628,6 +661,17 @@ const MatxVerticalNav = () => {
                                 label: 'DPS Report 4580',
                                 command: () => {
                                     navigation(routes.DPS_4580);
+                                }
+                            },{
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4583_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4583',
+                                command: () => {
+                                    navigation(routes.DPS_4583);
                                 }
                             },
                             {
@@ -772,6 +816,39 @@ const MatxVerticalNav = () => {
                                 label: 'DPS Report 4599',
                                 command: () => {
                                     navigation(routes.DPS_4599);
+                                }
+                            }, {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_45101_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 45101',
+                                command: () => {
+                                    navigation(routes.DPS_45101);
+                                }
+                            }, {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_45102_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 45102',
+                                command: () => {
+                                    navigation(routes.DPS_45102);
+                                }
+                            }, {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_45103_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 45103',
+                                command: () => {
+                                    navigation(routes.DPS_45103);
                                 }
                             }
                         ]
@@ -1111,6 +1188,39 @@ const MatxVerticalNav = () => {
                                 command: () => {
                                     navigation(routes.revenue4151);
                                 }
+                            },  {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4152_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: '4152- Revenue',
+                                command: () => {
+                                    navigation(routes.Revenue_4152);
+                                }
+                            },  {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4153_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: '4153- Revenue',
+                                command: () => {
+                                    navigation(routes.Revenue_4153);
+                                }
+                            },  {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4164_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: '4164- Revenue',
+                                command: () => {
+                                    navigation(routes.Revenue_4164);
+                                }
                             },
                             {
                                 className: classNames({
@@ -1158,6 +1268,28 @@ const MatxVerticalNav = () => {
                                 label: '4165- Revenue',
                                 command: () => {
                                     navigation(routes.revenue4165);
+                                }
+                            },{
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4169_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: '4169- Revenue',
+                                command: () => {
+                                    navigation(routes.Revenue_4169);
+                                }
+                            },{
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4170_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: '4170- Revenue',
+                                command: () => {
+                                    navigation(routes.Revenue_4170);
                                 }
                             },
                             {

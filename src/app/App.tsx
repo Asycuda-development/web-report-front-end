@@ -19,6 +19,7 @@ import DataExchangeReport5053 from './views/report/DataExchangeReport5053';
 import DataExchangeReport5054 from './views/report/DataExchangeReport5054';
 import DPS_4550 from './views/report/DPS_4550';
 import DPS_4551 from './views/report/DPS_4551';
+import DPS_4552 from './views/report/DPS_4552';
 import DPS_4553 from './views/report/DPS_4553';
 import DPS_4554 from './views/report/DPS_4554';
 import DPS_4555 from './views/report/DPS_4555';
@@ -118,6 +119,18 @@ import ValuationReport4654 from './views/report/ValuationReport4654';
 import ValuationReport4656 from './views/report/ValuationReport4656';
 import ValuationReport4657 from './views/report/ValuationReport4657';
 import ValuationReport4658 from './views/report/ValuationReport4658';
+import DPS_4570 from './views/report/DPS_4570';
+import DPS_4579 from './views/report/DPS_4579';
+import DPS_4583 from './views/report/DPS_4583';
+import DPS_45101 from './views/report/DPS_45101';
+import DPS_45102 from './views/report/DPS_45102';
+import DPS_45103 from './views/report/DPS_45103';
+import Revenue_4152 from './views/report/Revenue_4152';
+import Revenue_4153 from './views/report/Revenue_4153';
+import Revenue_4164 from './views/report/Revenue_4164';
+import Revenue_4169 from './views/report/Revenue_4169';
+import Revenue_4170 from './views/report/Revenue_4170';
+
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -232,6 +245,46 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Revenue_4151 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.Revenue_4152}
+            element={
+              <PrivateRoute>
+                <Revenue_4152 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.Revenue_4153}
+            element={
+              <PrivateRoute>
+                <Revenue_4153 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.Revenue_4164}
+            element={
+              <PrivateRoute>
+                <Revenue_4164 />
+              </PrivateRoute>
+            }
+          />
+           <Route
+            path={routes.Revenue_4169}
+            element={
+              <PrivateRoute>
+                <Revenue_4169 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4170}
+            element={
+              <PrivateRoute>
+                <Revenue_4170 />
               </PrivateRoute>
             }
           />
@@ -747,6 +800,14 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+            <Route
+            path={routes.DPS_4552}
+            element={
+              <PrivateRoute>
+                <DPS_4552 />
+              </PrivateRoute>
+            }
+          />
           <Route
             path={routes.DPS_4557}
             element={
@@ -760,6 +821,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DPS_4553 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.DPS_4570}
+            element={
+              <PrivateRoute>
+                <DPS_4570 />
               </PrivateRoute>
             }
           />
@@ -787,11 +856,27 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
+            <Route
+            path={routes.DPS_4579}
+            element={
+              <PrivateRoute>
+                <DPS_4579 />
+              </PrivateRoute>
+            }
+          />
           <Route
             path={routes.DPS_4580}
             element={
               <PrivateRoute>
                 <DPS_4580 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.DPS_4583}
+            element={
+              <PrivateRoute>
+                <DPS_4583 />
               </PrivateRoute>
             }
           />
@@ -848,6 +933,30 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DPS_4599 />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.DPS_45101}
+            element={
+              <PrivateRoute>
+                <DPS_45101/>
+              </PrivateRoute>
+            }
+          />
+           <Route
+            path={routes.DPS_45102}
+            element={
+              <PrivateRoute>
+                <DPS_45102/>
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path={routes.DPS_45103}
+            element={
+              <PrivateRoute>
+                <DPS_45103/>
               </PrivateRoute>
             }
           />
