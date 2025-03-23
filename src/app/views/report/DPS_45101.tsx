@@ -1,6 +1,6 @@
 import { SimpleCard } from '../../components';
-import { Box, styled, LinearProgress } from '@mui/material';
-import React, { useEffect, useState, useRef } from 'react';
+import { Box, LinearProgress } from '@mui/material';
+import { useState, useRef } from 'react';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
