@@ -6,6 +6,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { Toast } from 'react-toastify/dist/components';
 
 function Revenue_4153() {
   const [reportData, setReportData] = useState([]);
@@ -31,16 +32,7 @@ function Revenue_4153() {
       setLoading(false);
     }
   };
-  const basedOnOptions = [{
-    label: 'declarant',
-    name: 'declarant'
-  },{
-    label: 'company',
-    name: 'company'
-},{
-    label: 'O_no',
-    name: 'O_no'
-}]
+
 
   return (
     <SimpleCard title="Revenue_4153">

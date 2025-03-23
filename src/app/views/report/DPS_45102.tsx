@@ -31,14 +31,6 @@ function DPS_45102() {
       setLoading(false);
     }
   };
-  const basedOnOptions = [{
-    label: 'Engine',
-    name: 'Engine'
-  },{
-    label: 'VIN_Number',
-    name: 'VIN'
-}]
-
   return (
     <SimpleCard title="DPS_45102">
       <ReportHeaderInputs

@@ -11,6 +11,7 @@ function Revenue_4164() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const toastRef: any = useRef(null);
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -31,16 +32,7 @@ function Revenue_4164() {
       setLoading(false);
     }
   };
-  const basedOnOptions = [{
-    label: 'declarant',
-    name: 'declarant'
-  },{
-    label: 'company',
-    name: 'company'
-},{
-    label: 'O_no',
-    name: 'O_no'
-}]
+
 
   return (
     <SimpleCard title="Revenue_4164">

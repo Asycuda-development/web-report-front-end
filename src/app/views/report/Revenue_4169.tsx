@@ -31,16 +31,6 @@ function Revenue_4169() {
       setLoading(false);
     }
   };
-  const basedOnOptions = [{
-    label: 'declarant',
-    name: 'declarant'
-  },{
-    label: 'company',
-    name: 'company'
-},{
-    label: 'O_no',
-    name: 'O_no'
-}]
 
   return (
     <SimpleCard title="Revenue_4169">
