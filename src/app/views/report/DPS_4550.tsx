@@ -39,7 +39,6 @@ function DPS_4550() {
         setReportData(res.data);
       }
 
-      setReportData(res.data);
     } catch (error) { }
     finally {
       setLoading(false);
