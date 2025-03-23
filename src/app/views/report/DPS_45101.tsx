@@ -21,7 +21,6 @@ function DPS_45101() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
@@ -34,10 +33,10 @@ function DPS_45101() {
   const basedOnOptions = [{
     label: 'Engine',
     name: 'Engine'
-  },{
+  }, {
     label: 'VIN_Number',
     name: 'VIN'
-}]
+  }]
 
   return (
     <SimpleCard title="DPS_45101">
@@ -71,32 +70,32 @@ function DPS_45101() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-<Column field={'borderCuo'} header={'borderCuo'}/>
-<Column field={'destCuo'} header={'destCuo'}/>
-<Column field={'decCod'} header={'decCod'}/>
-<Column style={{minWidth:"15rem"}}field={'decNam1'} header={'decNam1'}/>
-<Column field={'refNo'} header={'refNo'}/>
-<Column field={'RegNo'} header={'RegNo'}/>
-<Column field={'RegDate'} header={'RegDate'}/>
-<Column style={{minWidth:"30rem"}}field={'mark1'} header={'mark1'}/>
-<Column style={{minWidth:"20rem"}}field={'mark2'} header={'mark2'}/>
-<Column style={{minWidth:"20rem"}} field={'decNam'} header={'decNam'}/>
-<Column style={{minWidth:"20rem"}}field={'CompanyTin'} header={'CompanyTin'}/>
-<Column style={{minWidth:"20rem"}}field={'cmpNam'} header={'cmpNam'}/>
-<Column style={{minWidth:"20rem"}}field={'finNam'} header={'finNam'}/>
-<Column field={'rgdat'} header={'rgdat'}/>
-<Column field={'color'} header={'color'}/>
-<Column style={{minWidth:"20rem"}}field={'finName'} header={'finName'}/>
-<Column field={'engNo'} header={'engNo'}/>
-<Column field={'shasi'} header={'shasi'}/>
-<Column field={'ValueAfs'} header={'ValueAfs'}/>
-<Column field={'RevenueTaxes'} header={'RevenueTaxes'}/>
-<Column field={'status'} header={'status'}/>
-<Column field={'hscode'} header={'hscode'}/>
-<Column field={'RcptDate'} header={'RcptDate'}/>
-<Column field={'RcptNumber'} header={'RcptNumber'}/>
-<Column field={'engPow'} header={'engPow'}/>
-<Column style={{minWidth:"20rem"}}field={'model'} header={'model'}/>
+          <Column field={'borderCuo'} header={'borderCuo'} />
+          <Column field={'destCuo'} header={'destCuo'} />
+          <Column field={'decCod'} header={'decCod'} />
+          <Column style={{ minWidth: "15rem" }} field={'decNam1'} header={'decNam1'} />
+          <Column field={'refNo'} header={'refNo'} />
+          <Column field={'RegNo'} header={'RegNo'} />
+          <Column field={'RegDate'} header={'RegDate'} />
+          <Column style={{ minWidth: "30rem" }} field={'mark1'} header={'mark1'} />
+          <Column style={{ minWidth: "20rem" }} field={'mark2'} header={'mark2'} />
+          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'decNam'} />
+          <Column style={{ minWidth: "20rem" }} field={'CompanyTin'} header={'CompanyTin'} />
+          <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'cmpNam'} />
+          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'finNam'} />
+          <Column field={'rgdat'} header={'rgdat'} />
+          <Column field={'color'} header={'color'} />
+          <Column style={{ minWidth: "20rem" }} field={'finName'} header={'finName'} />
+          <Column field={'engNo'} header={'engNo'} />
+          <Column field={'shasi'} header={'shasi'} />
+          <Column field={'ValueAfs'} header={'ValueAfs'} />
+          <Column field={'RevenueTaxes'} header={'RevenueTaxes'} />
+          <Column field={'status'} header={'status'} />
+          <Column field={'hscode'} header={'hscode'} />
+          <Column field={'RcptDate'} header={'RcptDate'} />
+          <Column field={'RcptNumber'} header={'RcptNumber'} />
+          <Column field={'engPow'} header={'engPow'} />
+          <Column style={{ minWidth: "20rem" }} field={'model'} header={'model'} />
         </DataTable>
       </ Box>
     </SimpleCard>
