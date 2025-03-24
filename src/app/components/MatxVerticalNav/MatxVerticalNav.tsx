@@ -976,7 +976,7 @@ const MatxVerticalNav = () => {
                                 }),
                                 label: 'Transit Report 4276',
                                 command: () => {
-                                    navigation(routes.TransitReport4276);
+                                    navigation(routes.Transit_4276);
                                 }
                             },
                             {
@@ -988,7 +988,7 @@ const MatxVerticalNav = () => {
                                 }),
                                 label: 'Transit Report 4277',
                                 command: () => {
-                                    navigation(routes.TransitReport4277);
+                                    navigation(routes.Transit_4277);
                                 }
                             },
                             {
@@ -1000,7 +1000,7 @@ const MatxVerticalNav = () => {
                                 }),
                                 label: 'Transit Report 4278',
                                 command: () => {
-                                    navigation(routes.TransitReport4278);
+                                    navigation(routes.Transit_4278);
                                 }
                             },
                             {
@@ -1012,7 +1012,7 @@ const MatxVerticalNav = () => {
                                 }),
                                 label: 'Transit Report 4279',
                                 command: () => {
-                                    navigation(routes.TransitReport4279);
+                                    navigation(routes.Transit_4279);
                                 }
                             },
                             {
@@ -1024,7 +1024,7 @@ const MatxVerticalNav = () => {
                                 }),
                                 label: 'Transit Report 4280',
                                 command: () => {
-                                    navigation(routes.TransitReport4280);
+                                    navigation(routes.Transit_4280);
                                 }
                             },
                             {
@@ -1036,7 +1036,7 @@ const MatxVerticalNav = () => {
                                 }),
                                 label: 'Transit Report 4281',
                                 command: () => {
-                                    navigation(routes.TransitReport4281);
+                                    navigation(routes.Transit_4281);
                                 }
                             },
                             {

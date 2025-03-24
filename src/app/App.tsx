@@ -73,9 +73,15 @@ import Transit_4271 from './views/report/Transit_4271';
 import Transit_4272 from './views/report/Transit_4272';
 import Transit_4274 from './views/report/Transit_4274';
 import Transit_4275 from './views/report/Transit_4275';
-import Transit_4282 from './views/report/REPORT_4282_TRANSIT';
-import Transit_4283 from './views/report/REPORT_4283_TRANSIT';
-import Transit_4284 from './views/report/REPORT_4284_TRANSIT';
+import Transit_4276 from './views/report/Transit_4276';
+import Transit_4277 from './views/report/Transit_4277';
+import Transit_4278 from './views/report/Transit_4278';
+import Transit_4279 from './views/report/Transit_4279';
+import Transit_4280 from './views/report/Transit_4280';
+import Transit_4281 from './views/report/Transit_4281';
+import Transit_4282 from './views/report/Transit_4282';
+import Transit_4283 from './views/report/Transit_4283';
+import Transit_4284 from './views/report/Transit_4284';
 import Revenue_4151 from './views/report/Revenue_4151';
 import Revenue_4155 from './views/report/Revenue_4155';
 import Revenue_4165 from './views/report/Revenue_4165';
@@ -105,12 +111,6 @@ import SelectivityReport4353 from './views/report/SelectivityReport4353';
 import SelectivityReport4354 from './views/report/SelectivityReport4354';
 import SelectivityReport4355 from './views/report/SelectivityReport4355';
 import SelectivityReport4356 from './views/report/SelectivityReport4356';
-import TransitReport4276 from './views/report/REPORT_4276_TRANSIT';
-import TransitReport4277 from './views/report/REPORT_4277_TRANSIT';
-import TransitReport4278 from './views/report/REPORT_4278_TRANSIT';
-import TransitReport4279 from './views/report/REPORT_4279_TRANSIT';
-import TransitReport4280 from './views/report/REPORT_4280_TRANSIT';
-import TransitReport4281 from './views/report/REPORT_4281_TRANSIT';
 import Valuation_4650 from './views/report/Valuation_4650';
 import Valuation_4652 from './views/report/Valuation_4652';
 import Valuation_4653 from './views/report/Valuation_4653';
@@ -508,18 +508,18 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.TransitReport4276}
+            path={routes.Transit_4276}
             element={
               <PrivateRoute>
-                <TransitReport4276 />
+                <Transit_4276 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.TransitReport4277}
+            path={routes.Transit_4277}
             element={
               <PrivateRoute>
-                <TransitReport4277 />
+                <Transit_4277 />
               </PrivateRoute>
             }
           />
@@ -548,34 +548,34 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.TransitReport4278}
+            path={routes.Transit_4278}
             element={
               <PrivateRoute>
-                <TransitReport4278 />
+                <Transit_4278 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.TransitReport4279}
+            path={routes.Transit_4279}
             element={
               <PrivateRoute>
-                <TransitReport4279 />
+                <Transit_4279 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.TransitReport4280}
+            path={routes.Transit_4280}
             element={
               <PrivateRoute>
-                <TransitReport4280 />
+                <Transit_4280 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.TransitReport4281}
+            path={routes.Transit_4281}
             element={
               <PrivateRoute>
-                <TransitReport4281 />
+                <Transit_4281 />
               </PrivateRoute>
             }
           />
