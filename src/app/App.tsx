@@ -82,26 +82,26 @@ import Transit_4281 from './views/report/Transit_4281';
 import Transit_4282 from './views/report/Transit_4282';
 import Transit_4283 from './views/report/Transit_4283';
 import Transit_4284 from './views/report/Transit_4284';
+import Revenue_4153_1400 from './views/report/Revenue_4153_1400';
+import Revenue_4157_1400 from './views/report/Revenue_4157_1400';
+import Revenue_4164_1400 from './views/report/Revenue_4164_1400';
+import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
+import Revenue_48100 from './views/report/Revenue_48100';
+import Revenue_48101 from './views/report/Revenue_48101';
 import Revenue_4151 from './views/report/Revenue_4151';
+import Revenue_4153 from './views/report/Revenue_4153';
+import Revenue_4154 from './views/report/Revenue_4154';
 import Revenue_4155 from './views/report/Revenue_4155';
+import Revenue_4158 from './views/report/Revenue_4158';
+import Revenue_4159 from './views/report/Revenue_4159';
+import Revenue_4160 from './views/report/Revenue_4160';
+import Revenue_4161 from './views/report/Revenue_4161';
+import Revenue_4162 from './views/report/Revenue_4162';
+import Revenue_4163 from './views/report/Revenue_4163';
 import Revenue_4165 from './views/report/Revenue_4165';
 import Revenue_4171 from './views/report/Revenue_4171';
-import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
 import Revenue_4172 from './views/report/Revenue_4172';
-import RevenueReport4153 from './views/report/RevenueReport4153';
-import RevenueReport4153_1400 from './views/report/RevenueReport4153_1400';
-import RevenueReport4154 from './views/report/RevenueReport4154';
-import RevenueReport4157_1400 from './views/report/RevenueReport4157_1400';
-import RevenueReport4158 from './views/report/RevenueReport4158';
-import RevenueReport4159 from './views/report/RevenueReport4159';
-import RevenueReport4160 from './views/report/RevenueReport4160';
-import RevenueReport4161 from './views/report/RevenueReport4161';
-import RevenueReport4162 from './views/report/RevenueReport4162';
-import RevenueReport4163 from './views/report/RevenueReport4163';
-import RevenueReport4164_1400 from './views/report/RevenueReport4164_1400';
-import RevenueReport4173 from './views/report/RevenueReport4173';
-import RevenueReport48100 from './views/report/RevenueReport48100';
-import RevenueReport48101 from './views/report/RevenueReport48101';
+import Revenue_4173 from './views/report/Revenue_4173';
 import Selectivity_4360 from './views/report/Selectivity_4360';
 import Selectivity_4361 from './views/report/Selectivity_4361';
 import Selectivity_4350 from './views/report/Selectivity_4350';
@@ -126,7 +126,7 @@ const JwtLogin = Loadable(lazy(() => import('./views/sessions/JwtLogin')));
 const JwtRegister = Loadable(lazy(() => import('../app/views/sessions/JwtRegister')));
 const ForgotPassword = Loadable(lazy(() => import('./views/sessions/ForgotPassword')));
 
-const Revenue4150 = Loadable(lazy(() => import('./views/report/Revenue_4150')));
+const Revenue_4150 = Loadable(lazy(() => import('./views/report/Revenue_4150')));
 
 const Transit_4250 = Loadable(lazy(() => import('./views/report/Transit_4250')));
 
@@ -220,15 +220,15 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.revenue4150}
+            path={routes.Revenue_4150}
             element={
               <PrivateRoute>
-                <Revenue4150 />
+                <Revenue_4150 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.revenue4151}
+            path={routes.Revenue_4151}
             element={
               <PrivateRoute>
                 <Revenue_4151 />
@@ -236,7 +236,31 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.revenue4155}
+            path={routes.Revenue_4153_1400}
+            element={
+              <PrivateRoute>
+                <Revenue_4153_1400 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4153}
+            element={
+              <PrivateRoute>
+                <Revenue_4153 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4154}
+            element={
+              <PrivateRoute>
+                <Revenue_4154 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4155}
             element={
               <PrivateRoute>
                 <Revenue_4155 />
@@ -244,7 +268,71 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.revenue4165}
+            path={routes.Revenue_4157_1400}
+            element={
+              <PrivateRoute>
+                <Revenue_4157_1400 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4158}
+            element={
+              <PrivateRoute>
+                <Revenue_4158 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4159}
+            element={
+              <PrivateRoute>
+                <Revenue_4159 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4160}
+            element={
+              <PrivateRoute>
+                <Revenue_4160 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4161}
+            element={
+              <PrivateRoute>
+                <Revenue_4161 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4162}
+            element={
+              <PrivateRoute>
+                <Revenue_4162 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4163}
+            element={
+              <PrivateRoute>
+                <Revenue_4163 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4164_1400}
+            element={
+              <PrivateRoute>
+                <Revenue_4164_1400 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Revenue_4165}
             element={
               <PrivateRoute>
                 <Revenue_4165 />
@@ -252,7 +340,7 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.revenue4171}
+            path={routes.Revenue_4171}
             element={
               <PrivateRoute>
                 <Revenue_4171 />
@@ -260,7 +348,7 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.revenue4171_1400}
+            path={routes.Revenue_4171_1400}
             element={
               <PrivateRoute>
                 <Revenue_4171_1400 />
@@ -268,7 +356,7 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.revenue4172}
+            path={routes.Revenue_4172}
             element={
               <PrivateRoute>
                 <Revenue_4172 />
@@ -276,114 +364,26 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.RevenueReport4157_1400}
+            path={routes.Revenue_4173}
             element={
               <PrivateRoute>
-                <RevenueReport4157_1400 />
+                <Revenue_4173 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.RevenueReport4158}
+            path={routes.Revenue_48101}
             element={
               <PrivateRoute>
-                <RevenueReport4158 />
+                <Revenue_48101 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.RevenueReport4159}
+            path={routes.Revenue_48100}
             element={
               <PrivateRoute>
-                <RevenueReport4159 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4153_1400}
-            element={
-              <PrivateRoute>
-                <RevenueReport4153_1400 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4153}
-            element={
-              <PrivateRoute>
-                <RevenueReport4153 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4154}
-            element={
-              <PrivateRoute>
-                <RevenueReport4154 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4160}
-            element={
-              <PrivateRoute>
-                <RevenueReport4160 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4163}
-            element={
-              <PrivateRoute>
-                <RevenueReport4163 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4164_1400}
-            element={
-              <PrivateRoute>
-                <RevenueReport4164_1400 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4161}
-            element={
-              <PrivateRoute>
-                <RevenueReport4161 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4162}
-            element={
-              <PrivateRoute>
-                <RevenueReport4162 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport4173}
-            element={
-              <PrivateRoute>
-                <RevenueReport4173 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport48101}
-            element={
-              <PrivateRoute>
-                <RevenueReport48101 />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={routes.RevenueReport48100}
-            element={
-              <PrivateRoute>
-                <RevenueReport48100 />
+                <Revenue_48100 />
               </PrivateRoute>
             }
           />

@@ -1095,9 +1095,9 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4150- Revenue',
+                                label: 'Revenue Report 4150',
                                 command: () => {
-                                    navigation(routes.revenue4150);
+                                    navigation(routes.Revenue_4150);
                                 }
                             },
                             {
@@ -1107,33 +1107,33 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4151- Revenue',
+                                label: 'Revenue Report 4151',
                                 command: () => {
-                                    navigation(routes.revenue4151);
+                                    navigation(routes.Revenue_4151);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4153_1400,
+                                        AUTHORITIES.REPORT_4153_1400_REVENUE,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'RevenueReport4153_1400',
+                                label: 'Revenue Report 4153_1400',
                                 command: () => {
-                                    navigation(routes.RevenueReport4153_1400);
+                                    navigation(routes.Revenue_4153_1400);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4153_1400,
+                                        AUTHORITIES.REPORT_4154_REVENUE,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'RevenueReport4153',
+                                label: 'Revenue Report 4154',
                                 command: () => {
-                                    navigation(routes.RevenueReport4153_1400);
+                                    navigation(routes.Revenue_4154);
                                 }
                             },
                             {
@@ -1143,9 +1143,106 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4155- Revenue',
+                                label: 'Revenue Report 4155',
                                 command: () => {
-                                    navigation(routes.revenue4155);
+                                    navigation(routes.Revenue_4155);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4157_1400_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4157_1400',
+                                command: () => {
+                                    navigation(routes.Revenue_4157_1400);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4158_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4158',
+                                command: () => {
+                                    navigation(routes.Revenue_4158);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4159_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4159',
+                                command: () => {
+                                    navigation(routes.Revenue_4159);
+                                }
+                            },
+
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4160_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4160',
+                                command: () => {
+                                    navigation(routes.Revenue_4160);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4161_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'RevenueReport4161',
+                                command: () => {
+                                    navigation(routes.Revenue_4161);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4162_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4162',
+                                command: () => {
+                                    navigation(routes.Revenue_4162);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4163_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4163',
+                                command: () => {
+                                    navigation(routes.Revenue_4163);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4164_1400_REVENUE,
+                                        AUTHORITIES.ADMIN
+                                    ])
+                                }),
+                                label: 'Revenue Report 4164_1400',
+                                command: () => {
+                                    navigation(routes.Revenue_4164_1400);
                                 }
                             },
                             {
@@ -1155,21 +1252,9 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4165- Revenue',
+                                label: 'Revenue Report 4165',
                                 command: () => {
-                                    navigation(routes.revenue4165);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4157_1400,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'Revenue4157_1400',
-                                command: () => {
-                                    navigation(routes.RevenueReport4157_1400);
+                                    navigation(routes.Revenue_4165);
                                 }
                             },
                             {
@@ -1179,21 +1264,9 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4171_1400- Revenue',
+                                label: 'Revenue Report 4171_1400',
                                 command: () => {
-                                    navigation(routes.revenue4171_1400);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.REPORT_4172_REVENUE,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: '4172- Revenue',
-                                command: () => {
-                                    navigation(routes.revenue4172);
+                                    navigation(routes.Revenue_4171_1400);
                                 }
                             },
                             {
@@ -1203,142 +1276,57 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4171- Revenue',
+                                label: 'Revenue Report 4171',
                                 command: () => {
-                                    navigation(routes.revenue4171);
+                                    navigation(routes.Revenue_4171);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4158,
+                                        AUTHORITIES.REPORT_4172_REVENUE,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'RevenueReport4158',
+                                label: 'Revenue Report 4172',
                                 command: () => {
-                                    navigation(routes.RevenueReport4158);
+                                    navigation(routes.Revenue_4172);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4159,
+                                        AUTHORITIES.REPORT_4173_REVENUE,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'RevenueReport4159',
+                                label: 'Revenue Report 4173',
                                 command: () => {
-                                    navigation(routes.RevenueReport4159);
-                                }
-                            },
-
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4154,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport4154',
-                                command: () => {
-                                    navigation(routes.RevenueReport4154);
+                                    navigation(routes.Revenue_4173);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4160,
+                                        AUTHORITIES.REPORT_48100_REVENUE,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'RevenueReport4160',
+                                label: 'Revenue Report 48100',
                                 command: () => {
-                                    navigation(routes.RevenueReport4160);
+                                    navigation(routes.Revenue_48100);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4163,
+                                        AUTHORITIES.REPORT_48101_REVENUE,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'RevenueReport4163',
+                                label: 'Revenue Report 48101',
                                 command: () => {
-                                    navigation(routes.RevenueReport4163);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4164_1400,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport4164_1400',
-                                command: () => {
-                                    navigation(routes.RevenueReport4164_1400);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4161,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport4161',
-                                command: () => {
-                                    navigation(routes.RevenueReport4161);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4162,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport4162',
-                                command: () => {
-                                    navigation(routes.RevenueReport4162);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport4173,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport4173',
-                                command: () => {
-                                    navigation(routes.RevenueReport4173);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport48101,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport48101',
-                                command: () => {
-                                    navigation(routes.RevenueReport48100);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.RevenueReport48100,
-                                        AUTHORITIES.ADMIN
-                                    ])
-                                }),
-                                label: 'RevenueReport48100',
-                                command: () => {
-                                    navigation(routes.RevenueReport48100);
+                                    navigation(routes.Revenue_48100);
                                 }
                             }
                         ]
