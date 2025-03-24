@@ -1356,94 +1356,95 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4350,
+                                        AUTHORITIES.REPORT_4350_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4350',
+                                label: 'Selectivity Report 4350',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4350);
+                                    navigation(routes.Selectivity_4350);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4351,
+                                        AUTHORITIES.REPORT_4351_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4351',
+                                label: 'Selectivity Report 4351',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4351);
+                                    navigation(routes.Selectivity_4351);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4352,
+                                        AUTHORITIES.REPORT_4352_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4352',
+                                label: 'Selectivity Report 4352',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4352);
+                                    navigation(routes.Selectivity_4352);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4353,
+                                        AUTHORITIES.REPORT_4353_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4353',
+                                label: 'Selectivity Report 4353',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4353);
+                                    navigation(routes.Selectivity_4353);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4354,
+                                        AUTHORITIES.REPORT_4354_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4354',
+                                label: 'Selectivity Report 4354',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4354);
+                                    navigation(routes.Selectivity_4354);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4355,
+                                        AUTHORITIES.REPORT_4355_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4355',
+                                label: 'Selectivity Report 4355',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4355);
+                                    navigation(routes.Selectivity_4355);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.SelectivityReport4356,
+                                        AUTHORITIES.REPORT_4356_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'SelectivityReport4356',
+                                label: 'Selectivity Report 4356',
                                 command: () => {
-                                    navigation(routes.SelectivityReport4356);
+                                    navigation(routes.Selectivity_4356);
                                 }
                             },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4360_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4360-Selectivity',
+                                label: 'Selectivity Report 4360',
                                 command: () => {
                                     navigation('/SelectivityReport4360');
                                 }
@@ -1451,10 +1452,11 @@ const MatxVerticalNav = () => {
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.REPORT_4361_SELECTIVITY,
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: '4361-Selectivity',
+                                label: 'Selectivity Report 4361',
                                 command: () => {
                                     navigation('/SelectivityReport4361');
                                 }

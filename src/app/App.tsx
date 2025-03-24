@@ -104,13 +104,13 @@ import RevenueReport48100 from './views/report/RevenueReport48100';
 import RevenueReport48101 from './views/report/RevenueReport48101';
 import Selectivity_4360 from './views/report/Selectivity_4360';
 import Selectivity_4361 from './views/report/Selectivity_4361';
-import SelectivityReport4350 from './views/report/SelectivityReport4350';
-import SelectivityReport4351 from './views/report/SelectivityReport4351';
-import SelectivityReport4352 from './views/report/SelectivityReport4352';
-import SelectivityReport4353 from './views/report/SelectivityReport4353';
-import SelectivityReport4354 from './views/report/SelectivityReport4354';
-import SelectivityReport4355 from './views/report/SelectivityReport4355';
-import SelectivityReport4356 from './views/report/SelectivityReport4356';
+import Selectivity_4350 from './views/report/Selectivity_4350';
+import Selectivity_4351 from './views/report/Selectivity_4351';
+import Selectivity_4352 from './views/report/Selectivity_4352';
+import Selectivity_4353 from './views/report/Selectivity_4353';
+import Selectivity_4354 from './views/report/Selectivity_4354';
+import Selectivity_4355 from './views/report/Selectivity_4355';
+import Selectivity_4356 from './views/report/Selectivity_4356';
 import Valuation_4650 from './views/report/Valuation_4650';
 import Valuation_4652 from './views/report/Valuation_4652';
 import Valuation_4653 from './views/report/Valuation_4653';
@@ -652,58 +652,58 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.SelectivityReport4350}
+            path={routes.Selectivity_4350}
             element={
               <PrivateRoute>
-                <SelectivityReport4350 />
+                <Selectivity_4350 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.SelectivityReport4351}
+            path={routes.Selectivity_4351}
             element={
               <PrivateRoute>
-                <SelectivityReport4351 />
+                <Selectivity_4351 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.SelectivityReport4352}
+            path={routes.Selectivity_4352}
             element={
               <PrivateRoute>
-                <SelectivityReport4352 />
+                <Selectivity_4352 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.SelectivityReport4353}
+            path={routes.Selectivity_4353}
             element={
               <PrivateRoute>
-                <SelectivityReport4353 />
+                <Selectivity_4353 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.SelectivityReport4354}
+            path={routes.Selectivity_4354}
             element={
               <PrivateRoute>
-                <SelectivityReport4354 />
+                <Selectivity_4354 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.SelectivityReport4355}
+            path={routes.Selectivity_4355}
             element={
               <PrivateRoute>
-                <SelectivityReport4355 />
+                <Selectivity_4355 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.SelectivityReport4356}
+            path={routes.Selectivity_4356}
             element={
               <PrivateRoute>
-                <SelectivityReport4356 />
+                <Selectivity_4356 />
               </PrivateRoute>
             }
           />
