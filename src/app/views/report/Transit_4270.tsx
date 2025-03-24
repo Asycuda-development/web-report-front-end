@@ -9,8 +9,8 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 
 const Transit_4270 = () => {
     const [reportData, setReportData] = useState([]);
-    const [loading, setLoading] = useState(false);
     const tableRef: any = useRef(null);
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -42,6 +42,7 @@ const Transit_4270 = () => {
                 showDepartureCustomsList
                 onSearch={handleSubmit}
                 tabelRef={tableRef}
+
             />
             {loading && (
                 <LinearProgress />
@@ -69,7 +70,7 @@ const Transit_4270 = () => {
                     <Column field={'cns_Code'} header={'cns_Code'} />
                     <Column field={'cns_Name'} header={'cns_Name'} />
                     <Column field={'Package_Mark'} header={'Package_Mark'} />
-                    <Column field={'hscode;'} header={'hscode;'} />
+                    <Column field={'hscode'} header={'hscode'} />
                     <Column field={'gross_Mass'} header={'gross_Mass'} />
                     <Column field={'Net_Mass'} header={'Net_Mass'} />
                     <Column field={'Good_Description2'} header={'Good_Description2'} />
@@ -78,7 +79,7 @@ const Transit_4270 = () => {
                     <Column field={'mod_of_Transport'} header={'mod_of_Transport'} />
                     <Column field={'principal_Code'} header={'principal_Code'} />
                     <Column field={'principal_Name'} header={'principal_Name'} />
-                    <Column field={'Nationality_Of_Transpor'} header={'Nationality_Of_Transpor'} />t
+                    <Column field={'Nationality_Of_Transpor'} header={'Nationality_Of_Transpor'} />
                     <Column field={'seal_affixed_No'} header={'seal_affixed_No'} />
                     <Column field={'seal_Identity'} header={'seal_Identity'} />
                     <Column field={'transit_Officer'} header={'transit_Officer'} />
