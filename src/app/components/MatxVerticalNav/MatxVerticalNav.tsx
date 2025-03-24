@@ -914,7 +914,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4270_TRANSIT',
+                                label: 'Transit Report 4270',
                                 command: () => {
                                     navigation(routes.Transit_4270);
                                 }
@@ -926,7 +926,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4271_TRANSIT',
+                                label: 'Transit Report 4271',
                                 command: () => {
                                     navigation(routes.Transit_4271);
                                 }
@@ -938,7 +938,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4272_TRANSIT',
+                                label: 'Transit Report 4272',
                                 command: () => {
                                     navigation(routes.Transit_4272);
                                 }
@@ -950,7 +950,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4274_TRANSIT',
+                                label: 'Transit Report 4274',
                                 command: () => {
                                     navigation(routes.Transit_4274);
                                 }
@@ -962,7 +962,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4275_TRANSIT',
+                                label: 'Transit Report 4275',
                                 command: () => {
                                     navigation(routes.TransitReport4275);
                                 }
@@ -974,7 +974,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4276_TRANSIT',
+                                label: 'Transit Report 4276',
                                 command: () => {
                                     navigation(routes.TransitReport4276);
                                 }
@@ -986,7 +986,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4277_TRANSIT',
+                                label: 'Transit Report 4277',
                                 command: () => {
                                     navigation(routes.TransitReport4277);
                                 }
@@ -998,7 +998,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4278_TRANSIT',
+                                label: 'Transit Report 4278',
                                 command: () => {
                                     navigation(routes.TransitReport4278);
                                 }
@@ -1010,7 +1010,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4279_TRANSIT',
+                                label: 'Transit Report 4279',
                                 command: () => {
                                     navigation(routes.TransitReport4279);
                                 }
@@ -1022,7 +1022,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4280_TRANSIT',
+                                label: 'Transit Report 4280',
                                 command: () => {
                                     navigation(routes.TransitReport4280);
                                 }
@@ -1034,7 +1034,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4281_TRANSIT',
+                                label: 'Transit Report 4281',
                                 command: () => {
                                     navigation(routes.TransitReport4281);
                                 }
@@ -1046,7 +1046,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4282_TRANSIT',
+                                label: 'Transit Report 4282',
                                 command: () => {
                                     navigation(routes.Transit_4282);
                                 }
@@ -1058,7 +1058,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4283_TRANSIT',
+                                label: 'Transit Report 4283',
                                 command: () => {
                                     navigation(routes.Transit_4283);
                                 }
@@ -1070,7 +1070,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.ADMIN
                                     ])
                                 }),
-                                label: 'REPORT_4284_TRANSIT',
+                                label: 'Transit Report 4284',
                                 command: () => {
                                     navigation(routes.Transit_4284);
                                 }
