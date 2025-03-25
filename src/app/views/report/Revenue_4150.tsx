@@ -24,6 +24,15 @@ const OverallReport = () => {
 
   const handleSubmit = async (data: SearchData) => {
     try {
+      if (data.basedOn && !data.basedOnValue) {
+        console.log('first');
+        tableRef.current.show({
+          severity: 'error',
+          summary: 'Based On Value',
+          detail: 'Based On Value is required when Based On is selected, please try again.'
+        });
+        return;
+      }
       const res = await axios.post('/reporting/find-the-revenue', {
         startDate: data.startDate,
         endDate: data.endDate,

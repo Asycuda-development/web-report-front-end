@@ -45,11 +45,20 @@ import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
 import Transit_4270 from './views/report/Transit_4270';
 import Transit_4272 from './views/report/Transit_4272';
+import Transit_4273 from './views/report/Transit_4273';
 import Transit_4274 from './views/report/Transit_4274';
 import Transit_4282 from './views/report/Transit_4282';
 import Transit_4271 from './views/report/Transit_4271';
 import Transit_4283 from './views/report/Transit_4283';
 import Transit_4284 from './views/report/Transit_4284';
+import Transit_4253 from './views/report/Transit_4253';
+import Transit_4254 from './views/report/Transit_4254';
+import Transit_4255 from './views/report/Transit_4255';
+import Transit_4256 from './views/report/Transit_4256';
+import Transit_4260 from './views/report/Transit_4260';
+import Transit_4261 from './views/report/Transit_4261';
+import Transit_4263 from './views/report/Transit_4263';
+import Transit_4264 from './views/report/Transit_4264';
 import DPS_4554 from './views/report/DPS_4554';
 import DPS_4555 from './views/report/DPS_4555';
 import DPS_4556 from './views/report/DPS_4556';
@@ -412,6 +421,62 @@ const AuthLayout = () => {
             }
           />
           <Route
+            path={routes.Transit_4254}
+            element={
+              <PrivateRoute>
+                <Transit_4254 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4255}
+            element={
+              <PrivateRoute>
+                <Transit_4255 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4256}
+            element={
+              <PrivateRoute>
+                <Transit_4256 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4260}
+            element={
+              <PrivateRoute>
+                <Transit_4260 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4261}
+            element={
+              <PrivateRoute>
+                <Transit_4261 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4264}
+            element={
+              <PrivateRoute>
+                <Transit_4264 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4263}
+            element={
+              <PrivateRoute>
+                <Transit_4263 />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path={routes.Transit_4270}
             element={
               <PrivateRoute>
@@ -432,6 +497,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Transit_4272 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4273}
+            element={
+              <PrivateRoute>
+                <Transit_4273 />
               </PrivateRoute>
             }
           />
@@ -472,6 +545,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <TransitReport4257 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4253}
+            element={
+              <PrivateRoute>
+                <Transit_4253 />
               </PrivateRoute>
             }
           />

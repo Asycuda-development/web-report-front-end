@@ -22,21 +22,27 @@ const Container = styled('div')(({ theme }) => ({
 function DPS_4550() {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
-  const toastRef: any = useRef(null);
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   const handleSubmit = async (data: SearchData) => {
-    console.log(data.basedOn, data, data.basedOnValue, data.startDate, data.companyTin, data.customsProcedure)
+    console.log(
+      data.basedOn,
+      data,
+      data.basedOnValue,
+      data.startDate,
+      data.companyTin,
+      data.customsProcedure
+    );
     try {
       if (data.basedOn && !data.basedOnValue) {
-        console.log('first')
-        toastRef.current.show({
+        console.log('first');
+        tableRef.current.show({
           severity: 'error',
           summary: 'Based On Value',
           detail: 'Based On Value is required when Based On is selected, please try again.'
         });
-        return
+        return;
       }
       const res = await axios.post('/reporting/DpsReport4550', {
         ...data,
@@ -45,12 +51,14 @@ function DPS_4550() {
       });
 
       setReportData(res.data);
-    } catch (error) { }
+    } catch (error) {}
   };
-  const basedOnOptions = [{
-    label: 'declarant',
-    name: 'declarant'
-  }]
+  const basedOnOptions = [
+    {
+      label: 'declarant',
+      name: 'declarant'
+    }
+  ];
   //
   return (
     <Container>
@@ -89,31 +97,63 @@ function DPS_4550() {
             <Column field={'totalPackage'} header={'Total Package'} />
             <Column field={'packageCode'} header={'Package Code'} />
             <Column field={'packageType'} header={'Package Type'} />
-            <Column filter filterField='registrationNo' field={'registrationNo'} header={'RegistrationNo'} />
+            <Column
+              filter
+              filterField="registrationNo"
+              field={'registrationNo'}
+              header={'RegistrationNo'}
+            />
             <Column field={'registrationDate'} header={'Registration Date'} />
-            <Column filter filterField='assessmentNumber' field={'assessmentNumber'} header={'Assessment Number'} />
+            <Column
+              filter
+              filterField="assessmentNumber"
+              field={'assessmentNumber'}
+              header={'Assessment Number'}
+            />
             <Column field={'assessmentDate'} header={'Assessment Date'} />
             <Column field={'receiptDate'} header={'Receipt Date'} />
             <Column field={'bankName'} header={'Bank Name'} />
             <Column field={'hsCode'} header={'hsCode'} />
             <Column field={'cpc'} header={'cpc'} />
-            <Column style={{ minWidth: "14rem" }} field={'goodsDescription'} header={'Goods Description'} />
-            <Column style={{ minWidth: "20rem" }} field={'goodsAdditionalDesc'} header={'Goods Additional Description'} />
-            <Column style={{ minWidth: "12rem" }} field={'packageMark1'} header={'Package Mark1'} />
+            <Column
+              style={{ minWidth: '14rem' }}
+              field={'goodsDescription'}
+              header={'Goods Description'}
+            />
+            <Column
+              style={{ minWidth: '20rem' }}
+              field={'goodsAdditionalDesc'}
+              header={'Goods Additional Description'}
+            />
+            <Column style={{ minWidth: '12rem' }} field={'packageMark1'} header={'Package Mark1'} />
             <Column field={'packageMark2'} header={'Package Mark2'} />
             <Column field={'customsProcedure'} header={'Customs Procedure'} />
             <Column field={'itemGrossWeight'} header={'Item Gross Weight'} />
             <Column field={'itemNetWeight'} header={'Item Net Weight'} />
-            <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker TIN'} />
+            <Column filter filterField="brokerTIN" field={'brokerTIN'} header={'Broker TIN'} />
             <Column field={'declarantName'} header={'Declarant Name'} />
             <Column field={'companyTIN'} header={'Company TIN'} />
             <Column field={'companyName'} header={'Company Name'} />
-            <Column style={{ minWidth: "12rem" }} field={'financialName'} header={'Financial Name'} />
-            <Column filter filterField='financialCode' field={'financialCode'} header={'Financial Code'} />
+            <Column
+              style={{ minWidth: '12rem' }}
+              field={'financialName'}
+              header={'Financial Name'}
+            />
+            <Column
+              filter
+              filterField="financialCode"
+              field={'financialCode'}
+              header={'Financial Code'}
+            />
             <Column field={'countryDestinationName'} header={'Country Destination Name'} />
             <Column field={'countryDestinationCode'} header={'Country Destination Code'} />
             <Column field={'countryExportName'} header={'Country Export Name'} />
-            <Column filter filterField='countryExportCode' field={'countryExportCode'} header={'Country Export Code'} />
+            <Column
+              filter
+              filterField="countryExportCode"
+              field={'countryExportCode'}
+              header={'Country Export Code'}
+            />
             <Column field={'countryOriginName'} header={'Country Origin Name'} />
             <Column field={'countryOriginCode'} header={'Country Origin Code'} />
             <Column field={'lorryTotal'} header={'Lorry Total'} />
@@ -128,19 +168,28 @@ function DPS_4550() {
             <Column field={'itemTaxesAfs'} header={'Item Taxes Afs'} />
             <Column field={'taxCodeAmountAfs'} header={'Tax Code Amount Afs'} />
             <Column field={'taxCode'} header={'Tax Code'} />
-            <Column style={{ minWidth: "12rem" }} field={'taxDescription'} header={'Tax Description'} />
+            <Column
+              style={{ minWidth: '12rem' }}
+              field={'taxDescription'}
+              header={'Tax Description'}
+            />
             <Column field={'taxRate'} header={'Tax Rate'} />
             <Column field={'electronicFeeAfs'} header={'Electronic Fee Afs'} />
             <Column field={'sadStatus'} header={'Sad Status'} />
             <Column field={'vehicleChassis'} header={'Vehicle Chassis'} />
             <Column field={'engineNo'} header={'EngineNo'} />
-            <Column filter filterField='examiner' field={'examiner'} header={'Examiner'} />
-            <Column filter filterField='receiptNoOriginal' field={'receiptNoOriginal'} header={'Receipt No Original'} />
+            <Column filter filterField="examiner" field={'examiner'} header={'Examiner'} />
+            <Column
+              filter
+              filterField="receiptNoOriginal"
+              field={'receiptNoOriginal'}
+              header={'Receipt No Original'}
+            />
             <Column field={'container'} header={'Container'} />
-            <Column filter filterField='box18_1' field={'box18_1'} header={'Box18_1'} />
-            <Column filter filterField='box18_2' field={'box18_2'} header={'Box18_2'} />
-            <Column filter filterField='box21_1' field={'box21_1'} header={'Box21_1'} />
-            <Column filter filterField='box21_2' field={'box21_2'} header={'Box21_2'} />
+            <Column filter filterField="box18_1" field={'box18_1'} header={'Box18_1'} />
+            <Column filter filterField="box18_2" field={'box18_2'} header={'Box18_2'} />
+            <Column filter filterField="box21_1" field={'box21_1'} header={'Box21_1'} />
+            <Column filter filterField="box21_2" field={'box21_2'} header={'Box21_2'} />
             <Column field={'sadFlow'} header={'Sad Flow'} />
             <Column field={'locationGoods'} header={'Location Goods'} />
             <Column field={'goodsCategory1'} header={'Goods Category 1'} />
@@ -160,9 +209,9 @@ function DPS_4550() {
           </DataTable>
         </Box>
       </SimpleCard>
-      <Toast ref={toastRef} />
+      <Toast ref={tableRef} />
     </Container>
   );
-};
+}
 
-export default DPS_4550
+export default DPS_4550;
