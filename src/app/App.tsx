@@ -30,8 +30,6 @@ import DPS_4593 from './views/report/DPS_4593';
 import DPS_4595 from './views/report/DPS_4595';
 import DPS_4596 from './views/report/DPS_4596';
 import DPS_4599 from './views/report/DPS_4599';
-import DataExchange_5050 from './views/report/DataExchange_5050';
-import DataExchange_5051 from './views/report/DataExchange_5051';
 import Exemption_4753 from './views/report/Exemption_4753';
 import Exemption_4754 from './views/report/Exemption_4754';
 import Exemption_4755 from './views/report/Exemption_4755';
@@ -127,7 +125,9 @@ import SelectivityReport4356 from './views/report/SelectivityReport4356';
 import ManifestReport4450 from './views/report/ManifestReport4450';
 import DataExchangeReport5053 from './views/report/DataExchangeReport5053';
 import DataExchangeReport5054 from './views/report/DataExchangeReport5054';
-
+import DataExchange_5050 from './views/report/DataExchange_5050';
+import DataExchange_5051 from './views/report/DataExchange_5051';
+import DataExchange_5052 from './views/report/DataExchange_5052';
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
@@ -945,6 +945,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <DataExchange_5051 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.DataExchange_5052}
+            element={
+              <PrivateRoute>
+                <DataExchange_5052 />
               </PrivateRoute>
             }
           />

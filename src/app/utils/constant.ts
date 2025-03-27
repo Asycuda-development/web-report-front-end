@@ -139,6 +139,7 @@ export const AUTHORITIES = {
   Report_4599_DPS: 'REPORT:4599-DPS',
   Report_5050_DataExchange: 'REPORT:5050-DataExchange',
   Report_5051_DataExchange: 'REPORT:5051-DataExchange',
+  Report_5052_DataExchange: 'REPORT:5052-DataExchange',
   Report_4360_Selectivity: 'REPORT:4360-Selectivity',
   Report_4361_Selectivity: 'REPORT:4361-Selectivity',
   Report_4753_Exemption: 'REPORT:4753-Exemption',

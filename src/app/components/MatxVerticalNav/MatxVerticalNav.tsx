@@ -1585,6 +1585,18 @@ const MatxVerticalNav = () => {
               {
                 className: classNames({
                   'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                    AUTHORITIES.Report_5052_DataExchange,
+                    AUTHORITIES.ADMIN
+                  ])
+                }),
+                label: 'DataExchange Report 5055',
+                command: () => {
+                  navigation(routes.DataExchange_5052);
+                }
+              },
+              {
+                className: classNames({
+                  'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.DataExchangeReport5053,
                     AUTHORITIES.ADMIN
                   ])
