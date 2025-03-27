@@ -78,7 +78,7 @@ export const routes = {
   Selectivity_4356: '/selectivity-report-4356',
   Selectivity_4360: '/selectivity-report-4360',
   Selectivity_4361: '/selectivity-report-4361',
-  ManifestReport4450: '/ManifestReport4450',
+  Manifest_4450: '/manifest-report-4450',
   DPS_4550: '/dps-report-4550',
   DPS_4551: '/dps-report-4551',
   DPS_4552: '/dps-report-4552',
