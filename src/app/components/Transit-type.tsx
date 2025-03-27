@@ -1,4 +1,3 @@
-import React from 'react';
 import { Dropdown, DropdownProps } from './base-component';
 
 const transitT = [
@@ -8,7 +7,7 @@ const transitT = [
   { label: 'T2', name: 'T2' },
   { label: 'TIR', name: 'TIR' },
   { label: 'All', name: 'All' },
-  
+
 ];
 export const TransitType = ({
   label,
