@@ -38,6 +38,7 @@ export interface SearchData {
   RegisterNo?: number;
   TirepdNum?: number;
   hsCode?: number;
+  howTaxCode?:number;
   LocationCode?: number;
   ExemptionRepNo?: number;
   farwardCod?: number;
@@ -183,6 +184,7 @@ export const ReportHeaderInputs = ({
   const [opreationOptionValuation, setOpreationOptionValuation] = useState<string>('');
   const [opreationOptionValuationValue, setOpreationOptionValuationValue] = useState<string>('');
   const [hsCode, setHsCode] = useState<string>('');
+  const [taxCode, setTaxCode] = useState<string>('');
   const [tirepdNum, setTirepdNum] = useState<string>('');
   const [locationCode, setLocationCode] = useState<string>('');
   const [exemptionRepNo, setExemptionRepNo] = useState<string>('');
@@ -231,6 +233,7 @@ export const ReportHeaderInputs = ({
       dateType ||
       exemptedStatus ||
       hsCode ||
+      taxCode||
       goods ||
       username ||
       status ||
@@ -273,6 +276,7 @@ export const ReportHeaderInputs = ({
     numPalate,
     farwardCod,
     hsCode,
+    taxCode,
     goods,
     username,
     status,
@@ -295,6 +299,7 @@ export const ReportHeaderInputs = ({
       ...(showGoods && { goodsCategory: goods }),
       ...(showUserName && { userName: username }),
       ...(ShowHsCode && { hsCode: parseInt(hsCode) }),
+      ...(showTaxCode && { taxCode: parseInt(taxCode) }),
       ...(showfarwarCode && { forwarderCode: parseInt(farwardCod) }),
       ...(ShowRegisterNo && { registerNo: parseInt(registerNo) }),
       ...(showTirepdNum && { tirepdNum: parseInt(tirepdNum) }),
@@ -478,6 +483,19 @@ export const ReportHeaderInputs = ({
             />
             <label htmlFor="dateType4" style={{ marginLeft: '0.3em' }}>
               OperationDate
+            </label>
+          </Col>
+        </Condition>
+        <Condition condition={showDeclarationDate}>
+          <Col xs={6} md={4} lg={2} xl={2}>
+            <RadioButton
+              inputId="dateType5"
+              value="DeclarationDate"
+              onChange={(e) => setDateType(e.value)}
+              checked={dateType === 'DeclarationDate'}
+            />
+            <label htmlFor="dateType5" style={{ marginLeft: '0.3em' }}>
+            DeclarationDate
             </label>
           </Col>
         </Condition>
@@ -785,6 +803,19 @@ export const ReportHeaderInputs = ({
             value={hsCode}
             onChange={(e) => {
               setHsCode(e.target.value);
+            }}
+          />
+        </Condition>
+        <Condition condition={showTaxCode}>
+          <NumberInput
+            label="Tax_Code"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            value={taxCode}
+            onChange={(e) => {
+              setTaxCode(e.target.value);
             }}
           />
         </Condition>
