@@ -36,34 +36,11 @@ import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
 import DataExchange_5050 from './views/report/DataExchange_5050';
 import DataExchange_5051 from './views/report/DataExchange_5051';
->>>>>>> 45f5e7cc054db80b623233de59d0a1ba435e6e4e
 import Exemption_4753 from './views/report/Exemption_4753';
 import Exemption_4754 from './views/report/Exemption_4754';
 import Exemption_4755 from './views/report/Exemption_4755';
-import Revenue_4151 from './views/report/Revenue_4151';
-import Revenue_4155 from './views/report/Revenue_4155';
-import Revenue_4165 from './views/report/Revenue_4165';
-import Revenue_4171 from './views/report/Revenue_4171';
-import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
-import Revenue_4172 from './views/report/Revenue_4172';
-import Transit_4251 from './views/report/Transit_4251';
-import Transit_4252 from './views/report/Transit_4252';
-import Transit_4270 from './views/report/Transit_4270';
-import Transit_4272 from './views/report/Transit_4272';
-import Transit_4273 from './views/report/Transit_4273';
-import Transit_4274 from './views/report/Transit_4274';
-import Transit_4282 from './views/report/Transit_4282';
-import Transit_4271 from './views/report/Transit_4271';
-import Transit_4283 from './views/report/Transit_4283';
-import Transit_4284 from './views/report/Transit_4284';
-import Transit_4253 from './views/report/Transit_4253';
-import Transit_4254 from './views/report/Transit_4254';
-import Transit_4255 from './views/report/Transit_4255';
-import Transit_4256 from './views/report/Transit_4256';
-import Transit_4260 from './views/report/Transit_4260';
-import Transit_4261 from './views/report/Transit_4261';
-import Transit_4263 from './views/report/Transit_4263';
-import Transit_4264 from './views/report/Transit_4264';
+import DataExchange_5050 from './views/report/DataExchange_5050';
+import DataExchange_5051 from './views/report/DataExchange_5051';
 import DataExchange_5053 from './views/report/DataExchange_5053';
 import DataExchange_5054 from './views/report/DataExchange_5054';
 import DPS_4550 from './views/report/DPS_4550';
@@ -83,13 +60,16 @@ import DPS_4563 from './views/report/DPS_4563';
 import DPS_4564 from './views/report/DPS_4564';
 import DPS_4565 from './views/report/DPS_4565';
 import DPS_4566 from './views/report/DPS_4566';
+import DPS_4570 from './views/report/DPS_4570';
 import DPS_4571 from './views/report/DPS_4571';
 import DPS_4572 from './views/report/DPS_4572';
 import DPS_4573 from './views/report/DPS_4573';
 import DPS_4575 from './views/report/DPS_4575';
 import DPS_4576 from './views/report/DPS_4576';
 import DPS_4578 from './views/report/DPS_4578';
+import DPS_4579 from './views/report/DPS_4579';
 import DPS_4580 from './views/report/DPS_4580';
+import DPS_4583 from './views/report/DPS_4583';
 import DPS_4584 from './views/report/DPS_4584';
 import DPS_4585 from './views/report/DPS_4585';
 import DPS_4586 from './views/report/DPS_4586';
@@ -108,16 +88,18 @@ import Exemption_4755 from './views/report/Exemption_4755';
 import ExemptionReport4750 from './views/report/ExemptionReport4750';
 import ExemptionReport4752 from './views/report/ExemptionReport4752';
 import ManifestReport4450 from './views/report/ManifestReport4450';
-<<<<<<< HEAD
-import DataExchangeReport5053 from './views/report/DataExchangeReport5053';
-import DataExchangeReport5054 from './views/report/DataExchangeReport5054';
-import DataExchange_5050 from './views/report/DataExchange_5050';
-import DataExchange_5051 from './views/report/DataExchange_5051';
-import DataExchange_5052 from './views/report/DataExchange_5052';
-=======
 import OverallReport from './views/report/report';
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
+import Transit_4273 from './views/report/Transit_4273';
+import Transit_4253 from './views/report/Transit_4253';
+import Transit_4254 from './views/report/Transit_4254';
+import Transit_4255 from './views/report/Transit_4255';
+import Transit_4256 from './views/report/Transit_4256';
+import Transit_4260 from './views/report/Transit_4260';
+import Transit_4261 from './views/report/Transit_4261';
+import Transit_4263 from './views/report/Transit_4263';
+import Transit_4264 from './views/report/Transit_4264';
 import Transit_4257 from './views/report/Transit_4257';
 import Transit_4258 from './views/report/Transit_4258';
 import Transit_4259 from './views/report/Transit_4259';
@@ -173,13 +155,6 @@ import Selectivity_4354 from './views/report/Selectivity_4354';
 import Selectivity_4355 from './views/report/Selectivity_4355';
 import Selectivity_4356 from './views/report/Selectivity_4356';
 import Valuation_4650 from './views/report/Valuation_4650';
-import DPS_4570 from './views/report/DPS_4570';
-import DPS_4579 from './views/report/DPS_4579';
-import DPS_4583 from './views/report/DPS_4583';
-import DPS_45101 from './views/report/DPS_45101';
-import DPS_45102 from './views/report/DPS_45102';
-import DPS_45103 from './views/report/DPS_45103';
-
 import Valuation_4652 from './views/report/Valuation_4652';
 import Valuation_4653 from './views/report/Valuation_4653';
 import Valuation_4654 from './views/report/Valuation_4654';
@@ -545,6 +520,30 @@ const AuthLayout = () => {
             }
           />
           <Route
+            path={routes.Transit_4257}
+            element={
+              <PrivateRoute>
+                <Transit_4257 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4258}
+            element={
+              <PrivateRoute>
+                <Transit_4258 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4259}
+            element={
+              <PrivateRoute>
+                <Transit_4259 />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path={routes.Transit_4260}
             element={
               <PrivateRoute>
@@ -561,6 +560,14 @@ const AuthLayout = () => {
             }
           />
           <Route
+            path={routes.Transit_4263}
+            element={
+              <PrivateRoute>
+                <Transit_4263 />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path={routes.Transit_4264}
             element={
               <PrivateRoute>
@@ -569,10 +576,34 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.Transit_4263}
+            path={routes.Transit_4265}
             element={
               <PrivateRoute>
-                <Transit_4263 />
+                <Transit_4265 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4266}
+            element={
+              <PrivateRoute>
+                <Transit_4266 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4267}
+            element={
+              <PrivateRoute>
+                <Transit_4267 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4268}
+            element={
+              <PrivateRoute>
+                <Transit_4268 />
               </PrivateRoute>
             }
           />
@@ -681,7 +712,7 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.TransitReport4258}
+            path={routes.Transit_4279}
             element={
               <PrivateRoute>
                 <Transit_4279 />
@@ -761,18 +792,18 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ExemptionReport4750}
+            path={routes.Exemption_4750}
             element={
               <PrivateRoute>
-                <ExemptionReport4750 />
+                <Exemption_4750 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.ExemptionReport4752}
+            path={routes.Exemption_4752}
             element={
               <PrivateRoute>
-                <ExemptionReport4752 />
+                <Exemption_4752 />
               </PrivateRoute>
             }
           />
@@ -833,10 +864,10 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ManifestReport4450}
+            path={routes.Manifest_4450}
             element={
               <PrivateRoute>
-                <ManifestReport4450 />
+                <Manifest_4450 />
               </PrivateRoute>
             }
           />

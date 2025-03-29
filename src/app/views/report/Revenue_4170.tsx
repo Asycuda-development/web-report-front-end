@@ -21,7 +21,6 @@ function Revenue_4170() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
@@ -55,15 +54,15 @@ function Revenue_4170() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-<Column field={'office'} header={'office'} />
-<Column field={'reg_nbr'} header={'reg_nbr'} />
-<Column field={'reg_date'} header={'reg_date'} />
-<Column field={'dec_nam'} header={'dec_nam'} />
-<Column field={'Company_TIN'} header={'Company_TIN'} />
-<Column field={'cmp_nam'} header={'cmp_nam'} />
-<Column field={'amt_041'} header={'amt_041'} />
-<Column field={'amt_042'} header={'amt_042'} />
-<Column field={'amt_047'} header={'amt_047'} />
+          <Column field={'office'} header={'office'} />
+          <Column field={'reg_nbr'} header={'reg_nbr'} />
+          <Column field={'reg_date'} header={'reg_date'} />
+          <Column field={'dec_nam'} header={'dec_nam'} />
+          <Column field={'Company_TIN'} header={'Company_TIN'} />
+          <Column field={'cmp_nam'} header={'cmp_nam'} />
+          <Column field={'amt_041'} header={'amt_041'} />
+          <Column field={'amt_042'} header={'amt_042'} />
+          <Column field={'amt_047'} header={'amt_047'} />
         </DataTable>
       </ Box>
     </SimpleCard>

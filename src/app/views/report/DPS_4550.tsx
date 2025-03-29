@@ -12,6 +12,7 @@ function DPS_4550() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const toastRef: any = useRef(null);
 
   useEffect(() => { }, []);
 
