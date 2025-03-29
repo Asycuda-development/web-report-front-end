@@ -21,7 +21,6 @@ function DPS_4583() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
@@ -56,16 +55,16 @@ function DPS_4583() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-<Column field={'cmpCod'} header={'cmpCod'}/>
-<Column field={'cmpNam'} header={'cmpNam'}/>
-<Column field={'cmpAdr'} header={'cmpAdr'}/>
-<Column field={'cmpAd2'} header={'cmpAd2'}/>
-<Column field={'cmpAd3'} header={'cmpAd3'}/>
-<Column field={'cmpAd4'} header={'cmpAd4'}/>
-<Column field={'cmpTel'} header={'cmpTel'}/>
-<Column field={'valid_F'} header={'valid_F'}/>
-<Column field={'valid_To'} header={'valid_To'}/>
-<Column field={' cmpSta'} header={' cmpSta'} />
+          <Column field={'cmpCod'} header={'cmpCod'} />
+          <Column field={'cmpNam'} header={'cmpNam'} />
+          <Column field={'cmpAdr'} header={'cmpAdr'} />
+          <Column field={'cmpAd2'} header={'cmpAd2'} />
+          <Column field={'cmpAd3'} header={'cmpAd3'} />
+          <Column field={'cmpAd4'} header={'cmpAd4'} />
+          <Column field={'cmpTel'} header={'cmpTel'} />
+          <Column field={'valid_F'} header={'valid_F'} />
+          <Column field={'valid_To'} header={'valid_To'} />
+          <Column field={' cmpSta'} header={' cmpSta'} />
         </DataTable>
       </ Box>
     </SimpleCard>

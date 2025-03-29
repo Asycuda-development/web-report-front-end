@@ -11,7 +11,6 @@ function Revenue_4164() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
-  const toastRef: any = useRef(null);
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -58,9 +57,9 @@ function Revenue_4164() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-    <Column field={'sad_flw'} header={'sad_flw'}/>
-	<Column field={'Office'} header={'Office'}/>
-	<Column field={'taxAmount'} header={'taxAmount'}/>
+          <Column field={'sad_flw'} header={'sad_flw'} />
+          <Column field={'Office'} header={'Office'} />
+          <Column field={'taxAmount'} header={'taxAmount'} />
         </DataTable>
       </ Box>
     </SimpleCard>

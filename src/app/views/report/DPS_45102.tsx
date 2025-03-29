@@ -21,7 +21,6 @@ function DPS_45102() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
@@ -55,14 +54,14 @@ function DPS_45102() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-        <Column field={'New_Customs'} header={'New_Customs'}/>
-        <Column field={'newSadType'} header={'newSadType'}/>
-        <Column field={'newSer'} header={'newSer'}/>
-        <Column field={'new_I'} header={'new_I'}/>
-        <Column field={'new_I_Date'} header={'new_I_Date'}/>
-        <Column field={'newSer1'} header={'newSer1'}/>
-        <Column field={' other_I'} header={' other_I'}/>
-        <Column field={' new_I_Date_1'} header={' new_I_Date_1'}/>
+          <Column field={'New_Customs'} header={'New_Customs'} />
+          <Column field={'newSadType'} header={'newSadType'} />
+          <Column field={'newSer'} header={'newSer'} />
+          <Column field={'new_I'} header={'new_I'} />
+          <Column field={'new_I_Date'} header={'new_I_Date'} />
+          <Column field={'newSer1'} header={'newSer1'} />
+          <Column field={' other_I'} header={' other_I'} />
+          <Column field={' new_I_Date_1'} header={' new_I_Date_1'} />
         </DataTable>
       </ Box>
     </SimpleCard>
