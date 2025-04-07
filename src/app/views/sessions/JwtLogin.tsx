@@ -10,6 +10,9 @@ import { Toast } from 'primereact/toast';
 import * as Yup from 'yup';
 import { useRef } from 'react';
 import { routes } from 'src/app/navigations';
+import { useTranslation } from 'react-i18next';
+
+const translationsKey: string = "loginForm"
 
 const FlexBox = styled(Box)(() => ({ display: 'flex', alignItems: 'center' }));
 
@@ -46,18 +49,38 @@ const initialValues = {
   remember: true
 };
 
-// form field validation schema
-const validationSchema = Yup.object().shape({
-  password: Yup.string()
-    .min(5, 'Password must be 5 character length')
-    .required('Password is required!'),
-  username: Yup.string().required('Username is required!')
-});
 
 const JwtLogin = () => {
   const navigate = useNavigate();
   const toastRef: any = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [language, setLanguage] = useState('en')
+  const { i18n, t } = useTranslation();
+
+  function changeLanguage(e: any) {
+    i18n.changeLanguage(e.target.value);
+    setLanguage(e.target.value)
+
+    const date = new Date();
+    date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
+    const expires = "; expires=" + date.toUTCString();
+
+    document.cookie = `lang=${e.target.value} ${expires}; path=/`
+  }
+
+  useEffect(() => {
+    const lang = document.cookie.split('lang')[1].slice(1, 3)
+    setLanguage(lang)
+    i18n.changeLanguage(lang)
+  }, [])
+
+  // form field validation schema
+  const validationSchema = Yup.object().shape({
+    password: Yup.string()
+      .min(5, `${t(`${translationsKey}.passwordLengthError`)}`)
+      .required(`${t(`${translationsKey}.passwordRequired`)}`),
+    username: Yup.string().required(`${t(`${translationsKey}.usernameRequired`)}`)
+  });
 
   const { login, isAuthenticated, message } = useUser();
 
@@ -67,24 +90,30 @@ const JwtLogin = () => {
       if (response === 200) {
         navigate(routes.Dashboard);
       }
-    } catch (e) {}
+    } catch (e) { }
   };
+
   useEffect(() => {
     if (isAuthenticated) {
       navigate(routes.Dashboard);
     }
   }, [isAuthenticated]);
 
+  // useEffect(() => {
+  //   document.body.dir = i18n.dir();
+  // }, [i18n, i18n.language])
+
   useEffect(() => {
     if (message?.length) {
       toastRef.current.show({
         severity: 'error',
         summary: 'Error',
-        detail: 'Invalid credentials, please try again.'
+        detail: `${t(`${translationsKey}.emptyInputs`)}`
       });
       setLoading(false);
     }
   }, [message]);
+
 
   return (
     <JWTRoot>
@@ -98,12 +127,20 @@ const JwtLogin = () => {
           </Grid>
 
           <Grid item sm={6} xs={12}>
-            <ContentBox sx={{ marginTop: '100px' }}>
+            <select
+              style={{ padding: '2px', margin: '2px 10px', float: 'right', color: '#555', borderColor: '#555', outlineColor: '#777' }}
+              name="lang" id="lang" value={language} onChange={(e) => changeLanguage(e)}>
+              <option value="en">English</option>
+              <option value="fa">Farsi</option>
+              <option value="ps">Pashto</option>
+            </select>
+            <ContentBox sx={{ marginTop: '73px' }}>
               <Formik
                 onSubmit={handleFormSubmit}
                 initialValues={initialValues}
                 validationSchema={validationSchema}
               >
+
                 {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
                   <form onSubmit={handleSubmit}>
                     <TextField
@@ -111,7 +148,7 @@ const JwtLogin = () => {
                       size="small"
                       type="text"
                       name="username"
-                      label="Username"
+                      label={t(`${translationsKey}.username`)}
                       variant="outlined"
                       onBlur={handleBlur}
                       value={values.username}
@@ -126,7 +163,7 @@ const JwtLogin = () => {
                       size="small"
                       name="password"
                       type="password"
-                      label="Password"
+                      label={t(`${translationsKey}.password`)}
                       variant="outlined"
                       onBlur={handleBlur}
                       value={values.password}
@@ -143,7 +180,7 @@ const JwtLogin = () => {
                       variant="contained"
                       sx={{ my: 2 }}
                     >
-                      Login
+                      {t(`${translationsKey}.login`)}
                     </LoadingButton>
                   </form>
                 )}

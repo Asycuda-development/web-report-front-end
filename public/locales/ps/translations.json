@@ -1,0 +1,13 @@
+{
+    "home": "کور",
+    "page2": "Page 2",
+    "loginForm": {
+        "login": "ننوتل",
+        "username": "کارن نوم",
+        "password": "پټنوم",
+        "emptyInputs": "ناسم اسناد، مهرباني وکړئ بیا هڅه وکړئ.",
+        "passwordLengthError": "پټنوم باید د 5 حروف اوږدوالی ولري",
+        "passwordRequired": "پټنوم اړین دی!",
+        "usernameRequired": "کارن نوم اړین دی!"
+    }
+}

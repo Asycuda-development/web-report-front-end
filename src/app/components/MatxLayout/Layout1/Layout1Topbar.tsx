@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Avatar,
@@ -21,6 +21,8 @@ import { Span } from '../../Typography';
 import NotificationBar from '../../NotificationBar/NotificationBar';
 import ShoppingCart from '../../ShoppingCart';
 import { useSettingsStore } from '../../../contexts/SettingsContext';
+import { useTranslation } from 'react-i18next';
+import { Dropdown } from 'primereact/dropdown';
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.text.primary
@@ -85,6 +87,25 @@ const Layout1Topbar = (props: { fixed?: boolean; className?: string }) => {
   const { settings, updateSettings } = useSettingsStore();
   const { logout, user } = useUser((state) => state);
   const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const [language, setLanguage] = useState('en')
+  const { i18n, t } = useTranslation();
+
+  function changeLanguage(e: any) {
+    i18n.changeLanguage(e.target.value);
+    setLanguage(e.target.value)
+
+    const date = new Date();
+    date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
+    const expires = "; expires=" + date.toUTCString();
+
+    document.cookie = `lang=${e.target.value} ${expires}; path=/`
+  }
+
+  useEffect(() => {
+    const lang = document.cookie.split('lang')[1].slice(1, 3)
+    setLanguage(lang)
+    i18n.changeLanguage(lang)
+  }, [])
 
   const updateSidebarMode = (sidebarSettings: any) => {
     updateSettings({ layout1Settings: { leftSidebar: { ...sidebarSettings } } });
@@ -125,6 +146,13 @@ const Layout1Topbar = (props: { fixed?: boolean; className?: string }) => {
         </Box>
 
         <Box display="flex" alignItems="center">
+          <select
+            style={{ padding: '2px 5px', margin: '2px 10px', color: '#333', borderColor: '#333', outlineColor: '#777' }}
+            name="lang" id="lang" value={language} onChange={(e) => changeLanguage(e)}>
+            <option value="en">English</option>
+            <option value="fa">Farsi</option>
+            <option value="ps">Pashto</option>
+          </select>
           <MatxSearchBox />
           {/* 
           <NotificationBar container={{}} />
@@ -136,6 +164,7 @@ const Layout1Topbar = (props: { fixed?: boolean; className?: string }) => {
               <UserMenu>
                 <Hidden xsDown>
                   <Span>
+                    {t('home')}
                     Hi <strong>{user.name}</strong>
                   </Span>
                 </Hidden>

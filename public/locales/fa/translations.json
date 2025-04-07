@@ -1,0 +1,13 @@
+{
+    "home": "خانه",
+    "page2": "Page 2",
+    "loginForm": {
+        "login": "ورود",
+        "username": "اسم کاربر",
+        "password": "رمز عبور",
+        "emptyInputs": "اسناد غلط وارد شده، لطفاً دوباره امتحان کنید.",
+        "passwordLengthError": "رمز عبور باید 5 حرف باشد",
+        "passwordRequired": "رمز عبور لازم است!",
+        "usernameRequired": "اسم کاربری لازم است!"
+    }
+}

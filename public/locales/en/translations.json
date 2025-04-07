@@ -1,0 +1,13 @@
+{
+    "home": "Home",
+    "page2": "Page 2",
+    "loginForm": {
+        "login": "Login",
+        "username": "Username",
+        "password": "Password",
+        "emptyInputs": "Invalid credentials, please try again.",
+        "passwordLengthError": "Password must be 5 character length",
+        "passwordRequired": "Password is required!",
+        "usernameRequired": "Username is required!"
+    }
+}

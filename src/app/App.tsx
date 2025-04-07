@@ -139,6 +139,8 @@ import Valuation_4656 from './views/report/Valuation_4656';
 import Valuation_4657 from './views/report/Valuation_4657';
 import Valuation_4658 from './views/report/Valuation_4658';
 
+import '../i18n/config';
+
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
 const NotFound = Loadable(lazy(() => import('./views/sessions/NotFound')));
