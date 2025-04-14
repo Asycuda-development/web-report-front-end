@@ -31,6 +31,31 @@ function DPS_4551() {
       setLoading(false);
     }
   };
+  const basedOnOptions = [{
+    label: 'declarant',
+    name: 'declarant_Code'
+  },{
+    label: 'company',
+    name: 'company Code'
+},{
+  label: 'Sad_Financial',
+  name: 'SAD_Financial'
+},{
+  label: 'Examiner',
+  name: 'Examiner'
+},{
+  label: 'I_no',
+  name: 'I_no'
+},{
+  label: 'P_no',
+  name: 'P_no'
+},{
+  label: 'M_no',
+  name: 'M_no'
+},{
+  label: 'HsCode',
+  name: 'HsCode'
+}]
 
   return (
     <SimpleCard title="DPS_4551">
@@ -40,6 +65,8 @@ function DPS_4551() {
         ShowTinNumber
         showExemptionType
         showCustomsProcedure
+        showBasedOn
+        basedOnOptions={basedOnOptions}
         showRegDate
         showAssesDate
         showPayDate

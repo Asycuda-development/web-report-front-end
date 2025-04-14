@@ -47,8 +47,29 @@ function DPS_4550() {
   };
   const basedOnOptions = [{
     label: 'declarant',
-    name: 'declarant'
-  }]
+    name: 'declarant_Code'
+  },{
+    label: 'company',
+    name: 'company Code'
+},{
+  label: 'Sad_Financial',
+  name: 'SAD_Financial'
+},{
+  label: 'Examiner',
+  name: 'Examiner'
+},{
+  label: 'I_no',
+  name: 'I_no'
+},{
+  label: 'P_no',
+  name: 'P_no'
+},{
+  label: 'M_no',
+  name: 'M_no'
+},{
+  label: 'HsCode',
+  name: 'HsCode'
+}]
   
   //
   return (
@@ -65,6 +86,7 @@ function DPS_4550() {
         showAssesDate
         showPayDate
         showCustomsList
+        showDepartureCustomsList
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />

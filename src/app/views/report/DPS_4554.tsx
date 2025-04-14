@@ -41,6 +41,7 @@ function DPS_4554() {
         showStartDate
         showEndDate
         ShowTinNumber
+        showTaxCode
         showCustomsProcedure
         showRegDate
         showAssesDate
