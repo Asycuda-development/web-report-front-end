@@ -55,6 +55,7 @@ function DPS_4575() {
         showEndDate
         showExemptionType
         showCustomsProcedure
+        showRegDate
         showAssesDate
         showPayDate
         showBasedOn

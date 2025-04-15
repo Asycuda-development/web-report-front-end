@@ -53,7 +53,6 @@ function DPS_4570() {
       <ReportHeaderInputs
         showStartDate
         showEndDate
-        ShowTinNumber
         showExemptionType
         showCustomsProcedure
         showBasedOn
