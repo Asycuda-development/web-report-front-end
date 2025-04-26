@@ -56,16 +56,16 @@ function DPS_4583() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-<Column field={'cmpCod'} header={'cmpCod'}/>
-<Column field={'cmpNam'} header={'cmpNam'}/>
-<Column field={'cmpAdr'} header={'cmpAdr'}/>
-<Column field={'cmpAd2'} header={'cmpAd2'}/>
-<Column field={'cmpAd3'} header={'cmpAd3'}/>
-<Column field={'cmpAd4'} header={'cmpAd4'}/>
-<Column field={'cmpTel'} header={'cmpTel'}/>
-<Column field={'valid_F'} header={'valid_F'}/>
-<Column field={'valid_To'} header={'valid_To'}/>
-<Column field={' cmpSta'} header={' cmpSta'} />
+<Column field={'cmpCod'} header={'COMPANAY_CODE'}/>
+<Column field={'cmpNam'} header={'COMPANY_NAME'}/>
+<Column field={'cmpAdr'} header={'COMPANY_ADDR'}/>
+<Column field={'cmpAd2'} header={'COMPANY_ADDR2'}/>
+<Column field={'cmpAd3'} header={'COMPANY_ADDR3'}/>
+<Column field={'cmpAd4'} header={'COMPANY_ADDR4'}/>
+<Column field={'cmpTel'} header={'COMPANY_TELL'}/>
+<Column field={'valid_F'} header={'VALIDE_FROM'}/>
+<Column field={'valid_To'} header={'VALIDE_TO'}/>
+<Column field={' cmpSta'} header={' COMPANY_STATUS'} />
         </DataTable>
       </ Box>
     </SimpleCard>

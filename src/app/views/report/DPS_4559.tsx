@@ -1,8 +1,8 @@
-import { Box, LinearProgress, styled } from '@mui/material';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
@@ -54,12 +54,14 @@ function DPS_4559() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'typSad'} header={'SAD_TYPE'} />
-                    <Column field={'typProc'} header={'TYP_PROC'} />
-                    <Column field={'office'} header={'OFFICE_NAME'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column field={'sadCnt'} header={'SAD_CNT'} />
+                    <Column field={'office'} header={'SAD_OFFICE'} />
+                    <Column field={'typSad'} header={'SAD_Type'} />
+                    <Column field={'typProc'} header={'SAD_Proc_code'}
+                    />
                     <Column field={'type'} header={'TYPE_E/I'} />
+                    <Column field={'status'} header={'Status'} />
+                    <Column field={'sadCnt'} header={'Count'} />
+
 
 
                 </DataTable>

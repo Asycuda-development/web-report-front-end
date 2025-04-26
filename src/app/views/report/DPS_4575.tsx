@@ -76,35 +76,35 @@ function DPS_4575() {
           stripedRows
           showGridlines
         >
-          <Column field={'borderCuo'} header={'Border_Custom'} />
-          <Column field={'destCuo'} header={'Destination Custom'} />
-          <Column field={'decCod'} header={'Declarant_Cod'} />
-          <Column field={'decNam1'} header={'Declarant_Cod'} />
+          <Column field={'status'} header={'Status'} />
+          <Column field={'borderCuo'} header={'Border office'} />
+          <Column field={'destCuo'} header={'Customs Office'} />
+          <Column field={'decCod'} header={'Dec Code'} />
+          <Column field={'decNam1'} header={'Dec Name'} />
           <Column field={'refNo'} header={'Ref_NO'} />
-          <Column field={'regNo'} header={'Registeration_NO'} />
+          <Column field={'regNo'} header={'Register_No'} />
           <Column field={'regDate'} header={'Reg_Date'} />
+          <Column field={'hscode'} header={'HSCODE'} />
           <Column field={'mark1'} header={'Mark1'} />
           <Column field={'mark2'} header={'Mark2'} />
-          <Column field={'decNam'} header={'Declarant_Name'} />
-          <Column field={'companyTin'} header={'Company_Cod'} />
-          <Column field={'cmpNam'} header={'Company_Name'} />
+          <Column field={'decNam'} header={'Brokers_Name'} />
+          <Column field={'companyTin'} header={'Company_TIN'} />
+          <Column field={'cmpNam'} header={'Company_name'} />
           <Column field={'finNam'} header={'Fin_Name'} />
-          <Column field={'rgdat'} header={'rg_date'} />
+          <Column field={'model'} header={'Model'} />
           <Column field={'color'} header={'Color'} />
-          <Column field={'gaz'} header={'Gaz'} />
-          <Column field={'finName'} header={'Fin Name'} />
+          <Column field={'gaz'} header={'Type_of_Gas'} />
           <Column field={'passenger'} header={'Passenger'} />
           <Column field={'engNo'} header={'Eng_NO'} />
           <Column field={'shasi'} header={'Shsi'} />
-          <Column field={'silandr'} header={'Siladar'} />
-          <Column field={'doors'} header={'Door'} />
+          <Column field={'doors'} header={'Doors'} />
           <Column field={'valueAfs'} header={'Value_AF'} />
           <Column field={'revenueTaxes'} header={'Revenue_Tax'} />
-          <Column field={'status'} header={'Status'} />
-          <Column field={'hscode'} header={'HS_Cod'} />
-          <Column field={'rcptDate'} header={'Rcp_Date'} />
           <Column field={'rcptNumber'} header={'Rcp_NO'} />
-          <Column field={'model'} header={'Model'} />
+          <Column field={'rcptDate'} header={'Rcp_Date'} />
+          <Column field={'rgdat'} header={'rg_date'} />
+          <Column field={'finName'} header={'Fin Name'} />
+          <Column field={'silandr'} header={'Siladar'} />
         </DataTable>
       </Box>
       <Toast ref={toastRef} />

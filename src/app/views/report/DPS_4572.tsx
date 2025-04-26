@@ -54,8 +54,7 @@ function DPS_4572() {
           showGridlines
         >
           <Column filter filterField="ideaYea" field={'ideaYea'} header={'Year'} />
-          <Column field={'ideSer'} header={'ID_Ser'} />
-          <Column filter filterField="ideNbr" field={'ideNbr'} header={'IDE_NO'} />
+          <Column filter filterField="ideNbr" field={'ideNbr'} header={'Exit_No'} />
           <Column field={'ideCuo'} header={'Customs_Code'} />
           <Column field={'ideCuoNam'} header={'Customs_Name'} />
           <Column field={'shdCod'} header={'Where_House_Cod'} />
@@ -64,21 +63,37 @@ function DPS_4572() {
           <Column field={'cmpCod'} header={'Company_TIN'} />
           <Column filter filterField="decCod" field={'decCod'} header={'Broker_Code'} />
           <Column field={'decNam'} header={'Broker_Name'} />
+          <Column field={'valUsr'} header={'val_Usr'} />
+          <Column field={'extUsr'} header={'Exit Usr'} />
+          <Column field={'extPlc'} header={'place_of_exit'} />
+          <Column field={'extItm'} header={'Exit Itm'} />
+          <Column field={'ExitDat'} header={'Exit Date'} />
+          <Column field={'sadItm'} header={'sad_Item'} />
+          <Column
+            filter
+            filterField="sadRegNbr"
+            field={'sadRegNbr'}
+            header={'Reg_NO'}
+          />
+          <Column field={'sadRegSer'} header={'Sad_Serial_NO'} />
+          <Column field={'sadAssDat'} header={'Assesment_Date'} />
+          <Column field={'sadPckMk1'} header={'	Desc1'} />
+          <Column field={'sadPckMk2'} header={'	Desc2'} />
+          <Column field={'sadPackNbr'} header={'sad_pack_nbr'} />
+          <Column field={'sadPckExtNbr'} header={'No_of_exit_packages'} />
+          <Column field={'sadPckExtWgt'} header={'weigh_of_exit_packages'} />
+          <Column field={'manRef'} header={'manifest_ref'} />
+          <Column field={'bolRef'} header={'bol_Ref'} />
           <Column field={'exitTrucks'} header={'Exit_Trucks'} />
           <Column field={'exitDrivers'} header={'Exit_Drivers'} />
+          <Column field={'ideSer'} header={'ID_Ser'} />
           <Column field={'tptInfNam'} header={'Transport_Name'} />
           <Column field={'ideBar'} header={'IDE_Bar'} />
           <Column field={'tptNatCod'} header={'Transport_Cod'} />
           <Column field={' tptNatNam'} header={'Transport_Name'} />
           <Column field={'valDat'} header={'Val_Date'} />
           <Column field={'valItm'} header={'valItm'} />
-          <Column field={'valUsr'} header={'val_Usr'} />
-          <Column field={'extPlc'} header={'place_of_exit'} />
-          <Column field={'ExitDat'} header={'Exit Date'} />
-          <Column field={'extItm'} header={'Exit Itm'} />
-          <Column field={'extUsr'} header={'Exit Usr'} />
           <Column field={'itmNbr'} header={'item NO'} />
-          <Column field={'sadItm'} header={'sad_Item'} />
           <Column
             filter
             filterField="sadDecYea"
@@ -94,33 +109,18 @@ function DPS_4572() {
           <Column field={'sadAssYea'} header={'Assesment_Year'} />
           <Column field={'sadAssSer'} header={'Assesment Serial No'} />
           <Column field={'sadAssNbr'} header={'Assesment_No'} />
-          <Column field={'sadRegSer'} header={'Sad_Serial_NO'} />
-          <Column
-            filter
-            filterField="sadRegNbr"
-            field={'sadRegNbr'}
-            header={'Sad Registeration NO'}
-          />
           <Column
             style={{ textAlign: 'center' }}
             field={'sadRegDat'}
             header={'Sad Registeration Date'}
           />
           <Column field={'sadAssAll'} header={'Assesment_detail'} />
-          <Column field={'sadAssDat'} header={'Assesment_Date'} />
           <Column field={'sadInstanceId'} header={'sad_Instance Id'} />
-          <Column field={'sadPckMk1'} header={'sad_Pck_Mk1'} />
-          <Column field={'sadPckMk2'} header={'sad_Pck_Mk2'} />
-          <Column field={'sadPackNbr'} header={'sad_pack_nbr'} />
           <Column field={'sadPckTypCod'} header={'sad_Pck_Typ_Cod'} />
           <Column field={'sadPckTypNam'} header={'sad_Pck_Typ_Name'} />
           <Column field={'sadWgtGrs'} header={'sad_Wgt_Grs'} />
-          <Column field={'sadPckExtNbr'} header={'No_of_exit_packages'} />
-          <Column field={'sadPckExtWgt'} header={'weigh_of_exit_packages'} />
           <Column field={'sadPckExtSel'} header={'sad_Pck_Ext_Sel'} />
           <Column field={'sadCtnExitId'} header={'sad_Ctn_Exit_Id'} />
-          <Column field={'manRef'} header={'man_Ref'} />
-          <Column field={'bolRef'} header={'bol_Ref'} />
           <Column field={'serPrt'} header={'ser_Prt'} />
           <Column field={'tptMot'} header={'tpt_Mot'} />
         </DataTable>

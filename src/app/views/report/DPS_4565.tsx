@@ -60,48 +60,48 @@ function DPS_4565() {
           showGridlines
         >
           <Column field={'Sad_type'} header={'SAD Type'} />
-          <Column style={{ minWidth: "12rem" }} field={'tpt_custom_nam'} header={'Transport Custom Name'} />
-          <Column style={{ minWidth: "12rem" }} filter filterField="ide_custom_nam" field={'ide_custom_nam'} header={'Custom Name'} />
-          <Column field={'custom_cod'} header={'Custom Code'} />
-          <Column field={'Item_total'} header={'Item Total'} />
-          <Column field={'Item_No'} header={'itemNo'} />
-          <Column field={'Total_Package'} header={'Total Package'} />
-          <Column field={'Code_of_package'} header={'Package Code'} />
-          <Column field={'Type_of_Package'} header={'Package Type'} />
-          <Column filter filterField='Reg_No' field={'Reg_No'} header={'RegistrationNo'} />
-          <Column field={'Reg_Date'} header={'Registration Date'} />
-          <Column filter filterField='ASMT_No' field={'ASMT_No'} header={'Assessment Number'} />
-          <Column field={'AST_Date'} header={'Assessment Date'} />
+          <Column style={{ minWidth: "12rem" }} field={'tpt_custom_nam'} header={'Border office'} />
+          <Column style={{ minWidth: "12rem" }} filter filterField="ide_custom_nam" field={'ide_custom_nam'} header={'Customs Office'} />
+          <Column field={'Item_total'} header={'Item_Total'} />
+          <Column field={'Item_No'} header={'Item_No'} />
+          <Column field={'Total_Package'} header={'Total_Package'} />
+          <Column field={'Type_of_Package'} header={'Package_Type'} />
+          <Column field={'Code_of_package'} header={'Package_Code'} />
+          <Column filter filterField='Reg_No' field={'Reg_No'} header={'Reg_No'} />
+          <Column field={'Reg_Date'} header={'Reg_Date'} />
+          <Column filter filterField='ASMT_No' field={'ASMT_No'} header={'AsseM_Number'} />
+          <Column field={'AST_Date'} header={'AsseM_Date'} />
           <Column field={'RCPT_No'} header={'RCPT_NO'} />
-          <Column field={'RCPT_Date'} header={'Receipt Date'} />
-          <Column style={{ minWidth: "12rem" }} field={'bank_nam'} header={'Bank Name'} />
-          <Column field={'hs_code'} header={'hsCode'} />
-          <Column field={'cpc'} header={'cpc'} />
-          <Column style={{ minWidth: "20rem" }} field={'dsc'} header={'Goods Description'} />
-          <Column style={{ minWidth: "25rem" }} field={'gds_description'} header={'Goods Additional Description'} />
-          <Column style={{ minWidth: "20rem" }} field={' Pakage_mark1'} header={'Package Mark1'} />
-          <Column field={'Pakage_mark2'} header={'Package Mark2'} />
-          <Column field={'Customs_Proc'} header={'Customs Procedure'} />
-          <Column field={'Item_Gross_Weight'} header={'Item Gross Weight'} />
-          <Column field={'Item_Net_Weight'} header={'Item Net Weight'} />
-          <Column filter filterField='Broker_TIN' field={'Broker_TIN'} header={'Broker TIN'} />
-          <Column style={{ minWidth: "12rem" }} field={' dec_nam'} header={'Declarant Name'} />
-          <Column field={'Company_TIN'} header={'Company TIN'} />
-          <Column style={{ minWidth: "20rem" }} field={'CMP_Nam'} header={'Company Name'} />
-          <Column style={{ minWidth: "20rem" }} field={'fin_nam'} header={'Financial Name'} />
-          <Column style={{ minWidth: "12rem" }} field={' Country_Dest'} header={'Country Destination Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'Country_Export'} header={'Country Export Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'Country_Org'} header={'Country Origin Name'} />
-          <Column field={'Lorry_Total'} header={'Lorry Total'} />
-          <Column field={'Currrency_code'} header={'Currency Code'} />
-          <Column field={'Currecny_Rate'} header={'Currency Rate'} />
-          <Column field={'Declaration_Value_currency'} header={'Declaration Value Currency'} />
-          <Column field={'Declaration_Value_Afs'} header={'Declaration Value Afs'} />
-          <Column field={'Declaration_Taxes'} header={'DECLARATION_TAXES'} />
-          <Column field={'Item_Value_currency'} header={'Item Value Currency'} />
-          <Column field={'Item_Value_Afs'} header={'Item Value Afs'} />
-          <Column field={'tax_amt'} header={'CODE_TAX_AMOUNT'} />
+          <Column field={'RCPT_Date'} header={'RECPT_Date'} />
           <Column field={'status'} header={'SAD_STATUS'} />
+          <Column field={'cpc'} header={'Customs_Pro'} />
+          <Column field={'Customs_Proc'} header={'Extended Proc Code'} />
+          <Column field={'hs_code'} header={'HS_Code'} />
+          <Column style={{ minWidth: "20rem" }} field={'dsc'} header={'Goods Description'} />
+          <Column style={{ minWidth: "25rem" }} field={'gds_description'} header={'Comercial Description'} />
+          <Column style={{ minWidth: "20rem" }} field={' Pakage_mark1'} header={'Marks of Packages 1'} />
+          <Column field={'Pakage_mark2'} header={'Marks of Packages 2'} />
+          <Column field={'Item_Gross_Weight'} header={'Item_Gross_Weight'} />
+          <Column field={'Item_Net_Weight'} header={'Item_Net_Weight'} />
+          <Column filter filterField='Broker_TIN' field={'Broker_TIN'} header={'Broker_TIN'} />
+          <Column style={{ minWidth: "12rem" }} field={' dec_nam'} header={'Declarant_Name'} />
+          <Column field={'Company_TIN'} header={'Company_TIN'} />
+          <Column style={{ minWidth: "20rem" }} field={'CMP_Nam'} header={'Company_Name'} />
+          <Column style={{ minWidth: "20rem" }} field={'fin_nam'} header={'Financial_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'Country_Org'} header={'Country_Origin_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={' Country_Dest'} header={'Country_Destination Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'Country_Export'} header={'Country_Export_Name'} />
+          <Column field={'Lorry_Total'} header={'Lorry_Total'} />
+          <Column field={'Currecny_Rate'} header={'Currency_Rate'} />
+          <Column field={'Declaration_Value_currency'} header={'Declaration_Value in Foriegn Currency'} />
+          <Column field={'Declaration_Value_Afs'} header={'Declaration_Value_Afs'} />
+          <Column field={'Declaration_Taxes'} header={'Declaration_Taxes'} />
+          <Column field={'Item_Value_currency'} header={'Item_Value_currency'} />
+          <Column field={'Item_Value_Afs'} header={'Item_Value_Afs'} />
+          <Column field={'tax_amt'} header={'Item Tax Amount'} />
+          <Column field={'custom_cod'} header={'Custom Code'} />
+          <Column style={{ minWidth: "12rem" }} field={'bank_nam'} header={'Bank_Name'} />
+          <Column field={'Currrency_code'} header={'Currency Code'} />
         </DataTable>
       </Box>
     </SimpleCard>

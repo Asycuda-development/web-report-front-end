@@ -98,27 +98,27 @@ function DPS_45103() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-            <Column field={'IdeCuoCod'} header={' IdeCuoCod'}/> 
-            <Column field={'DestCustoms'} header={' DestCustoms'}/> 
-            <Column field={'TypeSad'} header={' TypeSad'}/> 
-            <Column field={'PayDate'} header={' PayDate'}/> 
-            <Column field={'ProcExt'} header={' ProcExt'}/> 
-            <Column field={'CustomsProc'} header={' CustomsProc'}/> 
+            <Column field={'DestCustoms'} header={' Customs Office'}/> 
+            <Column field={'TypeSad'} header={' IMP/EXP'}/> 
+            <Column field={'PayDate'} header={' Payment Date'}/> 
+            <Column field={'ProcExt'} header={' Extend Procedure'}/> 
+            <Column field={'CustomsProc'} header={' Customs Procedure'}/> 
             <Column field={'Dsc2'} header={' Dsc2'}/> 
             <Column style={{minWidth:"25rem"}}field={'Dsc1'} header={' Dsc1'}/> 
             <Column field={'HsCode'} header={' HsCode'}/> 
-            <Column style={{minWidth:"30rem"}}field={'mark1'} header={' mark1'}/> 
-            <Column field={'mark2'} header={' mark2'}/> 
             <Column field={'ItemNetWeight'} header={' ItemNetWeight'}/> 
             <Column field={'CompanyTIN'} header={' CompanyTIN'}/> 
             <Column field={'CmpName'} header={' CmpName'}/> 
             <Column field={'ItemValueCurrency'} header={' ItemValueCurrency'}/> 
             <Column field={'ItemValueAfs'} header={' ItemValueAfs'}/> 
             <Column field={'ItemTaxes'} header={' ItemTaxes'}/> 
-            <Column field={'TaxCode'} header={' TaxCode'}/> 
-            <Column field={'TaxDecription'} header={' TaxDecription'}/> 
             <Column field={'TaxRate'} header={' TaxRate'}/> 
             <Column field={'CodeTaxAmount'} header={' CodeTaxAmount'}/> 
+            <Column field={'TaxCode'} header={' TaxCode'}/> 
+            <Column field={'IdeCuoCod'} header={' IdeCuoCod'}/> 
+            <Column style={{minWidth:"30rem"}}field={'mark1'} header={' mark1'}/> 
+            <Column field={'mark2'} header={' mark2'}/> 
+            <Column field={'TaxDecription'} header={' TaxDecription'}/> 
         </DataTable>
       </ Box>
       <Toast ref={toastRef} />

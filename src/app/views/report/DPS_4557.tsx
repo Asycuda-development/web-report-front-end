@@ -44,7 +44,7 @@ function DPS_4557() {
         showCustomsList
         onSearch={handleSubmit}
         tabelRef={tableRef}
-      />\
+      />
       {loading && (
         <LinearProgress />
       )}
@@ -65,31 +65,24 @@ function DPS_4557() {
             field={'ide_typ_sad'}
             header={'Identification Type SAD'}
           />
-          <Column field={'tpt_cuo_nam'} header={'Border Cusutom Name'} />
-          <Column field={'ide_cuo_nam'} header={'IDE Custom Name'} />
-          <Column field={'ide_cuo_cod'} header={'IDE Custom Code'} />
-          <Column field={'Item_total'} header={'Total Item'} />
+          <Column field={'tpt_cuo_nam'} header={'Border office'} />
+          <Column field={'ide_cuo_nam'} header={'Customs Office'} />
+          <Column field={'Item_total'} header={'Total_Item'} />
           <Column
             filter
             filterField="Reg_No"
             style={{ minWidth: '4rem', textAlign: 'center' }}
             field={'Reg_No'}
-            header={'Register No'}
+            header={'Reg_No'}
           />
-          <Column field={'Reg_Date'} header={'Register Date'} />
-          <Column field={'ASMT_No'} header={'ASMT No'} />
-          <Column field={'AST_Date'} header={'AST Date'} />
-          <Column field={'RCPT_No'} header={'RCPT No'} />
-          <Column field={'RCPT_Date'} header={'RCPT Date '} />
-          <Column
-            filter
-            filterField="bank_nam"
-            style={{ minWidth: '8rem', textAlign: 'center' }}
-            field={'bank_nam'}
-            header={'Bank Name'}
-          />
+          <Column field={'Reg_Date'} header={'Reg_Date'} />
+          <Column field={'ASMT_No'} header={'ASMT_No'} />
+          <Column field={'AST_Date'} header={'AST_Date'} />
+          <Column field={'RCPT_No'} header={'RCPT_No'} />
+          <Column field={'RCPT_Date'} header={'RCPT_Date '} />
+          <Column filter filterField="status" field={'status'} header={'Status'} />
           <Column filter filterField="Broker_TIN" field={'Broker_TIN'} header={'Broker TIN'} />
-          <Column field={'dec_nam'} header={'DEC Name'} />
+          <Column field={'dec_nam'} header={'Broker_Name'} />
           <Column
             filter
             filterField="Company_TIN"
@@ -97,33 +90,41 @@ function DPS_4557() {
             field={'Company_TIN'}
             header={'Company TIN'}
           />
-          <Column style={{ minWidth: '12rem' }} field={'cmp_nam'} header={'Company Name'} />
-          <Column field={'CMP_EXP_TIN'} header={'CMP EXP TIN'} />
-          <Column style={{ minWidth: '10rem' }} field={'cmp_exp_nam'} header={'cmp exp Name'} />
+          <Column style={{ minWidth: '12rem' }} field={'cmp_nam'} header={'Company_Name'} />
+          <Column field={'fis_cod'} header={'SAD_Financial_Code'} />
           <Column
             style={{ minWidth: '10rem', textAlign: 'center' }}
             field={'fin_nam'}
-            header={'Finantial Name'}
+            header={'Finantial_Name'}
           />
-          <Column field={'fis_cod'} header={'Fisical Code'} />
-          <Column field={'Country_Dest'} header={'Destination Country'} />
-          <Column field={'Country_Export'} header={'Country Export'} />
-          <Column field={'Country_Org'} header={'Country Orgine'} />
+          <Column field={'Country_Org'} header={'CountryـOrgine'} />
+          <Column field={'Country_Export'} header={'CountryـExport'} />
           <Column
             style={{ textAlign: 'center' }}
             field={'Lorry_Total'}
-            header={'Total Lorry'}
+            header={'Total_Lorry'}
           />
-          <Column field={'Item_Value_currency'} header={'Item Value Currency'} />
-          <Column field={'Item_Value_Afs'} header={'Item Value Afs'} />
-          <Column style={{ textAlign: 'center' }} field={'Item_Taxes'} header={'Item Tax'} />
-          <Column filter filterField="status" field={'status'} header={'Status'} />
-          <Column style={{ textAlign: 'center' }} field={'pk1'} header={'packing1'} />
-          <Column field={'pk2'} header={'packing2'} />
+          <Column field={'Item_Value_currency'} header={'Item_Value in Foriegn Currency'} />
+          <Column field={'Item_Value_Afs'} header={'Item_Value_Afs'} />
+          <Column style={{ textAlign: 'center' }} field={'Item_Taxes'} header={'Item_Tax'} />
+          <Column field={'netwgt'} header={'Net Wgt'} />
+          <Column field={'grswgt'} header={'Grs Wgt'} />
+          <Column style={{ textAlign: 'center' }} field={'pk1'} header={'Desc 1'} />
+          <Column field={'pk2'} header={'Desc 2'} />
+          <Column field={'ide_cuo_cod'} header={'IDE Custom Code'} />
+          <Column
+            filter
+            filterField="bank_nam"
+            style={{ minWidth: '8rem', textAlign: 'center' }}
+            field={'bank_nam'}
+            header={'Bank Name'}
+          />
+          <Column field={'CMP_EXP_TIN'} header={'CMP EXP TIN'} />
+          <Column style={{ minWidth: '10rem' }} field={'cmp_exp_nam'} header={'cmp exp Name'} />
+          <Column field={'Country_Dest'} header={'Destination Country'} />
           <Column field={'cap'} header={'CAP'} />
           <Column field={'hscode'} header={'H_S Code'} />
-          <Column field={'netwgt'} header={'netwgt'} />
-          <Column field={'grswgt'} header={'grswgt'} />
+
         </DataTable>
       </Box>
     </SimpleCard>

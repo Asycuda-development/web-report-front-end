@@ -99,56 +99,63 @@ function DPS_4552() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-              <Column field={'sadType'}header ={'sadType'} />
-	            <Column field={'transportCustomsName'}header ={'transportCustomsName'}/>
-	            <Column field={'customsName'}header ={'customsName'}/>
+             
+	            <Column field={'transportCustomsName'}header ={'Border office'}/>
+	            <Column field={'customsName'}header ={'Customs Office'}/>
+              <Column field={'sadType'}header ={'Sad_Type'} />
+              <Column field={'regSer'}header= {'Reg_Ser'}/>
+	            <Column field={'regNo'}header= {'Reg_No'}/>
+	            <Column field={'regDate;'}header= {'Reg_Date;'}/>
+	            <Column field={'asmtNo'}header ={'Asmt_No'}/>
+	            <Column field={'astDate'}header ={'AsMt_Date'}/>
+	            <Column field={'rcptNo'}header= {'RCPT_No'}/>
+	            <Column field={'rcptDate'}header ={'RECPT_Date'}/>
+              <Column field={'status'}header= {'status'}/>
+              <Column style={{minWidth:"15rem"}}field={'brokerTin'}header= {'BROKER_TIN'}/>
+              <Column style={{minWidth:"25rem"}}field={'decNam'}header= {'BROKER_NAME'}/>
+              <Column style={{minWidth:"15rem"}}field={'companyTin'}header= {'Company_TIN'}/>
+	            <Column style={{minWidth:"30rem"}}field={'cmpNam'}header= {'Company_NAME'}/>
+              <Column field={'fisCod'}header= {'SAD_Financial_Code'}/>
+              <Column style={{minWidth:"30rem"}}field={'finNam'}header={'SAD_Financial_Name'}/>
+              <Column field={'itemTotal'}header= {'Item_Total'}/>
+	            <Column field={'itemNo'}header= {'Item_No'}/>
+	            <Column field={'hsCode'}header= {'HS Code Item1'}/>
+              <Column style={{minWidth:"30rem"}}field={'dsc'}header={'HS Desc only Item No one'}/>
+	            <Column style={{minWidth:"30rem"}}field={'desc1'}header= {'	HS Desc1 only Item No one'}/>
+	            <Column style={{minWidth:"30rem"}}field={'MRK1'}header= {'Mark 1 only Item No one'}/>
+	            <Column style={{minWidth:"30rem"}}field={'MRK2'}header= {'Mark 2 only Item No one'}/>
+	            <Column field={'cpc'}header= {'Customs Proc'}/>
+	            <Column field={'natProc'}header= {'Nat procedure'}/>
+              <Column field={'countryOrg'}header ={'Country_Org'}/>
+              <Column field={'countryexport'}header= {'Country_Export'}/>
+              <Column field={'countryDest'}header= {'Country_Dest_Name'}/>
+              <Column field={'lorryTotal'}header ={'Lorry_Total'}/>
+              <Column field={'declarationValueCurrecy'}header= {'Declaration_Value_currency'}/>
+	            <Column field={'declarationValueAfs'}header={'Declaration_Value_Afs'}/>
+	            <Column field={'declarationTaxes'}header ={'Declaration_Taxes'}/>
+              <Column field={'locGoods'}header= {'Location_Of_Goods'}/>
+              <Column field={'typeoftransport'}header= {'Type of Transport'}/>
+              <Column field={'brdCty'}header ={'Identity of Truck Crossing Border1 Box21'}/>
+	            <Column field={'brdNam'}header ={'Identity of Truck Crossing Border2 Box21'}/>
+              <Column field={'gcategoryOfGoods1'}header= {'gcategory 1'}/>
+              <Column field={'gcategoryOfGoods2'}header ={'gcategory 2'}/>
+              <Column field={'itemGrossWeight'}header= {'Item_Gross_Weight only Item No one'}/>
+	            <Column field={'itemNetWeight'}header= {'Item_Net_Weight only Item No one'}/>
+              <Column field={'containerFlag'}header= {'Container_flag'}/>
+              <Column field={'licCod'}header ={'Lic Cod'}/>
+              <Column field={'txtRsv'}header= {'txt_Reserved'}/>
+
 	            <Column field={'customsCode'}header ={'customsCode'}/>
-	            <Column field={'typeoftransport'}header= {'typeoftransport'}/>
-	            <Column field={'regSer'}header= {'regSer'}/>
-	            <Column field={'regNo'}header= {'regNo'}/>
-	            <Column field={'regDate;'}header= {'regDate;'}/>
-	            <Column field={'asmtNo'}header ={'asmtNo'}/>
-	            <Column field={'astDate'}header ={'astDate'}/>
-	            <Column field={'rcptNo'}header= {'rcptNo'}/>
-	            <Column field={'rcptDate'}header ={'rcptDate'}/>
 	            <Column style={{minWidth:"15rem"}}field={'bankNam'}header= {'bankNam'}/>
-	            <Column style={{minWidth:"15rem"}}field={'brokerTin'}header= {'brokerTin'}/>
-	            <Column style={{minWidth:"25rem"}}field={'decNam'}header= {'decNam'}/>
-	            <Column style={{minWidth:"15rem"}}field={'companyTin'}header= {'companyTin'}/>
-	            <Column style={{minWidth:"30rem"}}field={'cmpNam'}header= {'cmpNam'}/>
-	            <Column style={{minWidth:"30rem"}}field={'finNam'}header={'finNam'}/>
-	            <Column field={'fisCod'}header= {'fisCod'}/>
-	            <Column field={'itemTotal'}header= {'itemTotal'}/>
-	            <Column field={'itemNo'}header= {'itemNo'}/>
-	            <Column field={'hsCode'}header= {'hsCode'}/>
-	            <Column style={{minWidth:"30rem"}}field={'dsc'}header={'dsc'}/>
-	            <Column style={{minWidth:"30rem"}}field={'desc1'}header= {'desc1'}/>
-	            <Column style={{minWidth:"30rem"}}field={'MRK1'}header= {'MRK1'}/>
-	            <Column style={{minWidth:"30rem"}}field={'MRK2'}header= {'MRK2'}/>
-	            <Column field={'cpc'}header= {'cpc'}/>
-	            <Column field={'natProc'}header= {'natProc'}/>
-	            <Column field={'countryDest'}header= {'countryDest'}/>
 	            <Column field={'countryDestCod'}header= {'countryDestCod'}/>
-	            <Column field={'countryexport'}header= {'countryexport'}/>
-	            <Column field={'countryOrg'}header ={'countryOrg'}/>
-	            <Column field={'lorryTotal'}header ={'lorryTotal'}/>
-	            <Column field={'declarationValueCurrecy'}header= {'declarationValueCurrecy'}/>
-	            <Column field={'declarationValueAfs'}header={'declarationValueAfs'}/>
-	            <Column field={'declarationTaxes'}header ={'declarationTaxes'}/>
-	            <Column field={'status'}header= {'status'}/>
-	            <Column field={'locGoods'}header= {'locGoods'}/>
-	            <Column field={'licCod'}header ={'licCod'}/>
 	            <Column field={'freeTxt'}header= {'freeTxt'}/>
-	            <Column field={'brdCty'}header ={'brdCty'}/>
-	            <Column field={'brdNam'}header ={'brdNam'}/>
 	            <Column field={'dpaCty'}header={'dpaCty'}/>
 	            <Column field={'dpaNam'}header= {'dpaNam'}/>
-	            <Column field={'gcategoryOfGoods1'}header= {'gcategoryOfGoods1'}/>
-	            <Column field={'itemGrossWeight'}header= {'itemGrossWeight'}/>
-	            <Column field={'itemNetWeight'}header= {'itemNetWeight'}/>
-	            <Column field={'gcategoryOfGoods2'}header ={'gcategoryOfGoods2'}/>
-	            <Column field={'txtRsv'}header= {'txtRsv'}/>
-	            <Column field={'containerFlag'}header= {'containerFlag'}/>
+	            
+	            
+	           
+	           
+	          
         </DataTable>
       </ Box>
       <Toast ref={toastRef} />

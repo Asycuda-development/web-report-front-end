@@ -59,30 +59,33 @@ function DPS_4556() {
                     showGridlines
                 >
                     <Column filter filterField="ideTypSad" field={'ideTypSad'} header={'SAD Type'} />
-                    <Column style={{ minWidth: '10rem' }} field={'tptCuoNam'} header={'Border Custom Name'} />
-                    <Column field={'ideCuoNam'} header={'Custom Name'} />
-                    <Column field={'ideCuoCod'} header={'Custom Code'} />
-                    <Column field={'itemTotal'} header={'Item Total'} />
-                    <Column filter filterField='regNo' field={'regNo'} header={'RegNo'} />
-                    <Column field={'regDate'} header={'Registeration Date'} />
+                    <Column style={{ minWidth: '10rem' }} field={'tptCuoNam'} header={'Border office'} />
+                    <Column field={'ideCuoNam'} header={'Customs Office'} />
+                    <Column field={'itemTotal'} header={'Item_Total'} />
+                    <Column filter filterField='regNo' field={'regNo'} header={'Reg_No'} />
+                    <Column field={'regDate'} header={'Reg_Date'} />
                     <Column filter filterField='asmtNo' field={'asmtNo'} header={'AssessNo'} />
-                    <Column field={'astDate'} header={'Assessment Date'} />
-                    <Column filter filterField='rcptNo' field={'rcptNo'} header={'ReceptNo'} />
-                    <Column field={'rcptDate'} header={'Recept Date'} />
-                    <Column style={{ minWidth: '10rem' }} field={'bankNam'} header={'Bank Name'} />
+                    <Column field={'astDate'} header={'AssM_Date'} />
+                    <Column filter filterField='rcptNo' field={'rcptNo'} header={'Recept_No'} />
+                    <Column field={'rcptDate'} header={'Recept_Date'} />
                     <Column field={'status'} header={'Status'} />
-                    <Column filter filterField='brokerTin' field={'brokerTin'} header={'Broker Tin'} />
-                    <Column style={{ minWidth: '20rem' }} field={'decNam'} header={'Declarant Name'} />
-                    <Column filter filterField='companyTin' field={'companyTin'} header={'Company Tin'} />
-                    <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'Company Name'} />
-                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'Financial Name'} />
+                    <Column filter filterField='brokerTin' field={'brokerTin'} header={'Broker_Tin'} />
+                    <Column style={{ minWidth: '20rem' }} field={'decNam'} header={'Broker_Name'} />
+                    <Column filter filterField='companyTin' field={'companyTin'} header={'Company_Tin'} />
+                    <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'Company_Name'} />
+                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'Financial_Name'} />
+                    <Column field={'countryOrg'} header={'Country_Orgin'} />
+                    <Column filter filterField="countryExport" field={'countryExport'} header={'Country_Export'} />
+                    <Column field={'lorryTotal'} header={'Lorry_Total'} />
+                    <Column field={'declarationValueCurrency'} header={'Declaration_Value in Foriegn Currency'} />
+                    <Column field={'declarationValueAfs'} header={'Declaration_Value_Afs'} />
+                    <Column field={'declarationTaxes'} header={'Declaration_Taxes'} />
+                    <Column field={'ideCuoCod'} header={'Custom Code'} />
+                    <Column style={{ minWidth: '10rem' }} field={'bankNam'} header={'Bank Name'} />
                     <Column style={{ minWidth: '12rem' }} field={'countryDest'} header={'Destination Country Name'} />
-                    <Column filter filterField="countryExport" field={'countryExport'} header={'Country of Export Name'} />
-                    <Column field={'countryOrg'} header={'Country of Origin'} />
-                    <Column field={'lorryTotal'} header={'Lorry Total'} />
-                    <Column field={'declarationValueCurrency'} header={'Declaration Value Currency'} />
-                    <Column field={'declarationValueAfs'} header={'Declaration Value Afs'} />
-                    <Column field={'declarationTaxes'} header={'Declaration Taxes'} />
+                   
+                    
+             
 
 
                 </DataTable>

@@ -95,8 +95,8 @@ function DPS_4584() {
                     stripedRows
                     showGridlines
                 >
-                    <Column style={{ minWidth: "12rem" }} field={'cuoNam'} header={'CUO_NAM'} />
-                    <Column field={'icd'} header={'ICD'} />
+                    <Column style={{ minWidth: "12rem" }} field={'cuoNam'} header={'Entrance Customs Name'} />
+                    <Column field={'icd'} header={'Exit Customs Name'} />
                     <Column field={'companyCode'} header={'COMPANY_CODE'} />
                     <Column style={{ minWidth: "40rem" }} field={'companyName'} header={'COMPANY_NAME'} />
                     <Column field={'barchalanCode'} header={'BARCHALAN_CODE'} />
@@ -120,10 +120,10 @@ function DPS_4584() {
                     <Column field={'regNbrYearly'} header={'REG_NBR_YEARLY'} />
                     <Column field={'regNbrDaily'} header={'REG_NBR_DAILY'} />
                     <Column field={'mobileTeam'} header={'MOBILE_TEAM'} />
-                    <Column field={'regDate'} header={'REG_DATE'} />
-                    <Column field={'exitDate'} header={'EXIT_DATE'} />
-                    <Column field={'destArrDate'} header={'DEST_ARR_DATE'} />
-                    <Column field={'destExtDate'} header={'DEST_EXT_DATE'} />
+                    <Column field={'regDate'} header={'Register Date in BCP'} />
+                    <Column field={'exitDate'} header={'Exit Date From BCP'} />
+                    <Column field={'destArrDate'} header={'Register Date in ICD'} />
+                    <Column field={'destExtDate'} header={'Exit Date From ICD'} />
                     <Column field={'parkingLocation'} header={'PARKING_LOCATION'} />
                     <Column field={'destParkingLocation'} header={'DEST_PARKING_LOCATION'} />
                     <Column field={'dstArrRem'} header={'DST_ARR_REM'} />

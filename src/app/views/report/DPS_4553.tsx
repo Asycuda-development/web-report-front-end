@@ -69,54 +69,63 @@ function DPS_4553() {
             field={'ideTyp_sad'}
             header={'Identification SAD Type'}
           />
-          <Column field={'tptCuoNam'} header={'Border Cusutom Name'} />
-          <Column field={' ideCuoNam'} header={'IDE Custom Name'} />
-          <Column field={'ideCuoCod'} header={'IDE Custom Code'} />
-          <Column field={'itemTotal'} header={'Totao Item'} />
-          <Column field={'itemNo'} header={'Item No'} />
-          <Column field={'iotalPackage'} header={'Total Package'} />
-          <Column field={'codeOfPackage'} header={'Package Code'} />
-          <Column field={'typeOfPackage'} header={'Package Type'} />
-          <Column filter filterField="regNo" field={'regNo'} header={'Register No'} />
-          <Column field={'regDate'} header={'Register Date'} />
-          <Column field={'asmtNo'} header={'Assmt No'} />
-          <Column field={'astDate'} header={'Assmt Date'} />
-          <Column field={'rcptNo'} header={'RCPT No'} />
-          <Column filter filterField="status" field={'status'} header={'status'} />
-          <Column field={'rcptDate'} header={'RCPT Date'} />
-          <Column filter filterField="bankNam" field={'bankNam'} header={'Bank Name'} />
-          <Column field={'hsCode'} header={'HS Code'} />
-          <Column field={'cpc'} header={'CPC'} />
-          <Column style={{ minWidth: '15rem' }} field={'dsc'} header={'DSC'} />
-          <Column style={{ minWidth: '15rem' }} field={'gdsDs3'} header={'GDS DS3'} />
-          <Column field={'pckMrk1'} header={'Packing Marks1'} />
-          <Column field={'pckMrk2'} header={'Packing Marks2'} />
-          <Column field={'customs_Proc'} header={'Custom Procedure '} />
+          <Column field={'tptCuoNam'} header={'Border office'} />
+          <Column field={' ideCuoNam'} header={'Customs Office'} />
+          <Column field={'itemTotal'} header={'Item_total'} />
+          <Column field={'itemNo'} header={'Item_No'} />
+          <Column field={'iotalPackage'} header={'Total_Package'} />
+          <Column field={'typeOfPackage'} header={'Type_of_Package'} />
+          <Column filter filterField="regNo" field={'regNo'} header={'Reg_No'} />
+          <Column field={'regDate'} header={'Reg_Date'} />
+          <Column field={'astDate'} header={'Assmt_Date'} />
+          <Column field={'rcptDate'} header={'RCPT_Date'} />
+          <Column filter filterField="status" field={'status'} header={'Status'} />
+          <Column field={'cpc'} header={'Customs_Proc'} />
+          <Column field={'customs_Proc'} header={'Extended Proc Code '} />
+          <Column field={'hsCode'} header={'HSCODE'} />
+          <Column style={{ minWidth: '15rem' }} field={'dsc'} header={'Good Description'} />
+          <Column style={{ minWidth: '15rem' }} field={'gdsDs3'} header={'Comercial Description'} />
+          <Column field={'pckMrk1'} header={'Marks of Packages 1'} />
+          <Column field={'pckMrk2'} header={'Marks of Packages 2'} />
           <Column field={'itemGrossWeight'} header={'Item_Gross_Weight'} />
           <Column field={'itemNetWeight'} header={'Item_Net_Weight'} />
-          <Column filter filterField="brokerTIN" field={'brokerTIN'} header={'Broker TIN'} />
-          <Column field={'decNam'} header={'DEC Name'} />
-          <Column field={'companyTin'} header={'Company TIN'} />
-          <Column field={'cmpNam'} header={'Company Name'} />
-          <Column field={'finNam'} header={'SAD_Financial_Name'} />
-          <Column field={'finCod'} header={'SAD_Financial_Code'} />
-          <Column field={'countryDest'} header={'Destination Country'} />
+          <Column filter filterField="brokerTIN" field={'brokerTIN'} header={'Broker_TIN'} />
+          <Column field={'decNam'} header={'Broker_Name'} />
+          <Column field={'companyTin'} header={'Company_TIN'} />
+          <Column field={'cmpNam'} header={'Company_Name'} />
+          <Column field={'finNam'} header={'Individual_Name'} />
+          <Column field={'countryOrg'} header={'Country_Orgin'} />
+          <Column field={'countryDest'} header={'Contry_Destination'} />
           <Column
             filter
             filterField="countryExport"
             field={'countryExport'}
-            header={'country Export'}
+            header={'Country_Export'}
           />
-          <Column field={'countryOrg'} header={'country Oregin'} />
-          <Column field={'lorryTotal'} header={'Total Lorry'} />
+          <Column field={'lorryTotal'} header={'Total_Lorry'} />
+          <Column field={'currencyRate'} header={'Currency_Rate'} />
+          <Column field={'declarationValue_currency'} header={'Declaration_Value in Foriegn Currency'} />
+          <Column field={'declarationValue_Afs'} header={'Declaration_Value_Afs'} />
+          <Column field={'declarationTaxes'} header={'Declaration_Taxes'} />
+          <Column field={'itemValueCurrency'} header={'Item_Value_currency'} />
+          <Column field={'itemValue_Afs'} header={'Item_Value_Afs'} />
+          <Column field={'itemTaxes'} header={'Item_Taxes_Amount'} />
+
+          <Column field={'ideCuoCod'} header={'IDE Custom Code'} />
+
+          <Column field={'codeOfPackage'} header={'Package Code'} />
+
+          <Column field={'asmtNo'} header={'Assmt_No'} />
+
+          <Column field={'rcptNo'} header={'RCPT No'} />
+
+
+          <Column filter filterField="bankNam" field={'bankNam'} header={'Bank Name'} />
+
+          <Column field={'finCod'} header={'SAD_Financial_Code'} />
+
           <Column field={'currencyCode'} header={'Currency Code'} />
-          <Column field={'currencyRate'} header={'Currency Rate'} />
-          <Column field={'declarationValue_currency'} header={'declarationValue currency'} />
-          <Column field={'declarationValue_Afs'} header={'declarationValue Afs'} />
-          <Column field={'declarationTaxes'} header={'declaration Taxes'} />
-          <Column field={'itemValueCurrency'} header={'Item Value Currency'} />
-          <Column field={'itemValue_Afs'} header={'ItemValue Afs'} />
-          <Column field={'itemTaxes'} header={'Item Taxes'} />
+
           <Column field={'totalTaxes'} header={'Total Taxes '} />
         </DataTable>
       </Box>

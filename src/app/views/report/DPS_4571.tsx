@@ -57,11 +57,11 @@ function DPS_4571() {
           showGridlines
         >
           <Column field={'OFFICE'} header={'OFFICE_CODE'} />
+          <Column field={'SAD_FLW'} header={'SAD_TYPE'} />
           <Column field={'SAD_NO'} header={'SAD_RegNo'} />
           <Column field={'SAD_DATE'} header={'SAD_DATE'} />
           <Column field={'CMP_COD'} header={'COMPANY_CODE'} />
           <Column field={'CMP_NAM'} header={'COMPANY_NAME'} />
-          <Column field={'SAD_FLW'} header={'SAD_TYPE'} />
           <Column field={'CNT'} header={'COUNT'} />
 
 

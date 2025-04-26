@@ -54,18 +54,18 @@ function DPS_4578() {
           stripedRows
           showGridlines
         >
-          <Column field={'tpCuNam'} header={'TP_CU_NAM'} />
-          <Column style={{ minWidth: "12rem" }} field={'icdCuNam'} header={'ICD_CU_NAM'} />
+          <Column field={'tpCuNam'} header={'Border Customs'} />
+          <Column style={{ minWidth: "12rem" }} field={'icdCuNam'} header={'Destination Customs'} />
           <Column style={{ minWidth: "12rem" }} field={'itemTotal'} header={'ITEM_TOTAL'} />
           <Column field={'sadRegNo'} header={'SAD_REG_NO'} />
           <Column field={'sadRegDate'} header={'SAD_REG_DATE'} />
           <Column field={'sadAsmtNo'} header={'SAD_ASMT_NO'} />
           <Column field={'sadAastDate'} header={'SAD_AST_DATE'} />
-          <Column style={{ minWidth: "10rem" }} field={'rcptNo'} header={'RCPT_NO'} />
-          <Column field={'rcptDate'} header={'RCPT_DATE'} />
+          <Column style={{ minWidth: "10rem" }} field={'rcptNo'} header={'P_NO'} />
+          <Column field={'rcptDate'} header={'P_Date'} />
           <Column style={{ minWidth: "20rem" }} field={'bankNam'} header={'BANK_NAM'} />
           <Column field={'brokerTinSad'} header={'BROKER_TIN_SAD'} />
-          <Column style={{ minWidth: '12rem' }} field={'decNamSad'} header={'DEC_NAM_SAD'} />
+          <Column style={{ minWidth: '12rem' }} field={'decNamSad'} header={'	Broker_NAM_SAD'} />
           <Column field={'companyTin'} header={'COMPANY_TIN'} />
           <Column style={{ minWidth: "25rem" }} field={'cmpNam'} header={'CMP_NAM'} />
           <Column field={'countryDest'} header={'COUNTRY_DEST'} />
@@ -76,30 +76,30 @@ function DPS_4578() {
           <Column field={'declarationValueAfs'} header={'DECLARATION_VALUE_AFS'} />
           <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
           <Column field={'declarationstatus'} header={'DECLARATION_STATUS'} />
-          <Column field={'totPkg'} header={'TOT_PKG'} />
-          <Column field={'decRef'} header={'DEC_REF'} />
-          <Column field={'regNo'} header={'REG_NO'} />
-          <Column style={{ minWidth: "30rem" }} field={'regDat'} header={'REG_DAT'} />
-          <Column field={'t1status'} header={'T1STATUS'} />
-          <Column style={{ minWidth: "12rem" }} field={'arrDate'} header={'ARR_DATE'} />
-          <Column field={'deptOffNam'} header={'DEPT_OFF_NAM'} />
-          <Column field={'destnNam'} header={'DESTN_NAM'} />
-          <Column field={'destnCty'} header={'DESTN_CTY'} />
+          <Column field={'totPkg'} header={'1_Total_Package'} />
+          <Column field={'decRef'} header={'T1_Dec_Ref'} />
+          <Column field={'regNo'} header={'T1_Register_NO'} />
+          <Column style={{ minWidth: "30rem" }} field={'regDat'} header={'T1_Register_Date'} />
+          <Column field={'t1status'} header={'T1_Status'} />
+          <Column style={{ minWidth: "12rem" }} field={'arrDate'} header={'T1_Arrival_Date'} />
+          <Column field={'deptOffNam'} header={'BCP'} />
+          <Column field={'destnNam'} header={'	ICD'} />
+          <Column field={'destnCty'} header={'T1_Dest_Cty'} />
           <Column style={{ minWidth: "20rem" }} field={'transitType'} header={'TRANSIT_TYPE'} />
-          <Column style={{ minWidth: "20rem" }} field={'t1DeclarantCode'} header={'T1_DECLARANT_NAME'} />
-          <Column style={{ minWidth: "12rem" }} field={'t1DeclarantName'} header={'T1_DECLARANT_NAME'} />
-          <Column style={{ minWidth: "12rem" }} field={'expCode'} header={'EXP_CODE'} />
-          <Column style={{ minWidth: "12rem" }} field={'cnsCode'} header={'CNS_CODE'} />
-          <Column style={{ minWidth: "25rem" }} field={'cnsName'} header={'CNS_NAME'} />
-          <Column field={'ctyExportName'} header={'CTY_EXPORT_NAME'} />
-          <Column field={'ctyDestnNam'} header={'CTY_DESTN_NAM'} />
-          <Column field={'modOfTransport'} header={'MOD_OF_TRANSPORT'} />
-          <Column field={'principalCod'} header={'PRINCIPAL_COD'} />
-          <Column style={{ minWidth: "12rem" }} field={'principalNam'} header={'PRINCIPAL_NAM'} />
-          <Column style={{ minWidth: "20rem" }} field={'representedBy'} header={'REPRESENTED_BY'} />
-          <Column field={'nationalityOfTransport'} header={'NATIONALITY_OF_TRANSPORT'} />
-          <Column field={'transitOfficer'} header={'TRANSIT_OFFICER'} />
-          <Column field={'contFlg'} header={'CONT_FLG'} />
+          <Column style={{ minWidth: "20rem" }} field={'t1DeclarantCode'} header={'T1_Broker_TIN'} />
+          <Column style={{ minWidth: "12rem" }} field={'t1DeclarantName'} header={'T1_Broker_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'expCode'} header={'Exp_Code'} />
+          <Column style={{ minWidth: "12rem" }} field={'cnsCode'} header={'T1_Consignee_TIN'} />
+          <Column style={{ minWidth: "25rem" }} field={'cnsName'} header={'T1_Consignee_Name'} />
+          <Column field={'ctyExportName'} header={'T1_Country_Of_Export'} />
+          <Column field={'ctyDestnNam'} header={'T1_Country_Of_Des'} />
+          <Column field={'modOfTransport'} header={'T1_Mod_of_transport'} />
+          <Column field={'principalCod'} header={'T1_Principal_cod'} />
+          <Column style={{ minWidth: "12rem" }} field={'T1_Principal_Name'} header={'PRINCIPAL_NAM'} />
+          <Column style={{ minWidth: "20rem" }} field={'representedBy'} header={'T1_Referenced_By'} />
+          <Column field={'nationalityOfTransport'} header={'T1_Nationality_Of_transport'} />
+          <Column field={'transitOfficer'} header={'T1_transit_officer'} />
+          <Column field={'contFlg'} header={'Container_Flag'} />
         </DataTable>
       </Box>
     </SimpleCard>

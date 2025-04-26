@@ -55,12 +55,12 @@ function DPS_45102() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-        <Column field={'New_Customs'} header={'New_Customs'}/>
-        <Column field={'newSadType'} header={'newSadType'}/>
+        <Column field={'New_Customs'} header={'Office'}/>
+        <Column field={'newSadType'} header={'Type'}/>
         <Column field={'newSer'} header={'newSer'}/>
+        <Column field={'newSer1'} header={'newSer1'}/>
         <Column field={'new_I'} header={'new_I'}/>
         <Column field={'new_I_Date'} header={'new_I_Date'}/>
-        <Column field={'newSer1'} header={'newSer1'}/>
         <Column field={' other_I'} header={' other_I'}/>
         <Column field={' new_I_Date_1'} header={' new_I_Date_1'}/>
         </DataTable>

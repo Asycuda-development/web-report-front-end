@@ -55,14 +55,14 @@ function DPS_4563() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'cmpCod'} header={'CMP_CODE'} />
-                    <Column field={'cmpNam'} header={'CMP_NAME'} />
-                    <Column field={'mpAdr'} header={'CMP_ADR'} />
-                    <Column field={'cmpAd2'} header={'CMP_ADR2'} />
-                    <Column field={'cmpTel'} header={'CMP_TEL'} />
+                    <Column field={'cmpCod'} header={'Company TIN'} />
+                    <Column field={'cmpNam'} header={'Company Name'} />
                     <Column field={'validF'} header={'VALID_FROM'} />
                     <Column field={'validTo'} header={'VALID_TO'} />
                     <Column field={'cmpSta'} header={'CMP_STATUS'} />
+                    <Column field={'mpAdr'} header={'CMP_ADR'} />
+                    <Column field={'cmpAd2'} header={'CMP_ADR2'} />
+                    <Column field={'cmpTel'} header={'CMP_TEL'} />
 
 
                 </DataTable>

@@ -105,28 +105,32 @@ function DPS_4561() {
                     stripedRows
                     showGridlines
                 >
-                    <Column style={{ minWidth: '10rem' }} field={'fullName'} header={'FULLNAME'} />
-                    <Column field={'sadType'} header={'SAD_TYPE'} />
-                    <Column field={'officeCod'} header={'OFFICE_COD'} />
-                    <Column style={{ minWidth: '10rem' }} field={'office'} header={'OFFICE'} />
-                    <Column field={'regNo'} header={'REG_NO'} />
+                     <Column field={'regNo'} header={'REG_NO'} />
                     <Column field={'regDate'} header={'REG_DATE'} />
-                    <Column field={'assmtNo'} header={'ASSMT_NO'} />
                     <Column field={'assmtNo'} header={'ASSMT_NO'} />
                     <Column field={'rcptNo'} header={'RCPT_NO'} />
                     <Column field={'rcptDate'} header={'RCPT_DAT'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column style={{ minWidth: '20rem' }} field={'userName'} header={'USER_NAME'} />
-                    <Column filter filterField='operationName' field={'operationName'} header={'OPERATION_NAME'} />
                     <Column style={{ minWidth: '25rem' }} field={'status1'} header={'STATUS1'} />
+                    <Column field={'status'} header={'STATUS'} />
+                    <Column filter filterField='operationName' field={'operationName'} header={'OPERATION_NAME'} />
                     <Column style={{ minWidth: '20rem' }} field={'operationDate'} header={'OPERATION_DATE'} />
-                    <Column field={'cmpCode'} header={'CMP_CODE'} />
-                    <Column style={{ minWidth: '15rem' }} field={'cmpName'} header={'CMP_NAME'} />
-                    <Column style={{ minWidth: '20rem' }} field={'decCod'} header={'DEC_COD'} />
-                    <Column style={{ minWidth: '20rem' }} field={'decName'} header={'DEC_NAME'} />
-                    <Column style={{ minWidth: "12rem" }} field={'firstColor'} header={'FIRST_COLOR'} />
+                    <Column style={{ minWidth: '20rem' }} field={'userName'} header={'USER_NAME'} />
+                    <Column style={{ minWidth: '10rem' }} field={'fullName'} header={'FULLNAME'} />
+                    <Column field={'cmpCode'} header={'Company_CODE'} />
+                    <Column style={{ minWidth: '15rem' }} field={'cmpName'} header={'Company_NAME'} />
                     <Column style={{ minWidth: '14rem' }} field={'finCod'} header={'FIN_COD'} />
                     <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
+                    <Column style={{ minWidth: '20rem' }} field={'decCod'} header={'Declarant_Code'} />
+                    <Column style={{ minWidth: '20rem' }} field={'decName'} header={'Declarant_Name'} />
+                    <Column style={{ minWidth: "12rem" }} field={'firstColor'} header={'FIRST_COLOR'} />
+                   
+                   
+                    <Column field={'sadType'} header={'SAD_TYPE'} />
+                    <Column field={'officeCod'} header={'OFFICE_COD'} />
+                    <Column style={{ minWidth: '10rem' }} field={'office'} header={'OFFICE'} />
+                    
+                    
+                    
                 </DataTable>
             </Box>
             <Toast ref={toastRef} />

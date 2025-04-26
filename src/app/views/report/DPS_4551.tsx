@@ -34,28 +34,28 @@ function DPS_4551() {
   const basedOnOptions = [{
     label: 'declarant',
     name: 'declarant_Code'
-  },{
+  }, {
     label: 'company',
     name: 'company Code'
-},{
-  label: 'Sad_Financial',
-  name: 'SAD_Financial'
-},{
-  label: 'Examiner',
-  name: 'Examiner'
-},{
-  label: 'I_no',
-  name: 'I_no'
-},{
-  label: 'P_no',
-  name: 'P_no'
-},{
-  label: 'M_no',
-  name: 'M_no'
-},{
-  label: 'HsCode',
-  name: 'HsCode'
-}]
+  }, {
+    label: 'Sad_Financial',
+    name: 'SAD_Financial'
+  }, {
+    label: 'Examiner',
+    name: 'Examiner'
+  }, {
+    label: 'I_no',
+    name: 'I_no'
+  }, {
+    label: 'P_no',
+    name: 'P_no'
+  }, {
+    label: 'M_no',
+    name: 'M_no'
+  }, {
+    label: 'HsCode',
+    name: 'HsCode'
+  }]
 
   return (
     <SimpleCard title="DPS_4551">
@@ -89,100 +89,102 @@ function DPS_4551() {
           emptyMessage={'No Data Available'}
         >
           <Column filter filterField="ideTypSad" field={'ideTypSad'} header={'IDE Type SAD'} />
-          <Column field={'tptCuoNam'} header={'tptCuoNam'} />
-          <Column filter filterField="ideCuoNam" field={'ideCuoNam'} header={'IDE Cuo Name'} />
-          <Column field={'ideCuoCod'} header={'IDE Cuo Code'} />
-          <Column field={'typeofTransport'} header={'Type Of Transport'} />
-          <Column field={'itemTotal'} header={'Total Item'} />
-          <Column field={'itemNo'} header={'Item No'} />
-          <Column field={'totalPackage'} header={'Total Package'} />
-          <Column field={'codeOfPackage'} header={'Code Of Package'} />
+          <Column field={'tptCuoNam'} header={'Border office'} />
+          <Column filter filterField="ideCuoNam" field={'ideCuoNam'} header={'Customs Office'} />
+          <Column field={'regNo'} header={'Reg_No'} />
+          <Column
+            filter
+            filterField="regDate"
+            field={'regDate'}
+            header={'Reg_Date'}
+          />
+          <Column field={'rcptNo'} header={'RCPT_No'} />
+          <Column field={'rcptDate'} header={'RCPT_Date'} />
+          <Column field={'status'} header={'Status'} />
+          <Column style={{ minWidth: '20rem' }} field={'cpc'} header={'Customs_Proc'} />
+          <Column field={'customsProc'} header={'Extended Proc Code'} />
+          <Column field={'brokerTin'} header={'Broker_Tin'} />
+          <Column field={'decNam'} header={'Broker_Name'} />
+          <Column
+            filter
+            filterField="companyTin"
+            style={{ minWidth: '12rem' }}
+            field={'companyTin'}
+            header={'Company_Tin'}
+          />
+          <Column filter filterField="cmpNam" field={'cmpNam'} header={'Company_Name'} />
+          <Column field={'fisCod'} header={'SAD_Financial_Code'} />
+          <Column field={'finNam'} header={'SAD_Financial_Name'} />
+          <Column field={'countryOrg'} header={'Country_Org_Name'} />
+          <Column
+            filter
+            filterField="countryExport"
+            field={'countryExport'}
+            header={'Country_Export_Name'}
+          />
+          <Column field={'countryDest'} header={'Country_Dest_Name'} />
+          <Column field={'lorryTotal'} header={'Lorry_Total'} />
+          <Column field={'currencyRate'} header={'Currency_Rate'} />
+          <Column field={'declarationValueCurrency'} header={'Declaration_Value in Foriegn Currency'} />
+          <Column field={'declarationValueAfs'} header={'Declaration_Value_Afs'} />
+          <Column field={'declarationTaxes'} header={'Declaration_Taxes'} />
+          <Column field={'itemValueCurrency'} header={'Item_Value_Currency'} />
+          <Column field={'itemValueAfs'} header={'Item_Value_Afs'} />
+          <Column field={'itemTaxes'} header={'Item_Taxes'} />
+          <Column field={'itemTotal'} header={'Total_Item'} />
+          <Column field={'itemNo'} header={'Item_No'} />
+          <Column field={'totalPackage'} header={'Total_Package'} />
           <Column
             filter
             filterField="typeOfPackage"
             field={'typeOfPackage'}
             header={'Type Of Package'}
           />
-          <Column field={'regNo'} header={'Registeration No'} />
-          <Column
-            filter
-            filterField="regDate"
-            field={'regDate'}
-            header={'Registeration Date'}
-          />
-          <Column field={'rcptNo'} header={'Recept No'} />
-          <Column field={'rcptDate'} header={'Recept Date'} />
-          <Column field={'bankNam'} header={'Bank Name'} />
-          <Column field={'licCod'} header={'lic Cod'} />
-          <Column field={'txtFre'} header={'txtFre'} />
-          <Column style={{ minWidth: '14rem' }} field={'hsCode'} header={'Hs Code'} />
-          <Column style={{ minWidth: '14rem' }} field={'hs5'} header={'Hs5'} />
-          <Column style={{ minWidth: '20rem' }} field={'cpc'} header={'CPC'} />
-          <Column style={{ minWidth: '12rem' }} field={'dsc'} header={'Goods Category'} />
-          <Column field={'gdsDs3'} header={'Goods Category3'} />
-          <Column field={'pckMrk1First'} header={'pckMrk1 Firste'} />
-          <Column field={'pckMrk2First'} header={'pckMrk2 First'} />
-          <Column field={'customsProc'} header={'Customs Procedure'} />
           <Column
             filter
             filterField="itemGrossWeight"
             field={'itemGrossWeight'}
-            header={'Item Gross Weight'}
+            header={'Item_Gross_Weight'}
           />
-          <Column field={'itemNetWeight'} header={'Item Net Weight'} />
-          <Column field={'brokerTin'} header={'Broker Tin'} />
-          <Column field={'decNam'} header={'DEC Name'} />
-          <Column
-            filter
-            filterField="companyTin"
-            style={{ minWidth: '12rem' }}
-            field={'companyTin'}
-            header={'Company Tin'}
-          />
-          <Column filter filterField="cmpNam" field={'cmpNam'} header={'Company Name'} />
-          <Column field={'finNam'} header={'fin Name'} />
-          <Column field={'fisCod'} header={'fis Cod'} />
-          <Column field={'countryDest'} header={'Destination Country'} />
+          <Column field={'itemNetWeight'} header={'Item_Net_Weight'} />
+          <Column style={{ minWidth: '14rem' }} field={'hsCode'} header={'Hs_Code'} />
+          <Column field={'pckMrk1Second'} header={'Good Description'} />
+          <Column field={'pckMrk2Second'} header={'Comercial Description'} />
+          <Column field={'pckMrk1First'} header={'Marks of Packages 1'} />
+          <Column field={'pckMrk2First'} header={'Marks of Packages 2'} />
+          <Column field={'typeofTransport'} header={'Type Of Transport'} />
+          <Column field={'locGoods'} header={'Location_Of_Goods'} />
+          <Column field={'licCod'} header={'lic_Cod'} />
+          <Column field={'txtFre'} header={'txt_Fre'} />
+          <Column field={'tarVmtFirst'} header={'Tar_Vmt'} />
+          <Column field={'tarAtt'} header={'Tar_ATT'} />
+          <Column field={'tarVdt'} header={'Tar_VDT'} />
+          <Column field={'ideCuoCod'} header={'IDE Cuo Code'} />
+          <Column field={'codeOfPackage'} header={'Code Of Package'} />
+          <Column field={'bankNam'} header={'Bank Name'} />
+          <Column style={{ minWidth: '14rem' }} field={'hs5'} header={'Hs5'} />
+          <Column style={{ minWidth: '12rem' }} field={'dsc'} header={'Goods Category'} />
+          <Column field={'gdsDs3'} header={'Goods Category3'} />
           <Column field={'countryDestCod'} header={'Destination Country Code'} />
-          <Column
-            filter
-            filterField="countryExport"
-            field={'countryExport'}
-            header={'Country Export'}
-          />
-          <Column field={'countryOrg'} header={'Country Org'} />
-          <Column field={'lorryTotal'} header={'Lorry Total'} />
           <Column field={'currencyCode'} header={'Currency Code'} />
-          <Column field={'currencyRate'} header={'Currency Rate'} />
-          <Column field={'declarationValueAfs'} header={'Declaration Value Afs'} />
-          <Column field={'declarationValueCurrency'} header={'Declaration Value Currency'} />
-          <Column field={'declarationTaxes'} header={'Declaration Taxes'} />
-          <Column field={'itemValueCurrency'} header={'Item Value Currency'} />
-          <Column field={'itemValueAfs'} header={'Item Value Afs'} />
           <Column field={'itemCifValue'} header={'Item Cif Value'} />
-          <Column field={'itemTaxes'} header={'Item Taxes'} />
-          <Column field={'status'} header={'Status'} />
-          <Column field={'locGoods'} header={'Loc Goods'} />
           <Column field={'licCodItem'} header={'Lic Cod Item'} />
           <Column style={{ minWidth: '12rem' }} field={'txtFreItem'} header={'Txt Fre Item'} />
-          <Column field={'pckMrk1Second'} header={'pckMrk1 Second'} />
-          <Column field={'pckMrk2Second'} header={'pckMrk2 Second'} />
-          <Column field={'tarVmtFirst'} header={'Tar Vmt First'} />
-          <Column field={'tarAtt'} header={'Tar ATT'} />
-          <Column field={'tarVdt'} header={'Tar VDT'} />
+          <Column
+            filter
+            filterField="gCategoryOfGoods1"
+            field={'gCategoryOfGoods1'}
+            header={'gcategory 2'}
+          />
+          <Column field={'gCategoryOfGoods2'} header={'gcategory 1'} />
           <Column
             filter
             filterField="tarVmtSecond"
             field={'tarVmtSecond'}
             header={'Tar VTM Second'}
           />
-          <Column
-            filter
-            filterField="gCategoryOfGoods1"
-            field={'gCategoryOfGoods1'}
-            header={'G Category Of Goods1'}
-          />
-          <Column field={'gCategoryOfGoods2'} header={'G Category Of Goods2'} />
+
+
         </DataTable>
       </ Box>
     </SimpleCard>

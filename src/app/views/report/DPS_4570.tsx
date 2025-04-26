@@ -89,10 +89,10 @@ function DPS_4570() {
  <Column field={' TOTAL_PACKAGE'}header={' TOTAL_PACKAGE'}/>
  <Column field={' CODE_OF_PACKAGE'}header={' CODE_OF_PACKAGE'}/>
  <Column field={' TYPE_OF_PACKAGE'}header={' TYPE_OF_PACKAGE'}/>
- <Column field={' REG_NO'}header={' REG_'}/>
- <Column field={' REG_DATE'}header={' REG_DA'}/>
+ <Column field={' REG_NO'}header={' REG_NO'}/>
+ <Column field={' REG_DATE'}header={' REG_DATE'}/>
  <Column field={' ASMT_NO'}header={' ASMT_NO'}/>
- <Column field={' AST_DATE'}header={' AST_DA'}/>
+ <Column field={' AST_DATE'}header={' AST_DADTE'}/>
  <Column field={' RCPT_NO'}header={' RCPT_NO'}/>
  <Column field={' RCPT_DATE'}header={' RCPT_DATE'}/>
  <Column field={' BANK_NAM'}header={' BANK_N'}/>

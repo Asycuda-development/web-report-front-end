@@ -1,4 +1,4 @@
-import { Box, LinearProgress, styled } from '@mui/material';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
@@ -68,48 +68,48 @@ function DPS_4554() {
         >
 
           <Column field={'ideTypSad'} header={'SAD Type'} />
-          <Column style={{ minWidth: "12rem" }} field={'tptCuoNam'} header={'Transport Custom Name'} />
-          <Column style={{ minWidth: "12rem" }} filter filterField="ideCuoNam" field={'ideCuoNam'} header={'Custom Name'} />
-          <Column field={'ideCuoCod'} header={'Custom Code'} />
-          <Column field={'itemTotal'} header={'Item Total'} />
-          <Column field={'itemNo'} header={'itemNo'} />
-          <Column field={'totalPackage'} header={'Total Package'} />
-          <Column field={'codeOfPackage'} header={'Package Code'} />
-          <Column field={'typeOfPackage'} header={'Package Type'} />
-          <Column filter filterField='registrationNo' field={'regNo'} header={'RegistrationNo'} />
+          <Column style={{ minWidth: "12rem" }} field={'tptCuoNam'} header={'Border office'} />
+          <Column style={{ minWidth: "12rem" }} filter filterField="ideCuoNam" field={'ideCuoNam'} header={'CustomـOfice_Name'} />
+          <Column field={'ideCuoCod'} header={'Custom_Code'} />
+          <Column field={'itemTotal'} header={'Item_Total'} />
+          <Column field={'itemNo'} header={'Item_No'} />
+          <Column field={'totalPackage'} header={'Total_Package'} />
+          <Column field={'codeOfPackage'} header={'Package_Code'} />
+          <Column field={'typeOfPackage'} header={'Package_Type'} />
+          <Column filter filterField='registrationNo' field={'regNo'} header={'Reg_No'} />
           <Column field={'regDate'} header={'Registration Date'} />
-          <Column filter filterField='asmtNo' field={'asmtNo'} header={'Assessment Number'} />
-          <Column field={'astDate'} header={'Assessment Date'} />
+          <Column filter filterField='asmtNo' field={'asmtNo'} header={'Assemt_Number'} />
+          <Column field={'astDate'} header={'Assessment_Date'} />
           <Column field={'rcptNo'} header={'RCPT_NO'} />
-          <Column field={'rcptDate'} header={'Receipt Date'} />
-          <Column style={{ minWidth: "12rem" }} field={'bankNam'} header={'Bank Name'} />
-          <Column field={'hsCode'} header={'hsCode'} />
+          <Column field={'rcptDate'} header={'Receipt_Date'} />
+          <Column style={{ minWidth: "12rem" }} field={'bankNam'} header={'Bank_Name'} />
+          <Column field={'hsCode'} header={'HS_Code'} />
           <Column field={'cpc'} header={'cpc'} />
-          <Column style={{ minWidth: "20rem" }} field={'dsc'} header={'Goods Description'} />
-          <Column style={{ minWidth: "25rem" }} field={'gdsDs3'} header={'Goods Additional Description'} />
-          <Column style={{ minWidth: "20rem" }} field={'pckMrk1'} header={'Package Mark1'} />
-          <Column field={'pckMrk2'} header={'Package Mark2'} />
+          <Column style={{ minWidth: "20rem" }} field={'dsc'} header={'Goods_Description'} />
+          <Column style={{ minWidth: "25rem" }} field={'gdsDs3'} header={'Goods_Additional_Description'} />
+          <Column style={{ minWidth: "20rem" }} field={'pckMrk1'} header={'Package_Mark1'} />
+          <Column field={'pckMrk2'} header={'Package_Mark2'} />
           <Column field={'taxAmt'} header={'TAX_AMT'} />
-          <Column field={'customsProc'} header={'Customs Procedure'} />
-          <Column field={'itemGrossWeight'} header={'Item Gross Weight'} />
-          <Column field={'itemNetWeight'} header={'Item Net Weight'} />
-          <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker TIN'} />
-          <Column style={{ minWidth: "12rem" }} field={'decNam'} header={'Declarant Name'} />
-          <Column field={'companyTin'} header={'Company TIN'} />
-          <Column style={{ minWidth: "15rem" }} field={'cmpNam'} header={'Company Name'} />
-          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryDest'} header={'Country Destination Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryExport'} header={'Country Export Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryOrg'} header={'Country Origin Name'} />
-          <Column field={'lorryTotal'} header={'Lorry Total'} />
-          <Column field={'currrencyCode'} header={'Currency Code'} />
-          <Column field={'currecnyRate'} header={'Currency Rate'} />
-          <Column field={'declarationValueCurrency'} header={'Declaration Value Currency'} />
-          <Column field={'declarationValueAfs'} header={'Declaration Value Afs'} />
+          <Column field={'customsProc'} header={'Customs_Procedure'} />
+          <Column field={'itemGrossWeight'} header={'Item_Gross_Weight'} />
+          <Column field={'itemNetWeight'} header={'Item_Net_Weight'} />
+          <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker_TIN'} />
+          <Column style={{ minWidth: "12rem" }} field={'decNam'} header={'Declarant_Name'} />
+          <Column field={'companyTin'} header={'Company_TIN'} />
+          <Column style={{ minWidth: "15rem" }} field={'cmpNam'} header={'Company_Name'} />
+          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'countryDest'} header={'Country_Destination_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'countryExport'} header={'Country_Export_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'countryOrg'} header={'Country_Origin_Name'} />
+          <Column field={'lorryTotal'} header={'Lorry_Total'} />
+          <Column field={'currrencyCode'} header={'Currency_Code'} />
+          <Column field={'currecnyRate'} header={'Currency_Rate'} />
+          <Column field={'declarationValueCurrency'} header={'Declaration_Value_Currency'} />
+          <Column field={'declarationValueAfs'} header={'Declaration_Value_Afs'} />
           <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
-          <Column field={'itemValueCurrency'} header={'Item Value Currency'} />
-          <Column field={'itemValueAfs'} header={'Item Value Afs'} />
-          <Column field={'taxRate'} header={'Tax Rate'} />
+          <Column field={'itemValueCurrency'} header={'Item_Value_Currency'} />
+          <Column field={'itemValueAfs'} header={'Item_Value_Afs'} />
+          <Column field={'taxRate'} header={'Tax_Rate'} />
           <Column field={'codeTaxAmount'} header={'CODE_TAX_AMOUNT'} />
           <Column field={'taxCode'} header={'TAX_CODE'} />
           <Column field={'status'} header={'SAD_STATUS'} />

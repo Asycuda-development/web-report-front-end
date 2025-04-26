@@ -53,10 +53,10 @@ function DPS_4580() {
           stripedRows
           showGridlines
         >
-          <Column field={'idea_yea'} header={'yaer'} />
-          <Column field={'ide_nbr'} header={'ide_nbr'} />
-          <Column field={'ide_cuo'} header={'ide_cuo'} />
-          <Column field={'ide_cuo_nam'} header={'ide_cuo_nam'} />
+          <Column field={'idea_yea'} header={'YEAR'} />
+          <Column field={'ide_nbr'} header={'IDE_NO'} />
+          <Column field={'ide_cuo'} header={'IDE_CUSTOMS_CODE'} />
+          <Column field={'ide_cuo_nam'} header={'IDE_CUSTOMS_NAME'} />
           <Column field={'shd_cod'} header={'shd_cod'} />
           <Column field={'shd_nam'} header={'shd_nam'} />
           <Column field={'cmp_cod'} header={'cmp_cod'} />
