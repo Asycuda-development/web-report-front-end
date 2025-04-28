@@ -56,6 +56,7 @@ function Revenue_4152() {
       <ReportHeaderInputs
         showStartDate
         showEndDate
+        showCustomsList
         showBasedOn
         basedOnOptions={basedOnOptions}
         showRegDate
@@ -77,17 +78,16 @@ function Revenue_4152() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-          <Column field={'ide_nam'} header={'ide_nam'} />
-          <Column field={'tra_dec_cod'} header={'tra_dec_cod'} />
-          <Column field={'tra_cmp_cod'} header={'tra_cmp_cod'} />
-          <Column field={'tra_nam'} header={'tra_nam'} />
+          <Column field={'ide_nam'} header={'Office_Code'} />
+          <Column field={'tra_dec_cod'} header={'Broker TIN'} />
+          <Column field={'tra_cmp_cod'} header={'Company TIN'} />
+          <Column field={'tra_nam'} header={'Company'} />
           <Column field={'O_NO'} header={'O_NO'} />
-          <Column field={'o_dat'} header={'o_dat'} />
-          <Column field={'REG_dat'} header={'REG_dat'} />
-          <Column field={'reg_nbr'} header={'reg_nbr'} />
-          <Column field={'RCP_NBR'} header={'RCP_NBR'} />
-          <Column field={'Des'} header={'Des'} />
-          <Column field={'amt_total'} header={'amt_total'} />
+          <Column field={'o_dat'} header={'O_Date'} />
+          <Column field={'reg_nbr'} header={'Reg Number'} />
+          <Column field={'REG_dat'} header={'Reg date'} />
+          <Column field={'RCP_NBR'} header={'RCP_No'} />
+          <Column field={'Des'} header={'Desc'} />
           <Column field={'amt_028'} header={'amt_028'} />
           <Column field={'amt_026'} header={'amt_026'} />
           <Column field={'amt_022'} header={'amt_022'} />
@@ -118,7 +118,6 @@ function Revenue_4152() {
           <Column field={'amt_51'} header={'amt_51'} />
           <Column field={'amt_52'} header={'amt_52'} />
           <Column field={'amt_53'} header={'amt_53'} />
-          <Column field={'amt_58'} header={'amt_58'} />
           <Column field={'amt_65'} header={'amt_65'} />
           <Column field={'amt_70'} header={'amt_70'} />
           <Column field={'amt_75'} header={'amt_75'} />
@@ -153,9 +152,11 @@ function Revenue_4152() {
           <Column field={'amt_86'} header={'amt_86'} />
           <Column field={'amt_87'} header={'amt_87'} />
           <Column field={'amt_88'} header={'amt_88'} />
+          <Column field={'amt_71'} header={'amt_71'} />
+          <Column field={'amt_58'} header={'amt_58'} />
           <Column field={'amt_89'} header={'amt_89'} />
           <Column field={'amt_90'} header={'amt_90'} />
-          <Column field={'amt_71'} header={'amt_71'} />
+          {/* two columns missing amt_92 amt_93 */}
           <Column field={'amt_94'} header={'amt_94'} />
           <Column field={'amt_96'} header={'amt_96'} />
           <Column field={'amt_97'} header={'amt_97'} />
@@ -163,9 +164,12 @@ function Revenue_4152() {
           <Column field={'amt_61'} header={'amt_61'} />
           <Column field={'amt_62'} header={'amt_62'} />
           <Column field={'amt_019'} header={'amt_019'} />
-          <Column field={'amt_099'} header={'amt_099'} />
-          <Column field={'amt_100'} header={'amt_100'} />
           <Column field={'amt_098'} header={'amt_098'} />
+          <Column field={'amt_100'} header={'amt_100'} />
+          {/* missing column amt_101 */}
+          <Column field={'amt_099'} header={'amt_099'} />
+          {/* missing column amt_95 */}
+          <Column field={'amt_total'} header={'Amount Total'} />
         </DataTable>
       </ Box>
       <Toast ref={toastRef} />

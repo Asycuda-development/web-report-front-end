@@ -59,8 +59,7 @@ const Revenue_4158 = () => {
           stripedRows
           showGridlines
         >
-          <Column style={{ minWidth: "20rem" }} field={'office'} header={'OFFICE '} />
-          <Column style={{ minWidth: "12rem" }} field={'amt_total'} header={'amt_total'} />
+          <Column style={{ minWidth: "20rem" }} field={'office'} header={'Office'} />
           <Column field={'amt_028'} header={'amt_028'} />
           <Column field={'amt_026'} header={'amt_026'} />
           <Column field={'amt_022'} header={'amt_022'} />
@@ -120,6 +119,7 @@ const Revenue_4158 = () => {
           <Column field={'amt_080'} header={'amt_080'} />
           <Column field={'amt_81'} header={'amt_81'} />
           <Column field={'amt_82'} header={'amt_82'} />
+          <Column field={'amt_71'} header={'amt_71'} />
           <Column field={'amt_83'} header={'amt_83'} />
           <Column field={'amt_84'} header={'amt_84'} />
           <Column field={'amt_85'} header={'amt_85'} />
@@ -136,11 +136,11 @@ const Revenue_4158 = () => {
           <Column field={'amt_33'} header={'amt_33'} />
           <Column field={'amt_61'} header={'amt_61'} />
           <Column field={'amt_62'} header={'amt_62'} />
-          <Column field={'amt_71'} header={'amt_71'} />
+          <Column field={'amt_019'} header={'amt_019'} />
           <Column field={'amt_098'} header={'amt_098'} />
           <Column field={'amt_099'} header={'amt_099'} />
           <Column field={'amt_100'} header={'amt_100'} />
-          <Column field={'amt_019'} header={'amt_019'} />
+          <Column style={{ minWidth: "12rem" }} field={'amt_total'} header={'Amount_Total'} />
         </DataTable>
       </Box>
     </SimpleCard>

@@ -59,30 +59,30 @@ const Revenue_4153_1400 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'office'} header={'OFFICE '} />
-          <Column field={'rcp_dat'} header={'RECEPT_DATE'} />
-          <Column field={'tax_total_IM'} header={'TaxTotal'} />
-          <Column field={'amt_011'} header={'amt_011'} />
-          <Column field={'amt_012'} header={'amt_012'} />
-          <Column field={'amt_013'} header={'amt_013'} />
-          <Column field={'amt_015'} header={'amt_015'} />
-          <Column field={'amt_017'} header={'amt_017'} />
-          <Column field={'amt_049'} header={'amt_049'} />
-          <Column field={'amt_018'} header={'amt_018'} />
-          <Column field={'amt_040'} header={'amt_040'} />
-          <Column field={'amt_041'} header={'amt_041'} />
-          <Column field={'amt_042'} header={'amt_042'} />
-          <Column field={'amt_043'} header={'amt_043'} />
-          <Column field={'amt_044'} header={'amt_044'} />
-          <Column field={'amt_045'} header={'amt_045'} />
-          <Column field={'amt_046'} header={'amt_046'} />
-          <Column field={'amt_047'} header={'amt_047'} />
-          <Column field={'amt_048'} header={'amt_048'} />
-          <Column field={'amt_75'} header={'amt_75'} />
-          <Column field={'amt_88'} header={'amt_88'} />
-          <Column field={'amt_80'} header={'amt_80'} />
-          <Column field={'amt_099'} header={'amt_099'} />
-          <Column field={'amt_019'} header={'amt_019'} />
+          <Column field={'office'} header={'Office'} />
+          <Column field={'rcp_dat'} header={'Rcpt_date'} />
+          <Column field={'tax_total_IM'} header={'Amount_Total_Import'} />
+          <Column field={'amt_011'} header={'011_محصول صادرات'} />
+          <Column field={'amt_012'} header={'012_ماليه صادرات'} />
+          <Column field={'amt_013'} header={'013_سره مياشت صادرات'} />
+          <Column field={'amt_015'} header={'013_سره مياشت صادرات'} />
+          <Column field={'amt_017'} header={'017_مالیه انتفاعی صادرات'} />
+          <Column field={'amt_018'} header={'018_جریمه صادرات'} />
+          <Column field={'amt_040'} header={'040_خاک پولي'} />
+          <Column field={'amt_041'} header={'041_محصول'} />
+          <Column field={'amt_042'} header={'042_مالیه واردات'} />
+          <Column field={'amt_043'} header={'043_سره مياشت'} />
+          <Column field={'amt_044'} header={'044_خدمات شاروالی'} />
+          <Column field={'amt_045'} header={'045_ساير وصوليهاي متفرقه'} />
+          <Column field={'amt_046'} header={'046_جريمه'} />
+          <Column field={'amt_047'} header={'047_ماليه انتفاعي 4% بر واردات'} />
+          <Column field={'amt_048'} header={'048_فیس تی یک وسرغج درسرحد'} />
+          <Column field={'amt_75'} header={'075 حق الوزن'} />
+          <Column field={'amt_88'} header={'088 Transport fees'} />
+          <Column field={'amt_80'} header={'080 اعانه معارف'} />
+          <Column field={'amt_049'} header={'049_فيس الكترونيك واردات'} />
+          <Column field={'amt_019'} header={'019 صکوک صادرات و واردات'} />
+          <Column field={'amt_099'} header={'099'} />
         </DataTable>
       </Box>
     </SimpleCard>

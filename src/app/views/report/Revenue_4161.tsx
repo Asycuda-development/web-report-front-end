@@ -57,17 +57,17 @@ const Revenue_4161 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'office'} header={'OFFICE '} />
-          <Column field={'cmpNam'} header={'COMPANY_NAME'} />
-          <Column field={'cmpCod'} header={'COMPANY_CODE'} />
-          <Column field={'cmpNam1'} header={'COMPANY_NAME1'} />
-          <Column field={'cmpCod1'} header={'COMPANY_CODE1'} />
-          <Column field={'decCod'} header={'DEC_CODE'} />
-          <Column field={'decNam'} header={'DEC_NAME'} />
-          <Column field={'totalTax'} header={'TOTAL_TEX'} />
-          <Column field={'rcpNo'} header={'RECEPT_NO'} />
-          <Column field={'rcpDat'} header={'RECEPT_DATE'} />
-          <Column field={'modpay'} header={'MOD_PAY'} />
+          <Column field={'office'} header={'Office'} />
+          <Column field={'cmpNam'} header={'Company_Name'} />
+          <Column field={'cmpCod'} header={'Company_Code'} />
+          <Column field={'cmpNam1'} header={'Company_Name1'} />
+          <Column field={'cmpCod1'} header={'Company_Code1'} />
+          <Column field={'decCod'} header={'Declarant_Code'} />
+          <Column field={'decNam'} header={'Declarant_Name'} />
+          <Column field={'totalTax'} header={'TOTAL_Amount'} />
+          <Column field={'rcpNo'} header={'RCPT_NO'} />
+          <Column field={'rcpDat'} header={'RCPT_DATE'} />
+          <Column field={'modpay'} header={'Mod_Payment'} />
         </DataTable>
       </Box>
     </SimpleCard>
