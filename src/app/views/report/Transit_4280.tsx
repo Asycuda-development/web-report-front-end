@@ -58,9 +58,9 @@ const Transit_4280 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'cuo_nam3'} header={'cuo_nam3 '} />
-          <Column field={'DIFF'} header={'DIFF'} />
-          <Column field={'Entry'} header={'Entry'} />
+          <Column field={'cuo_nam3'} header={'Office '} />
+          <Column field={'DIFF'} header={'Difference'} />
+          <Column field={'Entry'} header={'	Registered'} />
           <Column field={'Exit'} header={'Exit'} />
         </DataTable>
       </Box>

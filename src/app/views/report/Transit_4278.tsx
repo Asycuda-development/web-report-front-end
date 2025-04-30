@@ -39,6 +39,7 @@ const Transit_4278 = () => {
       <ReportHeaderInputs
         showStartDate
         showEndDate
+        
         showCustomsList
         showRegDate
         showNumPalate

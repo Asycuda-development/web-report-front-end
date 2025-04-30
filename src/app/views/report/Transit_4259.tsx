@@ -59,65 +59,66 @@ const TransitReport4259 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'totPkg'} header={'totPkg '} />
-          <Column field={'decRef'} header={'decRef'} />
-          <Column field={'loadList'} header={'loadList'} />
-          <Column field={'regNo'} header={'REG_NO'} />
-          <Column field={'regDat'} header={'regDat'} />
-          <Column style={{ minWidth: "20rem" }} field={'status'} header={'status'} />
-          <Column style={{ minWidth: "12rem" }} field={'arrDate'} header={'arrDate'} />
-          <Column field={'deptOffNam'} header={'deptOffNam'} />
-          <Column field={'destnNam'} header={'destnNam'} />
-          <Column field={'destnCty'} header={'destnCty'} />
-          <Column field={'transitType'} header={'transitType'} />
-          <Column field={'expCode'} header={'expCode'} />
-          <Column field={'expNam'} header={'expNam'} />
-          <Column field={'cnsCode'} header={'cnsCode'} />
-          <Column style={{ minWidth: "25rem" }} field={'cnsName'} header={'cnsName'} />
-          <Column field={'ctyExport'} header={'ctyExport'} />
-          <Column style={{ minWidth: "15rem" }} field={'ctyExportName'} header={'ctyExportName'} />
-          <Column field={'ctyDestnCod'} header={'ctyDestnCod'} />
-          <Column field={'ctyDestnNam'} header={'ctyDestnNam'} />
-          <Column field={'modOfTransport'} header={'modOfTransport'} />
-          <Column field={'principalCod'} header={'principalCod'} />
-          <Column style={{ minWidth: "25rem" }} field={'principalNam'} header={'principalNam'} />
-          <Column style={{ minWidth: "20rem" }} field={'representedBy'} header={'representedBy'} />
-          <Column field={'declarantCode'} header={'declarantCode'} />
-          <Column style={{ minWidth: "12rem" }} field={'declarantName'} header={'declarantName'} />
-          <Column field={'maxDateOfArrivalLimit'} header={'maxDateOfArrivalLimit'} />
-          <Column field={'maxDateAllowed'} header={'maxDateAllowed'} />
-          <Column field={'declarationRefYr'} header={'declarationRefYr'} />
-          <Column field={'nationalityOfTransport'} header={'nationalityOfTransport'} />
-          <Column field={'lorryToBorder'} header={'lorryToBorder'} />
-          <Column field={'ctyBorder'} header={'ctyBorder'} />
-          <Column field={'ctyDep'} header={'ctyDep'} />
-          <Column field={'sealAffixedNo'} header={'sealAffixedNo'} />
-          <Column field={'sealIdentity'} header={'sealIdentity'} />
-          <Column field={'garantyCod'} header={'garantyCod'} />
-          <Column field={'garantyAmnt'} header={'garantyAmnt'} />
-          <Column field={'itmNo'} header={'itmNo'} />
-          <Column field={'packNbr'} header={'packNbr'} />
-          <Column style={{ minWidth: "15rem" }} field={'packageMark'} header={'packageMark'} />
-          <Column field={'hscode'} header={'hscode'} />
-          <Column field={'grossMass'} header={'grossMass'} />
-          <Column field={'netMass'} header={'netMass'} />
+          <Column field={'transitType'} header={'Transit_type'} />
+          <Column field={'declarationRefYr'} header={'Declaration_Ref_Year'} />
+          <Column field={'deptOffNam'} header={'Departure_Off_Name'} />
+          <Column field={'destnNam'} header={'Destination_off_Name'} />
+          <Column style={{ minWidth: "20rem" }} field={'status'} header={'Status'} />
+          <Column field={'regNo'} header={'Reg_No'} />
+          <Column field={'regDat'} header={'Reg_Date'} />
+          <Column field={'valNo'} header={'valNo'} />
+          <Column style={{ minWidth: "12rem" }} field={'arrDate'} header={'Arrival Date'} />
+          <Column field={'maxDateOfArrivalLimit'} header={'Max_Date_of_Arrival'} />
+          <Column field={'maxDateAllowed'} header={'Max_Days_Allowed'} />
+          <Column style={{ minWidth: "12rem" }} field={'transitOfficer'} header={'d	Departure Officer'} />
+          <Column field={'declarantCode'} header={'Declarant_Code'} />
+          <Column style={{ minWidth: "12rem" }} field={'declarantName'} header={'Declarant_Name'} />
+          <Column field={'cnsCode'} header={'Consignee_Code'} />
+          <Column style={{ minWidth: "25rem" }} field={'cnsName'} header={'Consignee_Name'} />
+          <Column field={'principalCod'} header={'Principal_Code'} />
+          <Column style={{ minWidth: "25rem" }} field={'principalNam'} header={'Principal_Name'} />
+          <Column style={{ minWidth: "20rem" }} field={'representedBy'} header={'Represented_By'} />
+          <Column style={{ minWidth: "15rem" }} field={'ctyExportName'} header={'Cty_Export_Name'} />
+          <Column field={'ctyDestnNam'} header={'Cty_Destn_Name'} />
+          <Column field={'modOfTransport'} header={'Mode_of_Transport	'} />
+          <Column field={'lorryToBorder'} header={'	Truck To Border'} />
+          <Column field={'grossMass'} header={'Gross_Mass'} />
+          <Column field={'netMass'} header={'Net_Mass'} />
+          <Column field={'totPkg'} header={'Total_Pkg '} />
+          <Column style={{ minWidth: "12rem" }} field={'packageName'} header={'Package_Name'} />
+          <Column field={'hscode'} header={'Hscode'} />
           <Column style={{ minWidth: "20rem" }} field={'goodDescription2'} header={'goodDescription2'} />
           <Column style={{ minWidth: "30rem" }} field={'goodDescription3'} header={'goodDescription3'} />
+          <Column style={{ minWidth: "15rem" }} field={'packageMark'} header={'Package_Mark'} />
+          <Column field={'contFlg'} header={'Container Flag'} />
+          <Column field={'cont1'} header={'Container 1'} />
+          <Column field={'cont2'} header={'Container 2'} />
+          <Column field={'sealAffixedNo'} header={'Seal_Affixed_No'} />
+          <Column field={'sealIdentity'} header={'Seal_Identity'} />
+          <Column field={'garantyCod'} header={'Garanty_Code'} />
+          <Column field={'garantyAmnt'} header={'Garanty_Amnt'} />
+          <Column style={{ minWidth: "20rem" }} field={'at1Cod'} header={'ATT_AT1_COd'} />
+          <Column style={{ minWidth: "20rem" }} field={'at1Nbr'} header={'ATT_AT1_nbr'} />
+          <Column field={'at2Cod'} header={'ATT_AT2_COd'} />
+          <Column style={{ minWidth: "20rem" }} field={'at2Nbr'} header={'ATT_AT2_nbr'} />
+          <Column field={'at3Cod'} header={'ATT_AT3_COd'} />
+          <Column style={{ minWidth: "20rem" }} field={'at3Nbr'} header={'ATT_AT3_nbr'} />
+          <Column field={'at4Cod'} header={'ATT_AT4_COd'} />
+          <Column style={{ minWidth: "20rem" }} field={'at4Nbr'} header={'ATT_AT4_nbr'} />
+          <Column field={'decRef'} header={'decRef'} />
+          <Column field={'loadList'} header={'loadList'} />
+          <Column field={'destnCty'} header={'destnCty'} />
+          <Column field={'expCode'} header={'expCode'} />
+          <Column field={'expNam'} header={'expNam'} />
+          <Column field={'ctyExport'} header={'ctyExport'} />
+          <Column field={'ctyDestnCod'} header={'ctyDestnCod'} />
+          <Column field={'nationalityOfTransport'} header={'nationalityOfTransport'} />
+          <Column field={'ctyBorder'} header={'ctyBorder'} />
+          <Column field={'ctyDep'} header={'ctyDep'} />
+          <Column field={'itmNo'} header={'itmNo'} />
+          <Column field={'packNbr'} header={'packNbr'} />
           <Column field={'packageCode'} header={'packageCode'} />
-          <Column style={{ minWidth: "12rem" }} field={'packageName'} header={'packageName'} />
-          <Column style={{ minWidth: "20rem" }} field={'at1Cod'} header={'at1Cod'} />
-          <Column style={{ minWidth: "20rem" }} field={'at1Nbr'} header={'at1Nbr'} />
-          <Column field={'at2Cod'} header={'at2Cod'} />
-          <Column style={{ minWidth: "20rem" }} field={'at2Nbr'} header={'at2Nbr'} />
-          <Column field={'at3Cod'} header={'at3Cod'} />
-          <Column style={{ minWidth: "20rem" }} field={'at3Nbr'} header={'at3Nbr'} />
-          <Column field={'at4Cod'} header={'at4Cod'} />
-          <Column style={{ minWidth: "20rem" }} field={'at4Nbr'} header={'at4Nbr'} />
-          <Column field={'valNo'} header={'valNo'} />
-          <Column style={{ minWidth: "12rem" }} field={'transitOfficer'} header={'transitOfficer'} />
-          <Column field={'cont1'} header={'cont1'} />
-          <Column field={'cont2'} header={'cont2'} />
-          <Column field={'contFlg'} header={'contFlg'} />
+       
           <Column field={'delCod'} header={'delCod'} />
           <Column style={{ minWidth: "20rem" }} field={'delNam'} header={'delNam'} />
         </DataTable>

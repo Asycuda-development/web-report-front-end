@@ -36,6 +36,7 @@ const Transit_4272 = () => {
       <ReportHeaderInputs
         showStartDate
         showEndDate
+        showRegDate
         showDestinationCustomsList
         showDepartureCustomsList
         onSearch={handleSubmit}
@@ -56,7 +57,6 @@ const Transit_4272 = () => {
         >
           <Column field={'dept_Off_Name'} header={'dept_Off_Name'} />
           <Column field={'destn_Name'} header={'destn_Name'} />
-          <Column field={'dec_Ref'} header={'dec_Ref'} />
           <Column field={'reg_No'} header={'reg_No'} />
           <Column field={'reg_Date'} header={'reg_Date'} />
           <Column field={'arr_Date'} header={'arr_Date'} />
@@ -71,6 +71,7 @@ const Transit_4272 = () => {
           <Column field={'gross_Mass'} header={'gross_Mass'} />
           <Column field={'Net_Mass'} header={'Net_Mass'} />
           <Column field={'Good_Description2'} header={'Good_Description2'} />
+          <Column field={'dec_Ref'} header={'dec_Ref'} />
           <Column field={'cty_Export_name'} header={'cty_Export_name'} />
           <Column field={'cty_Destn_Nam'} header={'cty_Destn_Nam'} />
           <Column field={'mod_of_Transport'} header={'mod_of_Transport'} />
@@ -79,9 +80,9 @@ const Transit_4272 = () => {
           <Column field={'Nationality_Of_Transport'} header={'Nationality_Of_Transpo'} />
           <Column field={'seal_affixed_No'} header={'seal_affixed_No'} />
           <Column field={'seal_Identity'} header={'seal_Identity'} />
-          <Column field={'transit_Officer'} header={'transit_Officer'} />
           <Column field={'cont_Flg'} header={'cont_Flg'} />
           <Column field={'status'} header={'status'} />
+          <Column field={'transit_Officer'} header={'transit_Officer'} />
         </DataTable>
       </Box>
     </SimpleCard>
