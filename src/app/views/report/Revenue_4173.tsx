@@ -61,17 +61,18 @@ const Revenue_4173 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'deptOffNam'} header={'deptOffNam '} />
-          <Column field={'destOff'} header={'destOff'} />
-          <Column field={'expCty'} header={'expCty'} />
-          <Column field={'destCty'} header={'destCty'} />
-          <Column field={'hsCod'} header={'hsCod'} />
-          <Column field={'dsc'} header={'dsc'} />
-          <Column field={'regNo'} header={'regNo'} />
-          <Column field={'regDat'} header={'regDat'} />
-          <Column field={'cod'} header={'cod'} />
-          <Column field={'nam'} header={'nam'} />
-          <Column field={'tot'} header={'tot'} />
+          <Column field={'deptOffNam'} header={'Departure Office Name '} />
+          <Column field={'destOff'} header={'Destination Office Name'} />
+          <Column field={'expCty'} header={'Country of Export Code'} />
+          <Column field={'destCty'} header={'Country of Destination Code'} />
+          <Column field={'transitType'} header={'Transit Type'} />
+          <Column field={'hsCod'} header={'HSCode'} />
+          <Column field={'dsc'} header={'Description'} />
+          <Column field={'regNo'} header={'Reg_NO'} />
+          <Column field={'regDat'} header={'Reg_Date'} />
+          <Column field={'cod'} header={'Tax Code'} />
+          <Column field={'nam'} header={'Tax DSC'} />
+          <Column field={'tot'} header={'Total Payment'} />
         </DataTable>
       </Box>
     </SimpleCard>

@@ -17,7 +17,14 @@ function DPS_4550() {
   useEffect(() => { }, []);
 
   const handleSubmit = async (data: SearchData) => {
-    console.log(data.basedOn, data, data.basedOnValue, data.startDate, data.companyTin, data.customsProcedure)
+    console.log(
+      data.basedOn,
+      data,
+      data.basedOnValue,
+      data.startDate,
+      data.companyTin,
+      data.customsProcedure
+    );
     try {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
@@ -25,9 +32,9 @@ function DPS_4550() {
           summary: 'Based On Value',
           detail: 'Based On Value is required when Based On is selected, please try again.'
         });
-        return
+        return;
       }
-      setLoading(true)
+      setLoading(true);
       const res = await axios.post('/reporting/DpsReport4550', {
         ...data,
         type: data.customsProcedure,
@@ -38,39 +45,37 @@ function DPS_4550() {
       } else {
         setReportData(res.data);
       }
-
-    } catch (error) { }
-    finally {
+    } catch (error) {
+    } finally {
       setLoading(false);
     }
-
   };
   const basedOnOptions = [{
     label: 'declarant',
     name: 'declarant_Code'
-  },{
+  }, {
     label: 'company',
     name: 'company Code'
-},{
-  label: 'Sad_Financial',
-  name: 'SAD_Financial'
-},{
-  label: 'Examiner',
-  name: 'Examiner'
-},{
-  label: 'I_no',
-  name: 'I_no'
-},{
-  label: 'P_no',
-  name: 'P_no'
-},{
-  label: 'M_no',
-  name: 'M_no'
-},{
-  label: 'HsCode',
-  name: 'HsCode'
-}]
-  
+  }, {
+    label: 'Sad_Financial',
+    name: 'SAD_Financial'
+  }, {
+    label: 'Examiner',
+    name: 'Examiner'
+  }, {
+    label: 'I_no',
+    name: 'I_no'
+  }, {
+    label: 'P_no',
+    name: 'P_no'
+  }, {
+    label: 'M_no',
+    name: 'M_no'
+  }, {
+    label: 'HsCode',
+    name: 'HsCode'
+  }]
+
   //
   return (
     <SimpleCard title="4550-DPS">
@@ -85,14 +90,13 @@ function DPS_4550() {
         showRegDate
         showAssesDate
         showPayDate
+        showBasedOnBox
         showCustomsList
         showDepartureCustomsList
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />
-      {loading && (
-        <LinearProgress />
-      )}
+      {loading && <LinearProgress />}
       <Box width="100%" overflow="auto">
         <DataTable
           ref={tableRef}
@@ -102,7 +106,6 @@ function DPS_4550() {
           paginator
           stripedRows
           showGridlines
-
         >
           <Column field={'sadType'} header={'SAD_Flow'} />
           <Column field={'transportCustomsName'} header={'Border office'} />
@@ -186,6 +189,6 @@ function DPS_4550() {
       <Toast ref={toastRef} />
     </SimpleCard>
   );
-};
+}
 
-export default DPS_4550
+export default DPS_4550;

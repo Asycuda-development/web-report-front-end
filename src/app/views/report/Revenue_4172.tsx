@@ -38,7 +38,6 @@ const Revenue_4172 = () => {
       <ReportHeaderInputs
         showStartDate
         showEndDate
-        showPayDate
         showCustomsList
         onSearch={handleSubmit}
         tabelRef={tableRef}
@@ -56,9 +55,9 @@ const Revenue_4172 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'sad_flw'} header={'sad_flw'} />
-          <Column field={'office'} header={'office'} />
-          <Column field={'TaxAmount'} header={'TaxAmount'} />
+          <Column field={'office'} header={'Office'} />
+          <Column field={'sad_flw'} header={'Import/Export/Other'} />
+          <Column field={'TaxAmount'} header={'Total Tax'} />
         </DataTable>
       </Box>
     </SimpleCard>

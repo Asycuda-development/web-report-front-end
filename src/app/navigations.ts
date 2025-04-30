@@ -1,15 +1,3 @@
-import DPS_45101 from "./views/report/DPS_45101";
-import DPS_45102 from "./views/report/DPS_45102";
-import DPS_45103 from "./views/report/DPS_45103";
-import DPS_4570 from "./views/report/DPS_4570";
-import DPS_4579 from "./views/report/DPS_4579";
-import DPS_4583 from "./views/report/DPS_4583";
-import Revenue_4152 from "./views/report/Revenue_4152";
-import Revenue_4153 from "./views/report/Revenue_4153";
-import Revenue_4164 from "./views/report/Revenue_4164";
-import Revenue_4169 from "./views/report/Revenue_4169";
-import Revenue_4170 from "./views/report/Revenue_4170";
-
 export const routes = {
   DataExchange_5050: '/data-exchange-report-5050',
   DataExchange_5051: '/data-exchange-report-5051',
@@ -22,6 +10,7 @@ export const routes = {
   Revenue_4153: '/revenue-report-4153',
   Revenue_4154: '/revenue-report-4154',
   Revenue_4155: '/revenue-report-4155',
+  Revenue_4156: '/revenue-report-4156',
   Revenue_4157_1400: '/revenue-report-4157_1400',
   Revenue_4158: '/revenue-repor-t4158',
   Revenue_4159: '/revenue-report-4159',
@@ -43,9 +32,17 @@ export const routes = {
   Transit_4250: '/transit-report-4250',
   Transit_4251: '/transit-report-4251',
   Transit_4252: '/transit-report-4252',
+  Transit_4253: '/transit-report-4253',
+  Transit_4254: '/transit-report-4254',
+  Transit_4255: '/transit-report-4255',
+  Transit_4256: '/transit-report-4256',
   Transit_4257: '/transit-report-4257',
   Transit_4258: '/transit-report-4258',
   Transit_4259: '/transit-report-4259',
+  Transit_4260: '/transit-report-4260',
+  Transit_4261: '/transit-report-4261',
+  Transit_4263: '/transit-report-4263',
+  Transit_4264: '/transit-report-4264',
   Transit_4265: '/transit-report-4265',
   Transit_4266: '/transit-report-4266',
   Transit_4267: '/transit-report-4267',
@@ -53,6 +50,7 @@ export const routes = {
   Transit_4270: '/transit-report-4270',
   Transit_4271: '/transit-report-4271',
   Transit_4272: '/transit-report-4272',
+  Transit_4273: '/transit-report-4273',
   Transit_4274: '/transit-report-4274',
   Transit_4275: '/transit-report-4275',
   Transit_4276: '/transit-report-4276',
@@ -71,8 +69,6 @@ export const routes = {
   Valuation_4656: '/valuation-report-4656',
   Valuation_4657: '/valuation-report-4657',
   Valuation_4658: '/valuation-report-4658',
-  ExemptionReport4750: '/ExemptionReport4750',
-  ExemptionReport4752: '/ExemptionReport4752',
   Selectivity_4350: '/selectivity-report-4350',
   Selectivity_4351: '/selectivity-report-4351',
   Selectivity_4352: '/selectivity-report-4352',
@@ -82,7 +78,7 @@ export const routes = {
   Selectivity_4356: '/selectivity-report-4356',
   Selectivity_4360: '/selectivity-report-4360',
   Selectivity_4361: '/selectivity-report-4361',
-  ManifestReport4450: '/ManifestReport4450',
+  Manifest_4450: '/manifest-report-4450',
   DPS_4550: '/dps-report-4550',
   DPS_4551: '/dps-report-4551',
   DPS_4552: '/dps-report-4552',
@@ -125,9 +121,11 @@ export const routes = {
   DPS_45101: '/dps-report-45101',
   DPS_45102: '/dps-report-45102',
   DPS_45103: '/dps-report-45103',
-  Exemption_4753: '/Exemption_4753',
-  Exemption_4754: '/Exemption_4754',
-  Exemption_4755: '/Exemption_4755',
+  Exemption_4750: '/exemption-report-4750',
+  Exemption_4752: '/exemption-report-4752',
+  Exemption_4753: '/exemption-report-4753',
+  Exemption_4754: '/exemption-report-4754',
+  Exemption_4755: '/exemption-report-4755',
   all: '*',
   base: '/*',
   Dashboard: '/dashboard',

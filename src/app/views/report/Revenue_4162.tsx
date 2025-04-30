@@ -38,9 +38,9 @@ const Revenue_4162 = () => {
       <ReportHeaderInputs
         showStartDate
         showEndDate
+        showUserName
         showCustomsList
         ShowModOfPayment
-        showRegDate
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />
@@ -58,30 +58,30 @@ const Revenue_4162 = () => {
           showGridlines
         >
 
-          <Column field={'idenam'} header={'IDENAM'} />
-          <Column field={'ideyea'} header={'IDEYEA'} />
-          <Column field={'ideser'} header={'IDESER'} />
-          <Column field={'idenbr'} header={'IDENBR'} />
-          <Column field={'rcpDat'} header={'RCP_DAT'} />
-          <Column field={'tarcmpcod'} header={'TARCMPCOD'} />
-          <Column style={{ minWidth: "20rem" }} field={'tranam'} header={'TRANAM'} />
-          <Column field={'regdat'} header={'REGDAT'} />
-          <Column field={'rcpnbr'} header={'RCPNBR'} />
-          <Column field={'ref'} header={'REF'} />
-          <Column field={'bnkNbr'} header={'BNK_NBR'} />
-          <Column field={'bnkDat'} header={'BNK_DAT'} />
-          <Column field={'assNbr'} header={'ASS_NBR'} />
-          <Column field={'assSer'} header={'ASS_SER'} />
-          <Column field={'modTyp'} header={'MOD_TYP'} />
-          <Column style={{ minWidth: "15rem" }} field={'nam'} header={'NAM'} />
-          <Column field={'saremiasht'} header={'SAREMIASHT'} />
-          <Column field={'sharwali'} header={'SHARWALI'} />
-          <Column field={'municipalityPlusRedCrescent'} header={'MUNICIPALITYPLUSRED_CRESCENT'} />
-          <Column field={'customsDuty'} header={'CUSTOMS_DUTY'} />
-          <Column field={'userid'} header={'USERID'} />
-          <Column field={'userName'} header={'USERNAME'} />
-          <Column style={{ minWidth: "20rem" }} field={'operationTime'} header={'OPERATION_TIME'} />
-          <Column field={'amttot'} header={'AMTTOT'} />
+          <Column field={'idenam'} header={'Customs Name'} />
+          <Column field={'ideyea'} header={'Year'} />
+          <Column field={'ideser'} header={'Serial'} />
+          <Column field={'idenbr'} header={'P Number(Reference of Customs)'} />
+          <Column field={'ref'} header={'Bank Reference(CBS)'} />
+          <Column field={'rcpDat'} header={'RCPT_Date'} />
+          <Column style={{ minWidth: "20rem" }} field={'operationTime'} header={'Operation_Date'} />
+          <Column field={'userid'} header={'User ID'} />
+          <Column style={{ minWidth: "14rem" }} field={'userName'} header={'User Name'} />
+          <Column field={'tarcmpcod'} header={'Company Code'} />
+          <Column style={{ minWidth: "20rem" }} field={'tranam'} header={'Company Name'} />
+          <Column field={'regdat'} header={'Register Date'} />
+          <Column field={'rcpnbr'} header={'RCPT_NO'} />
+          <Column field={'bnkNbr'} header={'Band Ref Number'} />
+          <Column field={'bnkDat'} header={'Bank Ref Date'} />
+          <Column field={'assNbr'} header={'ASS NO'} />
+          <Column field={'assSer'} header={'Serial'} />
+          <Column field={'modTyp'} header={'Type'} />
+          <Column style={{ minWidth: "15rem" }} field={'nam'} header={'Mod of Payment'} />
+          <Column field={'saremiasht'} header={'Red_Crescent'} />
+          <Column field={'sharwali'} header={'Municipality'} />
+          <Column field={'municipalityPlusRedCrescent'} header={'Municipality+Red_Crescent'} />
+          <Column field={'customsDuty'} header={'Customs_Duty'} />
+          <Column field={'amttot'} header={'Amount Total'} />
         </DataTable>
       </Box>
     </SimpleCard>

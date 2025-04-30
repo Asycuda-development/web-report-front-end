@@ -13,6 +13,12 @@ import Loading from './components/MatxLoading';
 import setupAxiosInterceptors from './config/axios-interceptor';
 import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
+import Manifest_4450 from './views/report/Manifest_4450';
+import Exemption_4750 from './views/report/Exemption_4750';
+import Exemption_4752 from './views/report/Exemption_4752';
+import Exemption_4753 from './views/report/Exemption_4753';
+import Exemption_4754 from './views/report/Exemption_4754';
+import Exemption_4755 from './views/report/Exemption_4755';
 import DataExchange_5050 from './views/report/DataExchange_5050';
 import DataExchange_5051 from './views/report/DataExchange_5051';
 import DataExchange_5053 from './views/report/DataExchange_5053';
@@ -34,13 +40,16 @@ import DPS_4563 from './views/report/DPS_4563';
 import DPS_4564 from './views/report/DPS_4564';
 import DPS_4565 from './views/report/DPS_4565';
 import DPS_4566 from './views/report/DPS_4566';
+import DPS_4570 from './views/report/DPS_4570';
 import DPS_4571 from './views/report/DPS_4571';
 import DPS_4572 from './views/report/DPS_4572';
 import DPS_4573 from './views/report/DPS_4573';
 import DPS_4575 from './views/report/DPS_4575';
 import DPS_4576 from './views/report/DPS_4576';
 import DPS_4578 from './views/report/DPS_4578';
+import DPS_4579 from './views/report/DPS_4579';
 import DPS_4580 from './views/report/DPS_4580';
+import DPS_4583 from './views/report/DPS_4583';
 import DPS_4584 from './views/report/DPS_4584';
 import DPS_4585 from './views/report/DPS_4585';
 import DPS_4586 from './views/report/DPS_4586';
@@ -53,15 +62,21 @@ import DPS_4593 from './views/report/DPS_4593';
 import DPS_4595 from './views/report/DPS_4595';
 import DPS_4596 from './views/report/DPS_4596';
 import DPS_4599 from './views/report/DPS_4599';
-import Exemption_4753 from './views/report/Exemption_4753';
-import Exemption_4754 from './views/report/Exemption_4754';
-import Exemption_4755 from './views/report/Exemption_4755';
-import ExemptionReport4750 from './views/report/ExemptionReport4750';
-import ExemptionReport4752 from './views/report/ExemptionReport4752';
-import ManifestReport4450 from './views/report/ManifestReport4450';
+import DPS_45101 from './views/report/DPS_45101';
+import DPS_45102 from './views/report/DPS_45102';
+import DPS_45103 from './views/report/DPS_45103';
 import OverallReport from './views/report/report';
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
+import Transit_4273 from './views/report/Transit_4273';
+import Transit_4253 from './views/report/Transit_4253';
+import Transit_4254 from './views/report/Transit_4254';
+import Transit_4255 from './views/report/Transit_4255';
+import Transit_4256 from './views/report/Transit_4256';
+import Transit_4260 from './views/report/Transit_4260';
+import Transit_4261 from './views/report/Transit_4261';
+import Transit_4263 from './views/report/Transit_4263';
+import Transit_4264 from './views/report/Transit_4264';
 import Transit_4257 from './views/report/Transit_4257';
 import Transit_4258 from './views/report/Transit_4258';
 import Transit_4259 from './views/report/Transit_4259';
@@ -117,13 +132,6 @@ import Selectivity_4354 from './views/report/Selectivity_4354';
 import Selectivity_4355 from './views/report/Selectivity_4355';
 import Selectivity_4356 from './views/report/Selectivity_4356';
 import Valuation_4650 from './views/report/Valuation_4650';
-import DPS_4570 from './views/report/DPS_4570';
-import DPS_4579 from './views/report/DPS_4579';
-import DPS_4583 from './views/report/DPS_4583';
-import DPS_45101 from './views/report/DPS_45101';
-import DPS_45102 from './views/report/DPS_45102';
-import DPS_45103 from './views/report/DPS_45103';
-
 import Valuation_4652 from './views/report/Valuation_4652';
 import Valuation_4653 from './views/report/Valuation_4653';
 import Valuation_4654 from './views/report/Valuation_4654';
@@ -464,6 +472,30 @@ const AuthLayout = () => {
             }
           />
           <Route
+            path={routes.Transit_4254}
+            element={
+              <PrivateRoute>
+                <Transit_4254 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4255}
+            element={
+              <PrivateRoute>
+                <Transit_4255 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4256}
+            element={
+              <PrivateRoute>
+                <Transit_4256 />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path={routes.Transit_4257}
             element={
               <PrivateRoute>
@@ -484,6 +516,38 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Transit_4259 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4260}
+            element={
+              <PrivateRoute>
+                <Transit_4260 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4261}
+            element={
+              <PrivateRoute>
+                <Transit_4261 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4263}
+            element={
+              <PrivateRoute>
+                <Transit_4263 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4264}
+            element={
+              <PrivateRoute>
+                <Transit_4264 />
               </PrivateRoute>
             }
           />
@@ -540,6 +604,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Transit_4272 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4273}
+            element={
+              <PrivateRoute>
+                <Transit_4273 />
               </PrivateRoute>
             }
           />
@@ -604,6 +676,14 @@ const AuthLayout = () => {
             element={
               <PrivateRoute>
                 <Transit_4278 />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={routes.Transit_4253}
+            element={
+              <PrivateRoute>
+                <Transit_4253 />
               </PrivateRoute>
             }
           />
@@ -688,18 +768,18 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ExemptionReport4750}
+            path={routes.Exemption_4750}
             element={
               <PrivateRoute>
-                <ExemptionReport4750 />
+                <Exemption_4750 />
               </PrivateRoute>
             }
           />
           <Route
-            path={routes.ExemptionReport4752}
+            path={routes.Exemption_4752}
             element={
               <PrivateRoute>
-                <ExemptionReport4752 />
+                <Exemption_4752 />
               </PrivateRoute>
             }
           />
@@ -760,10 +840,10 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.ManifestReport4450}
+            path={routes.Manifest_4450}
             element={
               <PrivateRoute>
-                <ManifestReport4450 />
+                <Manifest_4450 />
               </PrivateRoute>
             }
           />

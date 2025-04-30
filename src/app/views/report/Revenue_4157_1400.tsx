@@ -58,20 +58,12 @@ const Revenue_4157_1400 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'office'} header={'OFFICE '} />
-          <Column field={'sadRegNo'} header={'SAD_REG_NO'} />
-          <Column field={'traCmpCod'} header={'TRA_COMPANY_CODE'} />
-          <Column style={{ minWidth: "20rem" }} field={'traNam'} header={'TRA_NAME'} />
-          <Column field={'decRefYer'} header={'DECLERANT_YEAR'} />
-          <Column field={'rcpDat'} header={'RECEPT_DATE'} />
-          <Column field={'taxTotal'} header={'TaxTotal'} />
-          <Column field={'amt_011'} header={'amt_011'} />
-          <Column field={'amt_012'} header={'amt_012'} />
-          <Column field={'amt_013'} header={'amt_013'} />
-          <Column field={'amt_015'} header={'amt_015'} />
-          <Column field={'amt_017'} header={'amt_017'} />
-          <Column field={'amt_049'} header={'amt_049'} />
-          <Column field={'amt_018'} header={'amt_018'} />
+          <Column field={'office'} header={'Office'} />
+          <Column field={'decRefYer'} header={'Dec_Ref_Year'} />
+          <Column field={'sadRegNo'} header={'SAD_Reg_NO'} />
+          <Column field={'traCmpCod'} header={'TIN'} />
+          <Column style={{ minWidth: "20rem" }} field={'traNam'} header={'Company Name'} />
+          <Column field={'rcpDat'} header={'Rcpt_Date'} />
           <Column field={'amt_040'} header={'amt_040'} />
           <Column field={'amt_041'} header={'amt_041'} />
           <Column field={'amt_042'} header={'amt_042'} />
@@ -81,11 +73,19 @@ const Revenue_4157_1400 = () => {
           <Column field={'amt_046'} header={'amt_046'} />
           <Column field={'amt_047'} header={'amt_047'} />
           <Column field={'amt_048'} header={'amt_048'} />
+          <Column field={'amt_049'} header={'amt_049'} />
           <Column field={'amt_75'} header={'amt_75'} />
           <Column field={'amt_88'} header={'amt_88'} />
           <Column field={'amt_80'} header={'amt_80'} />
-          <Column field={'amt_099'} header={'amt_099'} />
           <Column field={'amt_019'} header={'amt_019'} />
+          <Column field={'amt_099'} header={'amt_099'} />
+          <Column field={'amt_011'} header={'amt_011'} />
+          <Column field={'amt_012'} header={'amt_012'} />
+          <Column field={'amt_013'} header={'amt_013'} />
+          <Column field={'amt_015'} header={'amt_015'} />
+          <Column field={'amt_017'} header={'amt_017'} />
+          <Column field={'amt_018'} header={'amt_018'} />
+          <Column field={'taxTotal'} header={'TaxTotal'} />
         </DataTable>
       </Box>
     </SimpleCard>

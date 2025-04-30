@@ -56,7 +56,7 @@ const Revenue_4165 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'customsNam'} header={'customs Nam'} />
+          <Column field={'customsNam'} header={'Customs Name'} />
           <Column field={'RcpDate'} header={'Rcp_Date'} />
           <Column field={'RcpNbr'} header={'RCP_NO'} />
           <Column field={'ser'} header={'Serial'} />
@@ -68,9 +68,10 @@ const Revenue_4165 = () => {
           <Column field={'bnk_Nbr'} header={'Bank Ref Number'} />
           <Column field={'bnk_Dat'} header={'Bank Ref Date'} />
           <Column field={'status'} header={'status'} />
-          <Column field={'Operation_Time'} header={'Operation_Time'} />
+          <Column field={'Operation_Time'} header={'Operation Time'} />
           <Column field={'userid'} header={'User_ID'} />
-          <Column field={'TOT'} header={'Amount Toatal'} />
+          <Column field={'userName'} header={'UserName'} />
+          <Column field={'TOT'} header={'Amount Total'} />
         </DataTable>
       </Box>
     </SimpleCard>

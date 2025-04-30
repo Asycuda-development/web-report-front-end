@@ -31,7 +31,6 @@ function DPS_45103() {
         customsCode: data.CustomsCode
       });
       if (res.data.length === 0) {
-        setLoading(false)
         setReportData([]);
       } else {
         setReportData(res.data);
@@ -41,29 +40,29 @@ function DPS_45103() {
       setLoading(false);
     }
   };
-        const basedOnOptions = [{
-          label: 'declarant',
-          name: 'declarant'
-        },{
-          label: 'company',
-          name: 'company'
-      },{
-          label: 'Sad_Financial',
-          name: 'Sad_Financial'
+  const basedOnOptions = [{
+    label: 'declarant',
+    name: 'declarant'
+  }, {
+    label: 'company',
+    name: 'company'
+  }, {
+    label: 'Sad_Financial',
+    name: 'Sad_Financial'
 
-      },{
-          label: 'I_no',
-          name: 'I_no'
+  }, {
+    label: 'I_no',
+    name: 'I_no'
 
-      },{
-          label: 'P_no',
-          name: 'P_no'
+  }, {
+    label: 'P_no',
+    name: 'P_no'
 
-      },{
-          label: 'M_no',
-          name: 'M_no'
+  }, {
+    label: 'M_no',
+    name: 'M_no'
 
-      }]
+  }]
 
   return (
     <SimpleCard title="DPS_45103">
@@ -98,27 +97,27 @@ function DPS_45103() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-            <Column field={'DestCustoms'} header={' Customs Office'}/> 
-            <Column field={'TypeSad'} header={' IMP/EXP'}/> 
-            <Column field={'PayDate'} header={' Payment Date'}/> 
-            <Column field={'ProcExt'} header={' Extend Procedure'}/> 
-            <Column field={'CustomsProc'} header={' Customs Procedure'}/> 
-            <Column field={'Dsc2'} header={' Dsc2'}/> 
-            <Column style={{minWidth:"25rem"}}field={'Dsc1'} header={' Dsc1'}/> 
-            <Column field={'HsCode'} header={' HsCode'}/> 
-            <Column field={'ItemNetWeight'} header={' ItemNetWeight'}/> 
-            <Column field={'CompanyTIN'} header={' CompanyTIN'}/> 
-            <Column field={'CmpName'} header={' CmpName'}/> 
-            <Column field={'ItemValueCurrency'} header={' ItemValueCurrency'}/> 
-            <Column field={'ItemValueAfs'} header={' ItemValueAfs'}/> 
-            <Column field={'ItemTaxes'} header={' ItemTaxes'}/> 
-            <Column field={'TaxRate'} header={' TaxRate'}/> 
-            <Column field={'CodeTaxAmount'} header={' CodeTaxAmount'}/> 
-            <Column field={'TaxCode'} header={' TaxCode'}/> 
-            <Column field={'IdeCuoCod'} header={' IdeCuoCod'}/> 
-            <Column style={{minWidth:"30rem"}}field={'mark1'} header={' mark1'}/> 
-            <Column field={'mark2'} header={' mark2'}/> 
-            <Column field={'TaxDecription'} header={' TaxDecription'}/> 
+          <Column field={'DestCustoms'} header={' Customs Office'} />
+          <Column field={'TypeSad'} header={' IMP/EXP'} />
+          <Column field={'PayDate'} header={' Payment Date'} />
+          <Column field={'ProcExt'} header={' Extend Procedure'} />
+          <Column field={'CustomsProc'} header={' Customs Procedure'} />
+          <Column field={'Dsc2'} header={' Dsc2'} />
+          <Column style={{ minWidth: "25rem" }} field={'Dsc1'} header={' Dsc1'} />
+          <Column field={'HsCode'} header={' HsCode'} />
+          <Column field={'ItemNetWeight'} header={' ItemNetWeight'} />
+          <Column field={'CompanyTIN'} header={' CompanyTIN'} />
+          <Column field={'CmpName'} header={' CmpName'} />
+          <Column field={'ItemValueCurrency'} header={' ItemValueCurrency'} />
+          <Column field={'ItemValueAfs'} header={' ItemValueAfs'} />
+          <Column field={'ItemTaxes'} header={' ItemTaxes'} />
+          <Column field={'TaxRate'} header={' TaxRate'} />
+          <Column field={'CodeTaxAmount'} header={' CodeTaxAmount'} />
+          <Column field={'TaxCode'} header={' TaxCode'} />
+          <Column field={'IdeCuoCod'} header={' IdeCuoCod'} />
+          <Column style={{ minWidth: "30rem" }} field={'mark1'} header={' mark1'} />
+          <Column field={'mark2'} header={' mark2'} />
+          <Column field={'TaxDecription'} header={' TaxDecription'} />
         </DataTable>
       </ Box>
       <Toast ref={toastRef} />

@@ -39,7 +39,6 @@ const Revenue_4164_1400 = () => {
         showStartDate
         showEndDate
         showCustomsList
-        showRegDate
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />

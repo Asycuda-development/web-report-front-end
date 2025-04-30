@@ -14,6 +14,15 @@ const Revenue_4150 = () => {
 
   const handleSubmit = async (data: SearchData) => {
     try {
+      if (data.basedOn && !data.basedOnValue) {
+        console.log('first');
+        tableRef.current.show({
+          severity: 'error',
+          summary: 'Based On Value',
+          detail: 'Based On Value is required when Based On is selected, please try again.'
+        });
+        return;
+      }
       setLoading(true)
       const res = await axios.post('/reporting/find-the-revenue', {
         startDate: data.startDate,
@@ -53,9 +62,9 @@ const Revenue_4150 = () => {
           stripedRows
           showGridlines
         >
-          <Column filter filterField="type" field={'type'} header={'Customs Procedure'} />
           <Column filter filterField="office" field={'office'} header={'office'} />
-          <Column field={'tot'} header={'Total amount'} />
+          <Column filter filterField="type" field={'type'} header={'Customs Procedure'} />
+          <Column field={'tot'} header={'Total Tax'} />
         </DataTable>
       </Box>
     </SimpleCard>
