@@ -138,6 +138,7 @@ import Valuation_4654 from './views/report/Valuation_4654';
 import Valuation_4656 from './views/report/Valuation_4656';
 import Valuation_4657 from './views/report/Valuation_4657';
 import Valuation_4658 from './views/report/Valuation_4658';
+import { AUTHORITIES } from './utils/constant';
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -194,7 +195,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Dashboard}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.DASHBOARD]}>
                 <Analytics />
               </PrivateRoute>
             }
@@ -202,7 +203,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Users}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.USER_READ]}>
                 <UsersList />
               </PrivateRoute>
             }
@@ -210,7 +211,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Report}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_SIGTAS]}>
                 <OverallReport />
               </PrivateRoute>
             }
@@ -218,7 +219,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Exemption_4753}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.Report_4753_Exemption]}>
                 <Exemption_4753 />
               </PrivateRoute>
             }
@@ -226,7 +227,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Exemption_4754}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.Report_4754_Exemption]}>
                 <Exemption_4754 />
               </PrivateRoute>
             }
@@ -234,7 +235,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Exemption_4755}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.Report_4755_Exemption]}>
                 <Exemption_4755 />
               </PrivateRoute>
             }
@@ -242,7 +243,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4150}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4150_REVENUE]}>
                 <Revenue_4150 />
               </PrivateRoute>
             }
@@ -250,7 +251,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4151}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4151_REVENUE]}>
                 <Revenue_4151 />
               </PrivateRoute>
             }
@@ -258,7 +259,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4152}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4152_REVENUE]}>
                 <Revenue_4152 />
               </PrivateRoute>
             }
