@@ -265,17 +265,9 @@ const AuthLayout = () => {
             }
           />
           <Route
-            path={routes.Revenue_4153}
-            element={
-              <PrivateRoute>
-                <Revenue_4153 />
-              </PrivateRoute>
-            }
-          />
-          <Route
             path={routes.Revenue_4164}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4164_REVENUE]}>
                 <Revenue_4164 />
               </PrivateRoute>
             }
@@ -283,7 +275,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4169}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4169_REVENUE]}>
                 <Revenue_4169 />
               </PrivateRoute>
             }
@@ -291,7 +283,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4170}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4170_REVENUE]}>
                 <Revenue_4170 />
               </PrivateRoute>
             }
@@ -299,7 +291,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4153_1400}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4153_1400_REVENUE]}>
                 <Revenue_4153_1400 />
               </PrivateRoute>
             }
@@ -307,7 +299,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4153}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4153_REVENUE]}>
                 <Revenue_4153 />
               </PrivateRoute>
             }
@@ -315,7 +307,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4154}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4154_REVENUE]}>
                 <Revenue_4154 />
               </PrivateRoute>
             }
@@ -323,7 +315,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4155}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4155_REVENUE]}>
                 <Revenue_4155 />
               </PrivateRoute>
             }
@@ -331,7 +323,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4157_1400}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4157_1400_REVENUE]}>
                 <Revenue_4157_1400 />
               </PrivateRoute>
             }
@@ -339,7 +331,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4158}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4158_REVENUE]}>
                 <Revenue_4158 />
               </PrivateRoute>
             }
@@ -347,7 +339,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4159}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4159_REVENUE]}>
                 <Revenue_4159 />
               </PrivateRoute>
             }
@@ -355,7 +347,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4160}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4160_REVENUE]}>
                 <Revenue_4160 />
               </PrivateRoute>
             }
@@ -363,7 +355,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4161}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4161_REVENUE]}>
                 <Revenue_4161 />
               </PrivateRoute>
             }
@@ -371,7 +363,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4162}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4162_REVENUE]}>
                 <Revenue_4162 />
               </PrivateRoute>
             }
@@ -379,7 +371,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4163}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4163_REVENUE]}>
                 <Revenue_4163 />
               </PrivateRoute>
             }
@@ -387,7 +379,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4164_1400}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4164_1400_REVENUE]}>
                 <Revenue_4164_1400 />
               </PrivateRoute>
             }
