@@ -474,7 +474,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_SIGTAS
                                     ])
                                 }),
-                                label: 'Sigtas Report',
+                                label: 'Report for SIGTAS',
                                 command: () => {
                                     navigation(routes.Report);
                                 }
@@ -486,7 +486,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4550_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4550',
+                                label: 'Report With Items and Tax_Code',
                                 command: () => {
                                     navigation(routes.DPS_4550);
                                 }
@@ -498,7 +498,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4551_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4551',
+                                label: 'Report With Items',
                                 command: () => {
                                     navigation(routes.DPS_4551);
                                 }
@@ -510,7 +510,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4552_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4552',
+                                label: 'Report Without Items and Tax_Code',
                                 command: () => {
                                     navigation(routes.DPS_4552);
                                 }
@@ -522,7 +522,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4553_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4553',
+                                label: 'Report Based on National Procedure Code',
                                 command: () => {
                                     navigation(routes.DPS_4553);
                                 }
@@ -534,7 +534,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4554_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4554',
+                                label: 'Report With Items & TaxCode Based on HSCODE',
                                 command: () => {
                                     navigation(routes.DPS_4554);
                                 }
@@ -546,7 +546,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4555_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4555',
+                                label: 'Report Based on Company Codes',
                                 command: () => {
                                     navigation(routes.DPS_4555);
                                 }
@@ -558,7 +558,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4556_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4556',
+                                label: 'Report Based on SAD Financial Code',
                                 command: () => {
                                     navigation(routes.DPS_4556);
                                 }
@@ -570,7 +570,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4557_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4557',
+                                label: 'Report Based On Declarant Code',
                                 command: () => {
                                     navigation(routes.DPS_4557);
                                 }
@@ -582,7 +582,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4558_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4558',
+                                label: 'Report Based On Status',
                                 command: () => {
                                     navigation(routes.DPS_4558);
                                 }
@@ -594,7 +594,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4559_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4559',
+                                label: 'Count Report by all Status',
                                 command: () => {
                                     navigation(routes.DPS_4559);
                                 }
@@ -606,7 +606,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4560_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4560 ',
+                                label: 'Count Report Based on Various Options',
                                 command: () => {
                                     navigation(routes.DPS_4560);
                                 }
@@ -618,7 +618,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4561_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4561',
+                                label: 'Report Release study Based on Various Options',
                                 command: () => {
                                     navigation(routes.DPS_4561);
                                 }
@@ -630,7 +630,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4562_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4562',
+                                label: 'Users Activity Report',
                                 command: () => {
                                     navigation(routes.DPS_4562);
                                 }
@@ -642,7 +642,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4563_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4563',
+                                label: 'I-List of Companies with details',
                                 command: () => {
                                     navigation(routes.DPS_4563);
                                 }
@@ -654,7 +654,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4564_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4564',
+                                label: 'Report Based on Offence Code',
                                 command: () => {
                                     navigation(routes.DPS_4564);
                                 }
@@ -666,7 +666,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4565_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4565',
+                                label: 'Report With Item Based On HSCODE',
                                 command: () => {
                                     navigation(routes.DPS_4565);
                                 }
@@ -678,7 +678,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4566_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4566',
+                                label: 'Report Based on Catagory of Goods',
                                 command: () => {
                                     navigation(routes.DPS_4566);
                                 }
@@ -690,7 +690,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4570_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4570',
+                                label: 'Report Based on Vehicle Engine or VIN Number',
                                 command: () => {
                                     navigation(routes.DPS_4570);
                                 }
@@ -702,7 +702,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4571_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4571',
+                                label: 'Declarations which has more than 1 Release Order',
                                 command: () => {
                                     navigation(routes.DPS_4571);
                                 }
@@ -714,7 +714,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4572_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4572',
+                                label: 'Exit Note',
                                 command: () => {
                                     navigation(routes.DPS_4572);
                                 }
@@ -726,7 +726,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4573_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4573',
+                                label: 'Exit Note Based on Various Options',
                                 command: () => {
                                     navigation(routes.DPS_4573);
                                 }
@@ -1056,7 +1056,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4575_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4575',
+                                label: 'Vehicles Report',
                                 command: () => {
                                     navigation(routes.DPS_4575);
                                 }
@@ -1068,7 +1068,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4576_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4576',
+                                label: 'Enforcement Team\'s Report',
                                 command: () => {
                                     navigation(routes.DPS_4576);
                                 }
@@ -1080,7 +1080,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4578_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4578',
+                                label: 'T1 & SAD Linked Report',
                                 command: () => {
                                     navigation(routes.DPS_4578);
                                 }
@@ -1104,7 +1104,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4580_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4580',
+                                label: 'Declaration without Exit Note',
                                 command: () => {
                                     navigation(routes.DPS_4580);
                                 }
@@ -1128,7 +1128,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4584_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4584',
+                                label: 'EXEX General Details Report',
                                 command: () => {
                                     navigation(routes.DPS_4584);
                                 }
@@ -1140,7 +1140,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4585_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4585',
+                                label: 'EXEX summaries Report',
                                 command: () => {
                                     navigation(routes.DPS_4585);
                                 }
@@ -1152,7 +1152,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4586_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4586',
+                                label: 'Summary Report for 4550',
                                 command: () => {
                                     navigation(routes.DPS_4586);
                                 }
@@ -1164,7 +1164,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4587_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4587',
+                                label: 'Check The User Activity',
                                 command: () => {
                                     navigation(routes.DPS_4587);
                                 }
@@ -1176,7 +1176,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4588_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4588',
+                                label: 'Finder for printing serial numver (Sukook Number)',
                                 command: () => {
                                     navigation(routes.DPS_4588);
                                 }
@@ -1188,7 +1188,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4589_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4589',
+                                label: 'The list of trucks used Digital Scale but not process in SAD',
                                 command: () => {
                                     navigation(routes.DPS_4589);
                                 }
@@ -1200,7 +1200,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4590_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4590',
+                                label: 'MOF Fiscal Policy Report',
                                 command: () => {
                                     navigation(routes.DPS_4590);
                                 }
@@ -1212,7 +1212,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4591_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4591',
+                                label: 'HS Base report for Ministry of Commerce',
                                 command: () => {
                                     navigation(routes.DPS_4591);
                                 }
@@ -1224,7 +1224,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4593_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4593',
+                                label: 'Finding the Container Base Container Number',
                                 command: () => {
                                     navigation(routes.DPS_4593);
                                 }
@@ -1236,7 +1236,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4595_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4595',
+                                label: 'HS Base and Rate Report for Ministry of Commerce',
                                 command: () => {
                                     navigation(routes.DPS_4595);
                                 }
@@ -1248,7 +1248,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4596_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4596',
+                                label: 'Tarrif Logs Table',
                                 command: () => {
                                     navigation(routes.DPS_4596);
                                 }
@@ -1260,7 +1260,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4599_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4599',
+                                label: 'List of Declaratoins Based on preferred HSCODE',
                                 command: () => {
                                     navigation(routes.DPS_4599);
                                 }
@@ -1272,7 +1272,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_45101_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 45101',
+                                label: 'Motorcycles Reports',
                                 command: () => {
                                     navigation(routes.DPS_45101);
                                 }
@@ -1284,7 +1284,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_45102_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 45102',
+                                label: 'Report for Returned Containers',
                                 command: () => {
                                     navigation(routes.DPS_45102);
                                 }
@@ -1296,7 +1296,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_45103_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 45103',
+                                label: 'Report of Companies with all details for the customs Statistics and Data department',
                                 command: () => {
                                     navigation(routes.DPS_45103);
                                 }
@@ -1311,39 +1311,39 @@ const MatxVerticalNav = () => {
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
-                      AUTHORITIES.REPORT_4250_TRANSIT,
-  AUTHORITIES.REPORT_4251_TRANSIT,
-  AUTHORITIES.REPORT_4252_TRANSIT,
-  AUTHORITIES.REPORT_4253_TRANSIT,
-  AUTHORITIES.REPORT_4254_TRANSIT,
-  AUTHORITIES.REPORT_4255_TRANSIT,
-  AUTHORITIES.REPORT_4256_TRANSIT,
-  AUTHORITIES.REPORT_4257_TRANSIT,
-  AUTHORITIES.REPORT_4258_TRANSIT,
-  AUTHORITIES.REPORT_4259_TRANSIT,
-  AUTHORITIES.REPORT_4260_TRANSIT,
-  AUTHORITIES.REPORT_4261_TRANSIT,
-  AUTHORITIES.REPORT_4263_TRANSIT,
-  AUTHORITIES.REPORT_4264_TRANSIT,
-  AUTHORITIES.REPORT_4265_TRANSIT,
-  AUTHORITIES.REPORT_4266_TRANSIT,
-   AUTHORITIES.REPORT_4267_TRANSIT,
-  AUTHORITIES.REPORT_4268_TRANSIT,
-  AUTHORITIES.REPORT_4270_TRANSIT,
-  AUTHORITIES.REPORT_4271_TRANSIT,
-  AUTHORITIES.REPORT_4272_TRANSIT,
-  AUTHORITIES.REPORT_4273_TRANSIT,
-  AUTHORITIES.REPORT_4274_TRANSIT,
-  AUTHORITIES.REPORT_4275_TRANSIT,
-  AUTHORITIES.REPORT_4276_TRANSIT,
-  AUTHORITIES.REPORT_4277_TRANSIT,
-  AUTHORITIES.REPORT_4278_TRANSIT,
-  AUTHORITIES.REPORT_4279_TRANSIT,
-  AUTHORITIES.REPORT_4280_TRANSIT,
-  AUTHORITIES.REPORT_4281_TRANSIT,
-  AUTHORITIES.REPORT_4282_TRANSIT,
-  AUTHORITIES.REPORT_4283_TRANSIT,
-  AUTHORITIES.REPORT_4284_TRANSIT,
+                    AUTHORITIES.REPORT_4250_TRANSIT,
+                    AUTHORITIES.REPORT_4251_TRANSIT,
+                    AUTHORITIES.REPORT_4252_TRANSIT,
+                    AUTHORITIES.REPORT_4253_TRANSIT,
+                    AUTHORITIES.REPORT_4254_TRANSIT,
+                    AUTHORITIES.REPORT_4255_TRANSIT,
+                    AUTHORITIES.REPORT_4256_TRANSIT,
+                    AUTHORITIES.REPORT_4257_TRANSIT,
+                    AUTHORITIES.REPORT_4258_TRANSIT,
+                    AUTHORITIES.REPORT_4259_TRANSIT,
+                    AUTHORITIES.REPORT_4260_TRANSIT,
+                    AUTHORITIES.REPORT_4261_TRANSIT,
+                    AUTHORITIES.REPORT_4263_TRANSIT,
+                    AUTHORITIES.REPORT_4264_TRANSIT,
+                    AUTHORITIES.REPORT_4265_TRANSIT,
+                    AUTHORITIES.REPORT_4266_TRANSIT,
+                    AUTHORITIES.REPORT_4267_TRANSIT,
+                    AUTHORITIES.REPORT_4268_TRANSIT,
+                    AUTHORITIES.REPORT_4270_TRANSIT,
+                    AUTHORITIES.REPORT_4271_TRANSIT,
+                    AUTHORITIES.REPORT_4272_TRANSIT,
+                    AUTHORITIES.REPORT_4273_TRANSIT,
+                    AUTHORITIES.REPORT_4274_TRANSIT,
+                    AUTHORITIES.REPORT_4275_TRANSIT,
+                    AUTHORITIES.REPORT_4276_TRANSIT,
+                    AUTHORITIES.REPORT_4277_TRANSIT,
+                    AUTHORITIES.REPORT_4278_TRANSIT,
+                    AUTHORITIES.REPORT_4279_TRANSIT,
+                    AUTHORITIES.REPORT_4280_TRANSIT,
+                    AUTHORITIES.REPORT_4281_TRANSIT,
+                    AUTHORITIES.REPORT_4282_TRANSIT,
+                    AUTHORITIES.REPORT_4283_TRANSIT,
+                    AUTHORITIES.REPORT_4284_TRANSIT,
                 ])
             }),
 
@@ -1354,22 +1354,22 @@ const MatxVerticalNav = () => {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
-                                  AUTHORITIES.REPORT_4250_TRANSIT,
-  AUTHORITIES.REPORT_4251_TRANSIT,
-  AUTHORITIES.REPORT_4252_TRANSIT,
-  AUTHORITIES.REPORT_4253_TRANSIT,
-  AUTHORITIES.REPORT_4254_TRANSIT,
-  AUTHORITIES.REPORT_4255_TRANSIT,
-  AUTHORITIES.REPORT_4256_TRANSIT,
-  AUTHORITIES.REPORT_4257_TRANSIT,
-  AUTHORITIES.REPORT_4258_TRANSIT,
-  AUTHORITIES.REPORT_4259_TRANSIT,
-  AUTHORITIES.REPORT_4260_TRANSIT,
-  AUTHORITIES.REPORT_4261_TRANSIT,
-  AUTHORITIES.REPORT_4263_TRANSIT,
-  AUTHORITIES.REPORT_4264_TRANSIT,
-  AUTHORITIES.REPORT_4265_TRANSIT,
-  AUTHORITIES.REPORT_4266_TRANSIT,
+                                AUTHORITIES.REPORT_4250_TRANSIT,
+                                AUTHORITIES.REPORT_4251_TRANSIT,
+                                AUTHORITIES.REPORT_4252_TRANSIT,
+                                AUTHORITIES.REPORT_4253_TRANSIT,
+                                AUTHORITIES.REPORT_4254_TRANSIT,
+                                AUTHORITIES.REPORT_4255_TRANSIT,
+                                AUTHORITIES.REPORT_4256_TRANSIT,
+                                AUTHORITIES.REPORT_4257_TRANSIT,
+                                AUTHORITIES.REPORT_4258_TRANSIT,
+                                AUTHORITIES.REPORT_4259_TRANSIT,
+                                AUTHORITIES.REPORT_4260_TRANSIT,
+                                AUTHORITIES.REPORT_4261_TRANSIT,
+                                AUTHORITIES.REPORT_4263_TRANSIT,
+                                AUTHORITIES.REPORT_4264_TRANSIT,
+                                AUTHORITIES.REPORT_4265_TRANSIT,
+                                AUTHORITIES.REPORT_4266_TRANSIT,
                             ])
                         }),
                         label: 'Transit-I',
@@ -1574,22 +1574,22 @@ const MatxVerticalNav = () => {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
-                                  AUTHORITIES.REPORT_4250_TRANSIT,
-  AUTHORITIES.REPORT_4251_TRANSIT,
-  AUTHORITIES.REPORT_4252_TRANSIT,
-  AUTHORITIES.REPORT_4253_TRANSIT,
-  AUTHORITIES.REPORT_4254_TRANSIT,
-  AUTHORITIES.REPORT_4255_TRANSIT,
-  AUTHORITIES.REPORT_4256_TRANSIT,
-  AUTHORITIES.REPORT_4257_TRANSIT,
-  AUTHORITIES.REPORT_4258_TRANSIT,
-  AUTHORITIES.REPORT_4259_TRANSIT,
-  AUTHORITIES.REPORT_4260_TRANSIT,
-  AUTHORITIES.REPORT_4261_TRANSIT,
-  AUTHORITIES.REPORT_4263_TRANSIT,
-  AUTHORITIES.REPORT_4264_TRANSIT,
-  AUTHORITIES.REPORT_4265_TRANSIT,
-  AUTHORITIES.REPORT_4266_TRANSIT,
+                                AUTHORITIES.REPORT_4250_TRANSIT,
+                                AUTHORITIES.REPORT_4251_TRANSIT,
+                                AUTHORITIES.REPORT_4252_TRANSIT,
+                                AUTHORITIES.REPORT_4253_TRANSIT,
+                                AUTHORITIES.REPORT_4254_TRANSIT,
+                                AUTHORITIES.REPORT_4255_TRANSIT,
+                                AUTHORITIES.REPORT_4256_TRANSIT,
+                                AUTHORITIES.REPORT_4257_TRANSIT,
+                                AUTHORITIES.REPORT_4258_TRANSIT,
+                                AUTHORITIES.REPORT_4259_TRANSIT,
+                                AUTHORITIES.REPORT_4260_TRANSIT,
+                                AUTHORITIES.REPORT_4261_TRANSIT,
+                                AUTHORITIES.REPORT_4263_TRANSIT,
+                                AUTHORITIES.REPORT_4264_TRANSIT,
+                                AUTHORITIES.REPORT_4265_TRANSIT,
+                                AUTHORITIES.REPORT_4266_TRANSIT,
                             ])
                         }),
                         label: 'Description',
@@ -1794,23 +1794,23 @@ const MatxVerticalNav = () => {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
-                                 AUTHORITIES.REPORT_4267_TRANSIT,
-  AUTHORITIES.REPORT_4268_TRANSIT,
-  AUTHORITIES.REPORT_4270_TRANSIT,
-  AUTHORITIES.REPORT_4271_TRANSIT,
-  AUTHORITIES.REPORT_4272_TRANSIT,
-  AUTHORITIES.REPORT_4273_TRANSIT,
-  AUTHORITIES.REPORT_4274_TRANSIT,
-  AUTHORITIES.REPORT_4275_TRANSIT,
-  AUTHORITIES.REPORT_4276_TRANSIT,
-  AUTHORITIES.REPORT_4277_TRANSIT,
-  AUTHORITIES.REPORT_4278_TRANSIT,
-  AUTHORITIES.REPORT_4279_TRANSIT,
-  AUTHORITIES.REPORT_4280_TRANSIT,
-  AUTHORITIES.REPORT_4281_TRANSIT,
-  AUTHORITIES.REPORT_4282_TRANSIT,
-  AUTHORITIES.REPORT_4283_TRANSIT,
-  AUTHORITIES.REPORT_4284_TRANSIT,
+                                AUTHORITIES.REPORT_4267_TRANSIT,
+                                AUTHORITIES.REPORT_4268_TRANSIT,
+                                AUTHORITIES.REPORT_4270_TRANSIT,
+                                AUTHORITIES.REPORT_4271_TRANSIT,
+                                AUTHORITIES.REPORT_4272_TRANSIT,
+                                AUTHORITIES.REPORT_4273_TRANSIT,
+                                AUTHORITIES.REPORT_4274_TRANSIT,
+                                AUTHORITIES.REPORT_4275_TRANSIT,
+                                AUTHORITIES.REPORT_4276_TRANSIT,
+                                AUTHORITIES.REPORT_4277_TRANSIT,
+                                AUTHORITIES.REPORT_4278_TRANSIT,
+                                AUTHORITIES.REPORT_4279_TRANSIT,
+                                AUTHORITIES.REPORT_4280_TRANSIT,
+                                AUTHORITIES.REPORT_4281_TRANSIT,
+                                AUTHORITIES.REPORT_4282_TRANSIT,
+                                AUTHORITIES.REPORT_4283_TRANSIT,
+                                AUTHORITIES.REPORT_4284_TRANSIT,
                             ])
                         }),
                         label: 'Transit-II',
@@ -2027,23 +2027,23 @@ const MatxVerticalNav = () => {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
-                                 AUTHORITIES.REPORT_4267_TRANSIT,
-  AUTHORITIES.REPORT_4268_TRANSIT,
-  AUTHORITIES.REPORT_4270_TRANSIT,
-  AUTHORITIES.REPORT_4271_TRANSIT,
-  AUTHORITIES.REPORT_4272_TRANSIT,
-  AUTHORITIES.REPORT_4273_TRANSIT,
-  AUTHORITIES.REPORT_4274_TRANSIT,
-  AUTHORITIES.REPORT_4275_TRANSIT,
-  AUTHORITIES.REPORT_4276_TRANSIT,
-  AUTHORITIES.REPORT_4277_TRANSIT,
-  AUTHORITIES.REPORT_4278_TRANSIT,
-  AUTHORITIES.REPORT_4279_TRANSIT,
-  AUTHORITIES.REPORT_4280_TRANSIT,
-  AUTHORITIES.REPORT_4281_TRANSIT,
-  AUTHORITIES.REPORT_4282_TRANSIT,
-  AUTHORITIES.REPORT_4283_TRANSIT,
-  AUTHORITIES.REPORT_4284_TRANSIT,
+                                AUTHORITIES.REPORT_4267_TRANSIT,
+                                AUTHORITIES.REPORT_4268_TRANSIT,
+                                AUTHORITIES.REPORT_4270_TRANSIT,
+                                AUTHORITIES.REPORT_4271_TRANSIT,
+                                AUTHORITIES.REPORT_4272_TRANSIT,
+                                AUTHORITIES.REPORT_4273_TRANSIT,
+                                AUTHORITIES.REPORT_4274_TRANSIT,
+                                AUTHORITIES.REPORT_4275_TRANSIT,
+                                AUTHORITIES.REPORT_4276_TRANSIT,
+                                AUTHORITIES.REPORT_4277_TRANSIT,
+                                AUTHORITIES.REPORT_4278_TRANSIT,
+                                AUTHORITIES.REPORT_4279_TRANSIT,
+                                AUTHORITIES.REPORT_4280_TRANSIT,
+                                AUTHORITIES.REPORT_4281_TRANSIT,
+                                AUTHORITIES.REPORT_4282_TRANSIT,
+                                AUTHORITIES.REPORT_4283_TRANSIT,
+                                AUTHORITIES.REPORT_4284_TRANSIT,
                             ])
                         }),
                         label: 'Description',
@@ -2263,30 +2263,30 @@ const MatxVerticalNav = () => {
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
                     AUTHORITIES.REPORT_4150_REVENUE,
-AUTHORITIES.REPORT_4151_REVENUE,
-AUTHORITIES.REPORT_4152_REVENUE,
-AUTHORITIES.REPORT_4153_REVENUE,
-AUTHORITIES.REPORT_4153_1400_REVENUE,
-AUTHORITIES.REPORT_4154_REVENUE,
-AUTHORITIES.REPORT_4155_REVENUE,
-AUTHORITIES.REPORT_4157_1400_REVENUE,
-AUTHORITIES.REPORT_4158_REVENUE,
-AUTHORITIES.REPORT_4159_REVENUE,
-AUTHORITIES.REPORT_4160_REVENUE,
-AUTHORITIES.REPORT_4161_REVENUE,
-AUTHORITIES.REPORT_4162_REVENUE,
-AUTHORITIES.REPORT_4163_REVENUE,
-AUTHORITIES.REPORT_4164_REVENUE,
-AUTHORITIES.REPORT_4164_1400_REVENUE,
-AUTHORITIES.REPORT_4165_REVENUE,
-AUTHORITIES.REPORT_4169_REVENUE,
-AUTHORITIES.REPORT_4170_REVENUE,
-AUTHORITIES.REPORT_4171_1400_REVENUE,
-AUTHORITIES.REPORT_4171_REVENUE,
-  AUTHORITIES.REPORT_4172_REVENUE,
-  AUTHORITIES.REPORT_4173_REVENUE,
-  AUTHORITIES.REPORT_48100_REVENUE,
-  AUTHORITIES.REPORT_48101_REVENUE
+                    AUTHORITIES.REPORT_4151_REVENUE,
+                    AUTHORITIES.REPORT_4152_REVENUE,
+                    AUTHORITIES.REPORT_4153_REVENUE,
+                    AUTHORITIES.REPORT_4153_1400_REVENUE,
+                    AUTHORITIES.REPORT_4154_REVENUE,
+                    AUTHORITIES.REPORT_4155_REVENUE,
+                    AUTHORITIES.REPORT_4157_1400_REVENUE,
+                    AUTHORITIES.REPORT_4158_REVENUE,
+                    AUTHORITIES.REPORT_4159_REVENUE,
+                    AUTHORITIES.REPORT_4160_REVENUE,
+                    AUTHORITIES.REPORT_4161_REVENUE,
+                    AUTHORITIES.REPORT_4162_REVENUE,
+                    AUTHORITIES.REPORT_4163_REVENUE,
+                    AUTHORITIES.REPORT_4164_REVENUE,
+                    AUTHORITIES.REPORT_4164_1400_REVENUE,
+                    AUTHORITIES.REPORT_4165_REVENUE,
+                    AUTHORITIES.REPORT_4169_REVENUE,
+                    AUTHORITIES.REPORT_4170_REVENUE,
+                    AUTHORITIES.REPORT_4171_1400_REVENUE,
+                    AUTHORITIES.REPORT_4171_REVENUE,
+                    AUTHORITIES.REPORT_4172_REVENUE,
+                    AUTHORITIES.REPORT_4173_REVENUE,
+                    AUTHORITIES.REPORT_48100_REVENUE,
+                    AUTHORITIES.REPORT_48101_REVENUE
                 ])
             }),
 
@@ -2298,18 +2298,18 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_4150_REVENUE,
-AUTHORITIES.REPORT_4151_REVENUE,
-AUTHORITIES.REPORT_4152_REVENUE,
-AUTHORITIES.REPORT_4153_REVENUE,
-AUTHORITIES.REPORT_4153_1400_REVENUE,
-AUTHORITIES.REPORT_4154_REVENUE,
-AUTHORITIES.REPORT_4155_REVENUE,
-AUTHORITIES.REPORT_4157_1400_REVENUE,
-AUTHORITIES.REPORT_4158_REVENUE,
-AUTHORITIES.REPORT_4159_REVENUE,
-AUTHORITIES.REPORT_4160_REVENUE,
-AUTHORITIES.REPORT_4161_REVENUE,
-AUTHORITIES.REPORT_4162_REVENUE,
+                                AUTHORITIES.REPORT_4151_REVENUE,
+                                AUTHORITIES.REPORT_4152_REVENUE,
+                                AUTHORITIES.REPORT_4153_REVENUE,
+                                AUTHORITIES.REPORT_4153_1400_REVENUE,
+                                AUTHORITIES.REPORT_4154_REVENUE,
+                                AUTHORITIES.REPORT_4155_REVENUE,
+                                AUTHORITIES.REPORT_4157_1400_REVENUE,
+                                AUTHORITIES.REPORT_4158_REVENUE,
+                                AUTHORITIES.REPORT_4159_REVENUE,
+                                AUTHORITIES.REPORT_4160_REVENUE,
+                                AUTHORITIES.REPORT_4161_REVENUE,
+                                AUTHORITIES.REPORT_4162_REVENUE,
                             ])
                         }),
                         label: 'Revenue-I',
@@ -2480,18 +2480,18 @@ AUTHORITIES.REPORT_4162_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_4150_REVENUE,
-AUTHORITIES.REPORT_4151_REVENUE,
-AUTHORITIES.REPORT_4152_REVENUE,
-AUTHORITIES.REPORT_4153_REVENUE,
-AUTHORITIES.REPORT_4153_1400_REVENUE,
-AUTHORITIES.REPORT_4154_REVENUE,
-AUTHORITIES.REPORT_4155_REVENUE,
-AUTHORITIES.REPORT_4157_1400_REVENUE,
-AUTHORITIES.REPORT_4158_REVENUE,
-AUTHORITIES.REPORT_4159_REVENUE,
-AUTHORITIES.REPORT_4160_REVENUE,
-AUTHORITIES.REPORT_4161_REVENUE,
-AUTHORITIES.REPORT_4162_REVENUE,
+                                AUTHORITIES.REPORT_4151_REVENUE,
+                                AUTHORITIES.REPORT_4152_REVENUE,
+                                AUTHORITIES.REPORT_4153_REVENUE,
+                                AUTHORITIES.REPORT_4153_1400_REVENUE,
+                                AUTHORITIES.REPORT_4154_REVENUE,
+                                AUTHORITIES.REPORT_4155_REVENUE,
+                                AUTHORITIES.REPORT_4157_1400_REVENUE,
+                                AUTHORITIES.REPORT_4158_REVENUE,
+                                AUTHORITIES.REPORT_4159_REVENUE,
+                                AUTHORITIES.REPORT_4160_REVENUE,
+                                AUTHORITIES.REPORT_4161_REVENUE,
+                                AUTHORITIES.REPORT_4162_REVENUE,
                             ])
                         }),
                         label: 'Description',
@@ -2662,17 +2662,17 @@ AUTHORITIES.REPORT_4162_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_4163_REVENUE,
-AUTHORITIES.REPORT_4164_REVENUE,
-AUTHORITIES.REPORT_4164_1400_REVENUE,
-AUTHORITIES.REPORT_4165_REVENUE,
-AUTHORITIES.REPORT_4169_REVENUE,
-AUTHORITIES.REPORT_4170_REVENUE,
-AUTHORITIES.REPORT_4171_1400_REVENUE,
-AUTHORITIES.REPORT_4171_REVENUE,
-  AUTHORITIES.REPORT_4172_REVENUE,
-  AUTHORITIES.REPORT_4173_REVENUE,
-  AUTHORITIES.REPORT_48100_REVENUE,
-  AUTHORITIES.REPORT_48101_REVENUE,
+                                AUTHORITIES.REPORT_4164_REVENUE,
+                                AUTHORITIES.REPORT_4164_1400_REVENUE,
+                                AUTHORITIES.REPORT_4165_REVENUE,
+                                AUTHORITIES.REPORT_4169_REVENUE,
+                                AUTHORITIES.REPORT_4170_REVENUE,
+                                AUTHORITIES.REPORT_4171_1400_REVENUE,
+                                AUTHORITIES.REPORT_4171_REVENUE,
+                                AUTHORITIES.REPORT_4172_REVENUE,
+                                AUTHORITIES.REPORT_4173_REVENUE,
+                                AUTHORITIES.REPORT_48100_REVENUE,
+                                AUTHORITIES.REPORT_48101_REVENUE,
                             ])
                         }),
                         label: 'Revenue-II',
@@ -2830,17 +2830,17 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_4163_REVENUE,
-AUTHORITIES.REPORT_4164_REVENUE,
-AUTHORITIES.REPORT_4164_1400_REVENUE,
-AUTHORITIES.REPORT_4165_REVENUE,
-AUTHORITIES.REPORT_4169_REVENUE,
-AUTHORITIES.REPORT_4170_REVENUE,
-AUTHORITIES.REPORT_4171_1400_REVENUE,
-AUTHORITIES.REPORT_4171_REVENUE,
-  AUTHORITIES.REPORT_4172_REVENUE,
-  AUTHORITIES.REPORT_4173_REVENUE,
-  AUTHORITIES.REPORT_48100_REVENUE,
-  AUTHORITIES.REPORT_48101_REVENUE,
+                                AUTHORITIES.REPORT_4164_REVENUE,
+                                AUTHORITIES.REPORT_4164_1400_REVENUE,
+                                AUTHORITIES.REPORT_4165_REVENUE,
+                                AUTHORITIES.REPORT_4169_REVENUE,
+                                AUTHORITIES.REPORT_4170_REVENUE,
+                                AUTHORITIES.REPORT_4171_1400_REVENUE,
+                                AUTHORITIES.REPORT_4171_REVENUE,
+                                AUTHORITIES.REPORT_4172_REVENUE,
+                                AUTHORITIES.REPORT_4173_REVENUE,
+                                AUTHORITIES.REPORT_48100_REVENUE,
+                                AUTHORITIES.REPORT_48101_REVENUE,
                             ])
                         }),
                         label: 'Description',
@@ -3000,17 +3000,17 @@ AUTHORITIES.REPORT_4171_REVENUE,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
                     AUTHORITIES.REPORT_4650_VALUATION,
-  AUTHORITIES.REPORT_4652_VALUATION,
-  AUTHORITIES.REPORT_4653_VALUATION,
-  AUTHORITIES.REPORT_4654_VALUATION,
-  AUTHORITIES.REPORT_4656_VALUATION,
-  AUTHORITIES.REPORT_4657_VALUATION,
-  AUTHORITIES.REPORT_4658_VALUATION,
-  AUTHORITIES.Report_4750_Exemption,
-  AUTHORITIES.Report_4752_Exemption,
-  AUTHORITIES.Report_4753_Exemption,
-  AUTHORITIES.Report_4754_Exemption,
-  AUTHORITIES.Report_4755_Exemption,
+                    AUTHORITIES.REPORT_4652_VALUATION,
+                    AUTHORITIES.REPORT_4653_VALUATION,
+                    AUTHORITIES.REPORT_4654_VALUATION,
+                    AUTHORITIES.REPORT_4656_VALUATION,
+                    AUTHORITIES.REPORT_4657_VALUATION,
+                    AUTHORITIES.REPORT_4658_VALUATION,
+                    AUTHORITIES.Report_4750_Exemption,
+                    AUTHORITIES.Report_4752_Exemption,
+                    AUTHORITIES.Report_4753_Exemption,
+                    AUTHORITIES.Report_4754_Exemption,
+                    AUTHORITIES.Report_4755_Exemption,
 
                 ])
             }),
@@ -3023,12 +3023,12 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_4650_VALUATION,
-  AUTHORITIES.REPORT_4652_VALUATION,
-  AUTHORITIES.REPORT_4653_VALUATION,
-  AUTHORITIES.REPORT_4654_VALUATION,
-  AUTHORITIES.REPORT_4656_VALUATION,
-  AUTHORITIES.REPORT_4657_VALUATION,
-  AUTHORITIES.REPORT_4658_VALUATION
+                                AUTHORITIES.REPORT_4652_VALUATION,
+                                AUTHORITIES.REPORT_4653_VALUATION,
+                                AUTHORITIES.REPORT_4654_VALUATION,
+                                AUTHORITIES.REPORT_4656_VALUATION,
+                                AUTHORITIES.REPORT_4657_VALUATION,
+                                AUTHORITIES.REPORT_4658_VALUATION
                             ])
                         }),
                         label: 'Valuation',
@@ -3126,12 +3126,12 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_4650_VALUATION,
-  AUTHORITIES.REPORT_4652_VALUATION,
-  AUTHORITIES.REPORT_4653_VALUATION,
-  AUTHORITIES.REPORT_4654_VALUATION,
-  AUTHORITIES.REPORT_4656_VALUATION,
-  AUTHORITIES.REPORT_4657_VALUATION,
-  AUTHORITIES.REPORT_4658_VALUATION,
+                                AUTHORITIES.REPORT_4652_VALUATION,
+                                AUTHORITIES.REPORT_4653_VALUATION,
+                                AUTHORITIES.REPORT_4654_VALUATION,
+                                AUTHORITIES.REPORT_4656_VALUATION,
+                                AUTHORITIES.REPORT_4657_VALUATION,
+                                AUTHORITIES.REPORT_4658_VALUATION,
                             ])
                         }),
                         label: 'Description',
@@ -3229,10 +3229,10 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.Report_4750_Exemption,
-  AUTHORITIES.Report_4752_Exemption,
-  AUTHORITIES.Report_4753_Exemption,
-  AUTHORITIES.Report_4754_Exemption,
-  AUTHORITIES.Report_4755_Exemption,
+                                AUTHORITIES.Report_4752_Exemption,
+                                AUTHORITIES.Report_4753_Exemption,
+                                AUTHORITIES.Report_4754_Exemption,
+                                AUTHORITIES.Report_4755_Exemption,
                             ])
                         }),
                         label: 'Exemption',
@@ -3306,10 +3306,10 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.Report_4750_Exemption,
-  AUTHORITIES.Report_4752_Exemption,
-  AUTHORITIES.Report_4753_Exemption,
-  AUTHORITIES.Report_4754_Exemption,
-  AUTHORITIES.Report_4755_Exemption,
+                                AUTHORITIES.Report_4752_Exemption,
+                                AUTHORITIES.Report_4753_Exemption,
+                                AUTHORITIES.Report_4754_Exemption,
+                                AUTHORITIES.Report_4755_Exemption,
                             ])
                         }),
                         label: 'Description',
@@ -3385,18 +3385,18 @@ AUTHORITIES.REPORT_4171_REVENUE,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
                     AUTHORITIES.ADMIN,
                     AUTHORITIES.REPORT_4350_SELECTIVITY,
-  AUTHORITIES.REPORT_4351_SELECTIVITY,
-  AUTHORITIES.REPORT_4352_SELECTIVITY,
-  AUTHORITIES.REPORT_4353_SELECTIVITY,
-  AUTHORITIES.REPORT_4354_SELECTIVITY,
-  AUTHORITIES.REPORT_4355_SELECTIVITY,
-  AUTHORITIES.REPORT_4356_SELECTIVITY,
-  AUTHORITIES.REPORT_4360_SELECTIVITY,
-  AUTHORITIES.REPORT_4361_SELECTIVITY,
-  AUTHORITIES.REPORT_5050_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5051_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5053_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5054_DATAEXCHANGE
+                    AUTHORITIES.REPORT_4351_SELECTIVITY,
+                    AUTHORITIES.REPORT_4352_SELECTIVITY,
+                    AUTHORITIES.REPORT_4353_SELECTIVITY,
+                    AUTHORITIES.REPORT_4354_SELECTIVITY,
+                    AUTHORITIES.REPORT_4355_SELECTIVITY,
+                    AUTHORITIES.REPORT_4356_SELECTIVITY,
+                    AUTHORITIES.REPORT_4360_SELECTIVITY,
+                    AUTHORITIES.REPORT_4361_SELECTIVITY,
+                    AUTHORITIES.REPORT_5050_DATAEXCHANGE,
+                    AUTHORITIES.REPORT_5051_DATAEXCHANGE,
+                    AUTHORITIES.REPORT_5053_DATAEXCHANGE,
+                    AUTHORITIES.REPORT_5054_DATAEXCHANGE
                 ])
             }),
 
@@ -3407,15 +3407,15 @@ AUTHORITIES.REPORT_4171_REVENUE,
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
-                                 AUTHORITIES.REPORT_4350_SELECTIVITY,
-  AUTHORITIES.REPORT_4351_SELECTIVITY,
-  AUTHORITIES.REPORT_4352_SELECTIVITY,
-  AUTHORITIES.REPORT_4353_SELECTIVITY,
-  AUTHORITIES.REPORT_4354_SELECTIVITY,
-  AUTHORITIES.REPORT_4355_SELECTIVITY,
-  AUTHORITIES.REPORT_4356_SELECTIVITY,
-  AUTHORITIES.REPORT_4360_SELECTIVITY,
-  AUTHORITIES.REPORT_4361_SELECTIVITY,
+                                AUTHORITIES.REPORT_4350_SELECTIVITY,
+                                AUTHORITIES.REPORT_4351_SELECTIVITY,
+                                AUTHORITIES.REPORT_4352_SELECTIVITY,
+                                AUTHORITIES.REPORT_4353_SELECTIVITY,
+                                AUTHORITIES.REPORT_4354_SELECTIVITY,
+                                AUTHORITIES.REPORT_4355_SELECTIVITY,
+                                AUTHORITIES.REPORT_4356_SELECTIVITY,
+                                AUTHORITIES.REPORT_4360_SELECTIVITY,
+                                AUTHORITIES.REPORT_4361_SELECTIVITY,
                             ])
                         }),
                         label: 'Selectivity',
@@ -3536,15 +3536,15 @@ AUTHORITIES.REPORT_4171_REVENUE,
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
-                                 AUTHORITIES.REPORT_4350_SELECTIVITY,
-  AUTHORITIES.REPORT_4351_SELECTIVITY,
-  AUTHORITIES.REPORT_4352_SELECTIVITY,
-  AUTHORITIES.REPORT_4353_SELECTIVITY,
-  AUTHORITIES.REPORT_4354_SELECTIVITY,
-  AUTHORITIES.REPORT_4355_SELECTIVITY,
-  AUTHORITIES.REPORT_4356_SELECTIVITY,
-  AUTHORITIES.REPORT_4360_SELECTIVITY,
-  AUTHORITIES.REPORT_4361_SELECTIVITY,
+                                AUTHORITIES.REPORT_4350_SELECTIVITY,
+                                AUTHORITIES.REPORT_4351_SELECTIVITY,
+                                AUTHORITIES.REPORT_4352_SELECTIVITY,
+                                AUTHORITIES.REPORT_4353_SELECTIVITY,
+                                AUTHORITIES.REPORT_4354_SELECTIVITY,
+                                AUTHORITIES.REPORT_4355_SELECTIVITY,
+                                AUTHORITIES.REPORT_4356_SELECTIVITY,
+                                AUTHORITIES.REPORT_4360_SELECTIVITY,
+                                AUTHORITIES.REPORT_4361_SELECTIVITY,
                             ])
                         }),
                         label: 'Description',
@@ -3666,9 +3666,9 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_5050_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5051_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5053_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5054_DATAEXCHANGE,
+                                AUTHORITIES.REPORT_5051_DATAEXCHANGE,
+                                AUTHORITIES.REPORT_5053_DATAEXCHANGE,
+                                AUTHORITIES.REPORT_5054_DATAEXCHANGE,
                             ])
                         }),
                         label: 'DataExchange',
@@ -3730,9 +3730,9 @@ AUTHORITIES.REPORT_4171_REVENUE,
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
                                 AUTHORITIES.ADMIN,
                                 AUTHORITIES.REPORT_5050_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5051_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5053_DATAEXCHANGE,
-  AUTHORITIES.REPORT_5054_DATAEXCHANGE,
+                                AUTHORITIES.REPORT_5051_DATAEXCHANGE,
+                                AUTHORITIES.REPORT_5053_DATAEXCHANGE,
+                                AUTHORITIES.REPORT_5054_DATAEXCHANGE,
                             ])
                         }),
                         label: 'Description',
