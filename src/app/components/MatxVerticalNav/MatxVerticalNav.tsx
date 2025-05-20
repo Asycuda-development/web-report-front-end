@@ -90,19 +90,81 @@ const MatxVerticalNav = () => {
             className: classNames({
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                    AUTHORITIES.USER_READ,
-                    AUTHORITIES.ROLE_READ,
-                    AUTHORITIES.ADMIN
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_SIGTAS,
+                    AUTHORITIES.REPORT_4550_DPS,
+                    AUTHORITIES.REPORT_4551_DPS,
+                    AUTHORITIES.REPORT_4552_DPS,
+                    AUTHORITIES.REPORT_4553_DPS,
+                    AUTHORITIES.REPORT_4554_DPS,
+                    AUTHORITIES.REPORT_4555_DPS,
+                    AUTHORITIES.REPORT_4556_DPS,
+                    AUTHORITIES.REPORT_4557_DPS,
+                    AUTHORITIES.REPORT_4558_DPS,
+                    AUTHORITIES.REPORT_4559_DPS,
+                    AUTHORITIES.REPORT_4560_DPS,
+                    AUTHORITIES.REPORT_4561_DPS,
+                    AUTHORITIES.REPORT_4562_DPS,
+                    AUTHORITIES.REPORT_4563_DPS,
+                    AUTHORITIES.REPORT_4564_DPS,
+                    AUTHORITIES.REPORT_4565_DPS,
+                    AUTHORITIES.REPORT_4566_DPS,
+                    AUTHORITIES.REPORT_4570_DPS,
+                    AUTHORITIES.REPORT_4571_DPS,
+                    AUTHORITIES.REPORT_4572_DPS,
+                    AUTHORITIES.REPORT_4573_DPS,
+                    AUTHORITIES.REPORT_4575_DPS,
+                    AUTHORITIES.REPORT_4576_DPS,
+                    AUTHORITIES.REPORT_4578_DPS,
+                    AUTHORITIES.REPORT_4579_DPS,
+                    AUTHORITIES.REPORT_4580_DPS,
+                    AUTHORITIES.REPORT_4583_DPS,
+                    AUTHORITIES.REPORT_4584_DPS,
+                    AUTHORITIES.REPORT_4585_DPS,
+                    AUTHORITIES.REPORT_4586_DPS,
+                    AUTHORITIES.REPORT_4587_DPS,
+                    AUTHORITIES.REPORT_4588_DPS,
+                    AUTHORITIES.REPORT_4589_DPS,
+                    AUTHORITIES.REPORT_4590_DPS,
+                    AUTHORITIES.REPORT_4591_DPS,
+                    AUTHORITIES.REPORT_4593_DPS,
+                    AUTHORITIES.REPORT_4595_DPS,
+                    AUTHORITIES.REPORT_4596_DPS,
+                    AUTHORITIES.REPORT_4599_DPS,
+                    AUTHORITIES.REPORT_45101_DPS,
+                    AUTHORITIES.REPORT_45102_DPS,
+                    AUTHORITIES.REPORT_45103_DPS,
                 ])
             }),
-
             label: 'DPS',
             items: [
                 [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_SIGTAS,
+                                AUTHORITIES.REPORT_4550_DPS,
+                                AUTHORITIES.REPORT_4551_DPS,
+                                AUTHORITIES.REPORT_4552_DPS,
+                                AUTHORITIES.REPORT_4553_DPS,
+                                AUTHORITIES.REPORT_4554_DPS,
+                                AUTHORITIES.REPORT_4555_DPS,
+                                AUTHORITIES.REPORT_4556_DPS,
+                                AUTHORITIES.REPORT_4557_DPS,
+                                AUTHORITIES.REPORT_4558_DPS,
+                                AUTHORITIES.REPORT_4559_DPS,
+                                AUTHORITIES.REPORT_4560_DPS,
+                                AUTHORITIES.REPORT_4561_DPS,
+                                AUTHORITIES.REPORT_4562_DPS,
+                                AUTHORITIES.REPORT_4563_DPS,
+                                AUTHORITIES.REPORT_4564_DPS,
+                                AUTHORITIES.REPORT_4565_DPS,
+                                AUTHORITIES.REPORT_4566_DPS,
+                                AUTHORITIES.REPORT_4570_DPS,
+                                AUTHORITIES.REPORT_4571_DPS,
+                                AUTHORITIES.REPORT_4572_DPS,
+                                AUTHORITIES.REPORT_4573_DPS,
                             ])
                         }),
                         label: 'DPS-I',
@@ -370,66 +432,6 @@ const MatxVerticalNav = () => {
                                 command: () => {
                                     navigation(routes.DPS_4573);
                                 }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4575_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4575',
-                                command: () => {
-                                    navigation(routes.DPS_4575);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4576_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4576',
-                                command: () => {
-                                    navigation(routes.DPS_4576);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4578_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4578',
-                                command: () => {
-                                    navigation(routes.DPS_4578);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4579_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4579',
-                                command: () => {
-                                    navigation(routes.DPS_4579);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4580_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4580',
-                                command: () => {
-                                    navigation(routes.DPS_4580);
-                                }
                             }
                         ]
                     }
@@ -438,7 +440,29 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_SIGTAS,
+                                AUTHORITIES.REPORT_4550_DPS,
+                                AUTHORITIES.REPORT_4551_DPS,
+                                AUTHORITIES.REPORT_4552_DPS,
+                                AUTHORITIES.REPORT_4553_DPS,
+                                AUTHORITIES.REPORT_4554_DPS,
+                                AUTHORITIES.REPORT_4555_DPS,
+                                AUTHORITIES.REPORT_4556_DPS,
+                                AUTHORITIES.REPORT_4557_DPS,
+                                AUTHORITIES.REPORT_4558_DPS,
+                                AUTHORITIES.REPORT_4559_DPS,
+                                AUTHORITIES.REPORT_4560_DPS,
+                                AUTHORITIES.REPORT_4561_DPS,
+                                AUTHORITIES.REPORT_4562_DPS,
+                                AUTHORITIES.REPORT_4563_DPS,
+                                AUTHORITIES.REPORT_4564_DPS,
+                                AUTHORITIES.REPORT_4565_DPS,
+                                AUTHORITIES.REPORT_4566_DPS,
+                                AUTHORITIES.REPORT_4570_DPS,
+                                AUTHORITIES.REPORT_4571_DPS,
+                                AUTHORITIES.REPORT_4572_DPS,
+                                AUTHORITIES.REPORT_4573_DPS,
                             ])
                         }),
                         label: 'Description',
@@ -774,11 +798,80 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4575_DPS,
+                                AUTHORITIES.REPORT_4576_DPS,
+                                AUTHORITIES.REPORT_4578_DPS,
+                                AUTHORITIES.REPORT_4579_DPS,
+                                AUTHORITIES.REPORT_4580_DPS,
+                                AUTHORITIES.REPORT_4583_DPS,
+                                AUTHORITIES.REPORT_4584_DPS,
+                                AUTHORITIES.REPORT_4585_DPS,
+                                AUTHORITIES.REPORT_4586_DPS,
+                                AUTHORITIES.REPORT_4587_DPS,
+                                AUTHORITIES.REPORT_4588_DPS,
+                                AUTHORITIES.REPORT_4589_DPS,
+                                AUTHORITIES.REPORT_4590_DPS,
+                                AUTHORITIES.REPORT_4591_DPS,
+                                AUTHORITIES.REPORT_4593_DPS,
+                                AUTHORITIES.REPORT_4595_DPS,
+                                AUTHORITIES.REPORT_4596_DPS,
+                                AUTHORITIES.REPORT_4599_DPS,
+                                AUTHORITIES.REPORT_45101_DPS,
+                                AUTHORITIES.REPORT_45102_DPS,
+                                AUTHORITIES.REPORT_45103_DPS,
                             ])
                         }),
                         label: 'DPS-II',
                         items: [
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4575_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4575',
+                                command: () => {
+                                    navigation(routes.DPS_4575);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4576_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4576',
+                                command: () => {
+                                    navigation(routes.DPS_4576);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4578_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4578',
+                                command: () => {
+                                    navigation(routes.DPS_4578);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4579_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4579',
+                                command: () => {
+                                    navigation(routes.DPS_4579);
+                                }
+                            },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -990,7 +1083,28 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4575_DPS,
+                                AUTHORITIES.REPORT_4576_DPS,
+                                AUTHORITIES.REPORT_4578_DPS,
+                                AUTHORITIES.REPORT_4579_DPS,
+                                AUTHORITIES.REPORT_4580_DPS,
+                                AUTHORITIES.REPORT_4583_DPS,
+                                AUTHORITIES.REPORT_4584_DPS,
+                                AUTHORITIES.REPORT_4585_DPS,
+                                AUTHORITIES.REPORT_4586_DPS,
+                                AUTHORITIES.REPORT_4587_DPS,
+                                AUTHORITIES.REPORT_4588_DPS,
+                                AUTHORITIES.REPORT_4589_DPS,
+                                AUTHORITIES.REPORT_4590_DPS,
+                                AUTHORITIES.REPORT_4591_DPS,
+                                AUTHORITIES.REPORT_4593_DPS,
+                                AUTHORITIES.REPORT_4595_DPS,
+                                AUTHORITIES.REPORT_4596_DPS,
+                                AUTHORITIES.REPORT_4599_DPS,
+                                AUTHORITIES.REPORT_45101_DPS,
+                                AUTHORITIES.REPORT_45102_DPS,
+                                AUTHORITIES.REPORT_45103_DPS,
                             ])
                         }),
                         label: 'Description',
@@ -2199,7 +2313,7 @@ const MatxVerticalNav = () => {
                                     navigation(routes.Revenue_4159);
                                 }
                             },
-    
+
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -2368,7 +2482,7 @@ const MatxVerticalNav = () => {
                                     navigation(routes.Revenue_4159);
                                 }
                             },
-    
+
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
