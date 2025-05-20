@@ -432,7 +432,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -766,7 +768,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -980,7 +984,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -1412,7 +1418,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -1614,7 +1622,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -1828,7 +1838,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -2187,7 +2199,7 @@ const MatxVerticalNav = () => {
                                     navigation(routes.Revenue_4159);
                                 }
                             },
-
+    
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -2225,7 +2237,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -2354,7 +2368,7 @@ const MatxVerticalNav = () => {
                                     navigation(routes.Revenue_4159);
                                 }
                             },
-
+    
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
@@ -2392,7 +2406,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -2546,7 +2562,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -2810,7 +2828,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -2904,7 +2924,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -2974,7 +2996,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -3178,7 +3202,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -3296,7 +3322,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
@@ -3354,7 +3382,9 @@ const MatxVerticalNav = () => {
                                 }
                             }
                         ]
-                    },
+                    }
+                ],
+                [
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
