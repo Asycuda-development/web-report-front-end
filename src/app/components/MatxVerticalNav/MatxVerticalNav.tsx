@@ -1310,9 +1310,40 @@ const MatxVerticalNav = () => {
             className: classNames({
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                    AUTHORITIES.USER_READ,
-                    AUTHORITIES.ROLE_READ,
-                    AUTHORITIES.ADMIN
+                    AUTHORITIES.ADMIN,
+                      AUTHORITIES.REPORT_4250_TRANSIT,
+  AUTHORITIES.REPORT_4251_TRANSIT,
+  AUTHORITIES.REPORT_4252_TRANSIT,
+  AUTHORITIES.REPORT_4253_TRANSIT,
+  AUTHORITIES.REPORT_4254_TRANSIT,
+  AUTHORITIES.REPORT_4255_TRANSIT,
+  AUTHORITIES.REPORT_4256_TRANSIT,
+  AUTHORITIES.REPORT_4257_TRANSIT,
+  AUTHORITIES.REPORT_4258_TRANSIT,
+  AUTHORITIES.REPORT_4259_TRANSIT,
+  AUTHORITIES.REPORT_4260_TRANSIT,
+  AUTHORITIES.REPORT_4261_TRANSIT,
+  AUTHORITIES.REPORT_4263_TRANSIT,
+  AUTHORITIES.REPORT_4264_TRANSIT,
+  AUTHORITIES.REPORT_4265_TRANSIT,
+  AUTHORITIES.REPORT_4266_TRANSIT,
+   AUTHORITIES.REPORT_4267_TRANSIT,
+  AUTHORITIES.REPORT_4268_TRANSIT,
+  AUTHORITIES.REPORT_4270_TRANSIT,
+  AUTHORITIES.REPORT_4271_TRANSIT,
+  AUTHORITIES.REPORT_4272_TRANSIT,
+  AUTHORITIES.REPORT_4273_TRANSIT,
+  AUTHORITIES.REPORT_4274_TRANSIT,
+  AUTHORITIES.REPORT_4275_TRANSIT,
+  AUTHORITIES.REPORT_4276_TRANSIT,
+  AUTHORITIES.REPORT_4277_TRANSIT,
+  AUTHORITIES.REPORT_4278_TRANSIT,
+  AUTHORITIES.REPORT_4279_TRANSIT,
+  AUTHORITIES.REPORT_4280_TRANSIT,
+  AUTHORITIES.REPORT_4281_TRANSIT,
+  AUTHORITIES.REPORT_4282_TRANSIT,
+  AUTHORITIES.REPORT_4283_TRANSIT,
+  AUTHORITIES.REPORT_4284_TRANSIT,
                 ])
             }),
 
@@ -1322,7 +1353,23 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                  AUTHORITIES.REPORT_4250_TRANSIT,
+  AUTHORITIES.REPORT_4251_TRANSIT,
+  AUTHORITIES.REPORT_4252_TRANSIT,
+  AUTHORITIES.REPORT_4253_TRANSIT,
+  AUTHORITIES.REPORT_4254_TRANSIT,
+  AUTHORITIES.REPORT_4255_TRANSIT,
+  AUTHORITIES.REPORT_4256_TRANSIT,
+  AUTHORITIES.REPORT_4257_TRANSIT,
+  AUTHORITIES.REPORT_4258_TRANSIT,
+  AUTHORITIES.REPORT_4259_TRANSIT,
+  AUTHORITIES.REPORT_4260_TRANSIT,
+  AUTHORITIES.REPORT_4261_TRANSIT,
+  AUTHORITIES.REPORT_4263_TRANSIT,
+  AUTHORITIES.REPORT_4264_TRANSIT,
+  AUTHORITIES.REPORT_4265_TRANSIT,
+  AUTHORITIES.REPORT_4266_TRANSIT,
                             ])
                         }),
                         label: 'Transit-I',
@@ -1526,7 +1573,23 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                  AUTHORITIES.REPORT_4250_TRANSIT,
+  AUTHORITIES.REPORT_4251_TRANSIT,
+  AUTHORITIES.REPORT_4252_TRANSIT,
+  AUTHORITIES.REPORT_4253_TRANSIT,
+  AUTHORITIES.REPORT_4254_TRANSIT,
+  AUTHORITIES.REPORT_4255_TRANSIT,
+  AUTHORITIES.REPORT_4256_TRANSIT,
+  AUTHORITIES.REPORT_4257_TRANSIT,
+  AUTHORITIES.REPORT_4258_TRANSIT,
+  AUTHORITIES.REPORT_4259_TRANSIT,
+  AUTHORITIES.REPORT_4260_TRANSIT,
+  AUTHORITIES.REPORT_4261_TRANSIT,
+  AUTHORITIES.REPORT_4263_TRANSIT,
+  AUTHORITIES.REPORT_4264_TRANSIT,
+  AUTHORITIES.REPORT_4265_TRANSIT,
+  AUTHORITIES.REPORT_4266_TRANSIT,
                             ])
                         }),
                         label: 'Description',
@@ -1730,7 +1793,24 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                 AUTHORITIES.REPORT_4267_TRANSIT,
+  AUTHORITIES.REPORT_4268_TRANSIT,
+  AUTHORITIES.REPORT_4270_TRANSIT,
+  AUTHORITIES.REPORT_4271_TRANSIT,
+  AUTHORITIES.REPORT_4272_TRANSIT,
+  AUTHORITIES.REPORT_4273_TRANSIT,
+  AUTHORITIES.REPORT_4274_TRANSIT,
+  AUTHORITIES.REPORT_4275_TRANSIT,
+  AUTHORITIES.REPORT_4276_TRANSIT,
+  AUTHORITIES.REPORT_4277_TRANSIT,
+  AUTHORITIES.REPORT_4278_TRANSIT,
+  AUTHORITIES.REPORT_4279_TRANSIT,
+  AUTHORITIES.REPORT_4280_TRANSIT,
+  AUTHORITIES.REPORT_4281_TRANSIT,
+  AUTHORITIES.REPORT_4282_TRANSIT,
+  AUTHORITIES.REPORT_4283_TRANSIT,
+  AUTHORITIES.REPORT_4284_TRANSIT,
                             ])
                         }),
                         label: 'Transit-II',
@@ -1946,7 +2026,24 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                 AUTHORITIES.REPORT_4267_TRANSIT,
+  AUTHORITIES.REPORT_4268_TRANSIT,
+  AUTHORITIES.REPORT_4270_TRANSIT,
+  AUTHORITIES.REPORT_4271_TRANSIT,
+  AUTHORITIES.REPORT_4272_TRANSIT,
+  AUTHORITIES.REPORT_4273_TRANSIT,
+  AUTHORITIES.REPORT_4274_TRANSIT,
+  AUTHORITIES.REPORT_4275_TRANSIT,
+  AUTHORITIES.REPORT_4276_TRANSIT,
+  AUTHORITIES.REPORT_4277_TRANSIT,
+  AUTHORITIES.REPORT_4278_TRANSIT,
+  AUTHORITIES.REPORT_4279_TRANSIT,
+  AUTHORITIES.REPORT_4280_TRANSIT,
+  AUTHORITIES.REPORT_4281_TRANSIT,
+  AUTHORITIES.REPORT_4282_TRANSIT,
+  AUTHORITIES.REPORT_4283_TRANSIT,
+  AUTHORITIES.REPORT_4284_TRANSIT,
                             ])
                         }),
                         label: 'Description',
@@ -2164,9 +2261,32 @@ const MatxVerticalNav = () => {
             className: classNames({
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                    AUTHORITIES.USER_READ,
-                    AUTHORITIES.ROLE_READ,
-                    AUTHORITIES.ADMIN
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4150_REVENUE,
+AUTHORITIES.REPORT_4151_REVENUE,
+AUTHORITIES.REPORT_4152_REVENUE,
+AUTHORITIES.REPORT_4153_REVENUE,
+AUTHORITIES.REPORT_4153_1400_REVENUE,
+AUTHORITIES.REPORT_4154_REVENUE,
+AUTHORITIES.REPORT_4155_REVENUE,
+AUTHORITIES.REPORT_4157_1400_REVENUE,
+AUTHORITIES.REPORT_4158_REVENUE,
+AUTHORITIES.REPORT_4159_REVENUE,
+AUTHORITIES.REPORT_4160_REVENUE,
+AUTHORITIES.REPORT_4161_REVENUE,
+AUTHORITIES.REPORT_4162_REVENUE,
+AUTHORITIES.REPORT_4163_REVENUE,
+AUTHORITIES.REPORT_4164_REVENUE,
+AUTHORITIES.REPORT_4164_1400_REVENUE,
+AUTHORITIES.REPORT_4165_REVENUE,
+AUTHORITIES.REPORT_4169_REVENUE,
+AUTHORITIES.REPORT_4170_REVENUE,
+AUTHORITIES.REPORT_4171_1400_REVENUE,
+AUTHORITIES.REPORT_4171_REVENUE,
+  AUTHORITIES.REPORT_4172_REVENUE,
+  AUTHORITIES.REPORT_4173_REVENUE,
+  AUTHORITIES.REPORT_48100_REVENUE,
+  AUTHORITIES.REPORT_48101_REVENUE
                 ])
             }),
 
@@ -2176,7 +2296,20 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4150_REVENUE,
+AUTHORITIES.REPORT_4151_REVENUE,
+AUTHORITIES.REPORT_4152_REVENUE,
+AUTHORITIES.REPORT_4153_REVENUE,
+AUTHORITIES.REPORT_4153_1400_REVENUE,
+AUTHORITIES.REPORT_4154_REVENUE,
+AUTHORITIES.REPORT_4155_REVENUE,
+AUTHORITIES.REPORT_4157_1400_REVENUE,
+AUTHORITIES.REPORT_4158_REVENUE,
+AUTHORITIES.REPORT_4159_REVENUE,
+AUTHORITIES.REPORT_4160_REVENUE,
+AUTHORITIES.REPORT_4161_REVENUE,
+AUTHORITIES.REPORT_4162_REVENUE,
                             ])
                         }),
                         label: 'Revenue-I',
@@ -2345,7 +2478,20 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4150_REVENUE,
+AUTHORITIES.REPORT_4151_REVENUE,
+AUTHORITIES.REPORT_4152_REVENUE,
+AUTHORITIES.REPORT_4153_REVENUE,
+AUTHORITIES.REPORT_4153_1400_REVENUE,
+AUTHORITIES.REPORT_4154_REVENUE,
+AUTHORITIES.REPORT_4155_REVENUE,
+AUTHORITIES.REPORT_4157_1400_REVENUE,
+AUTHORITIES.REPORT_4158_REVENUE,
+AUTHORITIES.REPORT_4159_REVENUE,
+AUTHORITIES.REPORT_4160_REVENUE,
+AUTHORITIES.REPORT_4161_REVENUE,
+AUTHORITIES.REPORT_4162_REVENUE,
                             ])
                         }),
                         label: 'Description',
@@ -2514,7 +2660,19 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4163_REVENUE,
+AUTHORITIES.REPORT_4164_REVENUE,
+AUTHORITIES.REPORT_4164_1400_REVENUE,
+AUTHORITIES.REPORT_4165_REVENUE,
+AUTHORITIES.REPORT_4169_REVENUE,
+AUTHORITIES.REPORT_4170_REVENUE,
+AUTHORITIES.REPORT_4171_1400_REVENUE,
+AUTHORITIES.REPORT_4171_REVENUE,
+  AUTHORITIES.REPORT_4172_REVENUE,
+  AUTHORITIES.REPORT_4173_REVENUE,
+  AUTHORITIES.REPORT_48100_REVENUE,
+  AUTHORITIES.REPORT_48101_REVENUE,
                             ])
                         }),
                         label: 'Revenue-II',
@@ -2670,7 +2828,19 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4163_REVENUE,
+AUTHORITIES.REPORT_4164_REVENUE,
+AUTHORITIES.REPORT_4164_1400_REVENUE,
+AUTHORITIES.REPORT_4165_REVENUE,
+AUTHORITIES.REPORT_4169_REVENUE,
+AUTHORITIES.REPORT_4170_REVENUE,
+AUTHORITIES.REPORT_4171_1400_REVENUE,
+AUTHORITIES.REPORT_4171_REVENUE,
+  AUTHORITIES.REPORT_4172_REVENUE,
+  AUTHORITIES.REPORT_4173_REVENUE,
+  AUTHORITIES.REPORT_48100_REVENUE,
+  AUTHORITIES.REPORT_48101_REVENUE,
                             ])
                         }),
                         label: 'Description',
@@ -2828,9 +2998,20 @@ const MatxVerticalNav = () => {
             className: classNames({
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                    AUTHORITIES.USER_READ,
-                    AUTHORITIES.ROLE_READ,
-                    AUTHORITIES.ADMIN
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4650_VALUATION,
+  AUTHORITIES.REPORT_4652_VALUATION,
+  AUTHORITIES.REPORT_4653_VALUATION,
+  AUTHORITIES.REPORT_4654_VALUATION,
+  AUTHORITIES.REPORT_4656_VALUATION,
+  AUTHORITIES.REPORT_4657_VALUATION,
+  AUTHORITIES.REPORT_4658_VALUATION,
+  AUTHORITIES.Report_4750_Exemption,
+  AUTHORITIES.Report_4752_Exemption,
+  AUTHORITIES.Report_4753_Exemption,
+  AUTHORITIES.Report_4754_Exemption,
+  AUTHORITIES.Report_4755_Exemption,
+
                 ])
             }),
 
@@ -2840,7 +3021,14 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4650_VALUATION,
+  AUTHORITIES.REPORT_4652_VALUATION,
+  AUTHORITIES.REPORT_4653_VALUATION,
+  AUTHORITIES.REPORT_4654_VALUATION,
+  AUTHORITIES.REPORT_4656_VALUATION,
+  AUTHORITIES.REPORT_4657_VALUATION,
+  AUTHORITIES.REPORT_4658_VALUATION
                             ])
                         }),
                         label: 'Valuation',
@@ -2936,7 +3124,14 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4650_VALUATION,
+  AUTHORITIES.REPORT_4652_VALUATION,
+  AUTHORITIES.REPORT_4653_VALUATION,
+  AUTHORITIES.REPORT_4654_VALUATION,
+  AUTHORITIES.REPORT_4656_VALUATION,
+  AUTHORITIES.REPORT_4657_VALUATION,
+  AUTHORITIES.REPORT_4658_VALUATION,
                             ])
                         }),
                         label: 'Description',
@@ -3032,7 +3227,12 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.Report_4750_Exemption,
+  AUTHORITIES.Report_4752_Exemption,
+  AUTHORITIES.Report_4753_Exemption,
+  AUTHORITIES.Report_4754_Exemption,
+  AUTHORITIES.Report_4755_Exemption,
                             ])
                         }),
                         label: 'Exemption',
@@ -3104,7 +3304,12 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.Report_4750_Exemption,
+  AUTHORITIES.Report_4752_Exemption,
+  AUTHORITIES.Report_4753_Exemption,
+  AUTHORITIES.Report_4754_Exemption,
+  AUTHORITIES.Report_4755_Exemption,
                             ])
                         }),
                         label: 'Description',
@@ -3178,9 +3383,20 @@ const MatxVerticalNav = () => {
             className: classNames({
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                    AUTHORITIES.USER_READ,
-                    AUTHORITIES.ROLE_READ,
-                    AUTHORITIES.ADMIN
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4350_SELECTIVITY,
+  AUTHORITIES.REPORT_4351_SELECTIVITY,
+  AUTHORITIES.REPORT_4352_SELECTIVITY,
+  AUTHORITIES.REPORT_4353_SELECTIVITY,
+  AUTHORITIES.REPORT_4354_SELECTIVITY,
+  AUTHORITIES.REPORT_4355_SELECTIVITY,
+  AUTHORITIES.REPORT_4356_SELECTIVITY,
+  AUTHORITIES.REPORT_4360_SELECTIVITY,
+  AUTHORITIES.REPORT_4361_SELECTIVITY,
+  AUTHORITIES.REPORT_5050_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5051_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5053_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5054_DATAEXCHANGE
                 ])
             }),
 
@@ -3190,7 +3406,16 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                 AUTHORITIES.REPORT_4350_SELECTIVITY,
+  AUTHORITIES.REPORT_4351_SELECTIVITY,
+  AUTHORITIES.REPORT_4352_SELECTIVITY,
+  AUTHORITIES.REPORT_4353_SELECTIVITY,
+  AUTHORITIES.REPORT_4354_SELECTIVITY,
+  AUTHORITIES.REPORT_4355_SELECTIVITY,
+  AUTHORITIES.REPORT_4356_SELECTIVITY,
+  AUTHORITIES.REPORT_4360_SELECTIVITY,
+  AUTHORITIES.REPORT_4361_SELECTIVITY,
                             ])
                         }),
                         label: 'Selectivity',
@@ -3310,7 +3535,16 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                 AUTHORITIES.REPORT_4350_SELECTIVITY,
+  AUTHORITIES.REPORT_4351_SELECTIVITY,
+  AUTHORITIES.REPORT_4352_SELECTIVITY,
+  AUTHORITIES.REPORT_4353_SELECTIVITY,
+  AUTHORITIES.REPORT_4354_SELECTIVITY,
+  AUTHORITIES.REPORT_4355_SELECTIVITY,
+  AUTHORITIES.REPORT_4356_SELECTIVITY,
+  AUTHORITIES.REPORT_4360_SELECTIVITY,
+  AUTHORITIES.REPORT_4361_SELECTIVITY,
                             ])
                         }),
                         label: 'Description',
@@ -3430,7 +3664,11 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_5050_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5051_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5053_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5054_DATAEXCHANGE,
                             ])
                         }),
                         label: 'DataExchange',
@@ -3490,7 +3728,11 @@ const MatxVerticalNav = () => {
                     {
                         className: classNames({
                             'tabbar-item-hidden': checkAuthorities(user.authorities, [
-                                AUTHORITIES.ADMIN
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_5050_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5051_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5053_DATAEXCHANGE,
+  AUTHORITIES.REPORT_5054_DATAEXCHANGE,
                             ])
                         }),
                         label: 'Description',
@@ -3552,8 +3794,8 @@ const MatxVerticalNav = () => {
             className: classNames({
                 'text-white': true,
                 'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                    AUTHORITIES.SETTINGS,
-                    AUTHORITIES.ADMIN
+                    AUTHORITIES.ADMIN,
+                    AUTHORITIES.REPORT_4450_MANIFEST
                 ])
             }),
 
