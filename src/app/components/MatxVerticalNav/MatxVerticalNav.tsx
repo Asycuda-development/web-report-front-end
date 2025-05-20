@@ -730,66 +730,6 @@ const MatxVerticalNav = () => {
                                 command: () => {
                                     navigation(routes.DPS_4573);
                                 }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4575_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4575',
-                                command: () => {
-                                    navigation(routes.DPS_4575);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4576_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4576',
-                                command: () => {
-                                    navigation(routes.DPS_4576);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4578_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4578',
-                                command: () => {
-                                    navigation(routes.DPS_4578);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4579_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4579',
-                                command: () => {
-                                    navigation(routes.DPS_4579);
-                                }
-                            },
-                            {
-                                className: classNames({
-                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
-                                        AUTHORITIES.ADMIN,
-                                        AUTHORITIES.REPORT_4580_DPS
-                                    ])
-                                }),
-                                label: 'DPS Report 4580',
-                                command: () => {
-                                    navigation(routes.DPS_4580);
-                                }
                             }
                         ]
                     }
@@ -1109,6 +1049,54 @@ const MatxVerticalNav = () => {
                         }),
                         label: 'Description',
                         items: [
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4575_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4575',
+                                command: () => {
+                                    navigation(routes.DPS_4575);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4576_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4576',
+                                command: () => {
+                                    navigation(routes.DPS_4576);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4578_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4578',
+                                command: () => {
+                                    navigation(routes.DPS_4578);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4579_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4579',
+                                command: () => {
+                                    navigation(routes.DPS_4579);
+                                }
+                            },
                             {
                                 className: classNames({
                                     'tabbar-item-hidden': !checkAuthorities(user.authorities, [
