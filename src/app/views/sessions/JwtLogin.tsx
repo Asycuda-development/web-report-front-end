@@ -10,6 +10,9 @@ import { Toast } from 'primereact/toast';
 import * as Yup from 'yup';
 import { useRef } from 'react';
 import { routes } from 'src/app/navigations';
+import { useTranslation } from 'react-i18next';
+
+const translationsKey: string = "loginForm"
 
 const FlexBox = styled(Box)(() => ({ display: 'flex', alignItems: 'center' }));
 
@@ -58,6 +61,25 @@ const JwtLogin = () => {
   const navigate = useNavigate();
   const toastRef: any = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [language, setLanguage] = useState('en')
+  const { i18n, t } = useTranslation();
+
+  function changeLanguage(e: any) {
+    i18n.changeLanguage(e.target.value);
+    setLanguage(e.target.value)
+
+    const date = new Date();
+    date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
+    const expires = "; expires=" + date.toUTCString();
+
+    document.cookie = `lang=${e.target.value} ${expires}; path=/`
+  }
+
+  useEffect(() => {
+    const lang = document.cookie.split('lang')[1].slice(1, 3)
+    setLanguage(lang)
+    i18n.changeLanguage(lang)
+  }, [])
 
   const { login, isAuthenticated, message } = useUser();
 
@@ -98,6 +120,13 @@ const JwtLogin = () => {
           </Grid>
 
           <Grid item sm={6} xs={12}>
+            <select
+              style={{ padding: '2px', margin: '2px 10px', float: 'right', color: '#555', borderColor: '#555', outlineColor: '#777' }}
+              name="lang" id="lang" value={language} onChange={(e) => changeLanguage(e)}>
+              <option value="en">English</option>
+              <option value="fa">Farsi</option>
+              <option value="ps">Pashto</option>
+            </select>
             <ContentBox sx={{ marginTop: '100px' }}>
               <Formik
                 onSubmit={handleFormSubmit}
@@ -143,7 +172,7 @@ const JwtLogin = () => {
                       variant="contained"
                       sx={{ my: 2 }}
                     >
-                      Login
+                      {t(`${translationsKey}.login`)}
                     </LoadingButton>
                   </form>
                 )}
