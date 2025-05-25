@@ -69,6 +69,7 @@ const JwtLogin = () => {
   }
 
   useEffect(() => {
+    document.cookie = `lang=${language}; path=/`
     const lang = document.cookie.split('lang')[1].slice(1, 3)
     setLanguage(lang)
     i18n.changeLanguage(lang)
