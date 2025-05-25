@@ -75,11 +75,11 @@ const JwtLogin = () => {
     document.cookie = `lang=${e.target.value} ${expires}; path=/`
   }
 
-  useEffect(() => {
-    const lang = document.cookie.split('lang')[1].slice(1, 3)
-    setLanguage(lang)
-    i18n.changeLanguage(lang)
-  }, [])
+  // useEffect(() => {
+  //   const lang = document.cookie.split('lang')[1].slice(1, 3)
+  //   setLanguage(lang)
+  //   i18n.changeLanguage(lang)
+  // }, [])
 
   const { login, isAuthenticated, message } = useUser();
 
