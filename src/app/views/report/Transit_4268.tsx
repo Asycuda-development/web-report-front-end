@@ -61,12 +61,12 @@ const Transit_4268 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'countNo'} header={'countNo '} />
-          <Column field={'exemp'} header={'exemp'} />
-          <Column field={'ctyExp'} header={'ctyExp'} />
-          <Column field={'trsType'} header={'trsType'} />
-          <Column field={'depCod'} header={'depCod'} />
-          <Column field={'destCod'} header={'destCod'} />
+          <Column field={'trsType'} header={'	Transit_Type'} />
+          <Column field={'ctyExp'} header={'Country Of Export'} />
+          <Column field={'depCod'} header={'Departure_Off'} />
+          <Column field={'destCod'} header={'Destination_off'} />
+          <Column field={'exemp'} header={'	Procedure'} />
+          <Column field={'countNo'} header={'	Total No '} />
           {/* <Column field={'tad_tot'} header={'Customs Value'} /> */}
         </DataTable>
       </Box>

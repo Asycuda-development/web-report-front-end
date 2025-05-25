@@ -31,7 +31,7 @@ function Revenue_4170() {
     }
   };
   return (
-    <SimpleCard title="Revenue_4170">
+    <SimpleCard title="Revenue Report 4170">
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -55,11 +55,11 @@ function Revenue_4170() {
           emptyMessage={'No Data Available'}
         >
           <Column field={'office'} header={'office'} />
-          <Column field={'reg_nbr'} header={'reg_nbr'} />
-          <Column field={'reg_date'} header={'reg_date'} />
-          <Column field={'dec_nam'} header={'dec_nam'} />
-          <Column field={'Company_TIN'} header={'Company_TIN'} />
-          <Column field={'cmp_nam'} header={'cmp_nam'} />
+          <Column field={'reg_nbr'} header={'Register Number'} />
+          <Column field={'reg_date'} header={'Register Date'} />
+          <Column field={'dec_nam'} header={'Broker Name'} />
+          <Column field={'Company_TIN'} header={'Company TIN'} />
+          <Column field={'cmp_nam'} header={'Company Name'} />
           <Column field={'amt_041'} header={'amt_041'} />
           <Column field={'amt_042'} header={'amt_042'} />
           <Column field={'amt_047'} header={'amt_047'} />

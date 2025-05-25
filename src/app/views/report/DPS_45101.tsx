@@ -80,32 +80,31 @@ function DPS_45101() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-          <Column field={'borderCuo'} header={'borderCuo'} />
-          <Column field={'destCuo'} header={'destCuo'} />
-          <Column field={'decCod'} header={'decCod'} />
-          <Column style={{ minWidth: "15rem" }} field={'decNam1'} header={'decNam1'} />
-          <Column field={'refNo'} header={'refNo'} />
-          <Column field={'RegNo'} header={'RegNo'} />
-          <Column field={'RegDate'} header={'RegDate'} />
+          <Column field={'status'} header={'status'} />
+          <Column field={'borderCuo'} header={'Border office'} />
+          <Column field={'destCuo'} header={'Customs Office'} />
+          <Column field={'decCod'} header={'Dec Code'} />
+          <Column style={{ minWidth: "15rem" }} field={'decNam1'} header={'Dec Name'} />
+          <Column field={'refNo'} header={'Ref No'} />
+          <Column field={'RegNo'} header={'Register_No'} />
+          <Column field={'RegDate'} header={'Register_date'} />
+          <Column field={'hscode'} header={'HSCODE'} />
           <Column style={{ minWidth: "30rem" }} field={'mark1'} header={'mark1'} />
           <Column style={{ minWidth: "20rem" }} field={'mark2'} header={'mark2'} />
-          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'decNam'} />
+          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'Brokers_name'} />
           <Column style={{ minWidth: "20rem" }} field={'CompanyTin'} header={'CompanyTin'} />
           <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'cmpNam'} />
           <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'finNam'} />
-          <Column field={'rgdat'} header={'rgdat'} />
+          <Column style={{ minWidth: "20rem" }} field={'model'} header={'model'} />
+          <Column field={'engPow'} header={'engPow'} />
           <Column field={'color'} header={'color'} />
-          <Column style={{ minWidth: "20rem" }} field={'finName'} header={'finName'} />
           <Column field={'engNo'} header={'engNo'} />
           <Column field={'shasi'} header={'shasi'} />
-          <Column field={'ValueAfs'} header={'ValueAfs'} />
           <Column field={'RevenueTaxes'} header={'RevenueTaxes'} />
-          <Column field={'status'} header={'status'} />
-          <Column field={'hscode'} header={'hscode'} />
-          <Column field={'RcptDate'} header={'RcptDate'} />
           <Column field={'RcptNumber'} header={'RcptNumber'} />
-          <Column field={'engPow'} header={'engPow'} />
-          <Column style={{ minWidth: "20rem" }} field={'model'} header={'model'} />
+          <Column field={'RcptDate'} header={'RcptDate'} />
+          <Column field={'rgdat'} header={'rgdat'} />
+          <Column field={'ValueAfs'} header={'ValueAfs'} />
         </DataTable>
       </ Box>
       <Toast ref={toastRef} />

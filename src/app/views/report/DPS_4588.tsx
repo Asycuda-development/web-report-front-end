@@ -52,13 +52,13 @@ function DPS_4588() {
           stripedRows
           showGridlines
         >
-          <Column filter filterField="ideCuonam" field={'ideCuonam'} header={'ideCuonam'} />
-          <Column field={'ideRcpDat'} header={'ideRcpDat'} />
-          <Column field={'ideRcpNbr'} header={'ideRcpNbr'} />
-          <Column field={'serPrt'} header={'serPrt'} />
-          <Column filter filterField="username" field={'username'} header={'username'} />
-          <Column field={'fullName'} header={'fullName'} />
-          <Column filter filterField="opName" field={'opName'} header={'opName'} />
+          <Column filter filterField="ideCuonam" field={'ideCuonam'} header={'Customs Name'} />
+          <Column field={'ideRcpDat'} header={'Payment Date'} />
+          <Column field={'ideRcpNbr'} header={'Payment Number'} />
+          <Column field={'serPrt'} header={'	Serial printing'} />
+          <Column filter filterField="username" field={'username'} header={'User Name'} />
+          <Column field={'fullName'} header={'Full Name'} />
+          <Column filter filterField="opName" field={'opName'} header={'Operation Name'} />
         </DataTable>
       </Box>
     </SimpleCard>

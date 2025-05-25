@@ -29,7 +29,11 @@ const Transit_4273 = () => {
 
   return (
     <SimpleCard title="4273- Transit">
-      <ReportHeaderInputs showStartDate showEndDate onSearch={handleSubmit} tabelRef={tableRef} />
+      <ReportHeaderInputs 
+      showStartDate 
+      showEndDate
+       onSearch={handleSubmit} 
+       tabelRef={tableRef} />
       <Box width="100%" overflow="auto">
         <DataTable
           ref={tableRef}

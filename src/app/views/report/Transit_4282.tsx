@@ -55,14 +55,14 @@ const Transit_4282 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'transit_type'} header={'transit_type'} />
+          <Column field={'transit_type'} header={'Transit Type'} />
           <Column field={'BCP'} header={'BCP'} />
           <Column field={'ICD'} header={'ICD'} />
           <Column field={'Country_Export'} header={'Country_Export'} />
           <Column field={'Country_Dest'} header={'Country_Dest'} />
           <Column field={'HS_code'} header={'HS_code'} />
           <Column field={'HS_Desc'} header={'HS_Desc'} />
-          <Column field={'Net_Mass'} header={'Net_Mass'} />
+          <Column field={'Net_Mass'} header={'Net Weight'} />
         </DataTable>
       </Box>
     </SimpleCard>

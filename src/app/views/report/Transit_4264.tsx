@@ -34,6 +34,7 @@ const Transit_4264 = () => {
         showEndDate
         showDepartureCustomsList
         showOperationDate
+        showUserName
         onSearch={handleSubmit}
         tabelRef={tableRef}
       />
@@ -48,7 +49,7 @@ const Transit_4264 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'Transit_Type	  '} header={'Transit_Type	  '} />
+          <Column field={'Transit_Type'} header={'Transit_Type'} />
           <Column field={'Reg_No'} header={'Reg_No'} />
           <Column field={'Reg_Date'} header={'Reg_Date'} />
           <Column field={'User_Name'} header={'User_Name'} />

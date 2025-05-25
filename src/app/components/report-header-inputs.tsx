@@ -20,6 +20,7 @@ import { Status2 } from './status1';
 import { ModOfPayment } from './ModOfPayment';
 import { TransitType2 } from './Transit2';
 import { AcceptRv } from './A_R_Value';
+import { BasedOnBox } from './base-component/BasedOnBox';
 //checked
 
 interface CustomsInterface {
@@ -38,7 +39,7 @@ export interface SearchData {
   RegisterNo?: number;
   TirepdNum?: number;
   hsCode?: number;
-  howTaxCode?:number;
+  howTaxCode?: number;
   LocationCode?: number;
   ExemptionRepNo?: number;
   farwardCod?: number;
@@ -112,6 +113,7 @@ interface ReportHeaderInputsProps {
   showStatusExemption?: boolean;
   showI_Number?: boolean;
   showCompanyContractorCode?: boolean;
+  showBasedOnBox?: boolean;
 }
 export const ReportHeaderInputs = ({
   tabelRef,
@@ -153,6 +155,7 @@ export const ReportHeaderInputs = ({
   showExemptionRepNo,
   showfarwarCode,
   showNumPalate,
+  showBasedOnBox,
   showUserDate,
   showDeclarationDate,
   showHsCode,
@@ -200,6 +203,8 @@ export const ReportHeaderInputs = ({
   const [destinationCustomsCode, setDestinationCustomsCode] = useState<string>('');
   const [dateType, setDateType] = useState<string>('RegDate');
   const [customsDpaCode, setCustomsDpaCode] = useState<string>('');
+  const [basedOnBox, setBasedOnBox] = useState<string>('')
+  const [basedOnBoxValue, setBasedOnBoxValue] = useState<string>('')
 
   useEffect(() => {
     if (
@@ -233,7 +238,7 @@ export const ReportHeaderInputs = ({
       dateType ||
       exemptedStatus ||
       hsCode ||
-      taxCode||
+      taxCode ||
       goods ||
       username ||
       status ||
@@ -252,7 +257,9 @@ export const ReportHeaderInputs = ({
       farwardCod ||
       foreignRegNo ||
       modofpayment ||
-      transitType2
+      transitType2 ||
+      basedOnBox ||
+      basedOnBoxValue
     ) {
       const formattedData = formatData();
       onChage(formattedData);
@@ -285,7 +292,9 @@ export const ReportHeaderInputs = ({
     transitType,
     status1,
     modofpayment,
-    transitType2
+    transitType2,
+    basedOnBox,
+    basedOnBoxValue
   ]);
 
   const formatData = () => {
@@ -321,6 +330,10 @@ export const ReportHeaderInputs = ({
       }),
       ...(showAcceptR && {
         acceptR: acceptR
+      }),
+      ...(showBasedOnBox && {
+        basedOnBoxNumber: basedOnBox,
+        basedOnBoxNumberValue: basedOnBoxValue
       }),
       ...(showTransitType2 && {
         transitType: transitType2
@@ -495,7 +508,7 @@ export const ReportHeaderInputs = ({
               checked={dateType === 'DeclarationDate'}
             />
             <label htmlFor="dateType5" style={{ marginLeft: '0.3em' }}>
-            DeclarationDate
+              DeclarationDate
             </label>
           </Col>
         </Condition>
@@ -754,6 +767,24 @@ export const ReportHeaderInputs = ({
             }}
             onChangeValue={(e) => {
               setBasedOnValue(e.target.value);
+            }}
+          />
+        </Condition>
+
+        <Condition condition={showBasedOnBox}>
+          <BasedOnBox
+            id="BasedOnBox"
+            xs={6}
+            md={4}
+            lg={4}
+            xl={3}
+            basedOnBoxValue={basedOnBoxValue}
+            value={basedOnBox}
+            onChange={(e) => {
+              setBasedOnBox(e.target.value);
+            }}
+            onChangeValue={(e) => {
+              setBasedOnBoxValue(e.target.value);
             }}
           />
         </Condition>

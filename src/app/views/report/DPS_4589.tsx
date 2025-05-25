@@ -52,23 +52,23 @@ function DPS_4589() {
           stripedRows
           showGridlines
         >
-          <Column filter filterField="Office" field={'Office'} header={'Office'} />
+          <Column filter filterField="Office" field={'Office'} header={'Customs Name'} />
           <Column field={'NUMBERPLATE'} header={'NUMBERPLATE'} />
           <Column field={'GROSSWEIGHT'} header={'GROSSWEIGHT'} />
           <Column field={'emptyweight'} header={'emptyweight'} />
-          <Column filter filterField="NETWEIGHT" field={'NETWEIGHT'} header={'NETWEIGHT'} />
+          <Column filter filterField="NETWEIGHT" field={'NETWEIGHT'} header={'NET_WEIGHT'} />
           <Column field={'NUMBERPLATE2'} header={'NUMBERPLATE2'} />
-          <Column filter filterField="ds_date" field={'ds_date'} header={'ds_date'} />
+          <Column filter filterField="ds_date" field={'ds_date'} header={'DS Date'} />
 
           <Column
             filter
             filterField="ds_date_dari"
             field={'ds_date_dari'}
-            header={'ds_date_dari'}
+            header={'DS Date Dari'}
           />
           <Column filter filterField="DS_ID" field={'DS_ID'} header={'DS_ID'} />
-          <Column filter filterField="tin" field={'tin'} header={'tin'} />
-          <Column filter filterField="loguser" field={'loguser'} header={'loguser'} />
+          <Column filter filterField="tin" field={'tin'} header={'Company TIN'} />
+          <Column filter filterField="loguser" field={'loguser'} header={'Users Logs'} />
         </DataTable>
       </Box>
     </SimpleCard>

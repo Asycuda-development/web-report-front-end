@@ -55,14 +55,13 @@ const Revenue_4155 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={''} header={''} />
           <Column field={'Customs'} header={'Customs'} />
           <Column field={'Reg_No'} header={'SAD_Reg_NO'} />
           <Column field={'reg_dat'} header={'SAD_Reg_Date'} />
-          <Column field={'CMP_Code'} header={'Company_Code'} />
-          <Column field={'CMP_Name'} header={'Company_Name'} />
           <Column field={'dec_cod'} header={'Declarant_Code'} />
           <Column field={'Declarant_Name'} header={'Declarant Name'} />
+          <Column field={'CMP_Code'} header={'Consignee_Code'} />
+          <Column field={'CMP_Name'} header={'Consignee_Name'} />
           <Column field={'fis_code'} header={'Financial_Code'} />
           <Column field={'Fis_Name'} header={'Financial_Name'} />
           <Column field={'itm_nbr'} header={'Item No'} />
@@ -74,14 +73,13 @@ const Revenue_4155 = () => {
           <Column field={'nat_proc'} header={'Nat Proc code'} />
           <Column field={'item_val_afs'} header={'Item Value Afs'} />
           <Column field={'item_val_fcx'} header={'Item Value Fcurrency'} />
-          <Column field={'currency_cod'} header={'currency_cod'} />
           <Column field={'SAD_currency_rate'} header={'SAD_Currency_Rate'} />
+          <Column field={'currency_cod'} header={'currency_cod'} />
           <Column field={'amt_011'} header={'Amt_011'} />
           <Column field={'amt_012'} header={'Amt_012'} />
           <Column field={'amt_013'} header={'Amt_013'} />
           <Column field={'amt_015'} header={'Amt_015'} />
           <Column field={'amt_017'} header={'Amt_017'} />
-          <Column field={'amt_049'} header={'Amt_049'} />
           <Column field={'amt_018'} header={'Amt_018'} />
           <Column field={'amt_041'} header={'Amt_041'} />
           <Column field={'amt_042'} header={'Amt_042'} />
@@ -91,6 +89,7 @@ const Revenue_4155 = () => {
           <Column field={'amt_046'} header={'Amt_046'} />
           <Column field={'amt_047'} header={'Amt_047'} />
           <Column field={'amt_048'} header={'Amt_048'} />
+          <Column field={'amt_049'} header={'Amt_049'} />
           <Column field={'amt_88'} header={'Amt_88'} />
           <Column field={'amt_80'} header={'Amt_80'} />
           <Column field={'amt_019'} header={'Amt_019'} />

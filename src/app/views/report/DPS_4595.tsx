@@ -56,8 +56,8 @@ function DPS_4595() {
           stripedRows
           showGridlines
         >
-          <Column field={'sad_Type'} header={'sad_Type'} />
-          <Column filter filterField={'bcp'} field={'bcp'} header={'Border Custom'} />
+          <Column field={'sad_Type'} header={'Type'} />
+          <Column filter filterField={'bcp'} field={'bcp'} header={'BCP'} />
           <Column field={'icd'} header={'ICD'} />
           <Column
             filter

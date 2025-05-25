@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import './MegaMenu.css';
 import { MegaMenu } from 'primereact/megamenu';
 import { MenuItem } from 'primereact/menuitem';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { checkAuthorities } from 'src/app/auth/private-routes';
 import { routes } from 'src/app/navigations';
@@ -11,7 +11,6 @@ import { useUser } from '../../contexts/JWTAuthContext';
 const MatxVerticalNav = () => {
     const navigation = useNavigate();
     const { user } = useUser();
-
     const items: MenuItem[] = [
         {
             className: classNames({
@@ -189,7 +188,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4550_DPS
                                     ])
                                 }),
-                                label: `DPS Report 4550 - Report With Items and Tax_Code`,
+                                label: 'DPS Report 4550',
                                 command: () => {
                                     navigation(routes.DPS_4550);
                                 }
@@ -201,7 +200,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4551_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4551 - Report With Items',
+                                label: 'DPS Report 4551',
                                 command: () => {
                                     navigation(routes.DPS_4551);
                                 }
@@ -213,7 +212,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4552_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4552 - Report Without Items and Tax_Code',
+                                label: 'DPS Report 4552',
                                 command: () => {
                                     navigation(routes.DPS_4552);
                                 }
@@ -225,7 +224,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4553_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4553 - Report Based on National Procedure Code',
+                                label: 'DPS Report 4553',
                                 command: () => {
                                     navigation(routes.DPS_4553);
                                 }
@@ -237,7 +236,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4554_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4554 - Report With Items & TaxCode Based on HSCODE',
+                                label: 'DPS Report 4554',
                                 command: () => {
                                     navigation(routes.DPS_4554);
                                 }
@@ -249,7 +248,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4555_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4555 - Report Based on Company Codes',
+                                label: 'DPS Report 4555',
                                 command: () => {
                                     navigation(routes.DPS_4555);
                                 }
@@ -261,7 +260,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4556_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4556 - Report Based on SAD Financial Code',
+                                label: 'DPS Report 4556',
                                 command: () => {
                                     navigation(routes.DPS_4556);
                                 }
@@ -273,7 +272,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4557_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4557 - Report Based On Declarant Code',
+                                label: 'DPS Report 4557',
                                 command: () => {
                                     navigation(routes.DPS_4557);
                                 }
@@ -285,7 +284,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4558_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4558 - Report Based On Status',
+                                label: 'DPS Report 4558',
                                 command: () => {
                                     navigation(routes.DPS_4558);
                                 }
@@ -297,7 +296,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4559_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4559 - Count Report by all Status',
+                                label: 'DPS Report 4559',
                                 command: () => {
                                     navigation(routes.DPS_4559);
                                 }
@@ -309,7 +308,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4560_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4560 - Count Report Based on Various Options',
+                                label: 'DPS Report 4560 ',
                                 command: () => {
                                     navigation(routes.DPS_4560);
                                 }
@@ -321,7 +320,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4561_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4561 - Report Release study Based on Various Options',
+                                label: 'DPS Report 4561',
                                 command: () => {
                                     navigation(routes.DPS_4561);
                                 }
@@ -333,7 +332,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4562_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4562 - Users Activity Report',
+                                label: 'DPS Report 4562',
                                 command: () => {
                                     navigation(routes.DPS_4562);
                                 }
@@ -345,7 +344,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4563_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4563 - I-List of Companies with details',
+                                label: 'DPS Report 4563',
                                 command: () => {
                                     navigation(routes.DPS_4563);
                                 }
@@ -357,7 +356,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4564_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4564 - Report Based on Offence Code',
+                                label: 'DPS Report 4564',
                                 command: () => {
                                     navigation(routes.DPS_4564);
                                 }
@@ -369,7 +368,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4565_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4565 - Report With Item Based On HSCODE',
+                                label: 'DPS Report 4565',
                                 command: () => {
                                     navigation(routes.DPS_4565);
                                 }
@@ -381,7 +380,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4566_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4566 - Report Based on Catagory of Goods',
+                                label: 'DPS Report 4566',
                                 command: () => {
                                     navigation(routes.DPS_4566);
                                 }
@@ -393,7 +392,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4570_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4570 - Report Based on Vehicle Engine or VIN Number',
+                                label: 'DPS Report 4570',
                                 command: () => {
                                     navigation(routes.DPS_4570);
                                 }
@@ -405,7 +404,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4571_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4571 - Declarations which has more than 1 Release Order',
+                                label: 'DPS Report 4571',
                                 command: () => {
                                     navigation(routes.DPS_4571);
                                 }
@@ -417,7 +416,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4572_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4572 - Exit Note',
+                                label: 'DPS Report 4572',
                                 command: () => {
                                     navigation(routes.DPS_4572);
                                 }
@@ -429,7 +428,305 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4573_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4573 - Exit Note Based on Various Options',
+                                label: 'DPS Report 4573',
+                                command: () => {
+                                    navigation(routes.DPS_4573);
+                                }
+                            }
+                        ]
+                    }
+                ],
+                [
+                    {
+                        className: classNames({
+                            'tabbar-item-hidden': checkAuthorities(user.authorities, [
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_SIGTAS,
+                                AUTHORITIES.REPORT_4550_DPS,
+                                AUTHORITIES.REPORT_4551_DPS,
+                                AUTHORITIES.REPORT_4552_DPS,
+                                AUTHORITIES.REPORT_4553_DPS,
+                                AUTHORITIES.REPORT_4554_DPS,
+                                AUTHORITIES.REPORT_4555_DPS,
+                                AUTHORITIES.REPORT_4556_DPS,
+                                AUTHORITIES.REPORT_4557_DPS,
+                                AUTHORITIES.REPORT_4558_DPS,
+                                AUTHORITIES.REPORT_4559_DPS,
+                                AUTHORITIES.REPORT_4560_DPS,
+                                AUTHORITIES.REPORT_4561_DPS,
+                                AUTHORITIES.REPORT_4562_DPS,
+                                AUTHORITIES.REPORT_4563_DPS,
+                                AUTHORITIES.REPORT_4564_DPS,
+                                AUTHORITIES.REPORT_4565_DPS,
+                                AUTHORITIES.REPORT_4566_DPS,
+                                AUTHORITIES.REPORT_4570_DPS,
+                                AUTHORITIES.REPORT_4571_DPS,
+                                AUTHORITIES.REPORT_4572_DPS,
+                                AUTHORITIES.REPORT_4573_DPS,
+                            ])
+                        }),
+                        label: 'Description',
+                        items: [
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_SIGTAS
+                                    ])
+                                }),
+                                label: 'Report for SIGTAS',
+                                command: () => {
+                                    navigation(routes.Report);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4550_DPS
+                                    ])
+                                }),
+                                label: 'Report With Items and Tax_Code',
+                                command: () => {
+                                    navigation(routes.DPS_4550);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4551_DPS
+                                    ])
+                                }),
+                                label: 'Report With Items',
+                                command: () => {
+                                    navigation(routes.DPS_4551);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4552_DPS
+                                    ])
+                                }),
+                                label: 'Report Without Items and Tax_Code',
+                                command: () => {
+                                    navigation(routes.DPS_4552);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4553_DPS
+                                    ])
+                                }),
+                                label: 'Report Based on National Procedure Code',
+                                command: () => {
+                                    navigation(routes.DPS_4553);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4554_DPS
+                                    ])
+                                }),
+                                label: 'Report With Items & TaxCode Based on HSCODE',
+                                command: () => {
+                                    navigation(routes.DPS_4554);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4555_DPS
+                                    ])
+                                }),
+                                label: 'Report Based on Company Codes',
+                                command: () => {
+                                    navigation(routes.DPS_4555);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4556_DPS
+                                    ])
+                                }),
+                                label: 'Report Based on SAD Financial Code',
+                                command: () => {
+                                    navigation(routes.DPS_4556);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4557_DPS
+                                    ])
+                                }),
+                                label: 'Report Based On Declarant Code',
+                                command: () => {
+                                    navigation(routes.DPS_4557);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4558_DPS
+                                    ])
+                                }),
+                                label: 'Report Based On Status',
+                                command: () => {
+                                    navigation(routes.DPS_4558);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4559_DPS
+                                    ])
+                                }),
+                                label: 'Count Report by all Status',
+                                command: () => {
+                                    navigation(routes.DPS_4559);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4560_DPS
+                                    ])
+                                }),
+                                label: 'Count Report Based on Various Options',
+                                command: () => {
+                                    navigation(routes.DPS_4560);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4561_DPS
+                                    ])
+                                }),
+                                label: 'Report Release study Based on Various Options',
+                                command: () => {
+                                    navigation(routes.DPS_4561);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4562_DPS
+                                    ])
+                                }),
+                                label: 'Users Activity Report',
+                                command: () => {
+                                    navigation(routes.DPS_4562);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4563_DPS
+                                    ])
+                                }),
+                                label: 'I-List of Companies with details',
+                                command: () => {
+                                    navigation(routes.DPS_4563);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4564_DPS
+                                    ])
+                                }),
+                                label: 'Report Based on Offence Code',
+                                command: () => {
+                                    navigation(routes.DPS_4564);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4565_DPS
+                                    ])
+                                }),
+                                label: 'Report With Item Based On HSCODE',
+                                command: () => {
+                                    navigation(routes.DPS_4565);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4566_DPS
+                                    ])
+                                }),
+                                label: 'Report Based on Catagory of Goods',
+                                command: () => {
+                                    navigation(routes.DPS_4566);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4570_DPS
+                                    ])
+                                }),
+                                label: 'Report Based on Vehicle Engine or VIN Number',
+                                command: () => {
+                                    navigation(routes.DPS_4570);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4571_DPS
+                                    ])
+                                }),
+                                label: 'Declarations which has more than 1 Release Order',
+                                command: () => {
+                                    navigation(routes.DPS_4571);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4572_DPS
+                                    ])
+                                }),
+                                label: 'Exit Note',
+                                command: () => {
+                                    navigation(routes.DPS_4572);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4573_DPS
+                                    ])
+                                }),
+                                label: 'Exit Note Based on Various Options',
                                 command: () => {
                                     navigation(routes.DPS_4573);
                                 }
@@ -474,7 +771,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4575_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4575 - Vehicles Report',
+                                label: 'DPS Report 4575',
                                 command: () => {
                                     navigation(routes.DPS_4575);
                                 }
@@ -486,7 +783,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4576_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4576 - Enforcement Team\'s Report',
+                                label: 'DPS Report 4576',
                                 command: () => {
                                     navigation(routes.DPS_4576);
                                 }
@@ -498,7 +795,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4578_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4578 - T1 & SAD Linked Report',
+                                label: 'DPS Report 4578',
                                 command: () => {
                                     navigation(routes.DPS_4578);
                                 }
@@ -510,7 +807,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4579_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4579 - DPS Report 4579',
+                                label: 'DPS Report 4579',
                                 command: () => {
                                     navigation(routes.DPS_4579);
                                 }
@@ -522,7 +819,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4580_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4580 - Declaration without Exit Note',
+                                label: 'DPS Report 4580',
                                 command: () => {
                                     navigation(routes.DPS_4580);
                                 }
@@ -546,7 +843,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4584_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4584 - EXEX General Details Report',
+                                label: 'DPS Report 4584',
                                 command: () => {
                                     navigation(routes.DPS_4584);
                                 }
@@ -558,7 +855,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4585_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4585 - EXEX summaries Report',
+                                label: 'DPS Report 4585',
                                 command: () => {
                                     navigation(routes.DPS_4585);
                                 }
@@ -570,7 +867,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4586_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4586 - Summary Report for 4550',
+                                label: 'DPS Report 4586',
                                 command: () => {
                                     navigation(routes.DPS_4586);
                                 }
@@ -582,7 +879,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4587_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4587 - Check The User Activity',
+                                label: 'DPS Report 4587',
                                 command: () => {
                                     navigation(routes.DPS_4587);
                                 }
@@ -594,7 +891,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4588_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4588 - Finder for printing serial numver (Sukook Number)',
+                                label: 'DPS Report 4588',
                                 command: () => {
                                     navigation(routes.DPS_4588);
                                 }
@@ -606,7 +903,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4589_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4589 - The list of trucks used Digital Scale but not process in SAD',
+                                label: 'DPS Report 4589',
                                 command: () => {
                                     navigation(routes.DPS_4589);
                                 }
@@ -618,7 +915,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4590_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4590 - MOF Fiscal Policy Report',
+                                label: 'DPS Report 4590',
                                 command: () => {
                                     navigation(routes.DPS_4590);
                                 }
@@ -630,7 +927,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4591_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4591 - HS Base report for Ministry of Commerce',
+                                label: 'DPS Report 4591',
                                 command: () => {
                                     navigation(routes.DPS_4591);
                                 }
@@ -642,7 +939,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4593_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4593 - Finding the Container Base Container Number',
+                                label: 'DPS Report 4593',
                                 command: () => {
                                     navigation(routes.DPS_4593);
                                 }
@@ -654,7 +951,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4595_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4595 - HS Base and Rate Report for Ministry of Commerce',
+                                label: 'DPS Report 4595',
                                 command: () => {
                                     navigation(routes.DPS_4595);
                                 }
@@ -666,7 +963,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4596_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4596 - Tarrif Logs Table',
+                                label: 'DPS Report 4596',
                                 command: () => {
                                     navigation(routes.DPS_4596);
                                 }
@@ -678,7 +975,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_4599_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 4599 - List of Declaratoins Based on preferred HSCODE',
+                                label: 'DPS Report 4599',
                                 command: () => {
                                     navigation(routes.DPS_4599);
                                 }
@@ -690,7 +987,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_45101_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 45101 - Motorcycles Reports',
+                                label: 'DPS Report 45101',
                                 command: () => {
                                     navigation(routes.DPS_45101);
                                 }
@@ -702,7 +999,7 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_45102_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 45102 - Report for Returned Containers',
+                                label: 'DPS Report 45102',
                                 command: () => {
                                     navigation(routes.DPS_45102);
                                 }
@@ -714,7 +1011,292 @@ const MatxVerticalNav = () => {
                                         AUTHORITIES.REPORT_45103_DPS
                                     ])
                                 }),
-                                label: 'DPS Report 45103 - Report of Companies with all details for the customs Statistics and Data department',
+                                label: 'DPS Report 45103',
+                                command: () => {
+                                    navigation(routes.DPS_45103);
+                                }
+                            }
+                        ]
+                    }
+                ],
+                [
+                    {
+                        className: classNames({
+                            'tabbar-item-hidden': checkAuthorities(user.authorities, [
+                                AUTHORITIES.ADMIN,
+                                AUTHORITIES.REPORT_4575_DPS,
+                                AUTHORITIES.REPORT_4576_DPS,
+                                AUTHORITIES.REPORT_4578_DPS,
+                                AUTHORITIES.REPORT_4579_DPS,
+                                AUTHORITIES.REPORT_4580_DPS,
+                                AUTHORITIES.REPORT_4583_DPS,
+                                AUTHORITIES.REPORT_4584_DPS,
+                                AUTHORITIES.REPORT_4585_DPS,
+                                AUTHORITIES.REPORT_4586_DPS,
+                                AUTHORITIES.REPORT_4587_DPS,
+                                AUTHORITIES.REPORT_4588_DPS,
+                                AUTHORITIES.REPORT_4589_DPS,
+                                AUTHORITIES.REPORT_4590_DPS,
+                                AUTHORITIES.REPORT_4591_DPS,
+                                AUTHORITIES.REPORT_4593_DPS,
+                                AUTHORITIES.REPORT_4595_DPS,
+                                AUTHORITIES.REPORT_4596_DPS,
+                                AUTHORITIES.REPORT_4599_DPS,
+                                AUTHORITIES.REPORT_45101_DPS,
+                                AUTHORITIES.REPORT_45102_DPS,
+                                AUTHORITIES.REPORT_45103_DPS,
+                            ])
+                        }),
+                        label: 'Description',
+                        items: [
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4575_DPS
+                                    ])
+                                }),
+                                label: 'Vehicles Report',
+                                command: () => {
+                                    navigation(routes.DPS_4575);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4576_DPS
+                                    ])
+                                }),
+                                label: 'Enforcement Team\'s Report',
+                                command: () => {
+                                    navigation(routes.DPS_4576);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4578_DPS
+                                    ])
+                                }),
+                                label: 'T1 & SAD Linked Report',
+                                command: () => {
+                                    navigation(routes.DPS_4578);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4579_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4579',
+                                command: () => {
+                                    navigation(routes.DPS_4579);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4580_DPS
+                                    ])
+                                }),
+                                label: 'Declaration without Exit Note',
+                                command: () => {
+                                    navigation(routes.DPS_4580);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4583_DPS
+                                    ])
+                                }),
+                                label: 'DPS Report 4583',
+                                command: () => {
+                                    navigation(routes.DPS_4583);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4584_DPS
+                                    ])
+                                }),
+                                label: 'EXEX General Details Report',
+                                command: () => {
+                                    navigation(routes.DPS_4584);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4585_DPS
+                                    ])
+                                }),
+                                label: 'EXEX summaries Report',
+                                command: () => {
+                                    navigation(routes.DPS_4585);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4586_DPS
+                                    ])
+                                }),
+                                label: 'Summary Report for 4550',
+                                command: () => {
+                                    navigation(routes.DPS_4586);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4587_DPS
+                                    ])
+                                }),
+                                label: 'Check The User Activity',
+                                command: () => {
+                                    navigation(routes.DPS_4587);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4588_DPS
+                                    ])
+                                }),
+                                label: 'Finder for printing serial numver (Sukook Number)',
+                                command: () => {
+                                    navigation(routes.DPS_4588);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4589_DPS
+                                    ])
+                                }),
+                                label: 'The list of trucks used Digital Scale but not process in SAD',
+                                command: () => {
+                                    navigation(routes.DPS_4589);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4590_DPS
+                                    ])
+                                }),
+                                label: 'MOF Fiscal Policy Report',
+                                command: () => {
+                                    navigation(routes.DPS_4590);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4591_DPS
+                                    ])
+                                }),
+                                label: 'HS Base report for Ministry of Commerce',
+                                command: () => {
+                                    navigation(routes.DPS_4591);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4593_DPS
+                                    ])
+                                }),
+                                label: 'Finding the Container Base Container Number',
+                                command: () => {
+                                    navigation(routes.DPS_4593);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4595_DPS
+                                    ])
+                                }),
+                                label: 'HS Base and Rate Report for Ministry of Commerce',
+                                command: () => {
+                                    navigation(routes.DPS_4595);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4596_DPS
+                                    ])
+                                }),
+                                label: 'Tarrif Logs Table',
+                                command: () => {
+                                    navigation(routes.DPS_4596);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_4599_DPS
+                                    ])
+                                }),
+                                label: 'List of Declaratoins Based on preferred HSCODE',
+                                command: () => {
+                                    navigation(routes.DPS_4599);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_45101_DPS
+                                    ])
+                                }),
+                                label: 'Motorcycles Reports',
+                                command: () => {
+                                    navigation(routes.DPS_45101);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_45102_DPS
+                                    ])
+                                }),
+                                label: 'Report for Returned Containers',
+                                command: () => {
+                                    navigation(routes.DPS_45102);
+                                }
+                            },
+                            {
+                                className: classNames({
+                                    'tabbar-item-hidden': !checkAuthorities(user.authorities, [
+                                        AUTHORITIES.ADMIN,
+                                        AUTHORITIES.REPORT_45103_DPS
+                                    ])
+                                }),
+                                label: 'Report of Companies with all details for the customs Statistics and Data department',
                                 command: () => {
                                     navigation(routes.DPS_45103);
                                 }

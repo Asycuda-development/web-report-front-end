@@ -103,23 +103,27 @@ function DPS_4558() {
                     <Column field={'sadOffice'} header={'SAD_OFFICE'} />
                     <Column filter filterField="sadRegNo" field={'sadRegNo'} header={'SAD_REG_NO'} />
                     <Column style={{ minWidth: '10rem' }} field={'sadRegDate'} header={'SAD_REG_DATE'} />
-                    <Column filter filterField='items' field={'ideRcpNo'} header={'IDE_RCP_NO'} />
-                    <Column field={'ideRcpDat'} header={'IDE_RCP_DAT'} />
-                    <Column filter filterField='items' field={'ideAstNo'} header={'IDE_AST_NO'} />
-                    <Column filter filterField='ideAstDat' field={'ideAstDat'} header={'IDE_AST_DAT'} />
+                    <Column filter filterField='items' field={'ideAstNo'} header={'SAD_ASSMT_NO'} />
+                    <Column filter filterField='ideAstDat' field={'ideAstDat'} header={'SAD_ASSMT_DATE'} />
+                    <Column filter filterField='items' field={'ideRcpNo'} header={'SAD_RCPT_NO'} />
+                    <Column field={'ideRcpDat'} header={'SAD_RCPT_DATE'} />
+                    
                     <Column filter filterField='Status' field={'Status'} header={'STATUS'} />
                     <Column filter filterField='brokerTin' field={'brokerTin'} header={'BROKER_TIN'} />
-                    <Column filter filterField='items' style={{ minWidth: '20rem' }} field={'decNam'} header={'DEC_NAM'} />
+                    <Column filter filterField='items' style={{ minWidth: '20rem' }} field={'decNam'} header={'BROKER_NAM'} />
                     <Column filter filterField='companyTin' field={'companyTin'} header={'COMPANY_TIN'} />
-                    <Column style={{ minWidth: '24rem' }} field={'cmpNam'} header={'CMP_NAM'} />
-                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
+                    <Column style={{ minWidth: '24rem' }} field={'cmpNam'} header={'COMPANY_NAM'} />
                     <Column field={'finCod'} header={'FIN_COD'} />
+                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
+                    
                     <Column filter filterField='items' field={'items'} header={'ITEMS'} />
                     <Column style={{ minWidth: '40rem' }} field={'dsc'} header={'DSC'} />
-                    <Column filter filterField='totalTaxes' field={'totalTaxes'} header={'TOTAL_TAXES'} />
                     <Column style={{ minWidth: "12rem" }} field={'customsValue'} header={'CUSTOMS_VALUE'} />
-                    <Column style={{ minWidth: '14rem' }} field={'truck1'} header={'TRUCK1'} />
-                    <Column field={'truck2'} header={'TRUCK2'} />
+                    <Column style={{ minWidth: '14rem' }} field={'truck1'} header={'Idenetity of Truck at Dep'} />
+                    <Column field={'truck2'} header={'Identity of Truck Crossing Border'} />
+                    <Column filter filterField='totalTaxes' field={'totalTaxes'} header={'TOTAL_TAXES'} />
+                    
+                    
                     <Column filter filterField="cap" field={'cap'} header={'CAP'} />
                     <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
                 </DataTable>

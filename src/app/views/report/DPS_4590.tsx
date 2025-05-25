@@ -56,7 +56,7 @@ function DPS_4590() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'icd'} header={'ICD_OFFICE'} />
+                    <Column field={'icd'} header={'	Customs Name'} />
                     <Column field={'types'} header={'SAD_TYPE I/E'} />
                     <Column field={'orgCountry'} header={'COUNTRY_ORG'} />
                     <Column field={'destCountry'} header={'DEST_COUNTERY'} />

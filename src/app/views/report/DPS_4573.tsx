@@ -1,12 +1,12 @@
-import { SimpleCard } from '../../components';
-import { Box, styled, LinearProgress } from '@mui/material';
-import { useEffect, useState, useRef } from 'react';
-import { ROWS_PER_PAGE } from '../../utils/constant';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
-import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { Column } from 'primereact/column';
+import { DataTable } from 'primereact/datatable';
 import { Toast } from 'primereact/toast';
+import { useRef, useState } from 'react';
+import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { SimpleCard } from '../../components';
+import { ROWS_PER_PAGE } from '../../utils/constant';
 
 function DPS_4573() {
   const [reportData, setReportData] = useState([]);
@@ -65,6 +65,7 @@ function DPS_4573() {
       <ReportHeaderInputs
         showStartDate
         showEndDate
+        showCustomsList
         showBasedOn
         basedOnOptions={basedOnOptions}
         onSearch={handleSubmit}

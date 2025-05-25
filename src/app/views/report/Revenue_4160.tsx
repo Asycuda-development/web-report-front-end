@@ -39,7 +39,6 @@ const Revenue_4160 = () => {
         showStartDate
         showEndDate
         showCustomsList
-        showPayDate
         showCustomsProcedure
         ShowTinNumber
         onSearch={handleSubmit}
@@ -58,30 +57,27 @@ const Revenue_4160 = () => {
           stripedRows
           showGridlines
         >
-          <Column style={{ minWidth: "5rem" }} field={'office'} header={'OFFICE '} />
           <Column style={{ minWidth: "12rem" }} field={'sadN'} header={'SAD_NO'} />
-          <Column field={'regDat'} header={'REG_DATE'} />
-          <Column field={'rcpDat'} header={'RECEPT_DATE'} />
-          <Column field={'rcptNo'} header={'RECEPT_NO'} />
-          <Column style={{ minWidth: "12rem" }} field={'cmpCod'} header={'COMPANY_CODE'} />
-          <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'COMPANY_NAME'} />
-          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'DEC_NAME'} />
-          <Column style={{ minWidth: "10rem" }} field={'decCod'} header={'DEC_CODE'} />
-          <Column field={'finCod'} header={'FIN_COD'} />
+          <Column field={'regDat'} header={'Reg_Date'} />
+          <Column field={'rcptNo'} header={'Reciept_NO'} />
+          <Column style={{ minWidth: "5rem" }} field={'office'} header={'Office'} />
+          <Column field={'rcpDat'} header={'Rcpt_Date'} />
+          <Column style={{ minWidth: "12rem" }} field={'cmpCod'} header={'Company_Code'} />
+          <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'Company_Name'} />
           <Column style={{ minWidth: "12rem" }} field={'cmpad3'} header={'cmpad3'} />
-          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'FIN_NAME'} />
+          <Column style={{ minWidth: "10rem" }} field={'decCod'} header={'Declarant_Code'} />
+          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'Declarant_Name'} />
+          <Column field={'finCod'} header={'SAD_Financial_Code'} />
+          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'SAD_Financial_Name'} />
           <Column field={'declarationValueCurrency'} header={'DEC_VALUE_CURRENCY'} />
-          <Column field={'declarationValueAfs'} header={'DEC_VALUE_AFG'} />
-          <Column style={{ minWidth: "12rem" }} field={'taxTotalIm'} header={'TOTAL_TEX'} />
+          <Column field={'declarationValueAfs'} header={'Declaration_Value_AFs'} />
+          <Column style={{ minWidth: "12rem" }} field={'taxTotalIm'} header={'Total_Tax'} />
           <Column field={'amt_011'} header={'amt_011'} />
           <Column field={'amt_012'} header={'amt_012'} />
           <Column field={'amt_013'} header={'amt_013'} />
-          <Column field={'amt_014'} header={'amt_014'} />
           <Column field={'amt_015'} header={'amt_015'} />
           <Column field={'amt_017'} header={'amt_017'} />
-          <Column field={'amt_049'} header={'amt_049'} />
           <Column field={'amt_018'} header={'amt_018'} />
-          <Column field={'amt_040'} header={'amt_040'} />
           <Column field={'amt_041'} header={'amt_041'} />
           <Column field={'amt_042'} header={'amt_042'} />
           <Column field={'amt_043'} header={'amt_043'} />
@@ -89,12 +85,15 @@ const Revenue_4160 = () => {
           <Column field={'amt_045'} header={'amt_045'} />
           <Column field={'amt_046'} header={'amt_046'} />
           <Column field={'amt_047'} header={'amt_047'} />
+          <Column field={'amt_048'} header={'amt_048'} />
+          <Column field={'amt_049'} header={'amt_049'} />
+          <Column field={'amt_75'} header={'amt_75'} />
           <Column field={'amt_88'} header={'amt_88'} />
           <Column field={'amt_80'} header={'amt_80'} />
-          <Column field={'amt_75'} header={'amt_75'} />
-          <Column field={'amt_099'} header={'amt_099'} />
-          <Column field={'amt_048'} header={'amt_048'} />
+          <Column field={'amt_014'} header={'amt_014'} />
+          <Column field={'amt_040'} header={'amt_040'} />
           <Column field={'amt_019'} header={'amt_019'} />
+          <Column field={'amt_099'} header={'amt_099'} />
         </DataTable>
       </Box>
     </SimpleCard>

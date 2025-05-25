@@ -62,9 +62,9 @@ const Revenue_4150 = () => {
           stripedRows
           showGridlines
         >
-          <Column filter filterField="type" field={'type'} header={'Customs Procedure'} />
           <Column filter filterField="office" field={'office'} header={'office'} />
-          <Column field={'tot'} header={'Total amount'} />
+          <Column filter filterField="type" field={'type'} header={'Customs Procedure'} />
+          <Column field={'tot'} header={'Total Tax'} />
         </DataTable>
       </Box>
     </SimpleCard>

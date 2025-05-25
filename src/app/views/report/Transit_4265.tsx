@@ -2,7 +2,7 @@ import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
@@ -63,7 +63,7 @@ const Transit_4265 = () => {
           <Column field={'IDE_CUO_DES_NAM'} header={'IDE_CUO_DES_NAM'} />
           <Column field={'IDE_TYP_TRS'} header={'IDE_TYP_TRS'} />
           <Column field={'STATUS'} header={'STATUS'} />
-          <Column field={'T1_cnt'} header={'T1_cnt'} />
+          <Column field={'T1_cnt'} header={'Count'} />
           {/* <Column field={'tad_tot'} header={'Customs Value'} /> */}
         </DataTable>
       </Box>

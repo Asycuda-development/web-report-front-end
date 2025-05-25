@@ -87,7 +87,7 @@ const Transit_4266 = () => {
           <Column field={'IDE_CUO_DES_NAM'} header={'IDE_CUO_DES_NAM'} />
           <Column field={'IDE_TYP_TRS'} header={'IDE_TYP_TRS'} />
           <Column field={'STATUS'} header={'STATUS'} />
-          <Column field={'T1_cnt'} header={'T1_cnt'} />
+          <Column field={'T1_cnt'} header={'COUNT'} />
           {/* <Column field={'tad_tot'} header={'Customs Value'} /> */}
         </DataTable>
       </Box>

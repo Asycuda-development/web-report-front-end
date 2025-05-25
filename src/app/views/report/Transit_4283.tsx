@@ -57,33 +57,33 @@ const Transit_4283 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'transit_Type'} header={'transit_Type'} />
-          <Column field={'dept_off_Name'} header={'dept_off_Name'} />
-          <Column field={'destn_Name'} header={'destn_Name'} />
-          <Column field={'Customs_Prc'} header={'Customs_Prc'} />
-          <Column field={'reg_No'} header={'reg_No'} />
-          <Column field={'reg_Date'} header={'reg_Date'} />
-          <Column field={'Dep_Date'} header={'Dep_Date'} />
-          <Column field={'arr_Date'} header={'arr_Date'} />
-          <Column field={'val_Date'} header={'val_Date'} />
+          <Column field={'transit_Type'} header={'Transit_type'} />
+          <Column field={'dept_off_Name'} header={'	Departure_Off_Name'} />
+          <Column field={'destn_Name'} header={'destnDestination_off_Name_Name'} />
+          <Column field={'status'} header={'status'} />
           <Column field={'op_Date'} header={'op_Date'} />
+          <Column field={'reg_No'} header={'Reg_No'} />
+          <Column field={'reg_Date'} header={'Reg_Date'} />
           <Column field={'val_No'} header={'val_No'} />
-          <Column field={'cty_Export_Name'} header={'cty_Export_Name'} />
-          <Column field={'cty_Destn_Name'} header={'cty_Destn_Name'} />
+          <Column field={'val_Date'} header={'val_Date'} />
+          <Column field={'arr_Date'} header={'arr_Date'} />
           <Column field={'declarant_Code'} header={'declarant_Code'} />
           <Column field={'declarant_Name'} header={'declarant_Name'} />
-          <Column field={'principal_Code'} header={'principal_Code'} />
-          <Column field={'principal_Name'} header={'principal_Name'} />
-          <Column field={'exp_Code'} header={'exp_Code'} />
-          <Column field={'exp_Nam'} header={'exp_Nam'} />
           <Column field={'cns_Code'} header={'cns_Code'} />
           <Column field={'cns_Name'} header={'cns_Name'} />
-          <Column field={'hscode'} header={'hscode'} />
-          <Column field={'Good_Description2'} header={'Good_Description2'} />
-          <Column field={'Good_Description3'} header={'Good_Description3'} />
+          <Column field={'principal_Code'} header={'principal_Code'} />
+          <Column field={'principal_Name'} header={'principal_Name'} />
+          <Column field={'cty_Export_Name'} header={'cty_Export_Name'} />
+          <Column field={'cty_Destn_Name'} header={'cty_Destn_Name'} />
           <Column field={'gross_Mass'} header={'gross_Mass'} />
           <Column field={'Net_Mass'} header={'Net_Mass'} />
-          <Column field={'status'} header={'status'} />
+          <Column field={'hscode'} header={'Hscode'} />
+          <Column field={'Good_Description2'} header={'Good_Description2'} />
+          <Column field={'Good_Description3'} header={'Good_Description3'} />
+          <Column field={'Customs_Prc'} header={'Customs_Prc'} />
+          <Column field={'Dep_Date'} header={'Dep_Date'} />
+          <Column field={'exp_Code'} header={'exp_Code'} />
+          <Column field={'exp_Nam'} header={'exp_Nam'} />
         </DataTable>
       </Box>
     </SimpleCard>

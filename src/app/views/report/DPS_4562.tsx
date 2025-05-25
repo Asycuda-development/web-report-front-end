@@ -56,8 +56,8 @@ function DPS_4562() {
                     showGridlines
                 >
                     <Column field={'sadType'} header={'SAD_TYPE'} />
-                    <Column field={'officeCod'} header={'OFFICE_CODE'} />
                     <Column field={'office'} header={'OFFICE'} />
+                    <Column field={'officeCod'} header={'OFFICE_CODE'} />
                     <Column style={{ minWidth: '10rem' }} field={'regNo'} header={'SAD_REG_NO'} />
                     <Column field={'regDate'} header={'SAD_REG_DATE'} />
                     <Column field={'rcptDat'} header={'RCP_DAT'} />

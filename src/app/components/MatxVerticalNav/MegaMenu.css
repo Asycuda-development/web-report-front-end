@@ -1,5 +1,20 @@
 .p-megamenu-grid {
-    max-height: 700px;
+    max-height: 600px;
     overflow: auto;
     z-index: 60;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.p-megamenu .p-submenu-list {
+    width: max-content;
+    max-width: 400px;
+}
+
+.p-megamenu-col-3 {
+    width: auto;
+}
+
+.p-megamenu-vertical .p-megamenu-root-list > .p-menuitem-active > .p-megamenu-panel {
+    top: -100%;
 }

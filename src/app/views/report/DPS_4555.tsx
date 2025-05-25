@@ -57,31 +57,36 @@ function DPS_4555() {
           showGridlines
         >
           <Column field={'ideTypSad'} header={'SAD Type'} />
-          <Column style={{ minWidth: "12rem" }} field={'tptCuoNam'} header={'Transport Custom Name'} />
-          <Column style={{ minWidth: "12rem" }} filter filterField="ideCuoNam" field={'ideCuoNam'} header={'Custom Name'} />
-          <Column field={'ideCuoCod'} header={'Custom Code'} />
-          <Column field={'itemTotal'} header={'Item Total'} />
-          <Column filter filterField='registrationNo' field={'regNo'} header={'RegistrationNo'} />
-          <Column field={'regDate'} header={'Registration Date'} />
-          <Column filter filterField='asmtNo' field={'asmtNo'} header={'Assessment Number'} />
-          <Column field={'astDate'} header={'Assessment Date'} />
+          <Column style={{ minWidth: "12rem" }} field={'tptCuoNam'} header={'Border office'} />
+          <Column style={{ minWidth: "12rem" }} filter filterField="ideCuoNam" field={'ideCuoNam'} header={'Customs Office'} />
+          <Column field={'itemTotal'} header={'Item_Total'} />
+          <Column filter filterField='registrationNo' field={'regNo'} header={'Reg_No'} />
+          <Column field={'regDate'} header={'Reg_Date'} />
+          //<Column filter filterField='asmtNo' field={'asmtNo'} header={'Assessment Number'} />
+          <Column field={'astDate'} header={'Assmt_Date'} />
           <Column field={'rcptNo'} header={'RCPT_NO'} />
-          <Column field={'rcptDate'} header={'Receipt Date'} />
-          <Column style={{ minWidth: "12rem" }} field={'bankNam'} header={'Bank Name'} />
-          <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker TIN'} />
-          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'Declarant Name'} />
-          <Column field={'companyTin'} header={'Company TIN'} />
-          <Column field={'cmpFisCod'} header={'CMP_FIS_COD'} />
-          <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'Company Name'} />
-          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryDest'} header={'Country Destination Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryExport'} header={'Country Export Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryOrg'} header={'Country Origin Name'} />
-          <Column field={'lorryTotal'} header={'Lorry Total'} />
-          <Column field={'declarationValueCurrency'} header={'Declaration Value Currency'} />
-          <Column field={'declarationValueAfs'} header={'Declaration Value Afs'} />
-          <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
+          <Column field={'rcptDate'} header={'RCPT_Date'} />
           <Column field={'status'} header={'SAD_STATUS'} />
+          <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker_TIN'} />
+          <Column style={{ minWidth: "20rem" }} field={'decNam'} header={'Broker_Name'} />
+          <Column field={'companyTin'} header={'Company_TIN'} />
+          <Column style={{ minWidth: "20rem" }} field={'cmpNam'} header={'Company_Name'} />
+          <Column field={'cmpFisCod'} header={'SAD_Financial_Code'} />
+          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'countryOrg'} header={'Country_Origin_Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'countryExport'} header={'Country_Export_Name'} />
+          <Column field={'lorryTotal'} header={'Lorry_Total'} />
+          <Column field={'declarationValueCurrency'} header={'Declaration_Value in Foriegn Currency'} />
+          <Column field={'declarationValueAfs'} header={'Declaration_Value_Afs'} />
+          <Column field={'declarationTaxes'} header={'	Declaration_Taxes'} />
+          <Column field={'ideCuoCod'} header={'Custom Code'} />
+          <Column style={{ minWidth: "12rem" }} field={'bankNam'} header={'Bank Name'} />
+          <Column style={{ minWidth: "12rem" }} field={'countryDest'} header={'Country_Destination_Name'} />
+         
+    
+        
+          
+         
 
 
           {/* {reportData.length > 0 &&
