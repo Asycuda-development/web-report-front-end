@@ -8,9 +8,14 @@ import { checkAuthorities } from 'src/app/auth/private-routes';
 import { routes } from 'src/app/navigations';
 import { AUTHORITIES } from 'src/app/utils/constant';
 import { useUser } from '../../contexts/JWTAuthContext';
+import { useTranslation } from 'react-i18next';
+
+const translationsForMenuParentItems: string = "menu.parent_menu_items"
+
 const MatxVerticalNav = () => {
     const navigation = useNavigate();
     const { user } = useUser();
+    const { t } = useTranslation();
 
     const items: MenuItem[] = [
         {
@@ -21,7 +26,7 @@ const MatxVerticalNav = () => {
                     AUTHORITIES.ADMIN
                 ])
             }),
-            label: 'Dashboard',
+            label: t(`${translationsForMenuParentItems}.dashboard`),
             command: () => {
                 navigation(routes.Dashboard);
             }
@@ -35,7 +40,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'Settings',
+            label: t(`${translationsForMenuParentItems}.settings`),
             command: () => {
                 navigation(routes.Dashboard);
             }
@@ -50,7 +55,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'User Management',
+            label: t(`${translationsForMenuParentItems}.user_management`),
             items: [
                 {
                     label: 'Users Management',
@@ -137,7 +142,7 @@ const MatxVerticalNav = () => {
                     AUTHORITIES.REPORT_45103_DPS,
                 ])
             }),
-            label: 'DPS',
+            label: t(`${translationsForMenuParentItems}.dps`),
             items: [
                 [
                     {
@@ -765,7 +770,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'Transit',
+            label: t(`${translationsForMenuParentItems}.transit`),
             items: [
                 [
                     {
@@ -1708,7 +1713,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'Revenue',
+            label: t(`${translationsForMenuParentItems}.revenue`),
             items: [
                 [
                     {
@@ -2433,7 +2438,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'Valuation & Exemption',
+            label: t(`${translationsForMenuParentItems}.valuation_exemption`),
             items: [
                 [
                     {
@@ -2818,7 +2823,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'Selectivity & DataExchange',
+            label: t(`${translationsForMenuParentItems}.selectivity_dataExchange`),
             items: [
                 [
                     {
@@ -3217,7 +3222,7 @@ const MatxVerticalNav = () => {
                 ])
             }),
 
-            label: 'Manifest',
+            label: t(`${translationsForMenuParentItems}.manifest`),
             command: () => {
                 navigation(routes.Manifest_4450);
             }
