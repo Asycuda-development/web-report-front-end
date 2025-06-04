@@ -845,7 +845,7 @@ const AuthLayout = () => {
           <Route
             path={routes.DPS_4550}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4550_DPS]}>
+              <PrivateRoute >
                 <DPS_4550 />
               </PrivateRoute>
             }
