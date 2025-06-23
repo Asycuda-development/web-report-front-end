@@ -308,7 +308,11 @@
         "i_no": "I_no",
         "p_no": "P_no",
         "m_no": "M_no",
-        "hscode": "HSCODE"
+        "hscode": "HSCODE",
+        "box18_1": "Box number 18 part 1",
+        "box18_2":  "Box number 18 part 2",
+        "box21_1": "Box number 21 part 1",
+        "box21_2": "Box number 21 part 2"
     },
     "reports": {
         "dps_4550": {
@@ -382,6 +386,12 @@
                 "sadFlow": "Sad Flow",
                 "goodsCategory2": "Goods Category 2",
                 "decRep": "Declerent Rep"
+            }
+        },
+        "revenue_4250": {
+            "tile": "Revenue Report 4250",
+            "columns": {
+                
             }
         }
     }
