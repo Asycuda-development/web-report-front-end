@@ -7,12 +7,19 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4584: string = "reports.dps_4584"
+const translationsForReportDPS4584Columns: string = "reports.dps_4584.columns"
 
 function DPS_4584() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -65,7 +72,7 @@ function DPS_4584() {
         name: 'CMP_COD'
     }]
     return (
-        <SimpleCard title="DPS_4584">
+        <SimpleCard title={t(`${translationsForReportDPS4584}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -95,43 +102,43 @@ function DPS_4584() {
                     stripedRows
                     showGridlines
                 >
-                    <Column style={{ minWidth: "12rem" }} field={'cuoNam'} header={'Entrance Customs Name'} />
-                    <Column field={'icd'} header={'Exit Customs Name'} />
-                    <Column field={'companyCode'} header={'COMPANY_CODE'} />
-                    <Column style={{ minWidth: "40rem" }} field={'companyName'} header={'COMPANY_NAME'} />
-                    <Column field={'barchalanCode'} header={'BARCHALAN_CODE'} />
-                    <Column style={{ minWidth: "25rem" }} field={'barchalanName'} header={'BARCHALAN_NAME'} />
-                    <Column field={'ruckType'} header={'TRACK_TYPE'} />
-                    <Column field={'truckRegNumber'} header={'TRUCK_REGISTER_NO'} />
-                    <Column field={'truckRegNbrnew'} header={'TRUCK_REGISTER_NO_NEW'} />
-                    <Column field={'trailerRegNumber'} header={'TRILAR_REG_NO'} />
-                    <Column field={'trailerRegNbrnew'} header={'TRILAR_REG_NO_NEW'} />
-                    <Column style={{ minWidth: "20rem" }} field={'goodsDesc'} header={'GOODS_DESCRIPTION'} />
-                    <Column field={'entEmty'} header={'ENT_EMTY'} />
-                    <Column field={'sadNumber'} header={'SAD_NUMBER'} />
-                    <Column field={'t1dNumber'} header={'T1D_NUMBER'} />
-                    <Column field={'exemptionCommercial'} header={'EXEMPTION_COMMERCIAL'} />
-                    <Column field={'weightEntered'} header={'WEIGHT_ENTERED'} />
-                    <Column field={'weightExited'} header={'WEIGHT_EXITED'} />
-                    <Column field={'weight'} header={'WEIGHT'} />
-                    <Column field={'totalPackage'} header={'TOTAL_PACKAGE'} />
-                    <Column style={{ minWidth: "12rem" }} field={'status'} header={'STATUS'} />
-                    <Column field={'customsRegime'} header={'CUSTOMS_REGIME'} />
-                    <Column field={'regNbrYearly'} header={'REG_NBR_YEARLY'} />
-                    <Column field={'regNbrDaily'} header={'REG_NBR_DAILY'} />
-                    <Column field={'mobileTeam'} header={'MOBILE_TEAM'} />
-                    <Column field={'regDate'} header={'Register Date in BCP'} />
-                    <Column field={'exitDate'} header={'Exit Date From BCP'} />
-                    <Column field={'destArrDate'} header={'Register Date in ICD'} />
-                    <Column field={'destExtDate'} header={'Exit Date From ICD'} />
-                    <Column field={'parkingLocation'} header={'PARKING_LOCATION'} />
-                    <Column field={'destParkingLocation'} header={'DEST_PARKING_LOCATION'} />
-                    <Column field={'dstArrRem'} header={'DST_ARR_REM'} />
-                    <Column field={'dstExtRem'} header={'DST_EXT_REM'} />
-                    <Column style={{ minWidth: "15rem" }} field={'remarkEntry'} header={'REMARK_ENTRY'} />
-                    <Column field={'remarkExit'} header={'REMARK_EXIT'} />
-                    <Column field={'truckNationality'} header={'TRUCK_NATIONALITY'} />
-                    <Column style={{ minWidth: "15rem" }} field={'prvDoc'} header={'PRV_DOC'} />
+                    <Column style={{ minWidth: "12rem" }} field={'cuoNam'} header={t(`${translationsForReportDPS4584Columns}.cuoNam`)} />
+                    <Column field={'icd'} header={t(`${translationsForReportDPS4584Columns}.icd`)} />
+                    <Column field={'companyCode'} header={t(`${translationsForReportDPS4584Columns}.companyCode`)} />
+                    <Column style={{ minWidth: "40rem" }} field={'companyName'} header={t(`${translationsForReportDPS4584Columns}.companyName`)} />
+                    <Column field={'barchalanCode'} header={t(`${translationsForReportDPS4584Columns}.barchalanCode`)} />
+                    <Column style={{ minWidth: "25rem" }} field={'barchalanName'} header={t(`${translationsForReportDPS4584Columns}.barchalanName`)} />
+                    <Column field={'ruckType'} header={t(`${translationsForReportDPS4584Columns}.ruckType`)} />
+                    <Column field={'truckRegNumber'} header={t(`${translationsForReportDPS4584Columns}.truckRegNumber`)} />
+                    <Column field={'truckRegNbrnew'} header={t(`${translationsForReportDPS4584Columns}.truckRegNbrnew`)} />
+                    <Column field={'trailerRegNumber'} header={t(`${translationsForReportDPS4584Columns}.trailerRegNumber`)} />
+                    <Column field={'trailerRegNbrnew'} header={t(`${translationsForReportDPS4584Columns}.trailerRegNbrnew`)} />
+                    <Column style={{ minWidth: "20rem" }} field={'goodsDesc'} header={t(`${translationsForReportDPS4584Columns}.goodsDesc`)} />
+                    <Column field={'entEmty'} header={t(`${translationsForReportDPS4584Columns}.entEmty`)} />
+                    <Column field={'sadNumber'} header={t(`${translationsForReportDPS4584Columns}.sadNumber`)} />
+                    <Column field={'t1dNumber'} header={t(`${translationsForReportDPS4584Columns}.t1dNumber`)} />
+                    <Column field={'exemptionCommercial'} header={t(`${translationsForReportDPS4584Columns}.exemptionCommercial`)} />
+                    <Column field={'weightEntered'} header={t(`${translationsForReportDPS4584Columns}.weightEntered`)} />
+                    <Column field={'weightExited'} header={t(`${translationsForReportDPS4584Columns}.weightExited`)} />
+                    <Column field={'weight'} header={t(`${translationsForReportDPS4584Columns}.weight`)} />
+                    <Column field={'totalPackage'} header={t(`${translationsForReportDPS4584Columns}.totalPackage`)} />
+                    <Column style={{ minWidth: "12rem" }} field={'status'} header={t(`${translationsForReportDPS4584Columns}.status`)} />
+                    <Column field={'customsRegime'} header={t(`${translationsForReportDPS4584Columns}.customsRegime`)} />
+                    <Column field={'regNbrYearly'} header={t(`${translationsForReportDPS4584Columns}.regNbrYearly`)} />
+                    <Column field={'regNbrDaily'} header={t(`${translationsForReportDPS4584Columns}.regNbrDaily`)} />
+                    <Column field={'mobileTeam'} header={t(`${translationsForReportDPS4584Columns}.mobileTeam`)} />
+                    <Column field={'regDate'} header={t(`${translationsForReportDPS4584Columns}.regDate`)} />
+                    <Column field={'exitDate'} header={t(`${translationsForReportDPS4584Columns}.exitDate`)} />
+                    <Column field={'destArrDate'} header={t(`${translationsForReportDPS4584Columns}.destArrDate`)} />
+                    <Column field={'destExtDate'} header={t(`${translationsForReportDPS4584Columns}.destExtDate`)} />
+                    <Column field={'parkingLocation'} header={t(`${translationsForReportDPS4584Columns}.parkingLocation`)} />
+                    <Column field={'destParkingLocation'} header={t(`${translationsForReportDPS4584Columns}.destParkingLocation`)} />
+                    <Column field={'dstArrRem'} header={t(`${translationsForReportDPS4584Columns}.dstArrRem`)} />
+                    <Column field={'dstExtRem'} header={t(`${translationsForReportDPS4584Columns}.dstExtRem`)} />
+                    <Column style={{ minWidth: "15rem" }} field={'remarkEntry'} header={t(`${translationsForReportDPS4584Columns}.remarkEntry`)} />
+                    <Column field={'remarkExit'} header={t(`${translationsForReportDPS4584Columns}.remarkExit`)} />
+                    <Column field={'truckNationality'} header={t(`${translationsForReportDPS4584Columns}.truckNationality`)} />
+                    <Column style={{ minWidth: "15rem" }} field={'prvDoc'} header={t(`${translationsForReportDPS4584Columns}.prvDoc`)} />
                 </DataTable>
             </Box>
             <Toast ref={toastRef} />

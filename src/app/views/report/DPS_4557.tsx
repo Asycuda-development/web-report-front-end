@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4557: string = "reports.dps_4557"
+const translationsForReportDPS4557Columns: string = "reports.dps_4557.columns"
 
 function DPS_4557() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -32,7 +39,7 @@ function DPS_4557() {
   };
 
   return (
-    <SimpleCard title="DPS_4557">
+    <SimpleCard title={t(`${translationsForReportDPS4557}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -63,67 +70,67 @@ function DPS_4557() {
             filterField="ide_typ_sad"
             style={{ textAlign: 'center' }}
             field={'ide_typ_sad'}
-            header={'Identification Type SAD'}
+            header={t(`${translationsForReportDPS4557Columns}.ide_typ_sad`)}
           />
-          <Column field={'tpt_cuo_nam'} header={'Border office'} />
-          <Column field={'ide_cuo_nam'} header={'Customs Office'} />
-          <Column field={'Item_total'} header={'Total_Item'} />
+          <Column field={'tpt_cuo_nam'} header={t(`${translationsForReportDPS4557Columns}.tpt_cuo_nam`)} />
+          <Column field={'ide_cuo_nam'} header={t(`${translationsForReportDPS4557Columns}.ide_cuo_nam`)} />
+          <Column field={'Item_total'} header={t(`${translationsForReportDPS4557Columns}.Item_total`)} />
           <Column
             filter
             filterField="Reg_No"
             style={{ minWidth: '4rem', textAlign: 'center' }}
             field={'Reg_No'}
-            header={'Reg_No'}
+            header={t(`${translationsForReportDPS4557Columns}.Reg_No`)}
           />
-          <Column field={'Reg_Date'} header={'Reg_Date'} />
-          <Column field={'ASMT_No'} header={'ASMT_No'} />
-          <Column field={'AST_Date'} header={'AST_Date'} />
-          <Column field={'RCPT_No'} header={'RCPT_No'} />
-          <Column field={'RCPT_Date'} header={'RCPT_Date '} />
-          <Column filter filterField="status" field={'status'} header={'Status'} />
-          <Column filter filterField="Broker_TIN" field={'Broker_TIN'} header={'Broker TIN'} />
-          <Column field={'dec_nam'} header={'Broker_Name'} />
+          <Column field={'Reg_Date'} header={t(`${translationsForReportDPS4557Columns}.Reg_Date`)} />
+          <Column field={'ASMT_No'} header={t(`${translationsForReportDPS4557Columns}.ASMT_No`)} />
+          <Column field={'AST_Date'} header={t(`${translationsForReportDPS4557Columns}.AST_Date`)} />
+          <Column field={'RCPT_No'} header={t(`${translationsForReportDPS4557Columns}.RCPT_No`)} />
+          <Column field={'RCPT_Date'} header={t(`${translationsForReportDPS4557Columns}.RCPT_Date`)} />
+          <Column filter filterField="status" field={'status'} header={t(`${translationsForReportDPS4557Columns}.status`)} />
+          <Column filter filterField="Broker_TIN" field={'Broker_TIN'} header={t(`${translationsForReportDPS4557Columns}.Broker_TIN`)} />
+          <Column field={'dec_nam'} header={t(`${translationsForReportDPS4557Columns}.dec_nam`)} />
           <Column
             filter
             filterField="Company_TIN"
             style={{ textAlign: 'center' }}
             field={'Company_TIN'}
-            header={'Company TIN'}
+            header={t(`${translationsForReportDPS4557Columns}.Company_TIN`)}
           />
-          <Column style={{ minWidth: '12rem' }} field={'cmp_nam'} header={'Company_Name'} />
-          <Column field={'fis_cod'} header={'SAD_Financial_Code'} />
+          <Column style={{ minWidth: '12rem' }} field={'cmp_nam'} header={t(`${translationsForReportDPS4557Columns}.cmp_nam`)} />
+          <Column field={'fis_cod'} header={t(`${translationsForReportDPS4557Columns}.fis_cod`)} />
           <Column
             style={{ minWidth: '10rem', textAlign: 'center' }}
             field={'fin_nam'}
-            header={'Finantial_Name'}
+            header={t(`${translationsForReportDPS4557Columns}.fin_nam`)}
           />
-          <Column field={'Country_Org'} header={'CountryـOrgine'} />
-          <Column field={'Country_Export'} header={'CountryـExport'} />
+          <Column field={'Country_Org'} header={t(`${translationsForReportDPS4557Columns}.Country_Org`)} />
+          <Column field={'Country_Export'} header={t(`${translationsForReportDPS4557Columns}.Country_Export`)} />
           <Column
             style={{ textAlign: 'center' }}
             field={'Lorry_Total'}
-            header={'Total_Lorry'}
+            header={t(`${translationsForReportDPS4557Columns}.Lorry_Total`)}
           />
-          <Column field={'Item_Value_currency'} header={'Item_Value in Foriegn Currency'} />
-          <Column field={'Item_Value_Afs'} header={'Item_Value_Afs'} />
-          <Column style={{ textAlign: 'center' }} field={'Item_Taxes'} header={'Item_Tax'} />
-          <Column field={'netwgt'} header={'Net Wgt'} />
-          <Column field={'grswgt'} header={'Grs Wgt'} />
-          <Column style={{ textAlign: 'center' }} field={'pk1'} header={'Desc 1'} />
-          <Column field={'pk2'} header={'Desc 2'} />
-          <Column field={'ide_cuo_cod'} header={'IDE Custom Code'} />
+          <Column field={'Item_Value_currency'} header={t(`${translationsForReportDPS4557Columns}.Item_Value_currency`)} />
+          <Column field={'Item_Value_Afs'} header={t(`${translationsForReportDPS4557Columns}.Item_Value_Afs`)} />
+          <Column style={{ textAlign: 'center' }} field={'Item_Taxes'} header={t(`${translationsForReportDPS4557Columns}.Item_Taxes`)} />
+          <Column field={'netwgt'} header={t(`${translationsForReportDPS4557Columns}.netwgt`)} />
+          <Column field={'grswgt'} header={t(`${translationsForReportDPS4557Columns}.grswgt`)} />
+          <Column style={{ textAlign: 'center' }} field={'pk1'} header={t(`${translationsForReportDPS4557Columns}.pk1`)} />
+          <Column field={'pk2'} header={t(`${translationsForReportDPS4557Columns}.pk2`)} />
+          <Column field={'ide_cuo_cod'} header={t(`${translationsForReportDPS4557Columns}.ide_cuo_cod`)} />
           <Column
             filter
             filterField="bank_nam"
             style={{ minWidth: '8rem', textAlign: 'center' }}
             field={'bank_nam'}
-            header={'Bank Name'}
+            header={t(`${translationsForReportDPS4557Columns}.bank_nam`)}
           />
-          <Column field={'CMP_EXP_TIN'} header={'CMP EXP TIN'} />
-          <Column style={{ minWidth: '10rem' }} field={'cmp_exp_nam'} header={'cmp exp Name'} />
-          <Column field={'Country_Dest'} header={'Destination Country'} />
-          <Column field={'cap'} header={'CAP'} />
-          <Column field={'hscode'} header={'H_S Code'} />
+          <Column field={'CMP_EXP_TIN'} header={t(`${translationsForReportDPS4557Columns}.CMP_EXP_TIN`)} />
+          <Column style={{ minWidth: '10rem' }} field={'cmp_exp_nam'} header={t(`${translationsForReportDPS4557Columns}.cmp_exp_nam`)} />
+          <Column field={'Country_Dest'} header={t(`${translationsForReportDPS4557Columns}.Country_Dest`)} />
+          <Column field={'cap'} header={t(`${translationsForReportDPS4557Columns}.cap`)} />
+          <Column field={'hscode'} header={t(`${translationsForReportDPS4557Columns}.hscode`)} />
 
         </DataTable>
       </Box>

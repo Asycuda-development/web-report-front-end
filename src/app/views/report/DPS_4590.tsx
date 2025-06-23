@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4590: string = "reports.dps_4590"
+const translationsForReportDPS4590Columns: string = "reports.dps_4590.columns"
 
 function DPS_4590() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4590() {
     };
 
     return (
-        <SimpleCard title="DPS_4590">
+        <SimpleCard title={t(`${translationsForReportDPS4590}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -56,15 +63,15 @@ function DPS_4590() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'icd'} header={'	Customs Name'} />
-                    <Column field={'types'} header={'SAD_TYPE I/E'} />
-                    <Column field={'orgCountry'} header={'COUNTRY_ORG'} />
-                    <Column field={'destCountry'} header={'DEST_COUNTERY'} />
-                    <Column field={'hscode'} header={'HS_CODE'} />
-                    <Column field={'hsdsc'} header={'HS_COD_D'} />
-                    <Column field={'valueUsd'} header={'VALUE_CURANCY'} />
-                    <Column field={'valueAfs'} header={'VALUE_AF'} />
-                    <Column field={'taxAmt'} header={'TEXT_AMOUNT'} />
+                    <Column field={'icd'} header={t(`${translationsForReportDPS4590Columns}.icd`)} />
+                    <Column field={'types'} header={t(`${translationsForReportDPS4590Columns}.types`)} />
+                    <Column field={'orgCountry'} header={t(`${translationsForReportDPS4590Columns}.orgCountry`)} />
+                    <Column field={'destCountry'} header={t(`${translationsForReportDPS4590Columns}.destCountry`)} />
+                    <Column field={'hscode'} header={t(`${translationsForReportDPS4590Columns}.hscode`)} />
+                    <Column field={'hsdsc'} header={t(`${translationsForReportDPS4590Columns}.hsdsc`)} />
+                    <Column field={'valueUsd'} header={t(`${translationsForReportDPS4590Columns}.valueUsd`)} />
+                    <Column field={'valueAfs'} header={t(`${translationsForReportDPS4590Columns}.valueAfs`)} />
+                    <Column field={'taxAmt'} header={t(`${translationsForReportDPS4590Columns}.taxAmt`)} />
                 </DataTable>
             </Box>
         </SimpleCard>

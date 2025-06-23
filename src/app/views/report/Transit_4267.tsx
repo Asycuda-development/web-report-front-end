@@ -6,11 +6,18 @@ import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4267: string = "reports.transit_4267"
+const translationsForReportTransit4267Columns: string = "reports.transit_4267.columns"
 
 const Transit_4267 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Transit_4267 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4267">
+    <SimpleCard title={t(`${translationsForReportTransit4267}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -60,69 +67,69 @@ const Transit_4267 = () => {
           showGridlines
         >
           
-          <Column field={'transitType'} header={'transitType'} />
-          <Column field={'declarationRefYr'} header={'Declaration_Ref_Year'} />
-          <Column field={'deptOffNam'} header={'Departure_Off_Name'} />
-          <Column field={'destnNam'} header={'Destination_off_Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'status'} header={'Status'} />
-          <Column field={'regNo'} header={'Reg_No'} />
-          <Column field={'regDat'} header={'Reg_Date'} />
-          <Column field={'valNo'} header={'Validation_No'} />
-          <Column style={{ minWidth: "12rem" }} field={'arrDate'} header={'Arrival_Date'} />
-          <Column field={'maxDateOfArrivalLimit'} header={'Max_Date_of_Arrival'} />
-          <Column field={'maxDateAllowed'} header={'Max_Days_Allowed'} />
-          <Column style={{ minWidth: "15rem" }} field={'transitOfficer'} header={'	Departure Officer'} />
-          <Column field={'declarantCode'} header={'Declarant_Code'} />
-          <Column style={{ minWidth: "12rem" }} field={'declarantName'} header={'Declarant_Name'} />
-          <Column field={'cnsCode'} header={'Consignee_Code'} />
-          <Column style={{ minWidth: "25rem" }} field={'cnsName'} header={'Consignee_Name'} />
-          <Column field={'principalCod'} header={'Principal_Code'} />
-          <Column style={{ minWidth: "25rem" }} field={'principalNam'} header={'Principal_Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'representedBy'} header={'Represented_By'} />
-          <Column style={{ minWidth: "15rem" }} field={'ctyExportName'} header={'ctyExportName'} />
-          <Column field={'ctyDestnCod'} header={'Ctry_of_Destn_code'} />
-          <Column field={'modOfTransport'} header={'Mode_of_Transport'} />
-          <Column field={'lorryToBorder'} header={'Truck To Border'} />
-          <Column field={'grossMass'} header={'Gross_Mass'} />
-          <Column field={'netMass'} header={'Net_Mass'} />
-          <Column field={'totPkg'} header={'Total_Pkg '} />
-          <Column style={{ minWidth: "15rem" }} field={'packageName'} header={'Package_Name'} />
-          <Column field={'hscode'} header={'Hscode'} />
-          <Column style={{ minWidth: "30rem" }} field={'goodDescription2'} header={'goodDescription2'} />
-          <Column style={{ minWidth: "30rem" }} field={'goodDescription3'} header={'goodDescription3'} />
-          <Column style={{ minWidth: "20rem" }} field={'packageMark'} header={'Package_Mark'} />
-          <Column field={'contFlg'} header={'Container Flag'} />
-          <Column field={'cont1'} header={'Container 1'} />
-          <Column field={'cont2'} header={'Container 2'} />
-          <Column field={'sealAffixedNo'} header={'Seal_Affixed_No'} />
-          <Column field={'sealIdentity'} header={'Seal_Identity'} />
-          <Column field={'garantyCod'} header={'Garanty_Code'} />
-          <Column field={'garantyAmnt'} header={'Garanty_Amnt'} />
-          <Column style={{ minWidth: "20rem" }} field={'at1Cod'} header={'ATT_AT1_COd'} />
-          <Column style={{ minWidth: "20rem" }} field={'at1Nbr'} header={'ATT_AT1_nbr'} />
-          <Column field={'at2Cod'} header={'ATT_AT2_COd'} />
-          <Column style={{ minWidth: "20rem" }} field={'at2Nbr'} header={'ATT_AT2_nbr'} />
-          <Column field={'at3Cod'} header={'ATT_AT3_COd'} />
-          <Column style={{ minWidth: "20rem" }} field={'at3Nbr'} header={'ATT_AT3_nbr'} />
-          <Column field={'at4Cod'} header={'ATT_AT4_COd'} />
-          <Column style={{ minWidth: "20rem" }} field={'at4Nbr'} header={'ATT_AT4_nbr'} />
-          <Column field={'decRef'} header={'decRef'} />
-          <Column field={'loadList'} header={'loadList'} />
-          <Column field={'destnCty'} header={'destnCty'} />
-          <Column field={'expCode'} header={'expCode'} />
-          <Column field={'expNam'} header={'expNam'} />
-          <Column field={'ctyExport'} header={'ctyExport'} />
-          <Column field={'ctyDestnNam'} header={'ctyDestnNam'} />
-          <Column field={'nationalityOfTransport'} header={'nationalityOfTransport'} />
-          <Column field={'ctyBorder'} header={'ctyBorder'} />
-          <Column field={'ctyDep'} header={'ctyDep'} />
-          <Column field={'itmNo'} header={'itmNo'} />
-          <Column field={'packNbr'} header={'packNbr'} />
-          <Column field={'packageCode'} header={'packageCode'} />
-          <Column field={'astDat'} header={'astDat'} />
-          <Column field={'delCod'} header={'delCod'} />
+          <Column field={'transitType'} header={t(`${translationsForReportTransit4267Columns}.transitType`)} />
+          <Column field={'declarationRefYr'} header={t(`${translationsForReportTransit4267Columns}.declarationRefYr`)} />
+          <Column field={'deptOffNam'} header={t(`${translationsForReportTransit4267Columns}.deptOffNam`)} />
+          <Column field={'destnNam'} header={t(`${translationsForReportTransit4267Columns}.destnNam`)} />
+          <Column style={{ minWidth: "12rem" }} field={'status'} header={t(`${translationsForReportTransit4267Columns}.status`)} />
+          <Column field={'regNo'} header={t(`${translationsForReportTransit4267Columns}.regNo`)} />
+          <Column field={'regDat'} header={t(`${translationsForReportTransit4267Columns}.regDat`)} />
+          <Column field={'valNo'} header={t(`${translationsForReportTransit4267Columns}.valNo`)} />
+          <Column style={{ minWidth: "12rem" }} field={'arrDate'} header={t(`${translationsForReportTransit4267Columns}.arrDate`)} />
+          <Column field={'maxDateOfArrivalLimit'} header={t(`${translationsForReportTransit4267Columns}.maxDateOfArrivalLimit`)} />
+          <Column field={'maxDateAllowed'} header={t(`${translationsForReportTransit4267Columns}.maxDateAllowed`)} />
+          <Column style={{ minWidth: "15rem" }} field={'transitOfficer'} header={t(`${translationsForReportTransit4267Columns}.transitOfficer`)} />
+          <Column field={'declarantCode'} header={t(`${translationsForReportTransit4267Columns}.declarantCode`)} />
+          <Column style={{ minWidth: "12rem" }} field={'declarantName'} header={t(`${translationsForReportTransit4267Columns}.declarantName`)} />
+          <Column field={'cnsCode'} header={t(`${translationsForReportTransit4267Columns}.cnsCode`)} />
+          <Column style={{ minWidth: "25rem" }} field={'cnsName'} header={t(`${translationsForReportTransit4267Columns}.cnsName`)} />
+          <Column field={'principalCod'} header={t(`${translationsForReportTransit4267Columns}.principalCod`)} />
+          <Column style={{ minWidth: "25rem" }} field={'principalNam'} header={t(`${translationsForReportTransit4267Columns}.principalNam`)} />
+          <Column style={{ minWidth: "12rem" }} field={'representedBy'} header={t(`${translationsForReportTransit4267Columns}.representedBy`)} />
+          <Column style={{ minWidth: "15rem" }} field={'ctyExportName'} header={t(`${translationsForReportTransit4267Columns}.ctyExportName`)} />
+          <Column field={'ctyDestnCod'} header={t(`${translationsForReportTransit4267Columns}.ctyDestnCod`)} />
+          <Column field={'modOfTransport'} header={t(`${translationsForReportTransit4267Columns}.modOfTransport`)} />
+          <Column field={'lorryToBorder'} header={t(`${translationsForReportTransit4267Columns}.lorryToBorder`)} />
+          <Column field={'grossMass'} header={t(`${translationsForReportTransit4267Columns}.grossMass`)} />
+          <Column field={'netMass'} header={t(`${translationsForReportTransit4267Columns}.netMass`)} />
+          <Column field={'totPkg'} header={t(`${translationsForReportTransit4267Columns}.totPkg`)} />
+          <Column style={{ minWidth: "15rem" }} field={'packageName'} header={t(`${translationsForReportTransit4267Columns}.packageName`)} />
+          <Column field={'hscode'} header={t(`${translationsForReportTransit4267Columns}.hscode`)} />
+          <Column style={{ minWidth: "30rem" }} field={'goodDescription2'} header={t(`${translationsForReportTransit4267Columns}.goodDescription2`)} />
+          <Column style={{ minWidth: "30rem" }} field={'goodDescription3'} header={t(`${translationsForReportTransit4267Columns}.goodDescription3`)} />
+          <Column style={{ minWidth: "20rem" }} field={'packageMark'} header={t(`${translationsForReportTransit4267Columns}.packageMark`)} />
+          <Column field={'contFlg'} header={t(`${translationsForReportTransit4267Columns}.contFlg`)} />
+          <Column field={'cont1'} header={t(`${translationsForReportTransit4267Columns}.cont1`)} />
+          <Column field={'cont2'} header={t(`${translationsForReportTransit4267Columns}.cont2`)} />
+          <Column field={'sealAffixedNo'} header={t(`${translationsForReportTransit4267Columns}.sealAffixedNo`)} />
+          <Column field={'sealIdentity'} header={t(`${translationsForReportTransit4267Columns}.sealIdentity`)} />
+          <Column field={'garantyCod'} header={t(`${translationsForReportTransit4267Columns}.garantyCod`)} />
+          <Column field={'garantyAmnt'} header={t(`${translationsForReportTransit4267Columns}.garantyAmnt`)} />
+          <Column style={{ minWidth: "20rem" }} field={'at1Cod'} header={t(`${translationsForReportTransit4267Columns}.at1Cod`)} />
+          <Column style={{ minWidth: "20rem" }} field={'at1Nbr'} header={t(`${translationsForReportTransit4267Columns}.at1Nbr`)} />
+          <Column field={'at2Cod'} header={t(`${translationsForReportTransit4267Columns}.at2Cod`)} />
+          <Column style={{ minWidth: "20rem" }} field={'at2Nbr'} header={t(`${translationsForReportTransit4267Columns}.at2Nbr`)} />
+          <Column field={'at3Cod'} header={t(`${translationsForReportTransit4267Columns}.at3Cod`)} />
+          <Column style={{ minWidth: "20rem" }} field={'at3Nbr'} header={t(`${translationsForReportTransit4267Columns}.at3Nbr`)} />
+          <Column field={'at4Cod'} header={t(`${translationsForReportTransit4267Columns}.at4Cod`)} />
+          <Column style={{ minWidth: "20rem" }} field={'at4Nbr'} header={t(`${translationsForReportTransit4267Columns}.at4Nbr`)} />
+          <Column field={'decRef'} header={t(`${translationsForReportTransit4267Columns}.decRef`)} />
+          <Column field={'loadList'} header={t(`${translationsForReportTransit4267Columns}.loadList`)} />
+          <Column field={'destnCty'} header={t(`${translationsForReportTransit4267Columns}.destnCty`)} />
+          <Column field={'expCode'} header={t(`${translationsForReportTransit4267Columns}.expCode`)} />
+          <Column field={'expNam'} header={t(`${translationsForReportTransit4267Columns}.expNam`)} />
+          <Column field={'ctyExport'} header={t(`${translationsForReportTransit4267Columns}.ctyExport`)} />
+          <Column field={'ctyDestnNam'} header={t(`${translationsForReportTransit4267Columns}.ctyDestnNam`)} />
+          <Column field={'nationalityOfTransport'} header={t(`${translationsForReportTransit4267Columns}.nationalityOfTransport`)} />
+          <Column field={'ctyBorder'} header={t(`${translationsForReportTransit4267Columns}.ctyBorder`)} />
+          <Column field={'ctyDep'} header={t(`${translationsForReportTransit4267Columns}.ctyDep`)} />
+          <Column field={'itmNo'} header={t(`${translationsForReportTransit4267Columns}.itmNo`)} />
+          <Column field={'packNbr'} header={t(`${translationsForReportTransit4267Columns}.packNbr`)} />
+          <Column field={'packageCode'} header={t(`${translationsForReportTransit4267Columns}.packageCode`)} />
+          <Column field={'astDat'} header={t(`${translationsForReportTransit4267Columns}.astDat`)} />
+          <Column field={'delCod'} header={t(`${translationsForReportTransit4267Columns}.delCod`)} />
 
-          <Column style={{ minWidth: "20rem" }} field={'delNam'} header={'delNam'} />
+          <Column style={{ minWidth: "20rem" }} field={'delNam'} header={t(`${translationsForReportTransit4267Columns}.delNam`)} />
         </DataTable>
       </Box>
     </SimpleCard>

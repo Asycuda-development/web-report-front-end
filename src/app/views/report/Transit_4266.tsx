@@ -7,12 +7,19 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4266: string = "reports.transit_4266"
+const translationsForReportTransit4266Columns: string = "reports.transit_4266.columns"
 
 const Transit_4266 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
   const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -57,7 +64,7 @@ const Transit_4266 = () => {
   }]
 
   return (
-    <SimpleCard title="Transit Report 4266">
+    <SimpleCard title={t(`${translationsForReportTransit4266}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -83,12 +90,12 @@ const Transit_4266 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'IDE_CUO_DPA_NAM'} header={'IDE_CUO_DPA_NAM '} />
-          <Column field={'IDE_CUO_DES_NAM'} header={'IDE_CUO_DES_NAM'} />
-          <Column field={'IDE_TYP_TRS'} header={'IDE_TYP_TRS'} />
-          <Column field={'STATUS'} header={'STATUS'} />
-          <Column field={'T1_cnt'} header={'COUNT'} />
-          {/* <Column field={'tad_tot'} header={'Customs Value'} /> */}
+          <Column field={'IDE_CUO_DPA_NAM'} header={t(`${translationsForReportTransit4266Columns}.IDE_CUO_DPA_NAM`)} />
+          <Column field={'IDE_CUO_DES_NAM'} header={t(`${translationsForReportTransit4266Columns}.IDE_CUO_DES_NAM`)} />
+          <Column field={'IDE_TYP_TRS'} header={t(`${translationsForReportTransit4266Columns}.IDE_TYP_TRS`)} />
+          <Column field={'STATUS'} header={t(`${translationsForReportTransit4266Columns}.STATUS`)} />
+          <Column field={'T1_cnt'} header={t(`${translationsForReportTransit4266Columns}.T1_cnt`)} />
+          {/* <Column field={'tad_tot'} header={t(`${translationsForReportTransit4266Columns}.tad_tot`)} /> */}
         </DataTable>
       </Box>
       <Toast ref={toastRef} />

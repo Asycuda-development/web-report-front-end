@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue4162: string = "reports.revenue_4162"
+const translationsForReportRevenue4162Columns: string = "reports.revenue_4162.columns"
 
 const Revenue_4162 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_4162 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 4162">
+    <SimpleCard title={t(`${translationsForReportRevenue4162}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -58,30 +65,30 @@ const Revenue_4162 = () => {
           showGridlines
         >
 
-          <Column field={'idenam'} header={'Customs Name'} />
-          <Column field={'ideyea'} header={'Year'} />
-          <Column field={'ideser'} header={'Serial'} />
-          <Column field={'idenbr'} header={'P Number(Reference of Customs)'} />
-          <Column field={'ref'} header={'Bank Reference(CBS)'} />
-          <Column field={'rcpDat'} header={'RCPT_Date'} />
-          <Column style={{ minWidth: "20rem" }} field={'operationTime'} header={'Operation_Date'} />
-          <Column field={'userid'} header={'User ID'} />
-          <Column style={{ minWidth: "14rem" }} field={'userName'} header={'User Name'} />
-          <Column field={'tarcmpcod'} header={'Company Code'} />
-          <Column style={{ minWidth: "20rem" }} field={'tranam'} header={'Company Name'} />
-          <Column field={'regdat'} header={'Register Date'} />
-          <Column field={'rcpnbr'} header={'RCPT_NO'} />
-          <Column field={'bnkNbr'} header={'Band Ref Number'} />
-          <Column field={'bnkDat'} header={'Bank Ref Date'} />
-          <Column field={'assNbr'} header={'ASS NO'} />
-          <Column field={'assSer'} header={'Serial'} />
-          <Column field={'modTyp'} header={'Type'} />
-          <Column style={{ minWidth: "15rem" }} field={'nam'} header={'Mod of Payment'} />
-          <Column field={'saremiasht'} header={'Red_Crescent'} />
-          <Column field={'sharwali'} header={'Municipality'} />
-          <Column field={'municipalityPlusRedCrescent'} header={'Municipality+Red_Crescent'} />
-          <Column field={'customsDuty'} header={'Customs_Duty'} />
-          <Column field={'amttot'} header={'Amount Total'} />
+          <Column field={'idenam'} header={t(`${translationsForReportRevenue4162Columns}.idenam`)} />
+          <Column field={'ideyea'} header={t(`${translationsForReportRevenue4162Columns}.ideyea`)} />
+          <Column field={'ideser'} header={t(`${translationsForReportRevenue4162Columns}.ideser`)} />
+          <Column field={'idenbr'} header={t(`${translationsForReportRevenue4162Columns}.idenbr`)} />
+          <Column field={'ref'} header={t(`${translationsForReportRevenue4162Columns}.ref`)} />
+          <Column field={'rcpDat'} header={t(`${translationsForReportRevenue4162Columns}.rcpDat`)} />
+          <Column style={{ minWidth: "20rem" }} field={'operationTime'} header={t(`${translationsForReportRevenue4162Columns}.operationTime`)} />
+          <Column field={'userid'} header={t(`${translationsForReportRevenue4162Columns}.userid`)} />
+          <Column style={{ minWidth: "14rem" }} field={'userName'} header={t(`${translationsForReportRevenue4162Columns}.userName`)} />
+          <Column field={'tarcmpcod'} header={t(`${translationsForReportRevenue4162Columns}.tarcmpcod`)} />
+          <Column style={{ minWidth: "20rem" }} field={'tranam'} header={t(`${translationsForReportRevenue4162Columns}.tranam`)} />
+          <Column field={'regdat'} header={t(`${translationsForReportRevenue4162Columns}.regdat`)} />
+          <Column field={'rcpnbr'} header={t(`${translationsForReportRevenue4162Columns}.rcpnbr`)} />
+          <Column field={'bnkNbr'} header={t(`${translationsForReportRevenue4162Columns}.bnkNbr`)} />
+          <Column field={'bnkDat'} header={t(`${translationsForReportRevenue4162Columns}.bnkDat`)} />
+          <Column field={'assNbr'} header={t(`${translationsForReportRevenue4162Columns}.assNbr`)} />
+          <Column field={'assSer'} header={t(`${translationsForReportRevenue4162Columns}.assSer`)} />
+          <Column field={'modTyp'} header={t(`${translationsForReportRevenue4162Columns}.modTyp`)} />
+          <Column style={{ minWidth: "15rem" }} field={'nam'} header={t(`${translationsForReportRevenue4162Columns}.nam`)} />
+          <Column field={'saremiasht'} header={t(`${translationsForReportRevenue4162Columns}.saremiasht`)} />
+          <Column field={'sharwali'} header={t(`${translationsForReportRevenue4162Columns}.sharwali`)} />
+          <Column field={'municipalityPlusRedCrescent'} header={t(`${translationsForReportRevenue4162Columns}.municipalityPlusRedCrescent`)} />
+          <Column field={'customsDuty'} header={t(`${translationsForReportRevenue4162Columns}.customsDuty`)} />
+          <Column field={'amttot'} header={t(`${translationsForReportRevenue4162Columns}.amttot`)} />
         </DataTable>
       </Box>
     </SimpleCard>

@@ -7,12 +7,19 @@ import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4573: string = "reports.dps_4573"
+const translationsForReportDPS4573Columns: string = "reports.dps_4573.columns"
 
 function DPS_4573() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
   const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -61,7 +68,7 @@ function DPS_4573() {
     name: 'Warehouse'
   }]
   return (
-    <SimpleCard title="DPS_4573">
+    <SimpleCard title={t(`${translationsForReportDPS4573}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -84,33 +91,33 @@ function DPS_4573() {
           stripedRows
           showGridlines
         >
-          <Column field={'ideaYea'} header={'Year'} />
+          <Column field={'ideaYea'} header={t(`${translationsForReportDPS4573Columns}.ideaYea`)} />
 
-          <Column filter filterField="ideNbr" field={'ideNbr'} header={'SAD_NO'} />
-          <Column field={'ideCuo'} header={'SAD_Cuo'} />
-          <Column field={'ideCuoNam'} header={'SAD_Cou_Name'} />
-          <Column field={'shdCod'} header={'SAD_Cod'} />
-          <Column field={'shdNam'} header={'SAD_Name'} />
-          <Column filter filterField="cmpCod" field={'cmpCod'} header={'Company_TIN'} />
-          <Column field={'cmpNam'} header={'Company_Name'} />
-          <Column filter filterField="decCod" field={'decCod'} header={'Declerant_Cod'} />
-          <Column field={'decNam'} header={'Declerant_Name'} />
-          <Column field={'valUsr'} header={'Val_Usr'} />
-          <Column field={'extUsr'} header={'Exit_Usr'} />
-          <Column field={'extPlc'} header={'Exit_Place'} />
-          <Column field={'extDat'} header={'Exit_Date'} />
-          <Column field={'sadItm'} header={'SAD_Item'} />
-          <Column filter filterField="sadRegNbr" field={'sadRegNbr'} header={'SAD_Reg_NO'} />
-          <Column field={'sadRegSer'} header={'SAD_Reg_Ser'} />
-          <Column field={'sadAssAll'} header={'SAD_ASS_All'} />
-          <Column field={'sadPckMk1'} header={'SAD_PckMK1'} />
-          <Column field={'sadPckMk2s'} header={'SAD_Pck_MK2'} />
-          <Column field={'sadPackNbr'} header={'SAD_Pck_MK_NO'} />
-          <Column field={'sadWgtGrs'} header={'SAD_Wgt_Grs'} />
-          <Column field={'sadPckExtNbr'} header={'SAD_Pck_Exit NO'} />
-          <Column field={'sadPckExtWgt'} header={'SAD Pck_Exit Wgt'} />
-          <Column filter filterField="manRef" field={'manRef'} header={'Man_Ref'} />
-          <Column field={'serPrt'} header={'serPrt'} />
+          <Column filter filterField="ideNbr" field={'ideNbr'} header={t(`${translationsForReportDPS4573Columns}.ideNbr`)} />
+          <Column field={'ideCuo'} header={t(`${translationsForReportDPS4573Columns}.ideCuo`)} />
+          <Column field={'ideCuoNam'} header={t(`${translationsForReportDPS4573Columns}.ideCuoNam`)} />
+          <Column field={'shdCod'} header={t(`${translationsForReportDPS4573Columns}.shdCod`)} />
+          <Column field={'shdNam'} header={t(`${translationsForReportDPS4573Columns}.shdNam`)} />
+          <Column filter filterField="cmpCod" field={'cmpCod'} header={t(`${translationsForReportDPS4573Columns}.cmpCod`)} />
+          <Column field={'cmpNam'} header={t(`${translationsForReportDPS4573Columns}.cmpNam`)} />
+          <Column filter filterField="decCod" field={'decCod'} header={t(`${translationsForReportDPS4573Columns}.decCod`)} />
+          <Column field={'decNam'} header={t(`${translationsForReportDPS4573Columns}.decNam`)} />
+          <Column field={'valUsr'} header={t(`${translationsForReportDPS4573Columns}.valUsr`)} />
+          <Column field={'extUsr'} header={t(`${translationsForReportDPS4573Columns}.extUsr`)} />
+          <Column field={'extPlc'} header={t(`${translationsForReportDPS4573Columns}.extPlc`)} />
+          <Column field={'extDat'} header={t(`${translationsForReportDPS4573Columns}.extDat`)} />
+          <Column field={'sadItm'} header={t(`${translationsForReportDPS4573Columns}.sadItm`)} />
+          <Column filter filterField="sadRegNbr" field={'sadRegNbr'} header={t(`${translationsForReportDPS4573Columns}.sadRegNbr`)} />
+          <Column field={'sadRegSer'} header={t(`${translationsForReportDPS4573Columns}.sadRegSer`)} />
+          <Column field={'sadAssAll'} header={t(`${translationsForReportDPS4573Columns}.sadAssAll`)} />
+          <Column field={'sadPckMk1'} header={t(`${translationsForReportDPS4573Columns}.sadPckMk1`)} />
+          <Column field={'sadPckMk2s'} header={t(`${translationsForReportDPS4573Columns}.sadPckMk2s`)} />
+          <Column field={'sadPackNbr'} header={t(`${translationsForReportDPS4573Columns}.sadPackNbr`)} />
+          <Column field={'sadWgtGrs'} header={t(`${translationsForReportDPS4573Columns}.sadWgtGrs`)} />
+          <Column field={'sadPckExtNbr'} header={t(`${translationsForReportDPS4573Columns}.sadPckExtNbr`)} />
+          <Column field={'sadPckExtWgt'} header={t(`${translationsForReportDPS4573Columns}.sadPckExtWgt`)} />
+          <Column filter filterField="manRef" field={'manRef'} header={t(`${translationsForReportDPS4573Columns}.manRef`)} />
+          <Column field={'serPrt'} header={t(`${translationsForReportDPS4573Columns}.serPrt`)} />
         </DataTable>
       </Box>
       <Toast ref={toastRef} />

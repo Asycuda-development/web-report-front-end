@@ -7,12 +7,19 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4564: string = "reports.dps_4564"
+const translationsForReportDPS4564Columns: string = "reports.dps_4564.columns"
 
 function DPS_4564() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -53,7 +60,7 @@ function DPS_4564() {
         name: 'ALL'
     }]
     return (
-        <SimpleCard title="DPS_4564">
+        <SimpleCard title={t(`${translationsForReportDPS4564}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -80,46 +87,46 @@ function DPS_4564() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'sadYear'} header={'SAD_YEAR'} />
-                    <Column field={'sddOffice'} header={'SAD_OFFICE'} />
-                    <Column field={'sadRegNo'} header={'SAD_REG_NO'} />
-                    <Column field={'sadRegDate'} header={'SAD_REG_DATE'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column field={'sadflw'} header={'SAD_FLW'} />
-                    <Column field={'currentChannelDsc'} header={'CURRENT_CHANNEL_DSC'} />
-                    <Column field={'ccurrentChannelCod'} header={'CURRENT_CHANNEL_COD'} />
-                    <Column field={'selectedChannel'} header={'SELECTED_CHANNEL'} />
-                    <Column field={'companyTin'} header={'COMPANY_TIN'} />
-                    <Column field={'cmpNam'} header={'CMP_NAM'} />
-                    <Column field={'items'} header={'ITEMS'} />
-                    <Column field={'deccod'} header={'DEC_COD'} />
-                    <Column field={'decnam'} header={'DEC_NAM'} />
-                    <Column field={'itmno'} header={'ITM_NO'} />
-                    <Column field={'hscode'} header={'HSCODE'} />
-                    <Column field={'dsc1'} header={'DSC1'} />
-                    <Column field={'dsc3'} header={'DSC3'} />
-                    <Column style={{ minWidth: '12rem' }} field={'FirstExa'} header={'FIRST_EXA'} />
-                    <Column field={'LastExa'} header={'LAST_EXA'} />
-                    <Column style={{ minWidth: '12rem' }} field={'FirstCexa'} header={'FIRST_CEXA'} />
-                    <Column style={{ minWidth: '12rem' }} field={'LastCexa'} header={'LAST_CEXA'} />
-                    <Column field={'PriviousDuty'} header={'PRIVIOUS_DUTY'} />
-                    <Column field={'CurrentTAXES'} header={'CURRENT_TAXES'} />
-                    <Column field={'TaxDiff'} header={'Tax Difference'} />
-                    <Column field={'CUSTOMSVALUE'} header={'CUSTOMS_VALUE'} />
-                    <Column field={'offenceCode'} header={'OFFENCE_CODE'} />
-                    <Column field={'offenceCodeDesc'} header={'OFFENCE_CODE_DESC'} />
-                    <Column field={'LorryTotal'} header={'LORRY_TOTAL'} />
-                    <Column field={'regtime'} header={'I_No_Time'} />
-                    <Column field={'assmttime'} header={'ASSMT_TIME'} />
-                    <Column field={'ctyorg'} header={'Country of origin'} />
-                    <Column field={'WORKLOAD'} header={'WORKLOAD'} />
-                    <Column field={'PriviousDuty_1'} header={'PRIVIOUS_DUTY_1'} />
-                    <Column field={'CurrentTAXES_1'} header={'CURRENT_TAXES_1'} />
-                    <Column field={'fincod'} header={'FIN_COD'} />
-                    <Column field={'finnam'} header={'FIN_NAM'} />
-                    <Column field={'rcptno'} header={'RCPT_NO'} />
-                    <Column field={'rcptdate'} header={'rcptdate'} />
-                    <Column field={'natproc'} header={'NAT_PROC'} />
+                    <Column field={'sadYear'} header={t(`${translationsForReportDPS4564Columns}.sadYear`)} />
+                    <Column field={'sddOffice'} header={t(`${translationsForReportDPS4564Columns}.sddOffice`)} />
+                    <Column field={'sadRegNo'} header={t(`${translationsForReportDPS4564Columns}.sadRegNo`)} />
+                    <Column field={'sadRegDate'} header={t(`${translationsForReportDPS4564Columns}.sadRegDate`)} />
+                    <Column field={'status'} header={t(`${translationsForReportDPS4564Columns}.status`)} />
+                    <Column field={'sadflw'} header={t(`${translationsForReportDPS4564Columns}.sadflw`)} />
+                    <Column field={'currentChannelDsc'} header={t(`${translationsForReportDPS4564Columns}.currentChannelDsc`)} />
+                    <Column field={'ccurrentChannelCod'} header={t(`${translationsForReportDPS4564Columns}.ccurrentChannelCod`)} />
+                    <Column field={'selectedChannel'} header={t(`${translationsForReportDPS4564Columns}.selectedChannel`)} />
+                    <Column field={'companyTin'} header={t(`${translationsForReportDPS4564Columns}.companyTin`)} />
+                    <Column field={'cmpNam'} header={t(`${translationsForReportDPS4564Columns}.cmpNam`)} />
+                    <Column field={'items'} header={t(`${translationsForReportDPS4564Columns}.items`)} />
+                    <Column field={'deccod'} header={t(`${translationsForReportDPS4564Columns}.deccod`)} />
+                    <Column field={'decnam'} header={t(`${translationsForReportDPS4564Columns}.decnam`)} />
+                    <Column field={'itmno'} header={t(`${translationsForReportDPS4564Columns}.itmno`)} />
+                    <Column field={'hscode'} header={t(`${translationsForReportDPS4564Columns}.hscode`)} />
+                    <Column field={'dsc1'} header={t(`${translationsForReportDPS4564Columns}.dsc1`)} />
+                    <Column field={'dsc3'} header={t(`${translationsForReportDPS4564Columns}.dsc3`)} />
+                    <Column style={{ minWidth: '12rem' }} field={'FirstExa'} header={t(`${translationsForReportDPS4564Columns}.FirstExa`)} />
+                    <Column field={'LastExa'} header={t(`${translationsForReportDPS4564Columns}.LastExa`)} />
+                    <Column style={{ minWidth: '12rem' }} field={'FirstCexa'} header={t(`${translationsForReportDPS4564Columns}.FirstCexa`)} />
+                    <Column style={{ minWidth: '12rem' }} field={'LastCexa'} header={t(`${translationsForReportDPS4564Columns}.LastCexa`)} />
+                    <Column field={'PriviousDuty'} header={t(`${translationsForReportDPS4564Columns}.PriviousDuty`)} />
+                    <Column field={'CurrentTAXES'} header={t(`${translationsForReportDPS4564Columns}.CurrentTAXES`)} />
+                    <Column field={'TaxDiff'} header={t(`${translationsForReportDPS4564Columns}.TaxDiff`)} />
+                    <Column field={'CUSTOMSVALUE'} header={t(`${translationsForReportDPS4564Columns}.CUSTOMSVALUE`)} />
+                    <Column field={'offenceCode'} header={t(`${translationsForReportDPS4564Columns}.offenceCode`)} />
+                    <Column field={'offenceCodeDesc'} header={t(`${translationsForReportDPS4564Columns}.offenceCodeDesc`)} />
+                    <Column field={'LorryTotal'} header={t(`${translationsForReportDPS4564Columns}.LorryTotal`)} />
+                    <Column field={'regtime'} header={t(`${translationsForReportDPS4564Columns}.regtime`)} />
+                    <Column field={'assmttime'} header={t(`${translationsForReportDPS4564Columns}.assmttime`)} />
+                    <Column field={'ctyorg'} header={t(`${translationsForReportDPS4564Columns}.ctyorg`)} />
+                    <Column field={'WORKLOAD'} header={t(`${translationsForReportDPS4564Columns}.WORKLOAD`)} />
+                    <Column field={'PriviousDuty_1'} header={t(`${translationsForReportDPS4564Columns}.PriviousDuty_1`)} />
+                    <Column field={'CurrentTAXES_1'} header={t(`${translationsForReportDPS4564Columns}.CurrentTAXES_1`)} />
+                    <Column field={'fincod'} header={t(`${translationsForReportDPS4564Columns}.fincod`)} />
+                    <Column field={'finnam'} header={t(`${translationsForReportDPS4564Columns}.finnam`)} />
+                    <Column field={'rcptno'} header={t(`${translationsForReportDPS4564Columns}.rcptno`)} />
+                    <Column field={'rcptdate'} header={t(`${translationsForReportDPS4564Columns}.rcptdate`)} />
+                    <Column field={'natproc'} header={t(`${translationsForReportDPS4564Columns}.natproc`)} />
                 </DataTable>
             </Box>
             <Toast ref={toastRef} />

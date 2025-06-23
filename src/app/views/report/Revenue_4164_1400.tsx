@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue41641400: string = "reports.revenue_4164_1400"
+const translationsForReportRevenue41641400Columns: string = "reports.revenue_4164_1400.columns"
 
 const Revenue_4164_1400 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_4164_1400 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 4164_1400">
+    <SimpleCard title={t(`${translationsForReportRevenue41641400}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -55,9 +62,9 @@ const Revenue_4164_1400 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'off'} header={'Office'} />
-          <Column field={'sadFlw'} header={'Import/Export/Other '} />
-          <Column field={'tot'} header={'Total Tax'} />
+          <Column field={'off'} header={t(`${translationsForReportRevenue41641400Columns}.off`)} />
+          <Column field={'sadFlw'} header={t(`${translationsForReportRevenue41641400Columns}.sadFlw`)} />
+          <Column field={'tot'} header={t(`${translationsForReportRevenue41641400Columns}.tot`)} />
         </DataTable>
       </Box>
     </SimpleCard>

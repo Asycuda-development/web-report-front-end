@@ -6,12 +6,19 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportValuation4657: string = "reports.valuation_4657"
+const translationsForReportValuation4657Columns: string = "reports.valuation_4657.columns"
 
 
 const Valuation_4657 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -37,7 +44,7 @@ const Valuation_4657 = () => {
   };
 
   return (
-    <SimpleCard title="ValuationReport4657">
+    <SimpleCard title={t(`${translationsForReportValuation4657}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -60,14 +67,14 @@ const Valuation_4657 = () => {
           showGridlines
         >
 
-          <Column field={'HS_CODE'} header={'HS_CODE'} />
-          <Column field={'TSC_CODE'} header={'TSC_CODE'} />
-          <Column style={{ minWidth: "15rem" }} field={'DSC'} header={'DSC'} />
-          <Column style={{ minWidth: "15rem" }} field={'Country_name'} header={'Country_name'} />
-          <Column style={{ minWidth: "15rem" }} field={'Item_No'} header={'Item_No'} />
-          <Column field={'Item_Value'} header={'Item_Value'} />
-          <Column field={'Item_tax'} header={'Item_tax'} />
-          <Column field={'TSC_Status'} header={'TSC_Status'} />
+          <Column field={'HS_CODE'} header={t(`${translationsForReportValuation4657Columns}.HS_CODE`)} />
+          <Column field={'TSC_CODE'} header={t(`${translationsForReportValuation4657Columns}.TSC_CODE`)} />
+          <Column style={{ minWidth: "15rem" }} field={'DSC'} header={t(`${translationsForReportValuation4657Columns}.DSC`)} />
+          <Column style={{ minWidth: "15rem" }} field={'Country_name'} header={t(`${translationsForReportValuation4657Columns}.Country_name`)} />
+          <Column style={{ minWidth: "15rem" }} field={'Item_No'} header={t(`${translationsForReportValuation4657Columns}.Item_No`)} />
+          <Column field={'Item_Value'} header={t(`${translationsForReportValuation4657Columns}.Item_Value`)} />
+          <Column field={'Item_tax'} header={t(`${translationsForReportValuation4657Columns}.Item_tax`)} />
+          <Column field={'TSC_Status'} header={t(`${translationsForReportValuation4657Columns}.TSC_Status`)} />
         </DataTable>
       </Box>
     </SimpleCard>

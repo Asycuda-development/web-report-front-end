@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue4163: string = "reports.revenue_4163"
+const translationsForReportRevenue4163Columns: string = "reports.revenue_4163.columns"
 
 const Revenue_4163 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_4163 = () => {
   };
 
   return (
-    <SimpleCard title="RevenueReport4163">
+    <SimpleCard title={t(`${translationsForReportRevenue4163}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -56,15 +63,15 @@ const Revenue_4163 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'ideCuo'} header={'IDE_CUO '} />
-          <Column field={'declarationValue'} header={'DECLARATION_VALUE'} />
-          <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
-          <Column field={'sadTotal'} header={'SAD_TOTAL'} />
-          <Column field={'lorryTotal'} header={'LORRY_TOTAL'} />
-          <Column field={'valuePerDeclaration'} header={'VALUE_PER_DECLARATION'} />
-          <Column field={'dutyPerDeclaration'} header={'DUTY_PER_DECLARATION'} />
-          <Column field={'valuePerLorry'} header={'VALUE_PER_LORRY'} />
-          <Column field={'dutyPerLorry'} header={'DUTY_PER_LORRY'} />
+          <Column field={'ideCuo'} header={t(`${translationsForReportRevenue4163Columns}.ideCuo`)} />
+          <Column field={'declarationValue'} header={t(`${translationsForReportRevenue4163Columns}.declarationValue`)} />
+          <Column field={'declarationTaxes'} header={t(`${translationsForReportRevenue4163Columns}.declarationTaxes`)} />
+          <Column field={'sadTotal'} header={t(`${translationsForReportRevenue4163Columns}.sadTotal`)} />
+          <Column field={'lorryTotal'} header={t(`${translationsForReportRevenue4163Columns}.lorryTotal`)} />
+          <Column field={'valuePerDeclaration'} header={t(`${translationsForReportRevenue4163Columns}.valuePerDeclaration`)} />
+          <Column field={'dutyPerDeclaration'} header={t(`${translationsForReportRevenue4163Columns}.dutyPerDeclaration`)} />
+          <Column field={'valuePerLorry'} header={t(`${translationsForReportRevenue4163Columns}.valuePerLorry`)} />
+          <Column field={'dutyPerLorry'} header={t(`${translationsForReportRevenue4163Columns}.dutyPerLorry`)} />
         </DataTable>
       </Box>
     </SimpleCard>

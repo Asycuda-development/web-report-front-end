@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4281: string = "reports.transit_4281"
+const translationsForReportTransit4281Columns: string = "reports.transit_4281.columns"
 
 const Transit_4281 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -36,7 +43,7 @@ const Transit_4281 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4281">
+    <SimpleCard title={t(`${translationsForReportTransit4281}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -59,12 +66,12 @@ const Transit_4281 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'Dep_Office_Name'} header={'Dep_Office_Name '} />
-          <Column field={'Dest_Office_Name'} header={'Dest_Office_Name'} />
-          <Column field={'Forwarder_code'} header={'Forwarder_code'} />
-          <Column field={'Forwarder_name'} header={'Forwarder_name'} />
-          <Column field={'Number_of_T1s'} header={'Number_of_T1s'} />
-          <Column field={'status'} header={'status'} />
+          <Column field={'Dep_Office_Name'} header={t(`${translationsForReportTransit4281Columns}.Dep_Office_Name`)} />
+          <Column field={'Dest_Office_Name'} header={t(`${translationsForReportTransit4281Columns}.Dest_Office_Name`)} />
+          <Column field={'Forwarder_code'} header={t(`${translationsForReportTransit4281Columns}.Forwarder_code`)} />
+          <Column field={'Forwarder_name'} header={t(`${translationsForReportTransit4281Columns}.Forwarder_name`)} />
+          <Column field={'Number_of_T1s'} header={t(`${translationsForReportTransit4281Columns}.Number_of_T1s`)} />
+          <Column field={'status'} header={t(`${translationsForReportTransit4281Columns}.status`)} />
         </DataTable>
       </Box>
     </SimpleCard>

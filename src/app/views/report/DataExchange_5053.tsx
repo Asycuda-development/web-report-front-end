@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDataExchange5053: string = "reports.dataexchange_5053"
+const translationsForReportDataExchange5053Columns: string = "reports.dataexchange_5053.columns"
 
 function DataExchange_5053() {
 	const [reportData, setReportData] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
 	useEffect(() => { }, []);
 
@@ -35,7 +42,7 @@ function DataExchange_5053() {
 	};
 
 	return (
-		<SimpleCard title="DataExchangeReport5053">
+		<SimpleCard title={t(`${translationsForReportDataExchange5053}.title`)}>
 			<ReportHeaderInputs
 				showStartDate
 				showEndDate
@@ -55,53 +62,53 @@ function DataExchange_5053() {
 					stripedRows
 					showGridlines
 				>
-					<Column field={'Country_of_export'} header={'Country_of_export'} />
-					<Column field={'electronic_ref_number'} header={'electronic_ref_number'} />
-					<Column field={'electronic_ref_date'} header={'electronic_ref_date'} />
-					<Column field={'electronic_document_ref_nber'} header={'electronic_document_ref_nber'} />
-					<Column field={'Country_sender'} header={'Country_sender'} />
-					<Column field={'Country_reciver'} header={'Country_reciver'} />
-					<Column field={'Languge'} header={'Languge'} />
-					<Column field={'Items'} header={'Items'} />
-					<Column field={'COUNTRYDESTINATION'} header={'COUNTRYDESTINATION'} />
-					<Column field={'COUNTRYORIGIN'} header={'COUNTRYORIGIN'} />
-					<Column field={'TOTAL_DEPARTURE_TRANSPORT'} header={'TOTAL_DEPARTURE_TRANSPORT'} />
-					<Column field={'CURRENCY1'} header={'CURRENCY1'} />
-					<Column field={'EXCHANGERATE1'} header={'EXCHANGERATE1'} />
-					<Column field={'USDRATE'} header={'USDRATE'} />
-					<Column field={'TOTAL_AMOUNT_INVOICED'} header={'TOTAL_AMOUNT_INVOICED'} />
-					<Column field={'STAMP_OFFICE'} header={'STAMP_OFFICE'} />
-					<Column field={'TOTAL_TRANSPORT_CROSS_BORDER'} header={'TOTAL_TRANSPORT_CROSS_BORDER'} />
-					<Column field={'OFFICE_ON_BORDER'} header={'OFFICE_ON_BORDER'} />
-					<Column field={'ISSUE_DATE'} header={'ISSUE_DATE'} />
-					<Column field={'DOC_NUMBER'} header={'DOC_NUMBER'} />
-					<Column field={'customs_code'} header={'customs_code'} />
-					<Column field={'proceduer'} header={'proceduer'} />
-					<Column field={'Type_of_document'} header={'Type_of_document'} />
-					<Column field={'CONTAINER_INDICATOR'} header={' CONTAINER_INDICATOR'} />
-					<Column field={'DELIVERY_TERMS_STRING_CODE'} header={'DELIVERY_TERMS_STRING_CODE'} />
-					<Column field={'UTKINDICATOR'} header={'UTKINDICATOR'} />
-					<Column field={'CONSIGNOR_ORG'} header={'CONSIGNOR_ORG'} />
-					<Column field={'Tax_payer_individual_nber'} header={'Tax_payer_individual_nber'} />
-					<Column field={'Address'} header={'Address'} />
-					<Column field={'DECLARANT_ORG'} header={'DECLARANT_ORG'} />
-					<Column field={'DECLARANT_TIN'} header={'DECLARANT_TIN'} />
-					<Column field={'CONSIGNEE_ORG'} header={'CONSIGNEE_ORG'} />
-					<Column field={'CONSIGNEE_Address'} header={'CONSIGNEE_Address'} />
-					<Column field={'TRANSPORT_TRADITIONAL_NAME'} header={'TRANSPORT_TRADITIONAL_NAME'} />
-					<Column field={'TRANSPORT_IDENTIFIER'} header={'TRANSPORT_IDENTIFIER'} />
-					<Column field={'TRANSPORTMODE_CODE'} header={'TRANSPORTMODE_CODE'} />
-					<Column field={'ITTM_NO'} header={'ITTM_NO'} />
-					<Column field={'NET_MASS'} header={'NET_MASS'} />
-					<Column field={'GROSS_MASS'} header={'GROSS_MASS'} />
-					<Column field={'CURRENCY'} header={'CURRENCY'} />
-					<Column field={'EXCHANGERATE'} header={'EXCHANGERATE'} />
-					<Column field={'INVOICE_VALUE'} header={'INVOICE_VALUE'} />
-					<Column field={'Customs_VALUE'} header={'Customs_VALUE'} />
-					<Column field={'GOODS_TNVE_DCODE'} header={'GOODS_TNVE_DCODE'} />
-					<Column field={'GOODS_DESCRIPTION'} header={'GOODS_DESCRIPTION'} />
-					<Column field={'DOCNUMBER'} header={'DOCNUMBER'} />
-					<Column field={'DOCKIND'} header={'DOCKIND'} />
+					<Column field={'Country_of_export'} header={t(`${translationsForReportDataExchange5053Columns}.Country_of_export`)} />
+					<Column field={'electronic_ref_number'} header={t(`${translationsForReportDataExchange5053Columns}.electronic_ref_number`)} />
+					<Column field={'electronic_ref_date'} header={t(`${translationsForReportDataExchange5053Columns}.electronic_ref_date`)} />
+					<Column field={'electronic_document_ref_nber'} header={t(`${translationsForReportDataExchange5053Columns}.electronic_document_ref_nber`)} />
+					<Column field={'Country_sender'} header={t(`${translationsForReportDataExchange5053Columns}.Country_sender`)} />
+					<Column field={'Country_reciver'} header={t(`${translationsForReportDataExchange5053Columns}.Country_reciver`)} />
+					<Column field={'Languge'} header={t(`${translationsForReportDataExchange5053Columns}.Languge`)} />
+					<Column field={'Items'} header={t(`${translationsForReportDataExchange5053Columns}.Items`)} />
+					<Column field={'COUNTRYDESTINATION'} header={t(`${translationsForReportDataExchange5053Columns}.COUNTRYDESTINATION`)} />
+					<Column field={'COUNTRYORIGIN'} header={t(`${translationsForReportDataExchange5053Columns}.COUNTRYORIGIN`)} />
+					<Column field={'TOTAL_DEPARTURE_TRANSPORT'} header={t(`${translationsForReportDataExchange5053Columns}.TOTAL_DEPARTURE_TRANSPORT`)} />
+					<Column field={'CURRENCY1'} header={t(`${translationsForReportDataExchange5053Columns}.CURRENCY1`)} />
+					<Column field={'EXCHANGERATE1'} header={t(`${translationsForReportDataExchange5053Columns}.EXCHANGERATE1`)} />
+					<Column field={'USDRATE'} header={t(`${translationsForReportDataExchange5053Columns}.USDRATE`)} />
+					<Column field={'TOTAL_AMOUNT_INVOICED'} header={t(`${translationsForReportDataExchange5053Columns}.TOTAL_AMOUNT_INVOICED`)} />
+					<Column field={'STAMP_OFFICE'} header={t(`${translationsForReportDataExchange5053Columns}.STAMP_OFFICE`)} />
+					<Column field={'TOTAL_TRANSPORT_CROSS_BORDER'} header={t(`${translationsForReportDataExchange5053Columns}.TOTAL_TRANSPORT_CROSS_BORDER`)} />
+					<Column field={'OFFICE_ON_BORDER'} header={t(`${translationsForReportDataExchange5053Columns}.OFFICE_ON_BORDER`)} />
+					<Column field={'ISSUE_DATE'} header={t(`${translationsForReportDataExchange5053Columns}.ISSUE_DATE`)} />
+					<Column field={'DOC_NUMBER'} header={t(`${translationsForReportDataExchange5053Columns}.DOC_NUMBER`)} />
+					<Column field={'customs_code'} header={t(`${translationsForReportDataExchange5053Columns}.customs_code`)} />
+					<Column field={'proceduer'} header={t(`${translationsForReportDataExchange5053Columns}.proceduer`)} />
+					<Column field={'Type_of_document'} header={t(`${translationsForReportDataExchange5053Columns}.Type_of_document`)} />
+					<Column field={'CONTAINER_INDICATOR'} header={t(`${translationsForReportDataExchange5053Columns}.CONTAINER_INDICATOR`)} />
+					<Column field={'DELIVERY_TERMS_STRING_CODE'} header={t(`${translationsForReportDataExchange5053Columns}.DELIVERY_TERMS_STRING_CODE`)} />
+					<Column field={'UTKINDICATOR'} header={t(`${translationsForReportDataExchange5053Columns}.UTKINDICATOR`)} />
+					<Column field={'CONSIGNOR_ORG'} header={t(`${translationsForReportDataExchange5053Columns}.CONSIGNOR_ORG`)} />
+					<Column field={'Tax_payer_individual_nber'} header={t(`${translationsForReportDataExchange5053Columns}.Tax_payer_individual_nber`)} />
+					<Column field={'Address'} header={t(`${translationsForReportDataExchange5053Columns}.Address`)} />
+					<Column field={'DECLARANT_ORG'} header={t(`${translationsForReportDataExchange5053Columns}.DECLARANT_ORG`)} />
+					<Column field={'DECLARANT_TIN'} header={t(`${translationsForReportDataExchange5053Columns}.DECLARANT_TIN`)} />
+					<Column field={'CONSIGNEE_ORG'} header={t(`${translationsForReportDataExchange5053Columns}.CONSIGNEE_ORG`)} />
+					<Column field={'CONSIGNEE_Address'} header={t(`${translationsForReportDataExchange5053Columns}.CONSIGNEE_Address`)} />
+					<Column field={'TRANSPORT_TRADITIONAL_NAME'} header={t(`${translationsForReportDataExchange5053Columns}.TRANSPORT_TRADITIONAL_NAME`)} />
+					<Column field={'TRANSPORT_IDENTIFIER'} header={t(`${translationsForReportDataExchange5053Columns}.TRANSPORT_IDENTIFIER`)} />
+					<Column field={'TRANSPORTMODE_CODE'} header={t(`${translationsForReportDataExchange5053Columns}.TRANSPORTMODE_CODE`)} />
+					<Column field={'ITTM_NO'} header={t(`${translationsForReportDataExchange5053Columns}.ITTM_NO`)} />
+					<Column field={'NET_MASS'} header={t(`${translationsForReportDataExchange5053Columns}.NET_MASS`)} />
+					<Column field={'GROSS_MASS'} header={t(`${translationsForReportDataExchange5053Columns}.GROSS_MASS`)} />
+					<Column field={'CURRENCY'} header={t(`${translationsForReportDataExchange5053Columns}.CURRENCY`)} />
+					<Column field={'EXCHANGERATE'} header={t(`${translationsForReportDataExchange5053Columns}.EXCHANGERATE`)} />
+					<Column field={'INVOICE_VALUE'} header={t(`${translationsForReportDataExchange5053Columns}.INVOICE_VALUE`)} />
+					<Column field={'Customs_VALUE'} header={t(`${translationsForReportDataExchange5053Columns}.Customs_VALUE`)} />
+					<Column field={'GOODS_TNVE_DCODE'} header={t(`${translationsForReportDataExchange5053Columns}.GOODS_TNVE_DCODE`)} />
+					<Column field={'GOODS_DESCRIPTION'} header={t(`${translationsForReportDataExchange5053Columns}.GOODS_DESCRIPTION`)} />
+					<Column field={'DOCNUMBER'} header={t(`${translationsForReportDataExchange5053Columns}.DOCNUMBER`)} />
+					<Column field={'DOCKIND'} header={t(`${translationsForReportDataExchange5053Columns}.DOCKIND`)} />
 
 
 

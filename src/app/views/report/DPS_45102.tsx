@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS45102: string = "reports.dps_45102"
+const translationsForReportDPS45102Columns: string = "reports.dps_45102.columns"
 
 function DPS_45102() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -31,7 +38,7 @@ function DPS_45102() {
     }
   };
   return (
-    <SimpleCard title="DPS_45102">
+    <SimpleCard title={t(`${translationsForReportDPS45102}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -54,14 +61,14 @@ function DPS_45102() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-          <Column field={'New_Customs'} header={'Office'} />
-          <Column field={'newSadType'} header={'Type'} />
-          <Column field={'newSer'} header={'newSer'} />
-          <Column field={'newSer1'} header={'newSer1'} />
-          <Column field={'new_I'} header={'new_I'} />
-          <Column field={'new_I_Date'} header={'new_I_Date'} />
-          <Column field={' other_I'} header={' other_I'} />
-          <Column field={' new_I_Date_1'} header={' new_I_Date_1'} />
+          <Column field={'New_Customs'} header={t(`${translationsForReportDPS45102Columns}.New_Customs`)} />
+          <Column field={'newSadType'} header={t(`${translationsForReportDPS45102Columns}.newSadType`)} />
+          <Column field={'newSer'} header={t(`${translationsForReportDPS45102Columns}.newSer`)} />
+          <Column field={'newSer1'} header={t(`${translationsForReportDPS45102Columns}.newSer1`)} />
+          <Column field={'new_I'} header={t(`${translationsForReportDPS45102Columns}.new_I`)} />
+          <Column field={'new_I_Date'} header={t(`${translationsForReportDPS45102Columns}.new_I_Date`)} />
+          <Column field={' other_I'} header={t(`${translationsForReportDPS45102Columns}. other_I`)} />
+          <Column field={' new_I_Date_1'} header={t(`${translationsForReportDPS45102Columns}. new_I_Date_1`)} />
         </DataTable>
       </ Box>
     </SimpleCard>

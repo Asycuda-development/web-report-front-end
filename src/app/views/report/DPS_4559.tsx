@@ -6,11 +6,18 @@ import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4559: string = "reports.dps_4559"
+const translationsForReportDPS4559Columns: string = "reports.dps_4559.columns"
 
 function DPS_4559() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4559() {
     };
 
     return (
-        <SimpleCard title="DPS_4559">
+        <SimpleCard title={t(`${translationsForReportDPS4559}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -54,13 +61,13 @@ function DPS_4559() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'office'} header={'SAD_OFFICE'} />
-                    <Column field={'typSad'} header={'SAD_Type'} />
-                    <Column field={'typProc'} header={'SAD_Proc_code'}
+                    <Column field={'office'} header={t(`${translationsForReportDPS4559Columns}.office`)} />
+                    <Column field={'typSad'} header={t(`${translationsForReportDPS4559Columns}.typSad`)} />
+                    <Column field={'typProc'} header={t(`${translationsForReportDPS4559Columns}.typProc`)}
                     />
-                    <Column field={'type'} header={'TYPE_E/I'} />
-                    <Column field={'status'} header={'Status'} />
-                    <Column field={'sadCnt'} header={'Count'} />
+                    <Column field={'type'} header={t(`${translationsForReportDPS4559Columns}.type`)} />
+                    <Column field={'status'} header={t(`${translationsForReportDPS4559Columns}.status`)} />
+                    <Column field={'sadCnt'} header={t(`${translationsForReportDPS4559Columns}.sadCnt`)} />
 
 
 

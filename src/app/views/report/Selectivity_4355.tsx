@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportSelectivity4355: string = "reports.selectivity_4355"
+const translationsForReportSelectivity4355Columns: string = "reports.selectivity_4355.columns"
 
 const Selectivity_4355 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Selectivity_4355 = () => {
   };
 
   return (
-    <SimpleCard title="Selectivity Report 4355">
+    <SimpleCard title={t(`${translationsForReportSelectivity4355}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -56,33 +63,33 @@ const Selectivity_4355 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'SAD_YEAR'} header={'SAD_YEAR'} />
-          <Column field={'SAD_OFFICE'} header={'SAD_OFFICE'} />
-          <Column field={'SAD_REG_NO'} header={'SAD_REG_NO'} />
-          <Column field={'SAD_REG_DATE'} header={'SAD_REG_DATE'} />
-          <Column field={'current_CHANNEL_Dsc'} header={'current_CHANNEL_Dsc'} />
-          <Column field={'current_CHANNEL_COD'} header={'current_CHANNEL_COD'} />
-          <Column field={'Selected_CHANNEL'} header={'Selected_CHANNEL'} />
-          <Column style={{ minWidth: "20rem" }} field={'SEL_DATA'} header={'SEL_DATA'} />
-          <Column field={'STATUS'} header={'STATUS'} />
-          <Column style={{ minWidth: "15rem" }} field={'CMP_NAM'} header={'CMP_NAM'} />
-          <Column field={'IMPORTER'} header={'IMPORTER'} />
-          <Column field={'ITEMS'} header={'ITEMS'} />
-          <Column field={'First_Exa'} header={'First_Exa'} />
-          <Column field={'First_Cexa'} header={'First_Cexa'} />
-          <Column field={'SECTION'} header={'SECTION'} />
-          <Column field={'WORKLOAD'} header={'WORKLOAD'} />
-          <Column field={'INFRINGEMENT_DETAILS'} header={'INFRINGEMENT_DETAILS'} />
-          <Column field={'SAD_Previous_Taxes'} header={'SAD_Previous_Taxes'} />
-          <Column field={'Sad_Current_TAXES'} header={'Sad_Current_TAXES'} />
-          <Column field={'Tax_Diff'} header={'Tax_Diff'} />
-          <Column field={'SAD_CUSTOMS_VALUE'} header={'SAD_CUSTOMS_VALUE'} />
-          <Column field={'fin_cod'} header={'fin_cod'} />
-          <Column style={{ minWidth: "30rem" }} field={'fin_nam'} header={'fin_nam'} />
-          <Column field={'rcpt_no'} header={'rcpt_no'} />
-          <Column field={'rcpt_date'} header={'rcpt_date'} />
-          <Column field={'dec_cod'} header={'dec_cod'} />
-          <Column style={{ minWidth: "20rem" }} field={'dec_nam'} header={'dec_nam'} />
+          <Column field={'SAD_YEAR'} header={t(`${translationsForReportSelectivity4355Columns}.SAD_YEAR`)} />
+          <Column field={'SAD_OFFICE'} header={t(`${translationsForReportSelectivity4355Columns}.SAD_OFFICE`)} />
+          <Column field={'SAD_REG_NO'} header={t(`${translationsForReportSelectivity4355Columns}.SAD_REG_NO`)} />
+          <Column field={'SAD_REG_DATE'} header={t(`${translationsForReportSelectivity4355Columns}.SAD_REG_DATE`)} />
+          <Column field={'current_CHANNEL_Dsc'} header={t(`${translationsForReportSelectivity4355Columns}.current_CHANNEL_Dsc`)} />
+          <Column field={'current_CHANNEL_COD'} header={t(`${translationsForReportSelectivity4355Columns}.current_CHANNEL_COD`)} />
+          <Column field={'Selected_CHANNEL'} header={t(`${translationsForReportSelectivity4355Columns}.Selected_CHANNEL`)} />
+          <Column style={{ minWidth: "20rem" }} field={'SEL_DATA'} header={t(`${translationsForReportSelectivity4355Columns}.SEL_DATA`)} />
+          <Column field={'STATUS'} header={t(`${translationsForReportSelectivity4355Columns}.STATUS`)} />
+          <Column style={{ minWidth: "15rem" }} field={'CMP_NAM'} header={t(`${translationsForReportSelectivity4355Columns}.CMP_NAM`)} />
+          <Column field={'IMPORTER'} header={t(`${translationsForReportSelectivity4355Columns}.IMPORTER`)} />
+          <Column field={'ITEMS'} header={t(`${translationsForReportSelectivity4355Columns}.ITEMS`)} />
+          <Column field={'First_Exa'} header={t(`${translationsForReportSelectivity4355Columns}.First_Exa`)} />
+          <Column field={'First_Cexa'} header={t(`${translationsForReportSelectivity4355Columns}.First_Cexa`)} />
+          <Column field={'SECTION'} header={t(`${translationsForReportSelectivity4355Columns}.SECTION`)} />
+          <Column field={'WORKLOAD'} header={t(`${translationsForReportSelectivity4355Columns}.WORKLOAD`)} />
+          <Column field={'INFRINGEMENT_DETAILS'} header={t(`${translationsForReportSelectivity4355Columns}.INFRINGEMENT_DETAILS`)} />
+          <Column field={'SAD_Previous_Taxes'} header={t(`${translationsForReportSelectivity4355Columns}.SAD_Previous_Taxes`)} />
+          <Column field={'Sad_Current_TAXES'} header={t(`${translationsForReportSelectivity4355Columns}.Sad_Current_TAXES`)} />
+          <Column field={'Tax_Diff'} header={t(`${translationsForReportSelectivity4355Columns}.Tax_Diff`)} />
+          <Column field={'SAD_CUSTOMS_VALUE'} header={t(`${translationsForReportSelectivity4355Columns}.SAD_CUSTOMS_VALUE`)} />
+          <Column field={'fin_cod'} header={t(`${translationsForReportSelectivity4355Columns}.fin_cod`)} />
+          <Column style={{ minWidth: "30rem" }} field={'fin_nam'} header={t(`${translationsForReportSelectivity4355Columns}.fin_nam`)} />
+          <Column field={'rcpt_no'} header={t(`${translationsForReportSelectivity4355Columns}.rcpt_no`)} />
+          <Column field={'rcpt_date'} header={t(`${translationsForReportSelectivity4355Columns}.rcpt_date`)} />
+          <Column field={'dec_cod'} header={t(`${translationsForReportSelectivity4355Columns}.dec_cod`)} />
+          <Column style={{ minWidth: "20rem" }} field={'dec_nam'} header={t(`${translationsForReportSelectivity4355Columns}.dec_nam`)} />
         </DataTable>
       </Box>
     </SimpleCard>
