@@ -26,8 +26,8 @@ function DPS_4584() {
             if (data.basedOn && !data.basedOnValue) {
                 toastRef.current.show({
                     severity: 'error',
-                    summary: 'Based On Value',
-                    detail: 'Based On Value is required when Based On is selected, please try again.'
+                    summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+                    detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
                 });
                 return
             }
@@ -48,19 +48,19 @@ function DPS_4584() {
         }
     };
     const basedOnOptions = [{
-        label: 'I-no',
+        label: t(`${translationsForBasedOn}.i_no`),
         name: 'I-no'
     },
     {
-        label: 'Reg_No_Yearly',
+        label: t(`${translationsForBasedOn}.reg_No_Yearly`),
         name: 'Reg_No_Yearly'
     },
     {
-        label: 'Reg_No_Daily',
+        label: t(`${translationsForBasedOn}.reg_No_Daily`),
         name: 'Reg_No_Daily'
     },
     {
-        label: 'T1D_NUMBER',
+        label: t(`${translationsForBasedOn}.t1D_NUMBER`),
         name: 'T1D_NUMBER'
     },
     {
@@ -68,7 +68,7 @@ function DPS_4584() {
         name: 'I_no'
     },
     {
-        label: 'CMP_COD',
+        label:t(`${translationsForBasedOn}.cMP_COD`),
         name: 'CMP_COD'
     }]
     return (

@@ -26,8 +26,8 @@ function DPS_4573() {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
           severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -48,23 +48,23 @@ function DPS_4573() {
     }
   };
   const basedOnOptions = [{
-    label: 'declarant',
+    label: t(`${translationsForBasedOn}.declarant`),
     name: 'declarant'
   },
   {
-    label: 'company',
+    label: t(`${translationsForBasedOn}.company`),
     name: 'company'
   },
   {
-    label: 'manifest',
+    label: t(`${translationsForBasedOn}.manifest`),
     name: 'manifest'
   },
   {
-    label: 'I_no',
+    label: t(`${translationsForBasedOn}.i_no`),
     name: 'I_no'
   },
   {
-    label: 'Warehouse',
+    label: t(`${translationsForBasedOn}.warehouse`),
     name: 'Warehouse'
   }]
   return (
