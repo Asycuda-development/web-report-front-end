@@ -7,6 +7,7 @@ import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { useTranslation } from 'react-i18next';
+import { Toast } from 'primereact/toast';
 
 const translationsForBasedOnError: string = "errors"
 const translationsForBasedOn: string = "basedOn"
@@ -17,12 +18,21 @@ const Transit_4250 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const toastRef: any = useRef(null);
   const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
   const handleSubmit = async (data: SearchData) => {
     try {
+      if (data.basedOn && !data.basedOnValue) {
+                toastRef.current.show({
+                    severity: 'error',
+                    summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+                    detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
+                });
+                return
+            }
       setLoading(true)
       const res = await axios.post('/reporting/transit4250', {
         ...data,
@@ -155,6 +165,7 @@ const Transit_4250 = () => {
           <Column field={'trsctl'} header={t(`${translationsForReportTransit4250Columns}.trsctl`)} />
         </DataTable>
       </Box>
+      <Toast ref={toastRef} />
     </SimpleCard>
   );
 };
