@@ -26,8 +26,8 @@ const Transit_4266 = () => {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
           severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -51,15 +51,15 @@ const Transit_4266 = () => {
   };
 
   const basedOnOptions = [{
-    label: 'Declarant',
+    label: t(`${translationsForBasedOn}.declarant`),
     name: 'declarant'
   },
   {
-    label: 'Company',
+    label: t(`${translationsForBasedOn}.company`),
     name: 'company'
   },
   {
-    label: 'Financial',
+    label: t(`${translationsForBasedOn}.financial`),
     name: 'Financial'
   }]
 

@@ -8,6 +8,7 @@ import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { useTranslation } from 'react-i18next';
 import { Toast } from 'primereact/toast';
+import tr from 'date-fns/esm/locale/tr/index.js';
 
 const translationsForBasedOnError: string = "errors"
 const translationsForBasedOn: string = "basedOn"
@@ -43,7 +44,7 @@ const Transit_4260 = () => {
     } catch (error) { }
   };
   const basedOnOptions = [{
-    label: 'declarant',
+    label: t(`${translationsForBasedOn}.declarant`),
     name: 'declarant_Code'
   }]
   return (
