@@ -7,6 +7,8 @@ import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { useTranslation } from 'react-i18next';
+import { Toast } from 'primereact/toast';
+import tr from 'date-fns/esm/locale/tr/index.js';
 
 const translationsForBasedOnError: string = "errors"
 const translationsForBasedOn: string = "basedOn"
@@ -16,10 +18,19 @@ const translationsForReportTransit4260Columns: string = "reports.transit_4260.co
 const Transit_4260 = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
+  const toastRef: any = useRef(null);
   const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
+      if (data.basedOn && !data.basedOnValue) {
+        toastRef.current.show({
+          severity: 'error',
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
+        });
+        return;
+      }
       const res = await axios.post('/reporting/TransitReport4260', {
         type: data.customsProcedure,
         customsCode: data.CustomsCode,
@@ -30,10 +41,10 @@ const Transit_4260 = () => {
       } else {
         setReportData(res.data);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
   const basedOnOptions = [{
-    label: 'declarant',
+    label: t(`${translationsForBasedOn}.declarant`),
     name: 'declarant_Code'
   }]
   return (
@@ -124,6 +135,7 @@ const Transit_4260 = () => {
           <Column field={'del_Nam'} header={t(`${translationsForReportTransit4260Columns}.del_Nam`)} />
         </DataTable>
       </Box>
+      <Toast ref={toastRef} />
     </SimpleCard>
   );
 };
