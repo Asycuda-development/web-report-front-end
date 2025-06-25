@@ -301,7 +301,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4153}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4153_REVENUE]}>
+              <PrivateRoute>
                 <Revenue_4153 />
               </PrivateRoute>
             }
