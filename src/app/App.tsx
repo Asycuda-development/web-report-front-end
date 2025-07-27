@@ -13,16 +13,14 @@ import Loading from './components/MatxLoading';
 import setupAxiosInterceptors from './config/axios-interceptor';
 import { useUser } from './contexts/JWTAuthContext';
 import { routes } from './navigations';
-import Manifest_4450 from './views/report/Manifest_4450';
-import Exemption_4750 from './views/report/Exemption_4750';
-import Exemption_4752 from './views/report/Exemption_4752';
-import Exemption_4753 from './views/report/Exemption_4753';
-import Exemption_4754 from './views/report/Exemption_4754';
-import Exemption_4755 from './views/report/Exemption_4755';
+import { AUTHORITIES } from './utils/constant';
 import DataExchange_5050 from './views/report/DataExchange_5050';
 import DataExchange_5051 from './views/report/DataExchange_5051';
 import DataExchange_5053 from './views/report/DataExchange_5053';
 import DataExchange_5054 from './views/report/DataExchange_5054';
+import DPS_45101 from './views/report/DPS_45101';
+import DPS_45102 from './views/report/DPS_45102';
+import DPS_45103 from './views/report/DPS_45103';
 import DPS_4550 from './views/report/DPS_4550';
 import DPS_4551 from './views/report/DPS_4551';
 import DPS_4552 from './views/report/DPS_4552';
@@ -62,24 +60,59 @@ import DPS_4593 from './views/report/DPS_4593';
 import DPS_4595 from './views/report/DPS_4595';
 import DPS_4596 from './views/report/DPS_4596';
 import DPS_4599 from './views/report/DPS_4599';
-import DPS_45101 from './views/report/DPS_45101';
-import DPS_45102 from './views/report/DPS_45102';
-import DPS_45103 from './views/report/DPS_45103';
+import Exemption_4750 from './views/report/Exemption_4750';
+import Exemption_4752 from './views/report/Exemption_4752';
+import Exemption_4753 from './views/report/Exemption_4753';
+import Exemption_4754 from './views/report/Exemption_4754';
+import Exemption_4755 from './views/report/Exemption_4755';
+import Manifest_4450 from './views/report/Manifest_4450';
+import Revenue_4151 from './views/report/Revenue_4151';
+import Revenue_4152 from './views/report/Revenue_4152';
+import Revenue_4153 from './views/report/Revenue_4153';
+import Revenue_4153_1400 from './views/report/Revenue_4153_1400';
+import Revenue_4154 from './views/report/Revenue_4154';
+import Revenue_4155 from './views/report/Revenue_4155';
+import Revenue_4157_1400 from './views/report/Revenue_4157_1400';
+import Revenue_4158 from './views/report/Revenue_4158';
+import Revenue_4159 from './views/report/Revenue_4159';
+import Revenue_4160 from './views/report/Revenue_4160';
+import Revenue_4161 from './views/report/Revenue_4161';
+import Revenue_4162 from './views/report/Revenue_4162';
+import Revenue_4163 from './views/report/Revenue_4163';
+import Revenue_4164 from './views/report/Revenue_4164';
+import Revenue_4164_1400 from './views/report/Revenue_4164_1400';
+import Revenue_4165 from './views/report/Revenue_4165';
+import Revenue_4169 from './views/report/Revenue_4169';
+import Revenue_4170 from './views/report/Revenue_4170';
+import Revenue_4171 from './views/report/Revenue_4171';
+import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
+import Revenue_4172 from './views/report/Revenue_4172';
+import Revenue_4173 from './views/report/Revenue_4173';
+import Revenue_48100 from './views/report/Revenue_48100';
+import Revenue_48101 from './views/report/Revenue_48101';
+import Selectivity_4350 from './views/report/Selectivity_4350';
+import Selectivity_4351 from './views/report/Selectivity_4351';
+import Selectivity_4352 from './views/report/Selectivity_4352';
+import Selectivity_4353 from './views/report/Selectivity_4353';
+import Selectivity_4354 from './views/report/Selectivity_4354';
+import Selectivity_4355 from './views/report/Selectivity_4355';
+import Selectivity_4356 from './views/report/Selectivity_4356';
+import Selectivity_4360 from './views/report/Selectivity_4360';
+import Selectivity_4361 from './views/report/Selectivity_4361';
 import OverallReport from './views/report/sigtas_report';
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
-import Transit_4273 from './views/report/Transit_4273';
 import Transit_4253 from './views/report/Transit_4253';
 import Transit_4254 from './views/report/Transit_4254';
 import Transit_4255 from './views/report/Transit_4255';
 import Transit_4256 from './views/report/Transit_4256';
+import Transit_4257 from './views/report/Transit_4257';
+import Transit_4258 from './views/report/Transit_4258';
+import Transit_4259 from './views/report/Transit_4259';
 import Transit_4260 from './views/report/Transit_4260';
 import Transit_4261 from './views/report/Transit_4261';
 import Transit_4263 from './views/report/Transit_4263';
 import Transit_4264 from './views/report/Transit_4264';
-import Transit_4257 from './views/report/Transit_4257';
-import Transit_4258 from './views/report/Transit_4258';
-import Transit_4259 from './views/report/Transit_4259';
 import Transit_4265 from './views/report/Transit_4265';
 import Transit_4266 from './views/report/Transit_4266';
 import Transit_4267 from './views/report/Transit_4267';
@@ -87,6 +120,7 @@ import Transit_4268 from './views/report/Transit_4268';
 import Transit_4270 from './views/report/Transit_4270';
 import Transit_4271 from './views/report/Transit_4271';
 import Transit_4272 from './views/report/Transit_4272';
+import Transit_4273 from './views/report/Transit_4273';
 import Transit_4274 from './views/report/Transit_4274';
 import Transit_4275 from './views/report/Transit_4275';
 import Transit_4276 from './views/report/Transit_4276';
@@ -98,39 +132,6 @@ import Transit_4281 from './views/report/Transit_4281';
 import Transit_4282 from './views/report/Transit_4282';
 import Transit_4283 from './views/report/Transit_4283';
 import Transit_4284 from './views/report/Transit_4284';
-import Revenue_4153_1400 from './views/report/Revenue_4153_1400';
-import Revenue_4157_1400 from './views/report/Revenue_4157_1400';
-import Revenue_4164_1400 from './views/report/Revenue_4164_1400';
-import Revenue_4171_1400 from './views/report/Revenue_4171_1400';
-import Revenue_48100 from './views/report/Revenue_48100';
-import Revenue_48101 from './views/report/Revenue_48101';
-import Revenue_4151 from './views/report/Revenue_4151';
-import Revenue_4152 from './views/report/Revenue_4152';
-import Revenue_4153 from './views/report/Revenue_4153';
-import Revenue_4154 from './views/report/Revenue_4154';
-import Revenue_4155 from './views/report/Revenue_4155';
-import Revenue_4158 from './views/report/Revenue_4158';
-import Revenue_4159 from './views/report/Revenue_4159';
-import Revenue_4160 from './views/report/Revenue_4160';
-import Revenue_4161 from './views/report/Revenue_4161';
-import Revenue_4162 from './views/report/Revenue_4162';
-import Revenue_4163 from './views/report/Revenue_4163';
-import Revenue_4164 from './views/report/Revenue_4164';
-import Revenue_4165 from './views/report/Revenue_4165';
-import Revenue_4169 from './views/report/Revenue_4169';
-import Revenue_4170 from './views/report/Revenue_4170';
-import Revenue_4171 from './views/report/Revenue_4171';
-import Revenue_4172 from './views/report/Revenue_4172';
-import Revenue_4173 from './views/report/Revenue_4173';
-import Selectivity_4360 from './views/report/Selectivity_4360';
-import Selectivity_4361 from './views/report/Selectivity_4361';
-import Selectivity_4350 from './views/report/Selectivity_4350';
-import Selectivity_4351 from './views/report/Selectivity_4351';
-import Selectivity_4352 from './views/report/Selectivity_4352';
-import Selectivity_4353 from './views/report/Selectivity_4353';
-import Selectivity_4354 from './views/report/Selectivity_4354';
-import Selectivity_4355 from './views/report/Selectivity_4355';
-import Selectivity_4356 from './views/report/Selectivity_4356';
 import Valuation_4650 from './views/report/Valuation_4650';
 import Valuation_4652 from './views/report/Valuation_4652';
 import Valuation_4653 from './views/report/Valuation_4653';
@@ -138,7 +139,6 @@ import Valuation_4654 from './views/report/Valuation_4654';
 import Valuation_4656 from './views/report/Valuation_4656';
 import Valuation_4657 from './views/report/Valuation_4657';
 import Valuation_4658 from './views/report/Valuation_4658';
-import { AUTHORITIES } from './utils/constant';
 
 import '../i18n/config';
 
@@ -1053,7 +1053,7 @@ const AuthLayout = () => {
           <Route
             path={routes.DPS_4554}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4554_DPS]}>
+              <PrivateRoute >
                 <DPS_4554 />
               </PrivateRoute>
             }
@@ -1165,7 +1165,7 @@ const AuthLayout = () => {
           <Route
             path={routes.DPS_4572}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4572_DPS]}>
+              <PrivateRoute >
                 <DPS_4572 />
               </PrivateRoute>
             }
