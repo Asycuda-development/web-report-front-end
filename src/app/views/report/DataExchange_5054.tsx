@@ -6,6 +6,12 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDataExchange5054: string = "reports.dataexchange_5054"
+const translationsForReportDataExchange5054Columns: string = "reports.dataexchange_5054.columns"
 
 function DataExchange_5054() {
     const [reportData, setReportData] = useState([]);
@@ -34,7 +40,7 @@ function DataExchange_5054() {
     };
 
     return (
-        <SimpleCard title="DataExchangeReport5054">
+        <SimpleCard title={t(`${translationsForReportDataExchange5054}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -55,13 +61,13 @@ function DataExchange_5054() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'DOC_ID'} header={'DOC_ID'} />
-                    <Column field={'MSG_KND'} header={'MSG_KND'} />
-                    <Column field={'Msg_Dsc'} header={'Msg_Dsc'} />
-                    <Column field={'MessageDate'} header={'MessageDate'} />
-                    <Column field={'MSG_STA'} header={'MSG_STA'} />
-                    <Column field={'MSG_FLW'} header={'MSG_FLW'} />
-                    <Column field={'RecieveDate'} header={'	 RecieveDate'} />
+                    <Column field={'DOC_ID'} header={t(`${translationsForReportDataExchange5054Columns}.DOC_ID`)} />
+                    <Column field={'MSG_KND'} header={t(`${translationsForReportDataExchange5054Columns}.MSG_KND`)} />
+                    <Column field={'Msg_Dsc'} header={t(`${translationsForReportDataExchange5054Columns}.Msg_Dsc`)} />
+                    <Column field={'MessageDate'} header={t(`${translationsForReportDataExchange5054Columns}.MessageDate`)} />
+                    <Column field={'MSG_STA'} header={t(`${translationsForReportDataExchange5054Columns}.MSG_STA`)} />
+                    <Column field={'MSG_FLW'} header={t(`${translationsForReportDataExchange5054Columns}.MSG_FLW`)} />
+                    <Column field={'RecieveDate'} header={t(`${translationsForReportDataExchange5054Columns}.RecieveDate`)} />
                 </DataTable>
             </Box>
         </SimpleCard>

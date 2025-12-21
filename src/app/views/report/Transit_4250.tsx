@@ -11,6 +11,7 @@ const Transit_4250 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -33,19 +34,19 @@ const Transit_4250 = () => {
     }
   };
   const basedOnOptions = [{
-    label: 'Box number 18 part 1',
+    label: t(`${translationsForBasedOn}.box18_1`),
     name: 'Box number 18 part 1'
-  },{
-    label: 'Box number 18 part 2',
+  }, {
+    label: t(`${translationsForBasedOn}.box18_2`),
     name: 'Box number 18 part 2'
-},{
-  label: 'Box number 21 part 1',
-  name: 'Box number 21 part 1'
-},{
-  label: 'Box number 21 part 2',
-  name: 'Box number 21 part 2',
-}
-]
+  }, {
+    label: t(`${translationsForBasedOn}.box21_1`),
+    name: 'Box number 21 part 1'
+  }, {
+    label: t(`${translationsForBasedOn}.box21_2`),
+    name: 'Box number 21 part 2',
+  }
+  ]
 
   return (
     <SimpleCard title="Transit Report 4250">
