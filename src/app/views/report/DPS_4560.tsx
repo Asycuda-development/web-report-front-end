@@ -7,20 +7,27 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4560: string = "reports.dps_4560"
+const translationsForReportDPS4560Columns: string = "reports.dps_4560.columns"
 
 function DPS_4560() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
             if (data.basedOn && !data.basedOnValue) {
                 toastRef.current.show({
                     severity: 'error',
-                    summary: 'Based On Value',
-                    detail: 'Based On Value is required when Based On is selected, please try again.'
+                    summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+                    detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
                 });
                 return
             }
@@ -42,20 +49,20 @@ function DPS_4560() {
     };
 
     const basedOnOptions = [{
-        label: 'declarant',
+        label: t(`${translationsForBasedOn}.declarant`),
         name: 'declarant'
     },
     {
-        label: 'company',
+        label: t(`${translationsForBasedOn}.company`),
         name: 'company'
     },
     {
-        label: 'Sad_Financial',
+        label: t(`${translationsForBasedOn}.sad_financial`),
         name: 'Sad_Financial'
     }]
 
     return (
-        <SimpleCard title="DPS_4560">
+        <SimpleCard title={t(`${translationsForReportDPS4560}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -79,10 +86,10 @@ function DPS_4560() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'office'} header={'OFFICE_NAME'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column field={'sadCnt'} header={'SAD_COUNT'} />
-                    <Column field={'type'} header={'TYPE_I/E'} />
+                    <Column field={'office'} header={t(`${translationsForReportDPS4560Columns}.office`)} />
+                    <Column field={'status'} header={t(`${translationsForReportDPS4560Columns}.status`)} />
+                    <Column field={'sadCnt'} header={t(`${translationsForReportDPS4560Columns}.sadCnt`)} />
+                    <Column field={'type'} header={t(`${translationsForReportDPS4560Columns}.type`)} />
                 </DataTable>
             </Box>
             <Toast ref={toastRef} />

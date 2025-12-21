@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4562: string = "reports.dps_4562"
+const translationsForReportDPS4562Columns: string = "reports.dps_4562.columns"
 
 function DPS_4562() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4562() {
     };
 
     return (
-        <SimpleCard title="DPS_4562">
+        <SimpleCard title={t(`${translationsForReportDPS4562}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -55,23 +62,23 @@ function DPS_4562() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'sadType'} header={'SAD_TYPE'} />
-                    <Column field={'office'} header={'OFFICE'} />
-                    <Column field={'officeCod'} header={'OFFICE_CODE'} />
-                    <Column style={{ minWidth: '10rem' }} field={'regNo'} header={'SAD_REG_NO'} />
-                    <Column field={'regDate'} header={'SAD_REG_DATE'} />
-                    <Column field={'rcptDat'} header={'RCP_DAT'} />
-                    <Column field={'rcptNo'} header={'RECFT_NO'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column field={'status1'} header={'STATUS_1'} />
-                    <Column field={'userName'} header={'USER_NAME'} />
-                    <Column style={{ minWidth: '20rem' }} field={'operationName'} header={'OPREATION_NAME'} />
-                    <Column style={{ minWidth: '24rem' }} field={'operationDate'} header={'OPREATION_DATE'} />
-                    <Column style={{ minWidth: '12rem' }} field={'cmpCod'} header={'COMPANY_CODE'} />
-                    <Column style={{ minWidth: '20rem' }} field={'cmpName'} header={'COMPANY_NAME'} />
-                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAME'} />
-                    <Column field={'decCod'} header={'DECLARENT_CODE'} />
-                    <Column style={{ minWidth: '30rem' }} field={'decName'} header={'DECLARENT_NAME'} />
+                    <Column field={'sadType'} header={t(`${translationsForReportDPS4562Columns}.sadType`)} />
+                    <Column field={'office'} header={t(`${translationsForReportDPS4562Columns}.office`)} />
+                    <Column field={'officeCod'} header={t(`${translationsForReportDPS4562Columns}.officeCod`)} />
+                    <Column style={{ minWidth: '10rem' }} field={'regNo'} header={t(`${translationsForReportDPS4562Columns}.regNo`)} />
+                    <Column field={'regDate'} header={t(`${translationsForReportDPS4562Columns}.regDate`)} />
+                    <Column field={'rcptDat'} header={t(`${translationsForReportDPS4562Columns}.rcptDat`)} />
+                    <Column field={'rcptNo'} header={t(`${translationsForReportDPS4562Columns}.rcptNo`)} />
+                    <Column field={'status'} header={t(`${translationsForReportDPS4562Columns}.status`)} />
+                    <Column field={'status1'} header={t(`${translationsForReportDPS4562Columns}.status1`)} />
+                    <Column field={'userName'} header={t(`${translationsForReportDPS4562Columns}.userName`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'operationName'} header={t(`${translationsForReportDPS4562Columns}.operationName`)} />
+                    <Column style={{ minWidth: '24rem' }} field={'operationDate'} header={t(`${translationsForReportDPS4562Columns}.operationDate`)} />
+                    <Column style={{ minWidth: '12rem' }} field={'cmpCod'} header={t(`${translationsForReportDPS4562Columns}.cmpCod`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'cmpName'} header={t(`${translationsForReportDPS4562Columns}.cmpName`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={t(`${translationsForReportDPS4562Columns}.finNam`)} />
+                    <Column field={'decCod'} header={t(`${translationsForReportDPS4562Columns}.decCod`)} />
+                    <Column style={{ minWidth: '30rem' }} field={'decName'} header={t(`${translationsForReportDPS4562Columns}.decName`)} />
 
                 </DataTable>
             </Box>

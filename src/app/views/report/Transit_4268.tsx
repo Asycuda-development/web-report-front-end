@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4268: string = "reports.transit_4268"
+const translationsForReportTransit4268Columns: string = "reports.transit_4268.columns"
 
 const Transit_4268 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -37,7 +44,7 @@ const Transit_4268 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4268">
+    <SimpleCard title={t(`${translationsForReportTransit4268}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -61,13 +68,13 @@ const Transit_4268 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'trsType'} header={'	Transit_Type'} />
-          <Column field={'ctyExp'} header={'Country Of Export'} />
-          <Column field={'depCod'} header={'Departure_Off'} />
-          <Column field={'destCod'} header={'Destination_off'} />
-          <Column field={'exemp'} header={'	Procedure'} />
-          <Column field={'countNo'} header={'	Total No '} />
-          {/* <Column field={'tad_tot'} header={'Customs Value'} /> */}
+          <Column field={'trsType'} header={t(`${translationsForReportTransit4268Columns}.trsType`)} />
+          <Column field={'ctyExp'} header={t(`${translationsForReportTransit4268Columns}.ctyExp`)} />
+          <Column field={'depCod'} header={t(`${translationsForReportTransit4268Columns}.depCod`)} />
+          <Column field={'destCod'} header={t(`${translationsForReportTransit4268Columns}.destCod`)} />
+          <Column field={'exemp'} header={t(`${translationsForReportTransit4268Columns}.exemp`)} />
+          <Column field={'countNo'} header={t(`${translationsForReportTransit4268Columns}.countNo`)} />
+          {/* <Column field={'tad_tot'} header={t(`${translationsForReportTransit4268Columns}.tad_tot`)} /> */}
         </DataTable>
       </Box>
     </SimpleCard>

@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4554: string = "reports.dps_4554"
+const translationsForReportDPS4554Columns: string = "reports.dps_4554.columns"
 
 function DPS_4554() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -36,7 +43,7 @@ function DPS_4554() {
 
   return (
 
-    <SimpleCard title="4554-DPS">
+    <SimpleCard title={t(`${translationsForReportDPS4554}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -67,62 +74,52 @@ function DPS_4554() {
           emptyMessage={'No Data Available'}
         >
 
-          <Column field={'ideTypSad'} header={'SAD Type'} />
-          <Column style={{ minWidth: "12rem" }} field={'tptCuoNam'} header={'Border office'} />
-          <Column style={{ minWidth: "12rem" }} filter filterField="ideCuoNam" field={'ideCuoNam'} header={'CustomـOfice_Name'} />
-          <Column field={'ideCuoCod'} header={'Custom_Code'} />
-          <Column field={'itemTotal'} header={'Item_Total'} />
-          <Column field={'itemNo'} header={'Item_No'} />
-          <Column field={'totalPackage'} header={'Total_Package'} />
-          <Column field={'codeOfPackage'} header={'Package_Code'} />
-          <Column field={'typeOfPackage'} header={'Package_Type'} />
-          <Column filter filterField='registrationNo' field={'regNo'} header={'Reg_No'} />
-          <Column field={'regDate'} header={'Registration Date'} />
-          <Column filter filterField='asmtNo' field={'asmtNo'} header={'Assemt_Number'} />
-          <Column field={'astDate'} header={'Assessment_Date'} />
-          <Column field={'rcptNo'} header={'RCPT_NO'} />
-          <Column field={'rcptDate'} header={'Receipt_Date'} />
-          <Column style={{ minWidth: "12rem" }} field={'bankNam'} header={'Bank_Name'} />
-          <Column field={'hsCode'} header={'HS_Code'} />
-          <Column field={'cpc'} header={'cpc'} />
-          <Column style={{ minWidth: "20rem" }} field={'dsc'} header={'Goods_Description'} />
-          <Column style={{ minWidth: "25rem" }} field={'gdsDs3'} header={'Goods_Additional_Description'} />
-          <Column style={{ minWidth: "20rem" }} field={'pckMrk1'} header={'Package_Mark1'} />
-          <Column field={'pckMrk2'} header={'Package_Mark2'} />
-          <Column field={'taxAmt'} header={'TAX_AMT'} />
-          <Column field={'customsProc'} header={'Customs_Procedure'} />
-          <Column field={'itemGrossWeight'} header={'Item_Gross_Weight'} />
-          <Column field={'itemNetWeight'} header={'Item_Net_Weight'} />
-          <Column filter filterField='brokerTIN' field={'brokerTIN'} header={'Broker_TIN'} />
-          <Column style={{ minWidth: "12rem" }} field={'decNam'} header={'Declarant_Name'} />
-          <Column field={'companyTin'} header={'Company_TIN'} />
-          <Column style={{ minWidth: "15rem" }} field={'cmpNam'} header={'Company_Name'} />
-          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={'Financial_Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryDest'} header={'Country_Destination_Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryExport'} header={'Country_Export_Name'} />
-          <Column style={{ minWidth: "12rem" }} field={'countryOrg'} header={'Country_Origin_Name'} />
-          <Column field={'lorryTotal'} header={'Lorry_Total'} />
-          <Column field={'currrencyCode'} header={'Currency_Code'} />
-          <Column field={'currecnyRate'} header={'Currency_Rate'} />
-          <Column field={'declarationValueCurrency'} header={'Declaration_Value_Currency'} />
-          <Column field={'declarationValueAfs'} header={'Declaration_Value_Afs'} />
-          <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
-          <Column field={'itemValueCurrency'} header={'Item_Value_Currency'} />
-          <Column field={'itemValueAfs'} header={'Item_Value_Afs'} />
-          <Column field={'taxRate'} header={'Tax_Rate'} />
-          <Column field={'codeTaxAmount'} header={'CODE_TAX_AMOUNT'} />
-          <Column field={'taxCode'} header={'TAX_CODE'} />
-          <Column field={'status'} header={'SAD_STATUS'} />
-
-
-          {/* {reportData.length > 0 &&
-                Object.keys(reportData[0]).map((keys, index) => (
-                  <Column key={index} field={keys} header={keys} />
-                ))} */}
-          {/* <Column field="id" header="Id"></Column>
-              <Column field="name" header="Name"></Column>
-              <Column field="description" header="Description"></Column>
-              <Column field="active" header="Active"></Column> */}
+          <Column field={'ideTypSad'} header={t(`${translationsForReportDPS4554Columns}.ideTypSad`)} />
+          <Column style={{ minWidth: "12rem" }} field={'tptCuoNam'} header={t(`${translationsForReportDPS4554Columns}.tptCuoNam`)} />
+          <Column style={{ minWidth: "12rem" }} filter filterField="ideCuoNam" field={'ideCuoNam'} header={t(`${translationsForReportDPS4554Columns}.ideCuoNam`)} />
+          <Column field={'ideCuoCod'} header={t(`${translationsForReportDPS4554Columns}.ideCuoCod`)} />
+          <Column field={'itemTotal'} header={t(`${translationsForReportDPS4554Columns}.itemTotal`)} />
+          <Column field={'itemNo'} header={t(`${translationsForReportDPS4554Columns}.itemNo`)} />
+          <Column field={'totalPackage'} header={t(`${translationsForReportDPS4554Columns}.totalPackage`)} />
+          <Column field={'codeOfPackage'} header={t(`${translationsForReportDPS4554Columns}.codeOfPackage`)} />
+          <Column field={'typeOfPackage'} header={t(`${translationsForReportDPS4554Columns}.typeOfPackage`)} />
+          <Column filter filterField='registrationNo' field={'regNo'} header={t(`${translationsForReportDPS4554Columns}.regNo`)} />
+          <Column field={'regDate'} header={t(`${translationsForReportDPS4554Columns}.regDate`)} />
+          <Column filter filterField='asmtNo' field={'asmtNo'} header={t(`${translationsForReportDPS4554Columns}.asmtNo`)} />
+          <Column field={'astDate'} header={t(`${translationsForReportDPS4554Columns}.astDate`)} />
+          <Column field={'rcptNo'} header={t(`${translationsForReportDPS4554Columns}.rcptNo`)} />
+          <Column field={'rcptDate'} header={t(`${translationsForReportDPS4554Columns}.rcptDate`)} />
+          <Column style={{ minWidth: "12rem" }} field={'bankNam'} header={t(`${translationsForReportDPS4554Columns}.bankNam`)} />
+          <Column field={'hsCode'} header={t(`${translationsForReportDPS4554Columns}.hsCode`)} />
+          <Column field={'cpc'} header={t(`${translationsForReportDPS4554Columns}.cpc`)} />
+          <Column style={{ minWidth: "20rem" }} field={'dsc'} header={t(`${translationsForReportDPS4554Columns}.dsc`)} />
+          <Column style={{ minWidth: "25rem" }} field={'gdsDs3'} header={t(`${translationsForReportDPS4554Columns}.gdsDs3`)} />
+          <Column style={{ minWidth: "20rem" }} field={'pckMrk1'} header={t(`${translationsForReportDPS4554Columns}.pckMrk1`)} />
+          <Column field={'pckMrk2'} header={t(`${translationsForReportDPS4554Columns}.pckMrk2`)} />
+          <Column field={'taxAmt'} header={t(`${translationsForReportDPS4554Columns}.taxAmt`)} />
+          <Column field={'customsProc'} header={t(`${translationsForReportDPS4554Columns}.customsProc`)} />
+          <Column field={'itemGrossWeight'} header={t(`${translationsForReportDPS4554Columns}.itemGrossWeight`)} />
+          <Column field={'itemNetWeight'} header={t(`${translationsForReportDPS4554Columns}.itemNetWeight`)} />
+          <Column filter filterField='brokerTIN' field={'brokerTIN'} header={t(`${translationsForReportDPS4554Columns}.brokerTIN`)} />
+          <Column style={{ minWidth: "12rem" }} field={'decNam'} header={t(`${translationsForReportDPS4554Columns}.decNam`)} />
+          <Column field={'companyTin'} header={t(`${translationsForReportDPS4554Columns}.companyTin`)} />
+          <Column style={{ minWidth: "15rem" }} field={'cmpNam'} header={t(`${translationsForReportDPS4554Columns}.cmpNam`)} />
+          <Column style={{ minWidth: "20rem" }} field={'finNam'} header={t(`${translationsForReportDPS4554Columns}.finNam`)} />
+          <Column style={{ minWidth: "12rem" }} field={'countryDest'} header={t(`${translationsForReportDPS4554Columns}.countryDest`)} />
+          <Column style={{ minWidth: "12rem" }} field={'countryExport'} header={t(`${translationsForReportDPS4554Columns}.countryExport`)} />
+          <Column style={{ minWidth: "12rem" }} field={'countryOrg'} header={t(`${translationsForReportDPS4554Columns}.countryOrg`)} />
+          <Column field={'lorryTotal'} header={t(`${translationsForReportDPS4554Columns}.lorryTotal`)} />
+          <Column field={'currrencyCode'} header={t(`${translationsForReportDPS4554Columns}.currrencyCode`)} />
+          <Column field={'currecnyRate'} header={t(`${translationsForReportDPS4554Columns}.currecnyRate`)} />
+          <Column field={'declarationValueCurrency'} header={t(`${translationsForReportDPS4554Columns}.declarationValueCurrency`)} />
+          <Column field={'declarationValueAfs'} header={t(`${translationsForReportDPS4554Columns}.declarationValueAfs`)} />
+          <Column field={'declarationTaxes'} header={t(`${translationsForReportDPS4554Columns}.declarationTaxes`)} />
+          <Column field={'itemValueCurrency'} header={t(`${translationsForReportDPS4554Columns}.itemValueCurrency`)} />
+          <Column field={'itemValueAfs'} header={t(`${translationsForReportDPS4554Columns}.itemValueAfs`)} />
+          <Column field={'taxRate'} header={t(`${translationsForReportDPS4554Columns}.taxRate`)} />
+          <Column field={'codeTaxAmount'} header={t(`${translationsForReportDPS4554Columns}.codeTaxAmount`)} />
+          <Column field={'taxCode'} header={t(`${translationsForReportDPS4554Columns}.taxCode`)} />
+          <Column field={'status'} header={t(`${translationsForReportDPS4554Columns}.status`)} />
         </DataTable>
       </Box>
     </SimpleCard>

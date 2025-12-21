@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportExemption4752: string = "reports.exemption_4752"
+const translationsForReportExemption4752Columns: string = "reports.exemption_4752.columns"
 
 function Exemption_4752() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function Exemption_4752() {
     };
 
     return (
-        <SimpleCard title="ExemptionReport4752">
+        <SimpleCard title={t(`${translationsForReportExemption4752}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -55,16 +62,16 @@ function Exemption_4752() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'Autorization_No'} header={'Autorization_No'} />
-                    <Column field={'ref_no'} header={'ref_no'} />
-                    <Column field={'ref_date'} header={'ref_date'} />
-                    <Column field={'type_cert'} header={'type_cert'} />
-                    <Column field={'val_tot'} header={'val_tot'} />
-                    <Column field={'rem_val'} header={'rem_val'} />
-                    <Column field={'wgt_tot'} header={'wgt_tot'} />
-                    <Column field={'rem_wgt'} header={'rem_wgt'} />
-                    <Column field={'CNS_COD'} header={'CNS_COD'} />
-                    <Column field={'reg_no_ctn'} header={'reg_no_ctn'} />
+                    <Column field={'Autorization_No'} header={t(`${translationsForReportExemption4752Columns}.Autorization_No`)} />
+                    <Column field={'ref_no'} header={t(`${translationsForReportExemption4752Columns}.ref_no`)} />
+                    <Column field={'ref_date'} header={t(`${translationsForReportExemption4752Columns}.ref_date`)} />
+                    <Column field={'type_cert'} header={t(`${translationsForReportExemption4752Columns}.type_cert`)} />
+                    <Column field={'val_tot'} header={t(`${translationsForReportExemption4752Columns}.val_tot`)} />
+                    <Column field={'rem_val'} header={t(`${translationsForReportExemption4752Columns}.rem_val`)} />
+                    <Column field={'wgt_tot'} header={t(`${translationsForReportExemption4752Columns}.wgt_tot`)} />
+                    <Column field={'rem_wgt'} header={t(`${translationsForReportExemption4752Columns}.rem_wgt`)} />
+                    <Column field={'CNS_COD'} header={t(`${translationsForReportExemption4752Columns}.CNS_COD`)} />
+                    <Column field={'reg_no_ctn'} header={t(`${translationsForReportExemption4752Columns}.reg_no_ctn`)} />
 
 
 

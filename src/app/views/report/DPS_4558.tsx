@@ -1,26 +1,33 @@
-import { Box, LinearProgress, styled } from '@mui/material';
+import { Box, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
-import { useEffect, useRef, useState } from 'react';
+import { Toast } from 'primereact/toast';
+import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
-import { Toast } from 'primereact/toast';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4558: string = "reports.dps_4558"
+const translationsForReportDPS4558Columns: string = "reports.dps_4558.columns"
 
 function DPS_4558() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
             if (data.basedOn && !data.basedOnValue) {
                 toastRef.current.show({
                     severity: 'error',
-                    summary: 'Based On Value',
-                    detail: 'Based On Value is required when Based On is selected, please try again.'
+                    summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+                    detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
                 });
                 return
             }
@@ -41,36 +48,36 @@ function DPS_4558() {
         }
     };
     const basedOnOptions = [{
-        label: 'declarant',
+        label: t(`${translationsForBasedOn}.declarant`),
         name: 'declarant'
     },
     {
-        label: 'company',
+        label: t(`${translationsForBasedOn}.company`),
         name: 'company'
     },
     {
-        label: 'Sad_Financial',
+        label: t(`${translationsForBasedOn}.sad_financial`),
         name: 'Sad_Financial'
     },
     {
-        label: 'Examiner',
+        label: t(`${translationsForBasedOn}.examiner`),
         name: 'Examiner'
     },
     {
-        label: 'I_no',
+        label: t(`${translationsForBasedOn}.i_no`),
         name: 'I_no'
     },
     {
-        label: 'P_no',
+        label: t(`${translationsForBasedOn}.p_no`),
         name: 'P_no'
     },
     {
-        label: 'M_no',
+        label: t(`${translationsForBasedOn}.m_no`),
         name: 'M_no'
     }]
 
     return (
-        <SimpleCard title="DPS_4558">
+        <SimpleCard title={t(`${translationsForReportDPS4558}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -99,33 +106,33 @@ function DPS_4558() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'sadYear'} header={'SAD_YEAR'} />
-                    <Column field={'sadOffice'} header={'SAD_OFFICE'} />
-                    <Column filter filterField="sadRegNo" field={'sadRegNo'} header={'SAD_REG_NO'} />
-                    <Column style={{ minWidth: '10rem' }} field={'sadRegDate'} header={'SAD_REG_DATE'} />
-                    <Column filter filterField='items' field={'ideAstNo'} header={'SAD_ASSMT_NO'} />
-                    <Column filter filterField='ideAstDat' field={'ideAstDat'} header={'SAD_ASSMT_DATE'} />
-                    <Column filter filterField='items' field={'ideRcpNo'} header={'SAD_RCPT_NO'} />
-                    <Column field={'ideRcpDat'} header={'SAD_RCPT_DATE'} />
-                    
-                    <Column filter filterField='Status' field={'Status'} header={'STATUS'} />
-                    <Column filter filterField='brokerTin' field={'brokerTin'} header={'BROKER_TIN'} />
-                    <Column filter filterField='items' style={{ minWidth: '20rem' }} field={'decNam'} header={'BROKER_NAM'} />
-                    <Column filter filterField='companyTin' field={'companyTin'} header={'COMPANY_TIN'} />
-                    <Column style={{ minWidth: '24rem' }} field={'cmpNam'} header={'COMPANY_NAM'} />
-                    <Column field={'finCod'} header={'FIN_COD'} />
-                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
-                    
-                    <Column filter filterField='items' field={'items'} header={'ITEMS'} />
-                    <Column style={{ minWidth: '40rem' }} field={'dsc'} header={'DSC'} />
-                    <Column style={{ minWidth: "12rem" }} field={'customsValue'} header={'CUSTOMS_VALUE'} />
-                    <Column style={{ minWidth: '14rem' }} field={'truck1'} header={'Idenetity of Truck at Dep'} />
-                    <Column field={'truck2'} header={'Identity of Truck Crossing Border'} />
-                    <Column filter filterField='totalTaxes' field={'totalTaxes'} header={'TOTAL_TAXES'} />
-                    
-                    
-                    <Column filter filterField="cap" field={'cap'} header={'CAP'} />
-                    <Column field={'declarationTaxes'} header={'DECLARATION_TAXES'} />
+                    <Column field={'sadYear'} header={t(`${translationsForReportDPS4558Columns}.sadYear`)} />
+                    <Column field={'sadOffice'} header={t(`${translationsForReportDPS4558Columns}.sadOffice`)} />
+                    <Column filter filterField="sadRegNo" field={'sadRegNo'} header={t(`${translationsForReportDPS4558Columns}.sadRegNo`)} />
+                    <Column style={{ minWidth: '10rem' }} field={'sadRegDate'} header={t(`${translationsForReportDPS4558Columns}.sadRegDate`)} />
+                    <Column filter filterField='items' field={'ideAstNo'} header={t(`${translationsForReportDPS4558Columns}.ideAstNo`)} />
+                    <Column filter filterField='ideAstDat' field={'ideAstDat'} header={t(`${translationsForReportDPS4558Columns}.ideAstDat`)} />
+                    <Column filter filterField='items' field={'ideRcpNo'} header={t(`${translationsForReportDPS4558Columns}.ideRcpNo`)} />
+                    <Column field={'ideRcpDat'} header={t(`${translationsForReportDPS4558Columns}.ideRcpDat`)} />
+
+                    <Column filter filterField='Status' field={'Status'} header={t(`${translationsForReportDPS4558Columns}.Status`)} />
+                    <Column filter filterField='brokerTin' field={'brokerTin'} header={t(`${translationsForReportDPS4558Columns}.brokerTin`)} />
+                    <Column filter filterField='items' style={{ minWidth: '20rem' }} field={'decNam'} header={t(`${translationsForReportDPS4558Columns}.decNam`)} />
+                    <Column filter filterField='companyTin' field={'companyTin'} header={t(`${translationsForReportDPS4558Columns}.companyTin`)} />
+                    <Column style={{ minWidth: '24rem' }} field={'cmpNam'} header={t(`${translationsForReportDPS4558Columns}.cmpNam`)} />
+                    <Column field={'finCod'} header={t(`${translationsForReportDPS4558Columns}.finCod`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={t(`${translationsForReportDPS4558Columns}.finNam`)} />
+
+                    <Column filter filterField='items' field={'items'} header={t(`${translationsForReportDPS4558Columns}.items`)} />
+                    <Column style={{ minWidth: '40rem' }} field={'dsc'} header={t(`${translationsForReportDPS4558Columns}.dsc`)} />
+                    <Column style={{ minWidth: "12rem" }} field={'customsValue'} header={t(`${translationsForReportDPS4558Columns}.customsValue`)} />
+                    <Column style={{ minWidth: '14rem' }} field={'truck1'} header={t(`${translationsForReportDPS4558Columns}.truck1`)} />
+                    <Column field={'truck2'} header={t(`${translationsForReportDPS4558Columns}.truck2`)} />
+                    <Column filter filterField='totalTaxes' field={'totalTaxes'} header={t(`${translationsForReportDPS4558Columns}.totalTaxes`)} />
+
+
+                    <Column filter filterField="cap" field={'cap'} header={t(`${translationsForReportDPS4558Columns}.cap`)} />
+                    <Column field={'declarationTaxes'} header={t(`${translationsForReportDPS4558Columns}.declarationTaxes`)} />
                 </DataTable>
             </Box>
             <Toast ref={toastRef} />

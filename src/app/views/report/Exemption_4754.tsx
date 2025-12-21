@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportExemption4754: string = "reports.exemption_4754"
+const translationsForReportExemption4754Columns: string = "reports.exemption_4754.columns"
 
 const Exemption_4754 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Exemption_4754 = () => {
   };
 
   return (
-    <SimpleCard title="4754-Exemption">
+    <SimpleCard title={t(`${translationsForReportExemption4754}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -56,24 +63,24 @@ const Exemption_4754 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'Autorization_No'} header={'Autorization_No'} />
-          <Column field={'ref_no'} header={'Reference_NO'} style={{ textAlign: 'center' }} />
-          <Column field={'ref_date'} header={'ref_date'} />
-          <Column field={'status'} header={'status'} />
-          <Column field={'cmp_cod'} header={'cmp_cod'} />
+          <Column field={'Autorization_No'} header={t(`${translationsForReportExemption4754Columns}.Autorization_No`)} />
+          <Column field={'ref_no'} header={t(`${translationsForReportExemption4754Columns}.ref_no`)} style={{ textAlign: 'center' }} />
+          <Column field={'ref_date'} header={t(`${translationsForReportExemption4754Columns}.ref_date`)} />
+          <Column field={'status'} header={t(`${translationsForReportExemption4754Columns}.status`)} />
+          <Column field={'cmp_cod'} header={t(`${translationsForReportExemption4754Columns}.cmp_cod`)} />
           <Column
             field={'cmp_desc'}
-            header={'Company_Desc'}
+            header={t(`${translationsForReportExemption4754Columns}.cmp_desc`)}
             style={{ minWidth: '15rem', textAlign: 'center' }}
           />
-          <Column field={'contractor_cod'} header={'contractor_cod'} />
-          <Column field={'contractor_nam'} header={'contractor_nam'} />
-          <Column field={'clr_office'} header={'clr_office'} />
-          <Column field={'wgt_tot'} header={'wgt_tot'} />
-          <Column field={'written_off_wgt'} header={'written_off_wgt'} />
-          <Column field={'rem_wgt'} header={'rem_wgt'} />
-          <Column field={'sad_number'} header={'sad_number'} />
-          <Column field={'hscode'} header={'hscode'} />
+          <Column field={'contractor_cod'} header={t(`${translationsForReportExemption4754Columns}.contractor_cod`)} />
+          <Column field={'contractor_nam'} header={t(`${translationsForReportExemption4754Columns}.contractor_nam`)} />
+          <Column field={'clr_office'} header={t(`${translationsForReportExemption4754Columns}.clr_office`)} />
+          <Column field={'wgt_tot'} header={t(`${translationsForReportExemption4754Columns}.wgt_tot`)} />
+          <Column field={'written_off_wgt'} header={t(`${translationsForReportExemption4754Columns}.written_off_wgt`)} />
+          <Column field={'rem_wgt'} header={t(`${translationsForReportExemption4754Columns}.rem_wgt`)} />
+          <Column field={'sad_number'} header={t(`${translationsForReportExemption4754Columns}.sad_number`)} />
+          <Column field={'hscode'} header={t(`${translationsForReportExemption4754Columns}.hscode`)} />
         </DataTable>
       </Box>
     </SimpleCard>

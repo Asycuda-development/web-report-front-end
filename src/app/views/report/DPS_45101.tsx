@@ -19,14 +19,15 @@ function DPS_45101() {
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
   const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
           severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -47,10 +48,10 @@ function DPS_45101() {
     }
   };
   const basedOnOptions = [{
-    label: 'Engine',
+    label: t(`${translationsForBasedOn}.engine`),
     name: 'Engine'
   }, {
-    label: 'VIN_Number',
+    label: t(`${translationsForBasedOn}.vIN_Number`),
     name: 'VIN'
   }]
 

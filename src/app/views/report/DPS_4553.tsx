@@ -17,6 +17,7 @@ function DPS_4553() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
 
   const handleSubmit = async (data: SearchData) => {

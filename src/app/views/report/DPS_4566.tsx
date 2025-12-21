@@ -7,20 +7,27 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4566: string = "reports.dps_4566"
+const translationsForReportDPS4566Columns: string = "reports.dps_4566.columns"
 
 function DPS_4566() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
   const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
           severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -41,15 +48,15 @@ function DPS_4566() {
     }
   };
   const basedOnOptions = [{
-    label: 'declarant',
+    label: t(`${translationsForBasedOn}.declarant`),
     name: 'declarant'
   },
   {
-    label: 'company',
+    label: t(`${translationsForBasedOn}.company`),
     name: 'company'
   }]
   return (
-    <SimpleCard title="4566-DPS">
+    <SimpleCard title={t(`${translationsForReportDPS4566}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -78,46 +85,46 @@ function DPS_4566() {
           stripedRows
           showGridlines
         >
-          <Column field={'SAD_YEAR'} header={'SAD_YEAR'} />
-          <Column style={{ minWidth: "12rem" }} field={'SAD_OFFICE'} header={'SAD_OFFICE'} />
-          <Column style={{ minWidth: "12rem" }} field={'SAD_REG_NO'} header={'SAD_REG_NO'} />
-          <Column field={'SAD_REG_DATE'} header={'SAD_REG_DATE'} />
-          <Column style={{ minWidth: "10rem" }} field={'STATUS'} header={'STATUS'} />
-          <Column style={{ minWidth: "12rem" }} field={'sad_flw'} header={'SAD_FLW'} />
-          <Column field={'Selected_CHANNEL_Dsc'} header={'Selected_CHANNEL_Dsc'} />
-          <Column field={'Selected_CHANNEL_COD'} header={'Selected_CHANNEL_COD'} />
-          <Column field={'Current_CHANNEL'} header={'Current_CHANNEL'} />
-          <Column field={'Company_TIN'} header={'Company_TIN'} />
-          <Column style={{ minWidth: "20rem" }} field={'cmp_nam'} header={'Company_Name'} />
-          <Column field={'dec_cod'} header={'Declarent_Code'} />
-          <Column style={{ minWidth: "20rem" }} filter filterField='dec_nam' field={'dec_nam'} header={'Declarent_Name'} />
-          <Column field={'Item_total'} header={'Item_total'} />
-          <Column field={'itm_no'} header={'Item_No'} />
-          <Column field={'hscode'} header={'HScode'} />
-          <Column style={{ minWidth: "30rem" }} field={'dsc1'} header={'Description1'} />
-          <Column style={{ minWidth: "25rem" }} field={'dsc3'} header={'Description3'} />
-          <Column style={{ minWidth: "12rem" }} field={'CAT'} header={'Category'} />
-          <Column style={{ minWidth: '12rem' }} field={'First_Exa'} header={'First_Examiner'} />
-          <Column field={'Last_Exa'} header={'FLAST_Examiner'} />
-          <Column field={'First_Cexa'} header={'First_Chief_Examiner'} />
-          <Column field={'Last_Cexa'} header={'Last_Chief_Examiner'} />
-          <Column field={'Privious_Tax'} header={'Privious_Tax'} />
-          <Column field={'TOTAL_TAXES'} header={'TOTAL_TAXES'} />
-          <Column field={'CUSTOMS_VALUE'} header={'CUSTOMS_VALUE'} />
-          <Column style={{ minWidth: "20rem" }} field={'Lorry_Total'} header={'Lorry_Total'} />
-          <Column field={'Item_Value_Afs'} header={'Item_Value_Afs'} />
-          <Column field={'Item_tax_amt'} header={'Item_tax_amt'} />
-          <Column field={'wgtgrs'} header={'Item Gross Weight'} />
-          <Column field={'wgtnet'} header={'Item Net Weight'} />
-          <Column field={'ITEMS'} header={'ITEMS'} />
-          <Column field={'WORKLOAD'} header={'WORKLOAD'} />
-          <Column style={{ minWidth: "12rem" }} field={'ADDITIONAL_TAXES'} header={'ADDITIONAL_TAXES'} />
-          <Column field={'fin_cod'} header={'fin_cod'} />
-          <Column style={{ minWidth: "30rem" }} field={'fin_nam'} header={'fin_nam'} />
-          <Column filter filterField='rcpt_no' field={'rcpt_no'} header={'Recept_No'} />
-          <Column field={'rcpt_date'} header={'Recept_Date'} />
-          <Column style={{ minWidth: "12rem" }} field={'nat_proc'} header={'nat_proc'} />
-          <Column field={'SAD_OFFICENAM'} header={'SAD_OFFICENAM'} />
+          <Column field={'SAD_YEAR'} header={t(`${translationsForReportDPS4566Columns}.SAD_YEAR`)} />
+          <Column style={{ minWidth: "12rem" }} field={'SAD_OFFICE'} header={t(`${translationsForReportDPS4566Columns}.SAD_OFFICE`)} />
+          <Column style={{ minWidth: "12rem" }} field={'SAD_REG_NO'} header={t(`${translationsForReportDPS4566Columns}.SAD_REG_NO`)} />
+          <Column field={'SAD_REG_DATE'} header={t(`${translationsForReportDPS4566Columns}.SAD_REG_DATE`)} />
+          <Column style={{ minWidth: "10rem" }} field={'STATUS'} header={t(`${translationsForReportDPS4566Columns}.STATUS`)} />
+          <Column style={{ minWidth: "12rem" }} field={'sad_flw'} header={t(`${translationsForReportDPS4566Columns}.sad_flw`)} />
+          <Column field={'Selected_CHANNEL_Dsc'} header={t(`${translationsForReportDPS4566Columns}.Selected_CHANNEL_Dsc`)} />
+          <Column field={'Selected_CHANNEL_COD'} header={t(`${translationsForReportDPS4566Columns}.Selected_CHANNEL_COD`)} />
+          <Column field={'Current_CHANNEL'} header={t(`${translationsForReportDPS4566Columns}.Current_CHANNEL`)} />
+          <Column field={'Company_TIN'} header={t(`${translationsForReportDPS4566Columns}.Company_TIN`)} />
+          <Column style={{ minWidth: "20rem" }} field={'cmp_nam'} header={t(`${translationsForReportDPS4566Columns}.cmp_nam`)} />
+          <Column field={'dec_cod'} header={t(`${translationsForReportDPS4566Columns}.dec_cod`)} />
+          <Column style={{ minWidth: "20rem" }} filter filterField='dec_nam' field={'dec_nam'} header={t(`${translationsForReportDPS4566Columns}.dec_nam`)} />
+          <Column field={'Item_total'} header={t(`${translationsForReportDPS4566Columns}.Item_total`)} />
+          <Column field={'itm_no'} header={t(`${translationsForReportDPS4566Columns}.itm_no`)} />
+          <Column field={'hscode'} header={t(`${translationsForReportDPS4566Columns}.hscode`)} />
+          <Column style={{ minWidth: "30rem" }} field={'dsc1'} header={t(`${translationsForReportDPS4566Columns}.dsc1`)} />
+          <Column style={{ minWidth: "25rem" }} field={'dsc3'} header={t(`${translationsForReportDPS4566Columns}.dsc3`)} />
+          <Column style={{ minWidth: "12rem" }} field={'CAT'} header={t(`${translationsForReportDPS4566Columns}.CAT`)} />
+          <Column style={{ minWidth: '12rem' }} field={'First_Exa'} header={t(`${translationsForReportDPS4566Columns}.First_Exa`)} />
+          <Column field={'Last_Exa'} header={t(`${translationsForReportDPS4566Columns}.Last_Exa`)} />
+          <Column field={'First_Cexa'} header={t(`${translationsForReportDPS4566Columns}.First_Cexa`)} />
+          <Column field={'Last_Cexa'} header={t(`${translationsForReportDPS4566Columns}.Last_Cexa`)} />
+          <Column field={'Privious_Tax'} header={t(`${translationsForReportDPS4566Columns}.Privious_Tax`)} />
+          <Column field={'TOTAL_TAXES'} header={t(`${translationsForReportDPS4566Columns}.TOTAL_TAXES`)} />
+          <Column field={'CUSTOMS_VALUE'} header={t(`${translationsForReportDPS4566Columns}.CUSTOMS_VALUE`)} />
+          <Column style={{ minWidth: "20rem" }} field={'Lorry_Total'} header={t(`${translationsForReportDPS4566Columns}.Lorry_Total`)} />
+          <Column field={'Item_Value_Afs'} header={t(`${translationsForReportDPS4566Columns}.Item_Value_Afs`)} />
+          <Column field={'Item_tax_amt'} header={t(`${translationsForReportDPS4566Columns}.Item_tax_amt`)} />
+          <Column field={'wgtgrs'} header={t(`${translationsForReportDPS4566Columns}.wgtgrs`)} />
+          <Column field={'wgtnet'} header={t(`${translationsForReportDPS4566Columns}.wgtnet`)} />
+          <Column field={'ITEMS'} header={t(`${translationsForReportDPS4566Columns}.ITEMS`)} />
+          <Column field={'WORKLOAD'} header={t(`${translationsForReportDPS4566Columns}.WORKLOAD`)} />
+          <Column style={{ minWidth: "12rem" }} field={'ADDITIONAL_TAXES'} header={t(`${translationsForReportDPS4566Columns}.ADDITIONAL_TAXES`)} />
+          <Column field={'fin_cod'} header={t(`${translationsForReportDPS4566Columns}.fin_cod`)} />
+          <Column style={{ minWidth: "30rem" }} field={'fin_nam'} header={t(`${translationsForReportDPS4566Columns}.fin_nam`)} />
+          <Column filter filterField='rcpt_no' field={'rcpt_no'} header={t(`${translationsForReportDPS4566Columns}.rcpt_no`)} />
+          <Column field={'rcpt_date'} header={t(`${translationsForReportDPS4566Columns}.rcpt_date`)} />
+          <Column style={{ minWidth: "12rem" }} field={'nat_proc'} header={t(`${translationsForReportDPS4566Columns}.nat_proc`)} />
+          <Column field={'SAD_OFFICENAM'} header={t(`${translationsForReportDPS4566Columns}.SAD_OFFICENAM`)} />
         </DataTable>
       </Box>
       <Toast ref={toastRef} />

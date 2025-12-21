@@ -7,20 +7,27 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4561: string = "reports.dps_4561"
+const translationsForReportDPS4561Columns: string = "reports.dps_4561.columns"
 
 function DPS_4561() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
             if (data.basedOn && !data.basedOnValue) {
                 toastRef.current.show({
                     severity: 'error',
-                    summary: 'Based On Value',
-                    detail: 'Based On Value is required when Based On is selected, please try again.'
+                    summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+                    detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
                 });
                 return
             }
@@ -42,44 +49,44 @@ function DPS_4561() {
     };
 
     const basedOnOptions = [{
-        label: 'declarant',
+        label: t(`${translationsForBasedOn}.declarant`),
         name: 'declarant'
     },
     {
-        label: 'company',
+        label: t(`${translationsForBasedOn}.company`),
         name: 'company'
     },
     {
-        label: 'ALL',
+        label: t(`${translationsForBasedOn}.all`),
         name: 'ALL'
     },
     {
-        label: 'Sad_Financial',
+        label: t(`${translationsForBasedOn}.sad_financial`),
         name: 'Sad_Financial'
     },
     {
-        label: 'CExaminer',
+        label: t(`${translationsForBasedOn}.cExaminer`),
         name: 'CExaminer'
     },
     {
-        label: 'Examiner',
+        label: t(`${translationsForBasedOn}.examiner`),
         name: 'Examiner'
     },
     {
-        label: 'I_no',
+        label: t(`${translationsForBasedOn}.i_no`),
         name: 'I_no'
     },
     {
-        label: 'P_no',
+        label: t(`${translationsForBasedOn}.p_no`),
         name: 'P_no'
     },
     {
-        label: 'M_no',
+        label: t(`${translationsForBasedOn}.m_no`),
         name: 'M_no'
     }]
 
     return (
-        <SimpleCard title="DPS_4561">
+        <SimpleCard title={t(`${translationsForReportDPS4561}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -105,29 +112,29 @@ function DPS_4561() {
                     stripedRows
                     showGridlines
                 >
-                     <Column field={'regNo'} header={'REG_NO'} />
-                    <Column field={'regDate'} header={'REG_DATE'} />
-                    <Column field={'assmtNo'} header={'ASSMT_NO'} />
-                    <Column field={'rcptNo'} header={'RCPT_NO'} />
-                    <Column field={'rcptDate'} header={'RCPT_DAT'} />
-                    <Column style={{ minWidth: '25rem' }} field={'status1'} header={'STATUS1'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column filter filterField='operationName' field={'operationName'} header={'OPERATION_NAME'} />
-                    <Column style={{ minWidth: '20rem' }} field={'operationDate'} header={'OPERATION_DATE'} />
-                    <Column style={{ minWidth: '20rem' }} field={'userName'} header={'USER_NAME'} />
-                    <Column style={{ minWidth: '10rem' }} field={'fullName'} header={'FULLNAME'} />
-                    <Column field={'cmpCode'} header={'Company_CODE'} />
-                    <Column style={{ minWidth: '15rem' }} field={'cmpName'} header={'Company_NAME'} />
-                    <Column style={{ minWidth: '14rem' }} field={'finCod'} header={'FIN_COD'} />
-                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={'FIN_NAM'} />
-                    <Column style={{ minWidth: '20rem' }} field={'decCod'} header={'Declarant_Code'} />
-                    <Column style={{ minWidth: '20rem' }} field={'decName'} header={'Declarant_Name'} />
-                    <Column style={{ minWidth: "12rem" }} field={'firstColor'} header={'FIRST_COLOR'} />
+                     <Column field={'regNo'} header={t(`${translationsForReportDPS4561Columns}.regNo`)} />
+                    <Column field={'regDate'} header={t(`${translationsForReportDPS4561Columns}.regDate`)} />
+                    <Column field={'assmtNo'} header={t(`${translationsForReportDPS4561Columns}.assmtNo`)} />
+                    <Column field={'rcptNo'} header={t(`${translationsForReportDPS4561Columns}.rcptNo`)} />
+                    <Column field={'rcptDate'} header={t(`${translationsForReportDPS4561Columns}.rcptDate`)} />
+                    <Column style={{ minWidth: '25rem' }} field={'status1'} header={t(`${translationsForReportDPS4561Columns}.status1`)} />
+                    <Column field={'status'} header={t(`${translationsForReportDPS4561Columns}.status`)} />
+                    <Column filter filterField='operationName' field={'operationName'} header={t(`${translationsForReportDPS4561Columns}.operationName`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'operationDate'} header={t(`${translationsForReportDPS4561Columns}.operationDate`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'userName'} header={t(`${translationsForReportDPS4561Columns}.userName`)} />
+                    <Column style={{ minWidth: '10rem' }} field={'fullName'} header={t(`${translationsForReportDPS4561Columns}.fullName`)} />
+                    <Column field={'cmpCode'} header={t(`${translationsForReportDPS4561Columns}.cmpCode`)} />
+                    <Column style={{ minWidth: '15rem' }} field={'cmpName'} header={t(`${translationsForReportDPS4561Columns}.cmpName`)} />
+                    <Column style={{ minWidth: '14rem' }} field={'finCod'} header={t(`${translationsForReportDPS4561Columns}.finCod`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'finNam'} header={t(`${translationsForReportDPS4561Columns}.finNam`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'decCod'} header={t(`${translationsForReportDPS4561Columns}.decCod`)} />
+                    <Column style={{ minWidth: '20rem' }} field={'decName'} header={t(`${translationsForReportDPS4561Columns}.decName`)} />
+                    <Column style={{ minWidth: "12rem" }} field={'firstColor'} header={t(`${translationsForReportDPS4561Columns}.firstColor`)} />
                    
                    
-                    <Column field={'sadType'} header={'SAD_TYPE'} />
-                    <Column field={'officeCod'} header={'OFFICE_COD'} />
-                    <Column style={{ minWidth: '10rem' }} field={'office'} header={'OFFICE'} />
+                    <Column field={'sadType'} header={t(`${translationsForReportDPS4561Columns}.sadType`)} />
+                    <Column field={'officeCod'} header={t(`${translationsForReportDPS4561Columns}.officeCod`)} />
+                    <Column style={{ minWidth: '10rem' }} field={'office'} header={t(`${translationsForReportDPS4561Columns}.office`)} />
                     
                     
                     

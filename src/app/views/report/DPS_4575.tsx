@@ -7,20 +7,27 @@ import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4575: string = "reports.dps_4575"
+const translationsForReportDPS4575Columns: string = "reports.dps_4575.columns"
 
 function DPS_4575() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
   const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
           severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -41,15 +48,15 @@ function DPS_4575() {
     }
   };
   const basedOnOptions = [{
-    label: 'Engine',
+    label: t(`${translationsForBasedOn}.engine`),
     name: 'Engine'
   },
   {
-    label: 'VIN',
+    label: t(`${translationsForBasedOn}.vIN`),
     name: 'VIN'
   }]
   return (
-    <SimpleCard title="DPS_4575">
+    <SimpleCard title={t(`${translationsForReportDPS4575}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -76,35 +83,35 @@ function DPS_4575() {
           stripedRows
           showGridlines
         >
-          <Column field={'status'} header={'Status'} />
-          <Column field={'borderCuo'} header={'Border office'} />
-          <Column field={'destCuo'} header={'Customs Office'} />
-          <Column field={'decCod'} header={'Dec Code'} />
-          <Column field={'decNam1'} header={'Dec Name'} />
-          <Column field={'refNo'} header={'Ref_NO'} />
-          <Column field={'regNo'} header={'Register_No'} />
-          <Column field={'regDate'} header={'Reg_Date'} />
-          <Column field={'hscode'} header={'HSCODE'} />
-          <Column field={'mark1'} header={'Mark1'} />
-          <Column field={'mark2'} header={'Mark2'} />
-          <Column field={'decNam'} header={'Brokers_Name'} />
-          <Column field={'companyTin'} header={'Company_TIN'} />
-          <Column field={'cmpNam'} header={'Company_name'} />
-          <Column field={'finNam'} header={'Fin_Name'} />
-          <Column field={'model'} header={'Model'} />
-          <Column field={'color'} header={'Color'} />
-          <Column field={'gaz'} header={'Type_of_Gas'} />
-          <Column field={'passenger'} header={'Passenger'} />
-          <Column field={'engNo'} header={'Eng_NO'} />
-          <Column field={'shasi'} header={'Shsi'} />
-          <Column field={'doors'} header={'Doors'} />
-          <Column field={'valueAfs'} header={'Value_AF'} />
-          <Column field={'revenueTaxes'} header={'Revenue_Tax'} />
-          <Column field={'rcptNumber'} header={'Rcp_NO'} />
-          <Column field={'rcptDate'} header={'Rcp_Date'} />
-          <Column field={'rgdat'} header={'rg_date'} />
-          <Column field={'finName'} header={'Fin Name'} />
-          <Column field={'silandr'} header={'Siladar'} />
+          <Column field={'status'} header={t(`${translationsForReportDPS4575Columns}.status`)} />
+          <Column field={'borderCuo'} header={t(`${translationsForReportDPS4575Columns}.borderCuo`)} />
+          <Column field={'destCuo'} header={t(`${translationsForReportDPS4575Columns}.destCuo`)} />
+          <Column field={'decCod'} header={t(`${translationsForReportDPS4575Columns}.decCod`)} />
+          <Column field={'decNam1'} header={t(`${translationsForReportDPS4575Columns}.decNam1`)} />
+          <Column field={'refNo'} header={t(`${translationsForReportDPS4575Columns}.refNo`)} />
+          <Column field={'regNo'} header={t(`${translationsForReportDPS4575Columns}.regNo`)} />
+          <Column field={'regDate'} header={t(`${translationsForReportDPS4575Columns}.regDate`)} />
+          <Column field={'hscode'} header={t(`${translationsForReportDPS4575Columns}.hscode`)} />
+          <Column field={'mark1'} header={t(`${translationsForReportDPS4575Columns}.mark1`)} />
+          <Column field={'mark2'} header={t(`${translationsForReportDPS4575Columns}.mark2`)} />
+          <Column field={'decNam'} header={t(`${translationsForReportDPS4575Columns}.decNam`)} />
+          <Column field={'companyTin'} header={t(`${translationsForReportDPS4575Columns}.companyTin`)} />
+          <Column field={'cmpNam'} header={t(`${translationsForReportDPS4575Columns}.cmpNam`)} />
+          <Column field={'finNam'} header={t(`${translationsForReportDPS4575Columns}.finNam`)} />
+          <Column field={'model'} header={t(`${translationsForReportDPS4575Columns}.model`)} />
+          <Column field={'color'} header={t(`${translationsForReportDPS4575Columns}.color`)} />
+          <Column field={'gaz'} header={t(`${translationsForReportDPS4575Columns}.gaz`)} />
+          <Column field={'passenger'} header={t(`${translationsForReportDPS4575Columns}.passenger`)} />
+          <Column field={'engNo'} header={t(`${translationsForReportDPS4575Columns}.engNo`)} />
+          <Column field={'shasi'} header={t(`${translationsForReportDPS4575Columns}.shasi`)} />
+          <Column field={'doors'} header={t(`${translationsForReportDPS4575Columns}.doors`)} />
+          <Column field={'valueAfs'} header={t(`${translationsForReportDPS4575Columns}.valueAfs`)} />
+          <Column field={'revenueTaxes'} header={t(`${translationsForReportDPS4575Columns}.revenueTaxes`)} />
+          <Column field={'rcptNumber'} header={t(`${translationsForReportDPS4575Columns}.rcptNumber`)} />
+          <Column field={'rcptDate'} header={t(`${translationsForReportDPS4575Columns}.rcptDate`)} />
+          <Column field={'rgdat'} header={t(`${translationsForReportDPS4575Columns}.rgdat`)} />
+          <Column field={'finName'} header={t(`${translationsForReportDPS4575Columns}.finName`)} />
+          <Column field={'silandr'} header={t(`${translationsForReportDPS4575Columns}.silandr`)} />
         </DataTable>
       </Box>
       <Toast ref={toastRef} />

@@ -65,7 +65,7 @@ import DPS_4599 from './views/report/DPS_4599';
 import DPS_45101 from './views/report/DPS_45101';
 import DPS_45102 from './views/report/DPS_45102';
 import DPS_45103 from './views/report/DPS_45103';
-import OverallReport from './views/report/report';
+import OverallReport from './views/report/sigtas_report';
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
 import Transit_4273 from './views/report/Transit_4273';
@@ -301,7 +301,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Revenue_4153}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4153_REVENUE]}>
+              <PrivateRoute>
                 <Revenue_4153 />
               </PrivateRoute>
             }
@@ -517,7 +517,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Transit_4260}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4260_TRANSIT]}>
+              <PrivateRoute >
                 <Transit_4260 />
               </PrivateRoute>
             }

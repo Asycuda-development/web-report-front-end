@@ -17,6 +17,7 @@ function DataExchange_5050() {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {

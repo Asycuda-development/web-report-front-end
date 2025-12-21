@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4572: string = "reports.dps_4572"
+const translationsForReportDPS4572Columns: string = "reports.dps_4572.columns"
 
 function DPS_4572() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -32,7 +39,7 @@ function DPS_4572() {
   };
 
   return (
-    <SimpleCard title="DPS_4572">
+    <SimpleCard title={t(`${translationsForReportDPS4572}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -53,76 +60,76 @@ function DPS_4572() {
           stripedRows
           showGridlines
         >
-          <Column filter filterField="ideaYea" field={'ideaYea'} header={'Year'} />
-          <Column filter filterField="ideNbr" field={'ideNbr'} header={'Exit_No'} />
-          <Column field={'ideCuo'} header={'Customs_Code'} />
-          <Column field={'ideCuoNam'} header={'Customs_Name'} />
-          <Column field={'shdCod'} header={'Where_House_Cod'} />
-          <Column field={'shdNam'} header={'Where_House_Name'} />
-          <Column field={'cmpNam'} header={'Company_Name'} />
-          <Column field={'cmpCod'} header={'Company_TIN'} />
-          <Column filter filterField="decCod" field={'decCod'} header={'Broker_Code'} />
-          <Column field={'decNam'} header={'Broker_Name'} />
-          <Column field={'valUsr'} header={'val_Usr'} />
-          <Column field={'extUsr'} header={'Exit Usr'} />
-          <Column field={'extPlc'} header={'place_of_exit'} />
-          <Column field={'extItm'} header={'Exit Itm'} />
-          <Column field={'ExitDat'} header={'Exit Date'} />
-          <Column field={'sadItm'} header={'sad_Item'} />
+          <Column filter filterField="ideaYea" field={'ideaYea'} header={t(`${translationsForReportDPS4572Columns}.ideaYea`)} />
+          <Column filter filterField="ideNbr" field={'ideNbr'} header={t(`${translationsForReportDPS4572Columns}.ideNbr`)} />
+          <Column field={'ideCuo'} header={t(`${translationsForReportDPS4572Columns}.ideCuo`)} />
+          <Column field={'ideCuoNam'} header={t(`${translationsForReportDPS4572Columns}.ideCuoNam`)} />
+          <Column field={'shdCod'} header={t(`${translationsForReportDPS4572Columns}.shdCod`)} />
+          <Column field={'shdNam'} header={t(`${translationsForReportDPS4572Columns}.shdNam`)} />
+          <Column field={'cmpNam'} header={t(`${translationsForReportDPS4572Columns}.cmpNam`)} />
+          <Column field={'cmpCod'} header={t(`${translationsForReportDPS4572Columns}.cmpCod`)} />
+          <Column filter filterField="decCod" field={'decCod'} header={t(`${translationsForReportDPS4572Columns}.decCod`)} />
+          <Column field={'decNam'} header={t(`${translationsForReportDPS4572Columns}.decNam`)} />
+          <Column field={'valUsr'} header={t(`${translationsForReportDPS4572Columns}.valUsr`)} />
+          <Column field={'extUsr'} header={t(`${translationsForReportDPS4572Columns}.extUsr`)} />
+          <Column field={'extPlc'} header={t(`${translationsForReportDPS4572Columns}.extPlc`)} />
+          <Column field={'extItm'} header={t(`${translationsForReportDPS4572Columns}.extItm`)} />
+          <Column field={'ExitDat'} header={t(`${translationsForReportDPS4572Columns}.ExitDat`)} />
+          <Column field={'sadItm'} header={t(`${translationsForReportDPS4572Columns}.sadItm`)} />
           <Column
             filter
             filterField="sadRegNbr"
             field={'sadRegNbr'}
-            header={'Reg_NO'}
+            header={t(`${translationsForReportDPS4572Columns}.sadRegNbr`)}
           />
-          <Column field={'sadRegSer'} header={'Sad_Serial_NO'} />
-          <Column field={'sadAssDat'} header={'Assesment_Date'} />
-          <Column field={'sadPckMk1'} header={'	Desc1'} />
-          <Column field={'sadPckMk2'} header={'	Desc2'} />
-          <Column field={'sadPackNbr'} header={'sad_pack_nbr'} />
-          <Column field={'sadPckExtNbr'} header={'No_of_exit_packages'} />
-          <Column field={'sadPckExtWgt'} header={'weigh_of_exit_packages'} />
-          <Column field={'manRef'} header={'manifest_ref'} />
-          <Column field={'bolRef'} header={'bol_Ref'} />
-          <Column field={'exitTrucks'} header={'Exit_Trucks'} />
-          <Column field={'exitDrivers'} header={'Exit_Drivers'} />
-          <Column field={'ideSer'} header={'ID_Ser'} />
-          <Column field={'tptInfNam'} header={'Transport_Name'} />
-          <Column field={'ideBar'} header={'IDE_Bar'} />
-          <Column field={'tptNatCod'} header={'Transport_Cod'} />
-          <Column field={' tptNatNam'} header={'Transport_Name'} />
-          <Column field={'valDat'} header={'Val_Date'} />
-          <Column field={'valItm'} header={'valItm'} />
-          <Column field={'itmNbr'} header={'item NO'} />
+          <Column field={'sadRegSer'} header={t(`${translationsForReportDPS4572Columns}.sadRegSer`)} />
+          <Column field={'sadAssDat'} header={t(`${translationsForReportDPS4572Columns}.sadAssDat`)} />
+          <Column field={'sadPckMk1'} header={t(`${translationsForReportDPS4572Columns}.sadPckMk1`)} />
+          <Column field={'sadPckMk2'} header={t(`${translationsForReportDPS4572Columns}.sadPckMk2`)} />
+          <Column field={'sadPackNbr'} header={t(`${translationsForReportDPS4572Columns}.sadPackNbr`)} />
+          <Column field={'sadPckExtNbr'} header={t(`${translationsForReportDPS4572Columns}.sadPckExtNbr`)} />
+          <Column field={'sadPckExtWgt'} header={t(`${translationsForReportDPS4572Columns}.sadPckExtWgt`)} />
+          <Column field={'manRef'} header={t(`${translationsForReportDPS4572Columns}.manRef`)} />
+          <Column field={'bolRef'} header={t(`${translationsForReportDPS4572Columns}.bolRef`)} />
+          <Column field={'exitTrucks'} header={t(`${translationsForReportDPS4572Columns}.exitTrucks`)} />
+          <Column field={'exitDrivers'} header={t(`${translationsForReportDPS4572Columns}.exitDrivers`)} />
+          <Column field={'ideSer'} header={t(`${translationsForReportDPS4572Columns}.ideSer`)} />
+          <Column field={'tptInfNam'} header={t(`${translationsForReportDPS4572Columns}.tptInfNam`)} />
+          <Column field={'ideBar'} header={t(`${translationsForReportDPS4572Columns}.ideBar`)} />
+          <Column field={'tptNatCod'} header={t(`${translationsForReportDPS4572Columns}.tptNatCod`)} />
+          <Column field={' tptNatNam'} header={t(`${translationsForReportDPS4572Columns}. tptNatNam`)} />
+          <Column field={'valDat'} header={t(`${translationsForReportDPS4572Columns}.valDat`)} />
+          <Column field={'valItm'} header={t(`${translationsForReportDPS4572Columns}.valItm`)} />
+          <Column field={'itmNbr'} header={t(`${translationsForReportDPS4572Columns}.itmNbr`)} />
           <Column
             filter
             filterField="sadDecYea"
             field={'sadDecYea'}
-            header={'Decleration_Year'}
+            header={t(`${translationsForReportDPS4572Columns}.sadDecYea`)}
           />
           <Column
             filter
             filterField="sadDecNbr"
             field={'sadDecNbr'}
-            header={'Decleration_NO'}
+            header={t(`${translationsForReportDPS4572Columns}.sadDecNbr`)}
           />
-          <Column field={'sadAssYea'} header={'Assesment_Year'} />
-          <Column field={'sadAssSer'} header={'Assesment Serial No'} />
-          <Column field={'sadAssNbr'} header={'Assesment_No'} />
+          <Column field={'sadAssYea'} header={t(`${translationsForReportDPS4572Columns}.sadAssYea`)} />
+          <Column field={'sadAssSer'} header={t(`${translationsForReportDPS4572Columns}.sadAssSer`)} />
+          <Column field={'sadAssNbr'} header={t(`${translationsForReportDPS4572Columns}.sadAssNbr`)} />
           <Column
             style={{ textAlign: 'center' }}
             field={'sadRegDat'}
-            header={'Sad Registeration Date'}
+            header={t(`${translationsForReportDPS4572Columns}.sadRegDat`)}
           />
-          <Column field={'sadAssAll'} header={'Assesment_detail'} />
-          <Column field={'sadInstanceId'} header={'sad_Instance Id'} />
-          <Column field={'sadPckTypCod'} header={'sad_Pck_Typ_Cod'} />
-          <Column field={'sadPckTypNam'} header={'sad_Pck_Typ_Name'} />
-          <Column field={'sadWgtGrs'} header={'sad_Wgt_Grs'} />
-          <Column field={'sadPckExtSel'} header={'sad_Pck_Ext_Sel'} />
-          <Column field={'sadCtnExitId'} header={'sad_Ctn_Exit_Id'} />
-          <Column field={'serPrt'} header={'ser_Prt'} />
-          <Column field={'tptMot'} header={'tpt_Mot'} />
+          <Column field={'sadAssAll'} header={t(`${translationsForReportDPS4572Columns}.sadAssAll`)} />
+          <Column field={'sadInstanceId'} header={t(`${translationsForReportDPS4572Columns}.sadInstanceId`)} />
+          <Column field={'sadPckTypCod'} header={t(`${translationsForReportDPS4572Columns}.sadPckTypCod`)} />
+          <Column field={'sadPckTypNam'} header={t(`${translationsForReportDPS4572Columns}.sadPckTypNam`)} />
+          <Column field={'sadWgtGrs'} header={t(`${translationsForReportDPS4572Columns}.sadWgtGrs`)} />
+          <Column field={'sadPckExtSel'} header={t(`${translationsForReportDPS4572Columns}.sadPckExtSel`)} />
+          <Column field={'sadCtnExitId'} header={t(`${translationsForReportDPS4572Columns}.sadCtnExitId`)} />
+          <Column field={'serPrt'} header={t(`${translationsForReportDPS4572Columns}.serPrt`)} />
+          <Column field={'tptMot'} header={t(`${translationsForReportDPS4572Columns}.tptMot`)} />
         </DataTable>
       </Box>
     </SimpleCard>
