@@ -46,6 +46,7 @@ function Manifest_4450() {
             )}
             <Box width="100%" overflow="auto">
                 <DataTable
+                    exportFilename={`ManifestReport4450 ${new Date().toISOString()}`}
                     ref={tableRef}
                     value={reportData}
                     rows={ROWS_PER_PAGE}

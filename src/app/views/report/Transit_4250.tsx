@@ -35,17 +35,17 @@ const Transit_4250 = () => {
   const basedOnOptions = [{
     label: 'Box number 18 part 1',
     name: 'Box number 18 part 1'
-  },{
+  }, {
     label: 'Box number 18 part 2',
     name: 'Box number 18 part 2'
-},{
-  label: 'Box number 21 part 1',
-  name: 'Box number 21 part 1'
-},{
-  label: 'Box number 21 part 2',
-  name: 'Box number 21 part 2',
-}
-]
+  }, {
+    label: 'Box number 21 part 1',
+    name: 'Box number 21 part 1'
+  }, {
+    label: 'Box number 21 part 2',
+    name: 'Box number 21 part 2',
+  }
+  ]
 
   return (
     <SimpleCard title="Transit Report 4250">
@@ -68,6 +68,7 @@ const Transit_4250 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4250 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

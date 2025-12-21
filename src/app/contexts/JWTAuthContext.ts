@@ -2,7 +2,7 @@ import axios from 'axios';
 import { create } from 'zustand';
 interface UserInterface {
   id?: number;
-  name?: string;
+  username?: string;
   avatar?: string;
   authorities?: Array<string>;
 }

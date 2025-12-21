@@ -24,7 +24,7 @@ const Transit_4260 = () => {
       } else {
         setReportData(res.data);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
   const basedOnOptions = [{
     label: 'declarant',
@@ -47,6 +47,7 @@ const Transit_4260 = () => {
 
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4260 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

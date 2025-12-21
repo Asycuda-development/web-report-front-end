@@ -97,6 +97,7 @@ function DPS_4561() {
             )}
             <Box width="100%" overflow="auto">
                 <DataTable
+                    exportFilename={`DPS_4561 ${new Date().toISOString()}`}
                     ref={tableRef}
                     value={reportData}
                     rows={ROWS_PER_PAGE}
@@ -105,7 +106,7 @@ function DPS_4561() {
                     stripedRows
                     showGridlines
                 >
-                     <Column field={'regNo'} header={'REG_NO'} />
+                    <Column field={'regNo'} header={'REG_NO'} />
                     <Column field={'regDate'} header={'REG_DATE'} />
                     <Column field={'assmtNo'} header={'ASSMT_NO'} />
                     <Column field={'rcptNo'} header={'RCPT_NO'} />
@@ -123,14 +124,14 @@ function DPS_4561() {
                     <Column style={{ minWidth: '20rem' }} field={'decCod'} header={'Declarant_Code'} />
                     <Column style={{ minWidth: '20rem' }} field={'decName'} header={'Declarant_Name'} />
                     <Column style={{ minWidth: "12rem" }} field={'firstColor'} header={'FIRST_COLOR'} />
-                   
-                   
+
+
                     <Column field={'sadType'} header={'SAD_TYPE'} />
                     <Column field={'officeCod'} header={'OFFICE_COD'} />
                     <Column style={{ minWidth: '10rem' }} field={'office'} header={'OFFICE'} />
-                    
-                    
-                    
+
+
+
                 </DataTable>
             </Box>
             <Toast ref={toastRef} />

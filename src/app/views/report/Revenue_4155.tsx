@@ -47,6 +47,7 @@ const Revenue_4155 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Revenue Report 4155 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

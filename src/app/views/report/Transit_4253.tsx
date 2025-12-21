@@ -10,7 +10,7 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 const Transit_4253 = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
-  useEffect(() => {});
+  useEffect(() => { });
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -22,7 +22,7 @@ const Transit_4253 = () => {
       {
         setReportData(res.data);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
@@ -41,6 +41,7 @@ const Transit_4253 = () => {
 
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4253 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

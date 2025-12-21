@@ -55,6 +55,7 @@ const Transit_4258 = () => {
       <Box width="100%" overflow="auto">
         <DataTable
           ref={tableRef}
+          exportFilename={`Transit Report 4258 ${new Date().toISOString()}`}
           value={reportData}
           rows={ROWS_PER_PAGE}
           rowsPerPageOptions={[5, 10, 25, 50, 100]}

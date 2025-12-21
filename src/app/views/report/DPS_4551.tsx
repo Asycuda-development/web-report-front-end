@@ -57,6 +57,7 @@ function DPS_4551() {
     name: 'HsCode'
   }]
 
+
   return (
     <SimpleCard title="DPS_4551">
       <ReportHeaderInputs
@@ -79,6 +80,7 @@ function DPS_4551() {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`DPS_4551 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

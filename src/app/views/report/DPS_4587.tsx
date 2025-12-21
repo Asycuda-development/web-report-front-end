@@ -43,6 +43,7 @@ function DPS_4587() {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`DPS_4587 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

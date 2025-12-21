@@ -20,7 +20,7 @@ const OverallReport = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -31,7 +31,7 @@ const OverallReport = () => {
       });
 
       setReportData(res.data);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
@@ -48,6 +48,7 @@ const OverallReport = () => {
         />
         <Box width="100%" overflow="auto">
           <DataTable
+            exportFilename={`Sigtas Report ${new Date().toISOString()}`}
             ref={tableRef}
             value={reportData}
             rows={ROWS_PER_PAGE}

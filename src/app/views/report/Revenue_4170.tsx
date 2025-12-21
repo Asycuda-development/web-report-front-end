@@ -45,6 +45,7 @@ function Revenue_4170() {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Revenue Report 4170 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

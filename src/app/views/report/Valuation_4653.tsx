@@ -49,6 +49,7 @@ const Valuation_4653 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`ValuationReport4653 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

@@ -47,6 +47,7 @@ const Exemption_4755 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`ExemptionReport4755 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

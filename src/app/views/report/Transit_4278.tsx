@@ -39,7 +39,7 @@ const Transit_4278 = () => {
       <ReportHeaderInputs
         showStartDate
         showEndDate
-        
+
         showCustomsList
         showRegDate
         showNumPalate
@@ -51,6 +51,7 @@ const Transit_4278 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4278 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

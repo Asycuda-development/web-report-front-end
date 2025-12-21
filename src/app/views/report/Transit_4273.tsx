@@ -24,18 +24,19 @@ const Transit_4273 = () => {
       } else {
         setReportData(res.data);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
     <SimpleCard title="4273- Transit">
-      <ReportHeaderInputs 
-      showStartDate 
-      showEndDate
-       onSearch={handleSubmit} 
-       tabelRef={tableRef} />
+      <ReportHeaderInputs
+        showStartDate
+        showEndDate
+        onSearch={handleSubmit}
+        tabelRef={tableRef} />
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4273 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

@@ -51,6 +51,7 @@ const Transit_4267 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4267 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}
@@ -59,7 +60,7 @@ const Transit_4267 = () => {
           stripedRows
           showGridlines
         >
-          
+
           <Column field={'transitType'} header={'transitType'} />
           <Column field={'declarationRefYr'} header={'Declaration_Ref_Year'} />
           <Column field={'deptOffNam'} header={'Departure_Off_Name'} />

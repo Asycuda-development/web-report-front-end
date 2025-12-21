@@ -51,6 +51,7 @@ const TransitReport4259 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Transit Report 4259 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}
@@ -118,7 +119,7 @@ const TransitReport4259 = () => {
           <Column field={'itmNo'} header={'itmNo'} />
           <Column field={'packNbr'} header={'packNbr'} />
           <Column field={'packageCode'} header={'packageCode'} />
-       
+
           <Column field={'delCod'} header={'delCod'} />
           <Column style={{ minWidth: "20rem" }} field={'delNam'} header={'delNam'} />
         </DataTable>

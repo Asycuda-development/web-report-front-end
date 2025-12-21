@@ -108,6 +108,7 @@ const Transit_4261 = () => {
           )}
           {!isLoading && reportData.length > 0 && ( */}
         <DataTable
+          exportFilename={`Transit Report 4261 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}
@@ -148,22 +149,22 @@ const Transit_4261 = () => {
           <Column field={'Good_Description3'} header={'Good_Description3'} />
           <Column field={'Package_Mark'} header={'Package_Mark'} />
           <Column field={'cont_Flg'} header={'Container Flag'} />
-         <Column field={'cont1'} header={'Container 1'} />
-         <Column field={'cont2'} header={'Container 2'} />
-         <Column field={'cont1'} header={'Container 1'} />
-         <Column field={'cont2'} header={'Container 2'} />
-         <Column field={'seal_Affixed_No'} header={'Seal_Affixed_No'} />
-         <Column field={'seal_Identity'} header={'Seal_Identity'} />
-         <Column field={'aranty_Cod'} header={'Garanty_Code'} />
-         <Column field={'Garanty_Amnt'} header={'Garanty_Amnt'} />
-         <Column field={'at1_Cod'} header={'ATT_AT1_COd'} />
-         <Column field={'at1_Nbr'} header={'ATT_AT1_nbr'} />
-         <Column field={'at2_Cod'} header={'ATT_AT2_COd'} />
-         <Column field={'at2_Nbr'} header={'ATT_AT2_nbr'} />
-         <Column field={'at3_Cod'} header={'ATT_AT3_COd'} />
-         <Column field={'at3_Nbr'} header={'ATT_AT3_nbr'} />
-         <Column field={'at4_Cod'} header={'ATT_AT4_COd'} />
-         <Column field={'at4_Nbr'} header={'ATT_AT4_nbr'} />
+          <Column field={'cont1'} header={'Container 1'} />
+          <Column field={'cont2'} header={'Container 2'} />
+          <Column field={'cont1'} header={'Container 1'} />
+          <Column field={'cont2'} header={'Container 2'} />
+          <Column field={'seal_Affixed_No'} header={'Seal_Affixed_No'} />
+          <Column field={'seal_Identity'} header={'Seal_Identity'} />
+          <Column field={'aranty_Cod'} header={'Garanty_Code'} />
+          <Column field={'Garanty_Amnt'} header={'Garanty_Amnt'} />
+          <Column field={'at1_Cod'} header={'ATT_AT1_COd'} />
+          <Column field={'at1_Nbr'} header={'ATT_AT1_nbr'} />
+          <Column field={'at2_Cod'} header={'ATT_AT2_COd'} />
+          <Column field={'at2_Nbr'} header={'ATT_AT2_nbr'} />
+          <Column field={'at3_Cod'} header={'ATT_AT3_COd'} />
+          <Column field={'at3_Nbr'} header={'ATT_AT3_nbr'} />
+          <Column field={'at4_Cod'} header={'ATT_AT4_COd'} />
+          <Column field={'at4_Nbr'} header={'ATT_AT4_nbr'} />
           <Column field={'Itm_No'} header={'Itm_No'} />
           <Column field={'dec_Ref'} header={'dec_Ref'} />
           <Column field={'load_List'} header={'load_List'} />

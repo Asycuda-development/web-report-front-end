@@ -48,6 +48,7 @@ const Selectivity_4354 = () => {
       )}
       <Box width="100%" overflow="auto">
         <DataTable
+          exportFilename={`Selectivity Report 4354 ${new Date().toISOString()}`}
           ref={tableRef}
           value={reportData}
           rows={ROWS_PER_PAGE}

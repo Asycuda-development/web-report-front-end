@@ -50,6 +50,7 @@ function DPS_4556() {
             )}
             <Box width="100%" overflow="auto">
                 <DataTable
+                    exportFilename={`DPS_4556 ${new Date().toISOString()}`}
                     ref={tableRef}
                     value={reportData}
                     rows={ROWS_PER_PAGE}
@@ -83,9 +84,9 @@ function DPS_4556() {
                     <Column field={'ideCuoCod'} header={'Custom Code'} />
                     <Column style={{ minWidth: '10rem' }} field={'bankNam'} header={'Bank Name'} />
                     <Column style={{ minWidth: '12rem' }} field={'countryDest'} header={'Destination Country Name'} />
-                   
-                    
-             
+
+
+
 
 
                 </DataTable>
