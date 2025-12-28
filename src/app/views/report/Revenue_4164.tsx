@@ -43,6 +43,7 @@ function Revenue_4164() {
   return (
     <SimpleCard title={t(`${translationsForReportRevenue4164}.title`)}>
       <ReportHeaderInputs
+        report='Revenue_4164'
         showStartDate
         showEndDate
         showCustomsList

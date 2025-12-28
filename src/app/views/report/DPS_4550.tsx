@@ -82,11 +82,12 @@ function DPS_4550() {
     label: t(`${translationsForBasedOn}.hscode`),
     name: 'HsCode'
   }]
-
+  console.log(tableRef)
   //
   return (
     <SimpleCard title={t(`${translationsForReportDps4550}.title`)}>
       <ReportHeaderInputs
+        report='DpsReport4550'
         showStartDate
         showEndDate
         ShowTinNumber

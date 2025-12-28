@@ -42,6 +42,7 @@ function DataExchange_5050() {
     <SimpleCard title={t(`${translationsForReportDataExchange5050}.title`)}>
       <ReportHeaderInputs
         showStartDate
+        report='DataExchange_5050'
         showEndDate
         showDeclarationDate
         onSearch={handleSubmit}

@@ -31,6 +31,13 @@ interface basedOnsInterface {
   label: string;
   name: string;
 }
+
+interface Product {
+  id: string;
+  code: string;
+  name: string;
+  description: string;
+}
 export interface SearchData {
   dateType?: string;
   startDate?: string;
@@ -62,6 +69,7 @@ export interface SearchData {
   basedOn?: string;
 }
 interface ReportHeaderInputsProps {
+  report: string;
   onChage?: (e: SearchData) => void;
   onSearch?: (e: SearchData) => void;
   basedOnOptions?: Array<basedOnsInterface>;
@@ -116,6 +124,7 @@ interface ReportHeaderInputsProps {
   showBasedOnBox?: boolean;
 }
 export const ReportHeaderInputs = ({
+  report,
   tabelRef,
   onChage = () => { },
   onSearch = () => { },
@@ -205,6 +214,7 @@ export const ReportHeaderInputs = ({
   const [customsDpaCode, setCustomsDpaCode] = useState<string>('');
   const [basedOnBox, setBasedOnBox] = useState<string>('')
   const [basedOnBoxValue, setBasedOnBoxValue] = useState<string>('')
+  const [products, setProducts] = useState<Product[]>([])
 
   useEffect(() => {
     if (
@@ -296,6 +306,33 @@ export const ReportHeaderInputs = ({
     basedOnBox,
     basedOnBoxValue
   ]);
+
+  const exportExcel = () => {
+    import('xlsx').then((xlsx) => {
+      const worksheet = xlsx.utils.json_to_sheet(products);
+      const workbook = { Sheets: { data: worksheet }, SheetNames: ['data'] };
+      const excelBuffer = xlsx.write(workbook, {
+        bookType: 'xlsx',
+        type: 'array'
+      });
+
+      saveAsExcelFile(excelBuffer, report);
+    });
+  };
+
+  const saveAsExcelFile = (buffer: any, fileName: any) => {
+    import('file-saver').then((module) => {
+      if (module && module.default) {
+        let EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+        let EXCEL_EXTENSION = '.xlsx';
+        const data = new Blob([buffer], {
+          type: EXCEL_TYPE
+        });
+
+        module.default.saveAs(data, fileName + '_export_' + 'from' + startDate + 'to' + endDate + EXCEL_EXTENSION);
+      }
+    });
+  };
 
   const formatData = () => {
     return {
@@ -915,10 +952,11 @@ export const ReportHeaderInputs = ({
             </div>
             <div style={{ marginInline: '2px' }}>
               <LoadingButton
-                onClick={() => tabelRef?.current?.exportCSV()}
+                onClick={exportExcel}
                 type="submit"
                 color="primary"
                 variant="contained"
+                data-pr-tooltip='XLS'
               >
                 Export
               </LoadingButton>

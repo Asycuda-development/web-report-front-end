@@ -27,7 +27,7 @@ function DPS_45103() {
         toastRef.current.show({
           severity: 'error',
           summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
-          detail:t(`${translationsForBasedOnError}.basedOnDetailedError`)
+          detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -75,6 +75,7 @@ function DPS_45103() {
     <SimpleCard title={t(`${translationsForReportDPS45103}.title`)}>
       <ReportHeaderInputs
         showStartDate
+        report='DPS_45103'
         showEndDate
         ShowTinNumber
         showExemptionType

@@ -41,6 +41,7 @@ function DPS_4587() {
   return (
     <SimpleCard title={t(`${translationsForReportDPS4587}.title`)}>
       <ReportHeaderInputs
+        report='DPS_4587'
         showUserName
         onSearch={handleSubmit}
         tabelRef={tableRef}

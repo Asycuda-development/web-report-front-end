@@ -41,6 +41,7 @@ function DPS_4588() {
   return (
     <SimpleCard title={t(`${translationsForReportDPS4588}.title`)}>
       <ReportHeaderInputs
+        report='DPS_4588'
         showserPrt
         showCustomsList
         onSearch={handleSubmit}

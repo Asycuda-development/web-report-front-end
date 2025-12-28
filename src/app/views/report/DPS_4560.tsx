@@ -19,7 +19,7 @@ function DPS_4560() {
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -64,6 +64,7 @@ function DPS_4560() {
     return (
         <SimpleCard title={t(`${translationsForReportDPS4560}.title`)}>
             <ReportHeaderInputs
+                report='DPS_4560'
                 showStartDate
                 showEndDate
                 showRegDate

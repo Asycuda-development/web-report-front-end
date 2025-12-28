@@ -79,6 +79,7 @@ function DPS_4558() {
     return (
         <SimpleCard title={t(`${translationsForReportDPS4558}.title`)}>
             <ReportHeaderInputs
+                report='DPS_4558'
                 showStartDate
                 showEndDate
                 ShowTinNumber
@@ -98,7 +99,6 @@ function DPS_4558() {
             )}
             <Box width="100%" overflow="auto">
                 <DataTable
-                    exportFilename={`DPS_4558 ${new Date().toISOString()}`}
                     ref={tableRef}
                     value={reportData}
                     rows={ROWS_PER_PAGE}

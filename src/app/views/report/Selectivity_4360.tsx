@@ -43,6 +43,7 @@ const Selectivity_4360 = () => {
   return (
     <SimpleCard title={t(`${translationsForReportSelectivity4360}.title`)}>
       <ReportHeaderInputs
+        report='Selectivity_4360'
         showStartDate
         showEndDate
         showUserDate

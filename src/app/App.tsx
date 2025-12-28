@@ -1526,6 +1526,7 @@ import Valuation_4658 from './views/report/Valuation_4658';
 import { AUTHORITIES } from './utils/constant';
 
 import '../i18n/config';
+import DPS_4550 from './views/report/DPS_4550';
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -2227,14 +2228,14 @@ const AuthLayout = () => {
               </PrivateRoute>
             }
           />
-          {/* <Route
+          <Route
             path={routes.DPS_4550}
             element={
-              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4550_DPS]}>
+              <PrivateRoute >
                 <DPS_4550 />
               </PrivateRoute>
             }
-          /> */}
+          />
           <Route
             path={routes.DPS_4551}
             element={

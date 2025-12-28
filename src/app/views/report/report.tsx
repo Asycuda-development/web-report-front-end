@@ -38,6 +38,7 @@ const OverallReport = () => {
     <Container>
       <SimpleCard title="Sigtas Report">
         <ReportHeaderInputs
+          report='Sigtas Report'
           showStartDate
           showEndDate
           ShowTinNumber

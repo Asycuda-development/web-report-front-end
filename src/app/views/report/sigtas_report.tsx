@@ -46,6 +46,7 @@ const OverallReport = () => {
     <Container>
       <SimpleCard title={t(`${translationsForReportsigtasreport}.title`)}>
         <ReportHeaderInputs
+          report='findBy Creteria'
           showStartDate
           showEndDate
           ShowTinNumber

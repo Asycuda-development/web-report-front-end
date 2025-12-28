@@ -17,7 +17,7 @@ function Manifest_4450() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         console.log(data);
@@ -41,6 +41,7 @@ function Manifest_4450() {
     return (
         <SimpleCard title={t(`${translationsForReportManifest4450}.title`)}>
             <ReportHeaderInputs
+                report='Manifest_4450'
                 showStartDate
                 showEndDate
                 showRegDate

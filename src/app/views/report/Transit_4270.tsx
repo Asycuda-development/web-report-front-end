@@ -17,7 +17,7 @@ const Transit_4270 = () => {
     const [reportData, setReportData] = useState([]);
     const tableRef: any = useRef(null);
     const [loading, setLoading] = useState(false);
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -41,6 +41,7 @@ const Transit_4270 = () => {
     return (
         <SimpleCard title={t(`${translationsForReportTransit4270}.title`)}>
             <ReportHeaderInputs
+                report='Transit_4270'
                 showStartDate
                 showEndDate
                 showRegDate

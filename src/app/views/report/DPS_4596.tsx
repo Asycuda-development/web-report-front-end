@@ -40,7 +40,7 @@ function DPS_4596() {
 
   return (
     <SimpleCard title={t(`${translationsForReportDPS4596}.title`)}>
-      <ReportHeaderInputs showStartDate showEndDate onSearch={handleSubmit} tabelRef={tableRef} />
+      <ReportHeaderInputs report='DPS_4596' showStartDate showEndDate onSearch={handleSubmit} tabelRef={tableRef} />
       {loading && (
         <LinearProgress />
       )}

@@ -37,6 +37,7 @@ const Transit_4273 = () => {
   return (
     <SimpleCard title="4273- Transit">
       <ReportHeaderInputs
+        report='Transit_4273'
         showStartDate
         showEndDate
         onSearch={handleSubmit}

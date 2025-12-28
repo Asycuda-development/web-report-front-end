@@ -68,6 +68,7 @@ function DPS_4551() {
   return (
     <SimpleCard title={t(`${translationsForReportDPS4551}.title`)}>
       <ReportHeaderInputs
+        report='DPS_4551'
         showStartDate
         showEndDate
         ShowTinNumber

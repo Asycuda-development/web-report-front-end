@@ -43,6 +43,7 @@ const Revenue_48100 = () => {
   return (
     <SimpleCard title={t(`${translationsForReportRevenue48100}.title`)}>
       <ReportHeaderInputs
+        report='Revenue_48100'
         showStartDate
         showEndDate
         showCustomsList

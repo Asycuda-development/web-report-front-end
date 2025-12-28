@@ -37,6 +37,7 @@ const Transit_4264 = () => {
   return (
     <SimpleCard title={t(`${translationsForReportTransit4264}.title`)}>
       <ReportHeaderInputs
+        report='Transit_4264'
         showStartDate
         showEndDate
         showDepartureCustomsList

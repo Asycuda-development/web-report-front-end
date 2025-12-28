@@ -17,7 +17,7 @@ function Exemption_4752() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -41,6 +41,7 @@ function Exemption_4752() {
     return (
         <SimpleCard title={t(`${translationsForReportExemption4752}.title`)}>
             <ReportHeaderInputs
+                report='Exemption_4752'
                 showStartDate
                 showEndDate
                 showRegDate

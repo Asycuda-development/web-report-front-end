@@ -19,7 +19,7 @@ function DPS_4584() {
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -68,12 +68,13 @@ function DPS_4584() {
         name: 'I_no'
     },
     {
-        label:t(`${translationsForBasedOn}.cMP_COD`),
+        label: t(`${translationsForBasedOn}.cMP_COD`),
         name: 'CMP_COD'
     }]
     return (
         <SimpleCard title={t(`${translationsForReportDPS4584}.title`)}>
             <ReportHeaderInputs
+                report='DPS_4584'
                 showStartDate
                 showEndDate
                 showExitDate

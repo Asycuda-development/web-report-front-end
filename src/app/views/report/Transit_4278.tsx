@@ -46,7 +46,7 @@ const Transit_4278 = () => {
       <ReportHeaderInputs
         showStartDate
         showEndDate
-
+        report='Transit_4278'
         showCustomsList
         showRegDate
         showNumPalate

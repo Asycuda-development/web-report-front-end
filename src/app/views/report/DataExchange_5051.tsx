@@ -42,6 +42,7 @@ function DataExchange_5051() {
   return (
     <SimpleCard title={t(`${translationsForReportDataExchange5051}.title`)}>
       <ReportHeaderInputs
+        report='DataExchange_5051'
         showStartDate
         showEndDate
         showDeclarationDate

@@ -17,7 +17,7 @@ function DataExchange_5053() {
 	const [reportData, setReportData] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const tableRef: any = useRef(null);
-  const { t } = useTranslation();
+	const { t } = useTranslation();
 
 	useEffect(() => { }, []);
 
@@ -44,6 +44,7 @@ function DataExchange_5053() {
 	return (
 		<SimpleCard title={t(`${translationsForReportDataExchange5053}.title`)}>
 			<ReportHeaderInputs
+				report='DataExchange_5053'
 				showStartDate
 				showEndDate
 				onSearch={handleSubmit}

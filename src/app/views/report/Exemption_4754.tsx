@@ -43,6 +43,7 @@ const Exemption_4754 = () => {
   return (
     <SimpleCard title={t(`${translationsForReportExemption4754}.title`)}>
       <ReportHeaderInputs
+        report='Exemption_4754'
         showStartDate
         showEndDate
         showCustomsList
