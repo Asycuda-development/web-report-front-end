@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue48100: string = "reports.revenue_48100"
+const translationsForReportRevenue48100Columns: string = "reports.revenue_48100.columns"
 
 const Revenue_48100 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_48100 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 48100">
+    <SimpleCard title={t(`${translationsForReportRevenue48100}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -58,45 +65,45 @@ const Revenue_48100 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'status'} header={'STATUS '} />
-          <Column field={'cuocod'} header={'CUOCODE'} />
-          <Column field={'regdat'} header={'REG_DATE'} />
-          <Column field={'regnbr'} header={'REG_NO'} />
-          <Column field={'perlna'} header={'PERLNA'} />
-          <Column field={'perfna'} header={'PREFNA'} />
-          <Column field={'perplc'} header={'PERPLC'} />
-          <Column field={'pernad'} header={'PERNAD'} />
-          <Column field={'peradr'} header={'PERADR'} />
-          <Column field={'percit'} header={'PERCIT'} />
-          <Column field={'percna'} header={'PERCNA'} />
-          <Column field={'per_Job'} header={'PER_JOB'} />
-          <Column field={'pasnbr'} header={'PASNBR'} />
-          <Column field={'issdat'} header={'ISSDAT'} />
-          <Column field={'isscit'} header={'ISSCIT'} />
-          <Column field={'isscna'} header={'ISSCNA'} />
-          <Column field={'perbsn'} header={'PERBSN'} />
-          <Column field={'cshpro'} header={'CSHPRO'} />
-          <Column field={'cshuse'} header={'CSHUSE'} />
-          <Column field={'motdsc'} header={'MOTDSC'} />
-          <Column field={'depcty'} header={'DEPCTY'} />
-          <Column field={'depnam'} header={'DEPNAM'} />
-          <Column field={'depdat'} header={'DEPDAT'} />
-          <Column field={'tracty'} header={'TRACTY'} />
-          <Column field={'tranam'} header={'TRANAM'} />
-          <Column field={'tradat'} header={'TRADAT'} />
-          <Column field={'arrcty'} header={'ARRCTY'} />
-          <Column field={'arrnam'} header={'ARRNAM'} />
-          <Column field={'arrdat'} header={'ARRDAT'} />
-          <Column field={'cmpnam'} header={'CMPNAM'} />
-          <Column field={'cmocod'} header={'CMPCOD'} />
-          <Column field={'refnbr'} header={'REFNBR'} />
-          <Column field={'cuodat'} header={'CUODAT'} />
-          <Column field={'amttot'} header={'AMTTOT'} />
-          <Column field={'amtdsc'} header={'AMTDSC'} />
-          <Column field={'amtoth'} header={'AMTOTH'} />
-          <Column field={'amtval'} header={'AMTVAL'} />
-          <Column field={'curcod'} header={'CURCOD'} />
-          <Column field={'curdsc'} header={'CURDSC'} />
+          <Column field={'status'} header={t(`${translationsForReportRevenue48100Columns}.status`)} />
+          <Column field={'cuocod'} header={t(`${translationsForReportRevenue48100Columns}.cuocod`)} />
+          <Column field={'regdat'} header={t(`${translationsForReportRevenue48100Columns}.regdat`)} />
+          <Column field={'regnbr'} header={t(`${translationsForReportRevenue48100Columns}.regnbr`)} />
+          <Column field={'perlna'} header={t(`${translationsForReportRevenue48100Columns}.perlna`)} />
+          <Column field={'perfna'} header={t(`${translationsForReportRevenue48100Columns}.perfna`)} />
+          <Column field={'perplc'} header={t(`${translationsForReportRevenue48100Columns}.perplc`)} />
+          <Column field={'pernad'} header={t(`${translationsForReportRevenue48100Columns}.pernad`)} />
+          <Column field={'peradr'} header={t(`${translationsForReportRevenue48100Columns}.peradr`)} />
+          <Column field={'percit'} header={t(`${translationsForReportRevenue48100Columns}.percit`)} />
+          <Column field={'percna'} header={t(`${translationsForReportRevenue48100Columns}.percna`)} />
+          <Column field={'per_Job'} header={t(`${translationsForReportRevenue48100Columns}.per_Job`)} />
+          <Column field={'pasnbr'} header={t(`${translationsForReportRevenue48100Columns}.pasnbr`)} />
+          <Column field={'issdat'} header={t(`${translationsForReportRevenue48100Columns}.issdat`)} />
+          <Column field={'isscit'} header={t(`${translationsForReportRevenue48100Columns}.isscit`)} />
+          <Column field={'isscna'} header={t(`${translationsForReportRevenue48100Columns}.isscna`)} />
+          <Column field={'perbsn'} header={t(`${translationsForReportRevenue48100Columns}.perbsn`)} />
+          <Column field={'cshpro'} header={t(`${translationsForReportRevenue48100Columns}.cshpro`)} />
+          <Column field={'cshuse'} header={t(`${translationsForReportRevenue48100Columns}.cshuse`)} />
+          <Column field={'motdsc'} header={t(`${translationsForReportRevenue48100Columns}.motdsc`)} />
+          <Column field={'depcty'} header={t(`${translationsForReportRevenue48100Columns}.depcty`)} />
+          <Column field={'depnam'} header={t(`${translationsForReportRevenue48100Columns}.depnam`)} />
+          <Column field={'depdat'} header={t(`${translationsForReportRevenue48100Columns}.depdat`)} />
+          <Column field={'tracty'} header={t(`${translationsForReportRevenue48100Columns}.tracty`)} />
+          <Column field={'tranam'} header={t(`${translationsForReportRevenue48100Columns}.tranam`)} />
+          <Column field={'tradat'} header={t(`${translationsForReportRevenue48100Columns}.tradat`)} />
+          <Column field={'arrcty'} header={t(`${translationsForReportRevenue48100Columns}.arrcty`)} />
+          <Column field={'arrnam'} header={t(`${translationsForReportRevenue48100Columns}.arrnam`)} />
+          <Column field={'arrdat'} header={t(`${translationsForReportRevenue48100Columns}.arrdat`)} />
+          <Column field={'cmpnam'} header={t(`${translationsForReportRevenue48100Columns}.cmpnam`)} />
+          <Column field={'cmocod'} header={t(`${translationsForReportRevenue48100Columns}.cmocod`)} />
+          <Column field={'refnbr'} header={t(`${translationsForReportRevenue48100Columns}.refnbr`)} />
+          <Column field={'cuodat'} header={t(`${translationsForReportRevenue48100Columns}.cuodat`)} />
+          <Column field={'amttot'} header={t(`${translationsForReportRevenue48100Columns}.amttot`)} />
+          <Column field={'amtdsc'} header={t(`${translationsForReportRevenue48100Columns}.amtdsc`)} />
+          <Column field={'amtoth'} header={t(`${translationsForReportRevenue48100Columns}.amtoth`)} />
+          <Column field={'amtval'} header={t(`${translationsForReportRevenue48100Columns}.amtval`)} />
+          <Column field={'curcod'} header={t(`${translationsForReportRevenue48100Columns}.curcod`)} />
+          <Column field={'curdsc'} header={t(`${translationsForReportRevenue48100Columns}.curdsc`)} />
         </DataTable>
       </Box>
     </SimpleCard>

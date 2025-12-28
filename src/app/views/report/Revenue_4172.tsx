@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue4172: string = "reports.revenue_4172"
+const translationsForReportRevenue4172Columns: string = "reports.revenue_4172.columns"
 
 const Revenue_4172 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_4172 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 4172">
+    <SimpleCard title={t(`${translationsForReportRevenue4172}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -56,9 +63,9 @@ const Revenue_4172 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'office'} header={'Office'} />
-          <Column field={'sad_flw'} header={'Import/Export/Other'} />
-          <Column field={'TaxAmount'} header={'Total Tax'} />
+          <Column field={'office'} header={t(`${translationsForReportRevenue4172Columns}.office`)} />
+          <Column field={'sad_flw'} header={t(`${translationsForReportRevenue4172Columns}.sad_flw`)} />
+          <Column field={'TaxAmount'} header={t(`${translationsForReportRevenue4172Columns}.TaxAmount`)} />
         </DataTable>
       </Box>
     </SimpleCard>

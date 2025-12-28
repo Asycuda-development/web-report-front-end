@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4588: string = "reports.dps_4588"
+const translationsForReportDPS4588Columns: string = "reports.dps_4588.columns"
 
 function DPS_4588() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -32,7 +39,7 @@ function DPS_4588() {
   };
 
   return (
-    <SimpleCard title="DPS_4588">
+    <SimpleCard title={t(`${translationsForReportDPS4588}.title`)}>
       <ReportHeaderInputs
         showserPrt
         showCustomsList
@@ -53,13 +60,13 @@ function DPS_4588() {
           stripedRows
           showGridlines
         >
-          <Column filter filterField="ideCuonam" field={'ideCuonam'} header={'Customs Name'} />
-          <Column field={'ideRcpDat'} header={'Payment Date'} />
-          <Column field={'ideRcpNbr'} header={'Payment Number'} />
-          <Column field={'serPrt'} header={'	Serial printing'} />
-          <Column filter filterField="username" field={'username'} header={'User Name'} />
-          <Column field={'fullName'} header={'Full Name'} />
-          <Column filter filterField="opName" field={'opName'} header={'Operation Name'} />
+          <Column filter filterField="ideCuonam" field={'ideCuonam'} header={t(`${translationsForReportDPS4588Columns}.ideCuonam`)} />
+          <Column field={'ideRcpDat'} header={t(`${translationsForReportDPS4588Columns}.ideRcpDat`)} />
+          <Column field={'ideRcpNbr'} header={t(`${translationsForReportDPS4588Columns}.ideRcpNbr`)} />
+          <Column field={'serPrt'} header={t(`${translationsForReportDPS4588Columns}.serPrt`)} />
+          <Column filter filterField="username" field={'username'} header={t(`${translationsForReportDPS4588Columns}.username`)} />
+          <Column field={'fullName'} header={t(`${translationsForReportDPS4588Columns}.fullName`)} />
+          <Column filter filterField="opName" field={'opName'} header={t(`${translationsForReportDPS4588Columns}.opName`)} />
         </DataTable>
       </Box>
     </SimpleCard>

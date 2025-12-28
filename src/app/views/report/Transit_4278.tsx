@@ -6,12 +6,19 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4278: string = "reports.transit_4278"
+const translationsForReportTransit4278Columns: string = "reports.transit_4278.columns"
 
 
 const Transit_4278 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -35,7 +42,7 @@ const Transit_4278 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4278">
+    <SimpleCard title={t(`${translationsForReportTransit4278}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -60,14 +67,14 @@ const Transit_4278 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'OFFICE'} header={'OFFICE '} />
-          <Column field={'scale_id'} header={'scale_id'} />
-          <Column field={'T1_NUMBER'} header={'T1_NUMBER'} />
-          <Column field={'dec_cod'} header={'dec_cod'} />
-          <Column field={'dec_ref_nbr'} header={'dec_ref_nbr'} />
-          <Column field={'TRUCK_NBR'} header={'TRUCK_NBR'} />
-          <Column field={'rEG_DATE'} header={'rEG_DATE'} />
-          <Column field={'tot_grs'} header={'tot_grs'} />
+          <Column field={'OFFICE'} header={t(`${translationsForReportTransit4278Columns}.OFFICE`)} />
+          <Column field={'scale_id'} header={t(`${translationsForReportTransit4278Columns}.scale_id`)} />
+          <Column field={'T1_NUMBER'} header={t(`${translationsForReportTransit4278Columns}.T1_NUMBER`)} />
+          <Column field={'dec_cod'} header={t(`${translationsForReportTransit4278Columns}.dec_cod`)} />
+          <Column field={'dec_ref_nbr'} header={t(`${translationsForReportTransit4278Columns}.dec_ref_nbr`)} />
+          <Column field={'TRUCK_NBR'} header={t(`${translationsForReportTransit4278Columns}.TRUCK_NBR`)} />
+          <Column field={'rEG_DATE'} header={t(`${translationsForReportTransit4278Columns}.rEG_DATE`)} />
+          <Column field={'tot_grs'} header={t(`${translationsForReportTransit4278Columns}.tot_grs`)} />
         </DataTable>
       </Box>
     </SimpleCard>

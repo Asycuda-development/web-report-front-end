@@ -6,12 +6,19 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportValuation4653: string = "reports.valuation_4653"
+const translationsForReportValuation4653Columns: string = "reports.valuation_4653.columns"
 
 
 const Valuation_4653 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -35,7 +42,7 @@ const Valuation_4653 = () => {
   };
 
   return (
-    <SimpleCard title="ValuationReport4653">
+    <SimpleCard title={t(`${translationsForReportValuation4653}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -58,27 +65,27 @@ const Valuation_4653 = () => {
           stripedRows
           showGridlines
         >
-          <Column style={{ minWidth: "12rem" }} field={'Date_Modefication'} header={'Date_Modefication '} />
-          <Column style={{ minWidth: "12rem" }} field={'USERNAME'} header={'USERNAME'} />
-          <Column field={'RNK'} header={'RNK'} />
-          <Column field={'HS_CODE'} header={'HS_CODE'} />
-          <Column field={'IDE_HSC_NB2'} header={'IDE_HSC_NB2'} />
-          <Column field={'TSC_CODE'} header={'TSC_CODE'} />
-          <Column field={'IDE_CODE'} header={'IDE_CODE'} />
-          <Column field={'Country'} header={'Country'} />
-          <Column field={'Max_price'} header={'Max_price'} />
-          <Column field={'Min_price'} header={'Min_price'} />
-          <Column field={'GDS_MRG'} header={'GDS_MRG'} />
-          <Column field={'Country_name'} header={'Country_name'} />
-          <Column style={{ minWidth: "15rem" }} field={'AVG_PER'} header={'AVG_PER'} />
-          <Column style={{ minWidth: "12rem" }} field={'Brand'} header={'Brand'} />
-          <Column style={{ minWidth: "25rem" }} field={'DSC'} header={'DSC'} />
-          <Column style={{ minWidth: "35rem" }} field={'DSC1'} header={'DSC1'} />
-          <Column style={{ minWidth: "25rem" }} field={'gds_dsc'} header={'gds_dsc'} />
-          <Column style={{ minWidth: "rem" }} field={'Formula'} header={'Formula'} />
-          <Column field={'Formula_dsc'} header={'Formula_dsc'} />
-          <Column style={{ minWidth: "20rem" }} field={'linked_value'} header={'linked_value'} />
-          <Column style={{ minWidth: "15rem" }} field={'gds_rul'} header={'gds_rul'} />
+          <Column style={{ minWidth: "12rem" }} field={'Date_Modefication'} header={t(`${translationsForReportValuation4653Columns}.Date_Modefication`)} />
+          <Column style={{ minWidth: "12rem" }} field={'USERNAME'} header={t(`${translationsForReportValuation4653Columns}.USERNAME`)} />
+          <Column field={'RNK'} header={t(`${translationsForReportValuation4653Columns}.RNK`)} />
+          <Column field={'HS_CODE'} header={t(`${translationsForReportValuation4653Columns}.HS_CODE`)} />
+          <Column field={'IDE_HSC_NB2'} header={t(`${translationsForReportValuation4653Columns}.IDE_HSC_NB2`)} />
+          <Column field={'TSC_CODE'} header={t(`${translationsForReportValuation4653Columns}.TSC_CODE`)} />
+          <Column field={'IDE_CODE'} header={t(`${translationsForReportValuation4653Columns}.IDE_CODE`)} />
+          <Column field={'Country'} header={t(`${translationsForReportValuation4653Columns}.Country`)} />
+          <Column field={'Max_price'} header={t(`${translationsForReportValuation4653Columns}.Max_price`)} />
+          <Column field={'Min_price'} header={t(`${translationsForReportValuation4653Columns}.Min_price`)} />
+          <Column field={'GDS_MRG'} header={t(`${translationsForReportValuation4653Columns}.GDS_MRG`)} />
+          <Column field={'Country_name'} header={t(`${translationsForReportValuation4653Columns}.Country_name`)} />
+          <Column style={{ minWidth: "15rem" }} field={'AVG_PER'} header={t(`${translationsForReportValuation4653Columns}.AVG_PER`)} />
+          <Column style={{ minWidth: "12rem" }} field={'Brand'} header={t(`${translationsForReportValuation4653Columns}.Brand`)} />
+          <Column style={{ minWidth: "25rem" }} field={'DSC'} header={t(`${translationsForReportValuation4653Columns}.DSC`)} />
+          <Column style={{ minWidth: "35rem" }} field={'DSC1'} header={t(`${translationsForReportValuation4653Columns}.DSC1`)} />
+          <Column style={{ minWidth: "25rem" }} field={'gds_dsc'} header={t(`${translationsForReportValuation4653Columns}.gds_dsc`)} />
+          <Column style={{ minWidth: "rem" }} field={'Formula'} header={t(`${translationsForReportValuation4653Columns}.Formula`)} />
+          <Column field={'Formula_dsc'} header={t(`${translationsForReportValuation4653Columns}.Formula_dsc`)} />
+          <Column style={{ minWidth: "20rem" }} field={'linked_value'} header={t(`${translationsForReportValuation4653Columns}.linked_value`)} />
+          <Column style={{ minWidth: "15rem" }} field={'gds_rul'} header={t(`${translationsForReportValuation4653Columns}.gds_rul`)} />
 
         </DataTable>
       </Box>

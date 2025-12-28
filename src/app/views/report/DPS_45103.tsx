@@ -7,20 +7,27 @@ import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS45103: string = "reports.dps_45103"
+const translationsForReportDPS45103Columns: string = "reports.dps_45103.columns"
 
 function DPS_45103() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
   const toastRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
       if (data.basedOn && !data.basedOnValue) {
         toastRef.current.show({
           severity: 'error',
-          summary: 'Based On Value',
-          detail: 'Based On Value is required when Based On is selected, please try again.'
+          summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+          detail:t(`${translationsForBasedOnError}.basedOnDetailedError`)
         });
         return
       }
@@ -41,31 +48,31 @@ function DPS_45103() {
     }
   };
   const basedOnOptions = [{
-    label: 'declarant',
+    label: t(`${translationsForBasedOn}.declarant`),
     name: 'declarant'
   }, {
-    label: 'company',
+    label: t(`${translationsForBasedOn}.company`),
     name: 'company'
   }, {
-    label: 'Sad_Financial',
+    label: t(`${translationsForBasedOn}.sad_Financial`),
     name: 'Sad_Financial'
 
   }, {
-    label: 'I_no',
+    label: t(`${translationsForBasedOn}.i_no`),
     name: 'I_no'
 
   }, {
-    label: 'P_no',
+    label: t(`${translationsForBasedOn}.p_no`),
     name: 'P_no'
 
   }, {
-    label: 'M_no',
+    label: t(`${translationsForBasedOn}.m_no`),
     name: 'M_no'
 
   }]
 
   return (
-    <SimpleCard title="DPS_45103">
+    <SimpleCard title={t(`${translationsForReportDPS45103}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -98,27 +105,27 @@ function DPS_45103() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-          <Column field={'DestCustoms'} header={' Customs Office'} />
-          <Column field={'TypeSad'} header={' IMP/EXP'} />
-          <Column field={'PayDate'} header={' Payment Date'} />
-          <Column field={'ProcExt'} header={' Extend Procedure'} />
-          <Column field={'CustomsProc'} header={' Customs Procedure'} />
-          <Column field={'Dsc2'} header={' Dsc2'} />
-          <Column style={{ minWidth: "25rem" }} field={'Dsc1'} header={' Dsc1'} />
-          <Column field={'HsCode'} header={' HsCode'} />
-          <Column field={'ItemNetWeight'} header={' ItemNetWeight'} />
-          <Column field={'CompanyTIN'} header={' CompanyTIN'} />
-          <Column field={'CmpName'} header={' CmpName'} />
-          <Column field={'ItemValueCurrency'} header={' ItemValueCurrency'} />
-          <Column field={'ItemValueAfs'} header={' ItemValueAfs'} />
-          <Column field={'ItemTaxes'} header={' ItemTaxes'} />
-          <Column field={'TaxRate'} header={' TaxRate'} />
-          <Column field={'CodeTaxAmount'} header={' CodeTaxAmount'} />
-          <Column field={'TaxCode'} header={' TaxCode'} />
-          <Column field={'IdeCuoCod'} header={' IdeCuoCod'} />
-          <Column style={{ minWidth: "30rem" }} field={'mark1'} header={' mark1'} />
-          <Column field={'mark2'} header={' mark2'} />
-          <Column field={'TaxDecription'} header={' TaxDecription'} />
+          <Column field={'DestCustoms'} header={t(`${translationsForReportDPS45103Columns}.DestCustoms`)} />
+          <Column field={'TypeSad'} header={t(`${translationsForReportDPS45103Columns}.TypeSad`)} />
+          <Column field={'PayDate'} header={t(`${translationsForReportDPS45103Columns}.PayDate`)} />
+          <Column field={'ProcExt'} header={t(`${translationsForReportDPS45103Columns}.ProcExt`)} />
+          <Column field={'CustomsProc'} header={t(`${translationsForReportDPS45103Columns}.CustomsProc`)} />
+          <Column field={'Dsc2'} header={t(`${translationsForReportDPS45103Columns}.Dsc2`)} />
+          <Column style={{ minWidth: "25rem" }} field={'Dsc1'} header={t(`${translationsForReportDPS45103Columns}.Dsc1`)} />
+          <Column field={'HsCode'} header={t(`${translationsForReportDPS45103Columns}.HsCode`)} />
+          <Column field={'ItemNetWeight'} header={t(`${translationsForReportDPS45103Columns}.ItemNetWeight`)} />
+          <Column field={'CompanyTIN'} header={t(`${translationsForReportDPS45103Columns}.CompanyTIN`)} />
+          <Column field={'CmpName'} header={t(`${translationsForReportDPS45103Columns}.CmpName`)} />
+          <Column field={'ItemValueCurrency'} header={t(`${translationsForReportDPS45103Columns}.ItemValueCurrency`)} />
+          <Column field={'ItemValueAfs'} header={t(`${translationsForReportDPS45103Columns}.ItemValueAfs`)} />
+          <Column field={'ItemTaxes'} header={t(`${translationsForReportDPS45103Columns}.ItemTaxes`)} />
+          <Column field={'TaxRate'} header={t(`${translationsForReportDPS45103Columns}.TaxRate`)} />
+          <Column field={'CodeTaxAmount'} header={t(`${translationsForReportDPS45103Columns}.CodeTaxAmount`)} />
+          <Column field={'TaxCode'} header={t(`${translationsForReportDPS45103Columns}.TaxCode`)} />
+          <Column field={'IdeCuoCod'} header={t(`${translationsForReportDPS45103Columns}.IdeCuoCod`)} />
+          <Column style={{ minWidth: "30rem" }} field={'mark1'} header={t(`${translationsForReportDPS45103Columns}.mark1`)} />
+          <Column field={'mark2'} header={t(`${translationsForReportDPS45103Columns}.mark2`)} />
+          <Column field={'TaxDecription'} header={t(`${translationsForReportDPS45103Columns}.TaxDecription`)} />
         </DataTable>
       </ Box>
       <Toast ref={toastRef} />

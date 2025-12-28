@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4586: string = "reports.dps_4586"
+const translationsForReportDPS4586Columns: string = "reports.dps_4586.columns"
 
 function DPS_4586() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4586() {
     };
 
     return (
-        <SimpleCard title="DPS_4586">
+        <SimpleCard title={t(`${translationsForReportDPS4586}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -57,14 +64,14 @@ function DPS_4586() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'office'} header={'OFFICE'} />
-                    <Column field={'itemGrossWeight'} header={'ITEM_GROSS_WEIGHT'} />
-                    <Column field={'itemNetWeight'} header={'ITEM_NET_WEIGHT'} />
-                    <Column field={'itemValueCurrency'} header={'ITEM_VALUE_CURANCY'} />
-                    <Column field={'itemValueAfs'} header={'ITEM_VALUE_AFS'} />
-                    <Column field={'itemTaxes'} header={'ITEM_TEX'} />
-                    <Column field={'taxCode'} header={'TEXT_CODE'} />
-                    <Column field={'codeTaxAmount'} header={'CODE_TEX_AMOUNT'} />
+                    <Column field={'office'} header={t(`${translationsForReportDPS4586Columns}.office`)} />
+                    <Column field={'itemGrossWeight'} header={t(`${translationsForReportDPS4586Columns}.itemGrossWeight`)} />
+                    <Column field={'itemNetWeight'} header={t(`${translationsForReportDPS4586Columns}.itemNetWeight`)} />
+                    <Column field={'itemValueCurrency'} header={t(`${translationsForReportDPS4586Columns}.itemValueCurrency`)} />
+                    <Column field={'itemValueAfs'} header={t(`${translationsForReportDPS4586Columns}.itemValueAfs`)} />
+                    <Column field={'itemTaxes'} header={t(`${translationsForReportDPS4586Columns}.itemTaxes`)} />
+                    <Column field={'taxCode'} header={t(`${translationsForReportDPS4586Columns}.taxCode`)} />
+                    <Column field={'codeTaxAmount'} header={t(`${translationsForReportDPS4586Columns}.codeTaxAmount`)} />
 
 
                 </DataTable>

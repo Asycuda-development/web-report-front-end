@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportSelectivity4350: string = "reports.selectivity_4350"
+const translationsForReportSelectivity4350Columns: string = "reports.selectivity_4350.columns"
 
 const SelectivityReport4350 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const SelectivityReport4350 = () => {
   };
 
   return (
-    <SimpleCard title="Selectivity Report 4350">
+    <SimpleCard title={t(`${translationsForReportSelectivity4350}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -58,13 +65,13 @@ const SelectivityReport4350 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'SAD_YEAR'} header={'SAD_YEAR'} />
-          <Column field={'SAD_OFFICE'} header={'SAD_OFFICE'} />
-          <Column field={'rev_diff'} header={'rev_diff'} />
-          <Column field={'TOTAL_TAXES'} header={'TOTAL_TAXES'} />
-          <Column field={'CUSTOMS_VALUE'} header={'CUSTOMS_VALUE'} />
-          <Column field={'cnt'} header={'cnt'} />
-          <Column field={'First_CHANNEL'} header={'First_CHANNEL'} />
+          <Column field={'SAD_YEAR'} header={t(`${translationsForReportSelectivity4350Columns}.SAD_YEAR`)} />
+          <Column field={'SAD_OFFICE'} header={t(`${translationsForReportSelectivity4350Columns}.SAD_OFFICE`)} />
+          <Column field={'rev_diff'} header={t(`${translationsForReportSelectivity4350Columns}.rev_diff`)} />
+          <Column field={'TOTAL_TAXES'} header={t(`${translationsForReportSelectivity4350Columns}.TOTAL_TAXES`)} />
+          <Column field={'CUSTOMS_VALUE'} header={t(`${translationsForReportSelectivity4350Columns}.CUSTOMS_VALUE`)} />
+          <Column field={'cnt'} header={t(`${translationsForReportSelectivity4350Columns}.cnt`)} />
+          <Column field={'First_CHANNEL'} header={t(`${translationsForReportSelectivity4350Columns}.First_CHANNEL`)} />
         </DataTable>
       </Box>
     </SimpleCard>

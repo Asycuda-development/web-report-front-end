@@ -6,10 +6,17 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4264: string = "reports.transit_4264"
+const translationsForReportTransit4264Columns: string = "reports.transit_4264.columns"
 
 const Transit_4264 = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -28,7 +35,7 @@ const Transit_4264 = () => {
   };
 
   return (
-    <SimpleCard title="4264- Transit">
+    <SimpleCard title={t(`${translationsForReportTransit4264}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -50,21 +57,21 @@ const Transit_4264 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'Transit_Type'} header={'Transit_Type'} />
-          <Column field={'Reg_No'} header={'Reg_No'} />
-          <Column field={'Reg_Date'} header={'Reg_Date'} />
-          <Column field={'User_Name'} header={'User_Name'} />
-          <Column field={'Dep_Office'} header={'Dep_Office'} />
-          <Column field={'Dest_Office'} header={'Dest_Office'} />
-          <Column field={'Operation_Name'} header={'Operation_Name'} />
-          <Column field={'Status'} header={'Status'} />
-          <Column field={'Operation_Date'} header={'Operation_Date'} />
-          <Column field={'CMP_Cod'} header={'CMP_Cod'} />
-          <Column field={'CMP_Name'} header={'CMP_Name'} />
-          <Column field={'DEC_Name'} header={'DEC_Name'} />
-          <Column field={'dec_Cod'} header={'dec_Cod'} />
-          <Column field={'del_Cod'} header={'del_Cod'} />
-          <Column field={'del_Nam'} header={'del_Nam'} />
+          <Column field={'Transit_Type'} header={t(`${translationsForReportTransit4264Columns}.Transit_Type`)} />
+          <Column field={'Reg_No'} header={t(`${translationsForReportTransit4264Columns}.Reg_No`)} />
+          <Column field={'Reg_Date'} header={t(`${translationsForReportTransit4264Columns}.Reg_Date`)} />
+          <Column field={'User_Name'} header={t(`${translationsForReportTransit4264Columns}.User_Name`)} />
+          <Column field={'Dep_Office'} header={t(`${translationsForReportTransit4264Columns}.Dep_Office`)} />
+          <Column field={'Dest_Office'} header={t(`${translationsForReportTransit4264Columns}.Dest_Office`)} />
+          <Column field={'Operation_Name'} header={t(`${translationsForReportTransit4264Columns}.Operation_Name`)} />
+          <Column field={'Status'} header={t(`${translationsForReportTransit4264Columns}.Status`)} />
+          <Column field={'Operation_Date'} header={t(`${translationsForReportTransit4264Columns}.Operation_Date`)} />
+          <Column field={'CMP_Cod'} header={t(`${translationsForReportTransit4264Columns}.CMP_Cod`)} />
+          <Column field={'CMP_Name'} header={t(`${translationsForReportTransit4264Columns}.CMP_Name`)} />
+          <Column field={'DEC_Name'} header={t(`${translationsForReportTransit4264Columns}.DEC_Name`)} />
+          <Column field={'dec_Cod'} header={t(`${translationsForReportTransit4264Columns}.dec_Cod`)} />
+          <Column field={'del_Cod'} header={t(`${translationsForReportTransit4264Columns}.del_Cod`)} />
+          <Column field={'del_Nam'} header={t(`${translationsForReportTransit4264Columns}.del_Nam`)} />
         </DataTable>
       </Box>
     </SimpleCard>

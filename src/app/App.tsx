@@ -1450,7 +1450,7 @@ import DPS_4599 from './views/report/DPS_4599';
 import DPS_45101 from './views/report/DPS_45101';
 import DPS_45102 from './views/report/DPS_45102';
 import DPS_45103 from './views/report/DPS_45103';
-import OverallReport from './views/report/report';
+import OverallReport from './views/report/sigtas_report';
 import Transit_4251 from './views/report/Transit_4251';
 import Transit_4252 from './views/report/Transit_4252';
 import Transit_4273 from './views/report/Transit_4273';
@@ -1524,6 +1524,8 @@ import Valuation_4656 from './views/report/Valuation_4656';
 import Valuation_4657 from './views/report/Valuation_4657';
 import Valuation_4658 from './views/report/Valuation_4658';
 import { AUTHORITIES } from './utils/constant';
+
+import '../i18n/config';
 
 const ListRoles = Loadable(lazy(() => import('./views/users/listRoles')));
 const UsersList = Loadable(lazy(() => import('./views/users/ListUsers')));
@@ -1900,7 +1902,7 @@ const AuthLayout = () => {
           <Route
             path={routes.Transit_4260}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4260_TRANSIT]}>
                 <Transit_4260 />
               </PrivateRoute>
             }
@@ -2228,7 +2230,7 @@ const AuthLayout = () => {
           {/* <Route
             path={routes.DPS_4550}
             element={
-              <PrivateRoute _DPS]}>
+              <PrivateRoute hasAuthorities={[AUTHORITIES.REPORT_4550_DPS]}>
                 <DPS_4550 />
               </PrivateRoute>
             }

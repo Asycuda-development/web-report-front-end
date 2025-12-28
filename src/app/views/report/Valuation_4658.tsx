@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportValuation4658: string = "reports.valuation_4658"
+const translationsForReportValuation4658Columns: string = "reports.valuation_4658.columns"
 
 const Valuation_4658 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -36,7 +43,7 @@ const Valuation_4658 = () => {
   };
 
   return (
-    <SimpleCard title="ValuationReport4658">
+    <SimpleCard title={t(`${translationsForReportValuation4658}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -63,28 +70,28 @@ const Valuation_4658 = () => {
           showGridlines
         >
 
-          <Column field={'CUO_COD'} header={'CUO_COD'} />
-          <Column field={'CUO_NAM'} header={'CUO_NAM'} />
-          <Column style={{ minWidth: "15rem" }} field={'REG_YER'} header={'REG_YER'} />
-          <Column style={{ minWidth: "15rem" }} field={'REG_SER'} header={'REG_SER'} />
-          <Column style={{ minWidth: "15rem" }} field={'REG_NBR'} header={'REG_NBR'} />
-          <Column field={'reg_date'} header={'reg_date'} />
-          <Column field={'REJREASON'} header={'REJREASON'} />
-          <Column field={'ANALYSIS_REMARK'} header={'ANALYSIS_REMARK'} />
-          <Column field={'GEN_INV'} header={'GEN_INV'} />
-          <Column field={'GDS_DSC'} header={'GDS_DSC'} />
-          <Column field={'HSC_COD'} header={'HSC_COD'} />
-          <Column field={'CTY_ORG'} header={'CTY_ORG'} />
-          <Column field={'AMOUNT'} header={'AMOUNT'} />
-          <Column field={'CURRENCY_COD'} header={'CURRENCY_COD'} />
-          <Column field={'UOM'} header={'UOM'} />
-          <Column field={'UNT_COST'} header={'UNT_COST'} />
-          <Column field={'CMP_NAM'} header={'CMP_NAM'} />
-          <Column field={'TOT_QTY'} header={'TOT_QTY'} />
-          <Column field={'OP_NAME'} header={'OP_NAME'} />
-          <Column field={'OP_DATE_TIME'} header={'OP_DATE_TIME'} />
-          <Column field={'USERname'} header={'USERname'} />
-          <Column field={'fullname'} header={'fullname'} />
+          <Column field={'CUO_COD'} header={t(`${translationsForReportValuation4658Columns}.CUO_COD`)} />
+          <Column field={'CUO_NAM'} header={t(`${translationsForReportValuation4658Columns}.CUO_NAM`)} />
+          <Column style={{ minWidth: "15rem" }} field={'REG_YER'} header={t(`${translationsForReportValuation4658Columns}.REG_YER`)} />
+          <Column style={{ minWidth: "15rem" }} field={'REG_SER'} header={t(`${translationsForReportValuation4658Columns}.REG_SER`)} />
+          <Column style={{ minWidth: "15rem" }} field={'REG_NBR'} header={t(`${translationsForReportValuation4658Columns}.REG_NBR`)} />
+          <Column field={'reg_date'} header={t(`${translationsForReportValuation4658Columns}.reg_date`)} />
+          <Column field={'REJREASON'} header={t(`${translationsForReportValuation4658Columns}.REJREASON`)} />
+          <Column field={'ANALYSIS_REMARK'} header={t(`${translationsForReportValuation4658Columns}.ANALYSIS_REMARK`)} />
+          <Column field={'GEN_INV'} header={t(`${translationsForReportValuation4658Columns}.GEN_INV`)} />
+          <Column field={'GDS_DSC'} header={t(`${translationsForReportValuation4658Columns}.GDS_DSC`)} />
+          <Column field={'HSC_COD'} header={t(`${translationsForReportValuation4658Columns}.HSC_COD`)} />
+          <Column field={'CTY_ORG'} header={t(`${translationsForReportValuation4658Columns}.CTY_ORG`)} />
+          <Column field={'AMOUNT'} header={t(`${translationsForReportValuation4658Columns}.AMOUNT`)} />
+          <Column field={'CURRENCY_COD'} header={t(`${translationsForReportValuation4658Columns}.CURRENCY_COD`)} />
+          <Column field={'UOM'} header={t(`${translationsForReportValuation4658Columns}.UOM`)} />
+          <Column field={'UNT_COST'} header={t(`${translationsForReportValuation4658Columns}.UNT_COST`)} />
+          <Column field={'CMP_NAM'} header={t(`${translationsForReportValuation4658Columns}.CMP_NAM`)} />
+          <Column field={'TOT_QTY'} header={t(`${translationsForReportValuation4658Columns}.TOT_QTY`)} />
+          <Column field={'OP_NAME'} header={t(`${translationsForReportValuation4658Columns}.OP_NAME`)} />
+          <Column field={'OP_DATE_TIME'} header={t(`${translationsForReportValuation4658Columns}.OP_DATE_TIME`)} />
+          <Column field={'USERname'} header={t(`${translationsForReportValuation4658Columns}.USERname`)} />
+          <Column field={'fullname'} header={t(`${translationsForReportValuation4658Columns}.fullname`)} />
         </DataTable>
       </Box>
     </SimpleCard>

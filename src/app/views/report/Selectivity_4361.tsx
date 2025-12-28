@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportSelectivity4361: string = "reports.selectivity_4361"
+const translationsForReportSelectivity4361Columns: string = "reports.selectivity_4361.columns"
 
 const Selectivity_4361 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Selectivity_4361 = () => {
   };
 
   return (
-    <SimpleCard title="Selectivity Report 4361">
+    <SimpleCard title={t(`${translationsForReportSelectivity4361}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -59,16 +66,16 @@ const Selectivity_4361 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'uname'} header={'uname'} />
-          <Column field={'udate'} header={'udate'} />
-          <Column field={'cust_id'} header={'cust_id'} />
-          <Column field={'city'} header={'city'} />
-          <Column field={'phone'} header={'phone'} />
-          <Column field={'job'} header={'job'} />
-          <Column field={'fname'} header={'fname'} />
-          <Column field={'cust_acc'} header={'cust_acc'} />
-          <Column field={'prop_val'} header={'prop_val'} />
-          <Column field={'active'} header={'active'} />
+          <Column field={'uname'} header={t(`${translationsForReportSelectivity4361Columns}.uname`)} />
+          <Column field={'udate'} header={t(`${translationsForReportSelectivity4361Columns}.udate`)} />
+          <Column field={'cust_id'} header={t(`${translationsForReportSelectivity4361Columns}.cust_id`)} />
+          <Column field={'city'} header={t(`${translationsForReportSelectivity4361Columns}.city`)} />
+          <Column field={'phone'} header={t(`${translationsForReportSelectivity4361Columns}.phone`)} />
+          <Column field={'job'} header={t(`${translationsForReportSelectivity4361Columns}.job`)} />
+          <Column field={'fname'} header={t(`${translationsForReportSelectivity4361Columns}.fname`)} />
+          <Column field={'cust_acc'} header={t(`${translationsForReportSelectivity4361Columns}.cust_acc`)} />
+          <Column field={'prop_val'} header={t(`${translationsForReportSelectivity4361Columns}.prop_val`)} />
+          <Column field={'active'} header={t(`${translationsForReportSelectivity4361Columns}.active`)} />
         </DataTable>
       </Box>
     </SimpleCard>

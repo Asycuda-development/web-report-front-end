@@ -6,12 +6,19 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDataExchange5051: string = "reports.dataexchange_5051"
+const translationsForReportDataExchange5051Columns: string = "reports.dataexchange_5051.columns"
 
 
 function DataExchange_5051() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -33,7 +40,7 @@ function DataExchange_5051() {
   };
 
   return (
-    <SimpleCard title="DataExchange5051">
+    <SimpleCard title={t(`${translationsForReportDataExchange5051}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -55,11 +62,11 @@ function DataExchange_5051() {
           stripedRows
           showGridlines
         >
-          <Column field={'HS_CODE'} header={'HS_CODE'} />
-          <Column field={'WeightIRN'} header={'WeightIRN'} />
-          <Column field={'AFWGT'} header={'AFWGT'} />
-          <Column field={'difference_wght'} header={'difference_wght'} />
-          <Column field={'Weight'} header={'Weight'} />
+          <Column field={'HS_CODE'} header={t(`${translationsForReportDataExchange5051Columns}.HS_CODE`)} />
+          <Column field={'WeightIRN'} header={t(`${translationsForReportDataExchange5051Columns}.WeightIRN`)} />
+          <Column field={'AFWGT'} header={t(`${translationsForReportDataExchange5051Columns}.AFWGT`)} />
+          <Column field={'difference_wght'} header={t(`${translationsForReportDataExchange5051Columns}.difference_wght`)} />
+          <Column field={'Weight'} header={t(`${translationsForReportDataExchange5051Columns}.Weight`)} />
         </DataTable>
       </Box>
     </SimpleCard>

@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4571: string = "reports.dps_4571"
+const translationsForReportDPS4571Columns: string = "reports.dps_4571.columns"
 
 function DPS_4571() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -34,7 +41,7 @@ function DPS_4571() {
   };
 
   return (
-    <SimpleCard title="DPS_4571">
+    <SimpleCard title={t(`${translationsForReportDPS4571}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -57,13 +64,13 @@ function DPS_4571() {
           stripedRows
           showGridlines
         >
-          <Column field={'OFFICE'} header={'OFFICE_CODE'} />
-          <Column field={'SAD_FLW'} header={'SAD_TYPE'} />
-          <Column field={'SAD_NO'} header={'SAD_RegNo'} />
-          <Column field={'SAD_DATE'} header={'SAD_DATE'} />
-          <Column field={'CMP_COD'} header={'COMPANY_CODE'} />
-          <Column field={'CMP_NAM'} header={'COMPANY_NAME'} />
-          <Column field={'CNT'} header={'COUNT'} />
+          <Column field={'OFFICE'} header={t(`${translationsForReportDPS4571Columns}.OFFICE`)} />
+          <Column field={'SAD_FLW'} header={t(`${translationsForReportDPS4571Columns}.SAD_FLW`)} />
+          <Column field={'SAD_NO'} header={t(`${translationsForReportDPS4571Columns}.SAD_NO`)} />
+          <Column field={'SAD_DATE'} header={t(`${translationsForReportDPS4571Columns}.SAD_DATE`)} />
+          <Column field={'CMP_COD'} header={t(`${translationsForReportDPS4571Columns}.CMP_COD`)} />
+          <Column field={'CMP_NAM'} header={t(`${translationsForReportDPS4571Columns}.CMP_NAM`)} />
+          <Column field={'CNT'} header={t(`${translationsForReportDPS4571Columns}.CNT`)} />
 
 
         </DataTable>

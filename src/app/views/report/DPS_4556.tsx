@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4556: string = "reports.dps_4556"
+const translationsForReportDPS4556Columns: string = "reports.dps_4556.columns"
 
 function DPS_4556() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4556() {
     };
 
     return (
-        <SimpleCard title="DPS Report Based on SAD Financial Code.">
+        <SimpleCard title={t(`${translationsForReportDPS4556}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -84,15 +91,10 @@ function DPS_4556() {
                     <Column field={'ideCuoCod'} header={'Custom Code'} />
                     <Column style={{ minWidth: '10rem' }} field={'bankNam'} header={'Bank Name'} />
                     <Column style={{ minWidth: '12rem' }} field={'countryDest'} header={'Destination Country Name'} />
-
-
-
-
-
                 </DataTable>
             </Box>
         </SimpleCard>
     );
 }
 
-export default DPS_4556;
+export default DPS_4556; 

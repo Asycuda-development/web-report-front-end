@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4585: string = "reports.dps_4585"
+const translationsForReportDPS4585Columns: string = "reports.dps_4585.columns"
 
 function DPS_4585() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4585() {
     };
 
     return (
-        <SimpleCard title="DPS_4585">
+        <SimpleCard title={t(`${translationsForReportDPS4585}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -60,11 +67,11 @@ function DPS_4585() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'customsName'} header={'CUSTOMS_NAME'} />
-                    <Column field={'icd'} header={'ICD'} />
-                    <Column field={'status'} header={'STATUS'} />
-                    <Column field={'emptys'} header={'EMPTYS'} />
-                    <Column field={'co'} header={'CO'} />
+                    <Column field={'customsName'} header={t(`${translationsForReportDPS4585Columns}.customsName`)} />
+                    <Column field={'icd'} header={t(`${translationsForReportDPS4585Columns}.icd`)} />
+                    <Column field={'status'} header={t(`${translationsForReportDPS4585Columns}.status`)} />
+                    <Column field={'emptys'} header={t(`${translationsForReportDPS4585Columns}.emptys`)} />
+                    <Column field={'co'} header={t(`${translationsForReportDPS4585Columns}.co`)} />
                 </DataTable>
             </Box>
         </SimpleCard>

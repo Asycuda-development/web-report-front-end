@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDataExchange5050: string = "reports.dataexchange_5050"
+const translationsForReportDataExchange5050Columns: string = "reports.dataexchange_5050.columns"
 
 function DataExchange_5050() {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -32,7 +39,7 @@ function DataExchange_5050() {
   };
 
   return (
-    <SimpleCard title="DataExchange5050">
+    <SimpleCard title={t(`${translationsForReportDataExchange5050}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -55,49 +62,49 @@ function DataExchange_5050() {
         >
           <Column
             field={'DOCUID                           '}
-            header={'DOCUID                           '}
+            header={t(`${translationsForReportDataExchange5050Columns}.DOCUID                           `)}
           />
           <Column
             field={'IMPORTED_FROM_XML_DATE_TIME'}
-            header={'IMPORTED_FROM_XML_DATE_TIME'}
+            header={t(`${translationsForReportDataExchange5050Columns}.IMPORTED_FROM_XML_DATE_TIME`)}
           />
           <Column
             field={'CODEOFDECLAREDCUSTOMSPROCEDURE'}
-            header={'CODEOFDECLAREDCUSTOMSPROCEDURE'}
+            header={t(`${translationsForReportDataExchange5050Columns}.CODEOFDECLAREDCUSTOMSPROCEDURE`)}
           />
-          <Column field={'UCR'} header={'UCR'} />
-          <Column field={'COUNTRYOFDESTINATIONCODE'} header={'COUNTRYOFDESTINATIONCODE'} />
+          <Column field={'UCR'} header={t(`${translationsForReportDataExchange5050Columns}.UCR`)} />
+          <Column field={'COUNTRYOFDESTINATIONCODE'} header={t(`${translationsForReportDataExchange5050Columns}.COUNTRYOFDESTINATIONCODE`)} />
           <Column
             field={'COUNTRYOFDISPATCHEXPORTCODE'}
-            header={'COUNTRYOFDISPATCHEXPORTCODE'}
+            header={t(`${translationsForReportDataExchange5050Columns}.COUNTRYOFDISPATCHEXPORTCODE`)}
           />
-          <Column field={'date1'} header={'date1'} />
-          <Column field={'CONSIGNEE_NAME'} header={'CONSIGNEE_NAME'} />
-          <Column field={'CONSIGNEE_CODE'} header={'CONSIGNEE_CODE'} />
-          <Column field={'TOTALPACKAGES'} header={'TOTALPACKAGES'} />
-          <Column field={'TOTALINVOICEAMOUNT'} header={'TOTALINVOICEAMOUNT'} />
-          <Column field={'STATISTICALVALUEINUSD'} header={'STATISTICALVALUEINUSD'} />
-          <Column field={'ITEMNUMBER'} header={'ITEMNUMBER'} />
-          <Column field={'DESCRIPTIONOFGOODS'} header={'DESCRIPTIONOFGOODS'} />
-          <Column field={'TARRIFNUMBER'} header={'TARRIFNUMBER'} />
-          <Column field={'GROSSMASS'} header={'GROSSMASS'} />
-          <Column field={'NUMBEROFPACKAGES'} header={'NUMBEROFPACKAGES'} />
-          <Column field={'PACKAGETYPECODE'} header={'PACKAGETYPECODE'} />
-          <Column field={'INVOICEAMOUNT'} header={'INVOICEAMOUNT'} />
-          <Column field={'CODEOFTHEVEHICBORDER'} header={'CODEOFTHEVEHICBORDER'} />
-          <Column field={'WEIGHT'} header={'WEIGHT'} />
-          <Column field={'CARGOCODE'} header={'CARGOCODE'} />
-          <Column field={'CONTAINERNUMBER'} header={'CONTAINERNUMBER'} />
-          <Column field={'GROSSWEIGHT'} header={'GROSSWEIGHT'} />
-          <Column field={'DESCRIPTION'} header={'DESCRIPTION'} />
-          <Column field={'STATUSCODE'} header={'STATUSCODE'} />
-          <Column field={'customs_name'} header={'customs_name'} />
-          <Column field={'CUSTOMS_NAME_AFG'} header={'CUSTOMS_NAME_AFG'} />
-          <Column field={'BORDERCODE'} header={'BORDERCODE'} />
-          <Column field={'PLACEOFINITIALARRIVAL'} header={'PLACEOFINITIALARRIVAL'} />
-          <Column field={'PLACEOFLOADING'} header={'PLACEOFLOADING'} />
-          <Column field={'PLACEOFDISCHARGE'} header={'PLACEOFDISCHARGE'} />
-          <Column field={'PLACEOFDISTINATION'} header={'PLACEOFDISTINATION'} />
+          <Column field={'date1'} header={t(`${translationsForReportDataExchange5050Columns}.date1`)} />
+          <Column field={'CONSIGNEE_NAME'} header={t(`${translationsForReportDataExchange5050Columns}.CONSIGNEE_NAME`)} />
+          <Column field={'CONSIGNEE_CODE'} header={t(`${translationsForReportDataExchange5050Columns}.CONSIGNEE_CODE`)} />
+          <Column field={'TOTALPACKAGES'} header={t(`${translationsForReportDataExchange5050Columns}.TOTALPACKAGES`)} />
+          <Column field={'TOTALINVOICEAMOUNT'} header={t(`${translationsForReportDataExchange5050Columns}.TOTALINVOICEAMOUNT`)} />
+          <Column field={'STATISTICALVALUEINUSD'} header={t(`${translationsForReportDataExchange5050Columns}.STATISTICALVALUEINUSD`)} />
+          <Column field={'ITEMNUMBER'} header={t(`${translationsForReportDataExchange5050Columns}.ITEMNUMBER`)} />
+          <Column field={'DESCRIPTIONOFGOODS'} header={t(`${translationsForReportDataExchange5050Columns}.DESCRIPTIONOFGOODS`)} />
+          <Column field={'TARRIFNUMBER'} header={t(`${translationsForReportDataExchange5050Columns}.TARRIFNUMBER`)} />
+          <Column field={'GROSSMASS'} header={t(`${translationsForReportDataExchange5050Columns}.GROSSMASS`)} />
+          <Column field={'NUMBEROFPACKAGES'} header={t(`${translationsForReportDataExchange5050Columns}.NUMBEROFPACKAGES`)} />
+          <Column field={'PACKAGETYPECODE'} header={t(`${translationsForReportDataExchange5050Columns}.PACKAGETYPECODE`)} />
+          <Column field={'INVOICEAMOUNT'} header={t(`${translationsForReportDataExchange5050Columns}.INVOICEAMOUNT`)} />
+          <Column field={'CODEOFTHEVEHICBORDER'} header={t(`${translationsForReportDataExchange5050Columns}.CODEOFTHEVEHICBORDER`)} />
+          <Column field={'WEIGHT'} header={t(`${translationsForReportDataExchange5050Columns}.WEIGHT`)} />
+          <Column field={'CARGOCODE'} header={t(`${translationsForReportDataExchange5050Columns}.CARGOCODE`)} />
+          <Column field={'CONTAINERNUMBER'} header={t(`${translationsForReportDataExchange5050Columns}.CONTAINERNUMBER`)} />
+          <Column field={'GROSSWEIGHT'} header={t(`${translationsForReportDataExchange5050Columns}.GROSSWEIGHT`)} />
+          <Column field={'DESCRIPTION'} header={t(`${translationsForReportDataExchange5050Columns}.DESCRIPTION`)} />
+          <Column field={'STATUSCODE'} header={t(`${translationsForReportDataExchange5050Columns}.STATUSCODE`)} />
+          <Column field={'customs_name'} header={t(`${translationsForReportDataExchange5050Columns}.customs_name`)} />
+          <Column field={'CUSTOMS_NAME_AFG'} header={t(`${translationsForReportDataExchange5050Columns}.CUSTOMS_NAME_AFG`)} />
+          <Column field={'BORDERCODE'} header={t(`${translationsForReportDataExchange5050Columns}.BORDERCODE`)} />
+          <Column field={'PLACEOFINITIALARRIVAL'} header={t(`${translationsForReportDataExchange5050Columns}.PLACEOFINITIALARRIVAL`)} />
+          <Column field={'PLACEOFLOADING'} header={t(`${translationsForReportDataExchange5050Columns}.PLACEOFLOADING`)} />
+          <Column field={'PLACEOFDISCHARGE'} header={t(`${translationsForReportDataExchange5050Columns}.PLACEOFDISCHARGE`)} />
+          <Column field={'PLACEOFDISTINATION'} header={t(`${translationsForReportDataExchange5050Columns}.PLACEOFDISTINATION`)} />
         </DataTable>
       </Box>
     </SimpleCard>

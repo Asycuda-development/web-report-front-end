@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4591: string = "reports.dps_4591"
+const translationsForReportDPS4591Columns: string = "reports.dps_4591.columns"
 
 function DPS_4591() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
@@ -32,7 +39,7 @@ function DPS_4591() {
     };
 
     return (
-        <SimpleCard title="DPS_4591">
+        <SimpleCard title={t(`${translationsForReportDPS4591}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate
@@ -58,16 +65,16 @@ function DPS_4591() {
                     stripedRows
                     showGridlines
                 >
-                    <Column field={'type'} header={'SAD_TYPE'} />
-                    <Column field={'bcp'} header={'BCP '} />
-                    <Column field={'icd'} header={'ICD'} />
-                    <Column field={'countryOrigen'} header={'COUNTRY_ORIGEN'} />
-                    <Column field={'countryExport'} header={'COUNTRY_EXPORT'} />
-                    <Column field={'countryDestination'} header={'COUNTRY_DESTINATION'} />
-                    <Column field={'hsCode'} header={'HS_CODE'} />
-                    <Column field={'hsDsc'} header={'HS_DSC'} />
-                    <Column field={'netWeight'} header={'NET_WEIGHT'} />
-                    <Column field={'valueAfs'} header={'VALUE_AFS'} />
+                    <Column field={'type'} header={t(`${translationsForReportDPS4591Columns}.type`)} />
+                    <Column field={'bcp'} header={t(`${translationsForReportDPS4591Columns}.bcp`)} />
+                    <Column field={'icd'} header={t(`${translationsForReportDPS4591Columns}.icd`)} />
+                    <Column field={'countryOrigen'} header={t(`${translationsForReportDPS4591Columns}.countryOrigen`)} />
+                    <Column field={'countryExport'} header={t(`${translationsForReportDPS4591Columns}.countryExport`)} />
+                    <Column field={'countryDestination'} header={t(`${translationsForReportDPS4591Columns}.countryDestination`)} />
+                    <Column field={'hsCode'} header={t(`${translationsForReportDPS4591Columns}.hsCode`)} />
+                    <Column field={'hsDsc'} header={t(`${translationsForReportDPS4591Columns}.hsDsc`)} />
+                    <Column field={'netWeight'} header={t(`${translationsForReportDPS4591Columns}.netWeight`)} />
+                    <Column field={'valueAfs'} header={t(`${translationsForReportDPS4591Columns}.valueAfs`)} />
 
 
                 </DataTable>

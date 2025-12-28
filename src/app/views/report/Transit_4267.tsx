@@ -6,11 +6,18 @@ import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4267: string = "reports.transit_4267"
+const translationsForReportTransit4267Columns: string = "reports.transit_4267.columns"
 
 const Transit_4267 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Transit_4267 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4267">
+    <SimpleCard title={t(`${translationsForReportTransit4267}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -123,7 +130,7 @@ const Transit_4267 = () => {
           <Column field={'astDat'} header={'astDat'} />
           <Column field={'delCod'} header={'delCod'} />
 
-          <Column style={{ minWidth: "20rem" }} field={'delNam'} header={'delNam'} />
+          <Column style={{ minWidth: "20rem" }} field={'delNam'} header={t(`${translationsForReportTransit4267Columns}.delNam`)} />
         </DataTable>
       </Box>
     </SimpleCard>

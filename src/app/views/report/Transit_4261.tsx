@@ -6,59 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
-// I love you
-// const Container = styled('div')(({ theme }) => ({
-//   margin: '30px',
-//   [theme.breakpoints.down('sm')]: { margin: '16px' },
-//   '& .breadcrumb': {
-//     marginBottom: '30px',
-//     [theme.breakpoints.down('sm')]: { marginBottom: '16px' }
-//   }
-// }));
+import { useTranslation } from 'react-i18next';
 
-// const LoadingMessage = styled('p')({
-//   fontSize: '45px',
-//   textAlign: 'center',
-//   position: 'absolute',
-//   top: '68%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)'
-// });
-
-// const EmptyDataMessage = styled('p')({
-//   fontSize: '45px',
-//   textAlign: 'center',
-//   position: 'absolute',
-//   top: '68%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)'
-// });
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4261: string = "reports.transit_4261"
+const translationsForReportTransit4261Columns: string = "reports.transit_4261.columns"
 
 const Transit_4261 = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [loadingMessage, setLoadingMessage] = useState('Report generating');
-  // const [emptyDataMessage, setEmptyDataMessage] = useState('');
-  // useEffect(() => {
-  //   if (isLoading) {
-  //     const interval = setInterval(() => {
-  //       setLoadingMessage((prev) => {
-  //         switch (prev) {
-  //           case 'Report is generating':
-  //             return 'Report is generating.';
-  //           case 'Report is generating.':
-  //             return 'Report is generating..';
-  //           case 'Report is generating..':
-  //             return 'Report is generating...';
-  //           default:
-  //             return 'Report is generating.';
-  //         }
-  //       });
-  //     }, 500);
-  //     return () => clearInterval(interval);
-  //   }
-  // }, [isLoading]);
+  const { t } = useTranslation();
+
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -84,7 +43,7 @@ const Transit_4261 = () => {
   };
   return (
     //   <Container>
-    <SimpleCard title="4261- Transit">
+    <SimpleCard title={t(`${translationsForReportTransit4261}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate

@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4587: string = "reports.dps_4587"
+const translationsForReportDPS4587Columns: string = "reports.dps_4587.columns"
 
 function DPS_4587() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -32,7 +39,7 @@ function DPS_4587() {
   };
 
   return (
-    <SimpleCard title="DPS_4587">
+    <SimpleCard title={t(`${translationsForReportDPS4587}.title`)}>
       <ReportHeaderInputs
         showUserName
         onSearch={handleSubmit}
@@ -52,13 +59,13 @@ function DPS_4587() {
           stripedRows
           showGridlines
         >
-          <Column field={'userName'} header={'Usr_Name'} />
-          <Column field={'CustomerId'} header={'Customer_Id'} />
-          <Column field={'CustomerName'} header={'Customer_Name'} />
-          <Column field={'Address'} header={'Address'} />
-          <Column field={'Job'} header={'Job'} />
-          <Column field={'FullName'} header={'Full_Name'} />
-          <Column field={'Status'} header={'Status'} />
+          <Column field={'userName'} header={t(`${translationsForReportDPS4587Columns}.userName`)} />
+          <Column field={'CustomerId'} header={t(`${translationsForReportDPS4587Columns}.CustomerId`)} />
+          <Column field={'CustomerName'} header={t(`${translationsForReportDPS4587Columns}.CustomerName`)} />
+          <Column field={'Address'} header={t(`${translationsForReportDPS4587Columns}.Address`)} />
+          <Column field={'Job'} header={t(`${translationsForReportDPS4587Columns}.Job`)} />
+          <Column field={'FullName'} header={t(`${translationsForReportDPS4587Columns}.FullName`)} />
+          <Column field={'Status'} header={t(`${translationsForReportDPS4587Columns}.Status`)} />
         </DataTable>
       </Box>
     </SimpleCard>

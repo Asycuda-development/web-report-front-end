@@ -6,11 +6,18 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue4165: string = "reports.revenue_4165"
+const translationsForReportRevenue4165Columns: string = "reports.revenue_4165.columns"
 
 const Revenue_4165 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_4165 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 4165">
+    <SimpleCard title={t(`${translationsForReportRevenue4165}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -57,22 +64,22 @@ const Revenue_4165 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'customsNam'} header={'Customs Name'} />
-          <Column field={'RcpDate'} header={'Rcp_Date'} />
-          <Column field={'RcpNbr'} header={'RCP_NO'} />
-          <Column field={'ser'} header={'Serial'} />
-          <Column field={'DeclarantCode'} header={'Declarant TIN'} />
-          <Column field={'CompanyCode'} header={'Company TIN'} />
-          <Column style={{ minWidth: '11rem' }} field={'TraderName'} header={'Trader_Name'} />
-          <Column field={'ACD_ID'} header={'ACD_ID'} />
-          <Column field={'CBS_Batch_ID'} header={'CBS_Batch_ID'} />
-          <Column field={'bnk_Nbr'} header={'Bank Ref Number'} />
-          <Column field={'bnk_Dat'} header={'Bank Ref Date'} />
-          <Column field={'status'} header={'status'} />
-          <Column field={'Operation_Time'} header={'Operation Time'} />
-          <Column field={'userid'} header={'User_ID'} />
-          <Column field={'userName'} header={'UserName'} />
-          <Column field={'TOT'} header={'Amount Total'} />
+          <Column field={'customsNam'} header={t(`${translationsForReportRevenue4165Columns}.customsNam`)} />
+          <Column field={'RcpDate'} header={t(`${translationsForReportRevenue4165Columns}.RcpDate`)} />
+          <Column field={'RcpNbr'} header={t(`${translationsForReportRevenue4165Columns}.RcpNbr`)} />
+          <Column field={'ser'} header={t(`${translationsForReportRevenue4165Columns}.ser`)} />
+          <Column field={'DeclarantCode'} header={t(`${translationsForReportRevenue4165Columns}.DeclarantCode`)} />
+          <Column field={'CompanyCode'} header={t(`${translationsForReportRevenue4165Columns}.CompanyCode`)} />
+          <Column style={{ minWidth: '11rem' }} field={'TraderName'} header={t(`${translationsForReportRevenue4165Columns}.TraderName`)} />
+          <Column field={'ACD_ID'} header={t(`${translationsForReportRevenue4165Columns}.ACD_ID`)} />
+          <Column field={'CBS_Batch_ID'} header={t(`${translationsForReportRevenue4165Columns}.CBS_Batch_ID`)} />
+          <Column field={'bnk_Nbr'} header={t(`${translationsForReportRevenue4165Columns}.bnk_Nbr`)} />
+          <Column field={'bnk_Dat'} header={t(`${translationsForReportRevenue4165Columns}.bnk_Dat`)} />
+          <Column field={'status'} header={t(`${translationsForReportRevenue4165Columns}.status`)} />
+          <Column field={'Operation_Time'} header={t(`${translationsForReportRevenue4165Columns}.Operation_Time`)} />
+          <Column field={'userid'} header={t(`${translationsForReportRevenue4165Columns}.userid`)} />
+          <Column field={'userName'} header={t(`${translationsForReportRevenue4165Columns}.userName`)} />
+          <Column field={'TOT'} header={t(`${translationsForReportRevenue4165Columns}.TOT`)} />
         </DataTable>
       </Box>
     </SimpleCard>

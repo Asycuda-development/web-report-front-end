@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4555: string = "reports.dps_4555"
+const translationsForReportDPS4555Columns: string = "reports.dps_4555.columns"
 
 function DPS_4555() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     console.log(data)
@@ -33,7 +40,7 @@ function DPS_4555() {
   };
 
   return (
-    <SimpleCard title="4555-DPS">
+    <SimpleCard title={t(`${translationsForReportDPS4555}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate

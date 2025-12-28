@@ -7,20 +7,27 @@ import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
 import { Toast } from 'primereact/toast';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4561: string = "reports.dps_4561"
+const translationsForReportDPS4561Columns: string = "reports.dps_4561.columns"
 
 function DPS_4561() {
     const [reportData, setReportData] = useState([]);
     const [loading, setLoading] = useState(false)
     const tableRef: any = useRef(null);
     const toastRef: any = useRef(null);
+    const { t } = useTranslation();
 
     const handleSubmit = async (data: SearchData) => {
         try {
             if (data.basedOn && !data.basedOnValue) {
                 toastRef.current.show({
                     severity: 'error',
-                    summary: 'Based On Value',
-                    detail: 'Based On Value is required when Based On is selected, please try again.'
+                    summary: t(`${translationsForBasedOnError}.basedOnSummaryError`),
+                    detail: t(`${translationsForBasedOnError}.basedOnDetailedError`)
                 });
                 return
             }
@@ -42,44 +49,44 @@ function DPS_4561() {
     };
 
     const basedOnOptions = [{
-        label: 'declarant',
+        label: t(`${translationsForBasedOn}.declarant`),
         name: 'declarant'
     },
     {
-        label: 'company',
+        label: t(`${translationsForBasedOn}.company`),
         name: 'company'
     },
     {
-        label: 'ALL',
+        label: t(`${translationsForBasedOn}.all`),
         name: 'ALL'
     },
     {
-        label: 'Sad_Financial',
+        label: t(`${translationsForBasedOn}.sad_financial`),
         name: 'Sad_Financial'
     },
     {
-        label: 'CExaminer',
+        label: t(`${translationsForBasedOn}.cExaminer`),
         name: 'CExaminer'
     },
     {
-        label: 'Examiner',
+        label: t(`${translationsForBasedOn}.examiner`),
         name: 'Examiner'
     },
     {
-        label: 'I_no',
+        label: t(`${translationsForBasedOn}.i_no`),
         name: 'I_no'
     },
     {
-        label: 'P_no',
+        label: t(`${translationsForBasedOn}.p_no`),
         name: 'P_no'
     },
     {
-        label: 'M_no',
+        label: t(`${translationsForBasedOn}.m_no`),
         name: 'M_no'
     }]
 
     return (
-        <SimpleCard title="DPS_4561">
+        <SimpleCard title={t(`${translationsForReportDPS4561}.title`)}>
             <ReportHeaderInputs
                 showStartDate
                 showEndDate

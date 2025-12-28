@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4259: string = "reports.transit_4259"
+const translationsForReportTransit4259Columns: string = "reports.transit_4259.columns"
 
 const TransitReport4259 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const TransitReport4259 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4259">
+    <SimpleCard title={t(`${translationsForReportTransit4259}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate

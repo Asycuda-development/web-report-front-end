@@ -6,12 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue4153: string = "reports.revenue_4153"
+const translationsForReportRevenue4153Columns: string = "reports.revenue_4153.columns"
 
 const Revenue_4153 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
-
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -35,7 +41,7 @@ const Revenue_4153 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 4153">
+    <SimpleCard title={t(`${translationsForReportRevenue4153}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -59,30 +65,30 @@ const Revenue_4153 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'office'} header={'Office'} />
-          <Column field={'rcp_dat'} header={'Rcpt_date'} />
-          <Column field={'tax_total_IM'} header={'Amount_Total_Import'} />
-          <Column field={'amt_011'} header={'011_محصول صادرات'} />
-          <Column field={'amt_012'} header={'012_ماليه صادرات'} />
-          <Column field={'amt_013'} header={'013_سره مياشت صادرات'} />
-          <Column field={'amt_015'} header={'013_سره مياشت صادرات'} />
-          <Column field={'amt_017'} header={'017_مالیه انتفاعی صادرات'} />
-          <Column field={'amt_018'} header={'018_جریمه صادرات'} />
-          <Column field={'amt_040'} header={'040_خاک پولي'} />
-          <Column field={'amt_041'} header={'041_محصول'} />
-          <Column field={'amt_042'} header={'042_مالیه واردات'} />
-          <Column field={'amt_043'} header={'043_سره مياشت'} />
-          <Column field={'amt_044'} header={'044_خدمات شاروالی'} />
-          <Column field={'amt_045'} header={'045_ساير وصوليهاي متفرقه'} />
-          <Column field={'amt_046'} header={'046_جريمه'} />
-          <Column field={'amt_047'} header={'047_ماليه انتفاعي 4% بر واردات'} />
-          <Column field={'amt_048'} header={'048_فیس تی یک وسرغج درسرحد'} />
-          <Column field={'amt_75'} header={'075 حق الوزن'} />
-          <Column field={'amt_88'} header={'088 Transport fees'} />
-          <Column field={'amt_80'} header={'080 اعانه معارف'} />
-          <Column field={'amt_049'} header={'049_فيس الكترونيك واردات'} />
-          <Column field={'amt_019'} header={'019 صکوک صادرات و واردات'} />
-          <Column field={'amt_099'} header={'099'} />
+          <Column field={'office'} header={t(`${translationsForReportRevenue4153Columns}.office`)} />
+          <Column field={'rcp_dat'} header={t(`${translationsForReportRevenue4153Columns}.rcp_dat`)} />
+          <Column field={'tax_total_IM'} header={t(`${translationsForReportRevenue4153Columns}.tax_total_IM`)} />
+          <Column field={'amt_011'} header={t(`${translationsForReportRevenue4153Columns}.amt_011`)} />
+          <Column field={'amt_012'} header={t(`${translationsForReportRevenue4153Columns}.amt_012`)} />
+          <Column field={'amt_013'} header={t(`${translationsForReportRevenue4153Columns}.amt_013`)} />
+          <Column field={'amt_015'} header={t(`${translationsForReportRevenue4153Columns}.amt_015`)} />
+          <Column field={'amt_017'} header={t(`${translationsForReportRevenue4153Columns}.amt_017`)} /> //
+          <Column field={'amt_018'} header={t(`${translationsForReportRevenue4153Columns}.amt_018`)} />
+          <Column field={'amt_040'} header={t(`${translationsForReportRevenue4153Columns}.amt_040`)} />
+          <Column field={'amt_041'} header={t(`${translationsForReportRevenue4153Columns}.amt_041`)} />
+          <Column field={'amt_042'} header={t(`${translationsForReportRevenue4153Columns}.amt_042`)} />
+          <Column field={'amt_043'} header={t(`${translationsForReportRevenue4153Columns}.amt_043`)} />
+          <Column field={'amt_044'} header={t(`${translationsForReportRevenue4153Columns}.amt_044`)} />
+          <Column field={'amt_045'} header={t(`${translationsForReportRevenue4153Columns}.amt_045`)} /> //
+          <Column field={'amt_046'} header={t(`${translationsForReportRevenue4153Columns}.amt_046`)} />
+          <Column field={'amt_047'} header={t(`${translationsForReportRevenue4153Columns}.amt_047`)} />
+          <Column field={'amt_048'} header={t(`${translationsForReportRevenue4153Columns}.amt_048`)} />
+          <Column field={'amt_75'} header={t(`${translationsForReportRevenue4153Columns}.amt_75`)} />
+          <Column field={'amt_88'} header={t(`${translationsForReportRevenue4153Columns}.amt_88`)} />
+          <Column field={'amt_80'} header={t(`${translationsForReportRevenue4153Columns}.amt_80`)} />//
+          <Column field={'amt_049'} header={t(`${translationsForReportRevenue4153Columns}.amt_049`)} />
+          <Column field={'amt_019'} header={t(`${translationsForReportRevenue4153Columns}.amt_019`)} />
+          <Column field={'amt_099'} header={t(`${translationsForReportRevenue4153Columns}.amt_099`)} />
         </DataTable>
       </Box>
     </SimpleCard>

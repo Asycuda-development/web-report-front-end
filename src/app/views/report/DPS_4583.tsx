@@ -6,11 +6,18 @@ import { useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportDPS4583: string = "reports.dps_4583"
+const translationsForReportDPS4583Columns: string = "reports.dps_4583.columns"
 
 function DPS_4583() {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -32,7 +39,7 @@ function DPS_4583() {
   };
 
   return (
-    <SimpleCard title="DPS_4583">
+    <SimpleCard title={t(`${translationsForReportDPS4583}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -56,16 +63,16 @@ function DPS_4583() {
           showGridlines
           emptyMessage={'No Data Available'}
         >
-          <Column field={'cmpCod'} header={'COMPANAY_CODE'} />
-          <Column field={'cmpNam'} header={'COMPANY_NAME'} />
-          <Column field={'cmpAdr'} header={'COMPANY_ADDR'} />
-          <Column field={'cmpAd2'} header={'COMPANY_ADDR2'} />
-          <Column field={'cmpAd3'} header={'COMPANY_ADDR3'} />
-          <Column field={'cmpAd4'} header={'COMPANY_ADDR4'} />
-          <Column field={'cmpTel'} header={'COMPANY_TELL'} />
-          <Column field={'valid_F'} header={'VALIDE_FROM'} />
-          <Column field={'valid_To'} header={'VALIDE_TO'} />
-          <Column field={' cmpSta'} header={' COMPANY_STATUS'} />
+          <Column field={'cmpCod'} header={t(`${translationsForReportDPS4583Columns}.cmpCod`)} />
+          <Column field={'cmpNam'} header={t(`${translationsForReportDPS4583Columns}.cmpNam`)} />
+          <Column field={'cmpAdr'} header={t(`${translationsForReportDPS4583Columns}.cmpAdr`)} />
+          <Column field={'cmpAd2'} header={t(`${translationsForReportDPS4583Columns}.cmpAd2`)} />
+          <Column field={'cmpAd3'} header={t(`${translationsForReportDPS4583Columns}.cmpAd3`)} />
+          <Column field={'cmpAd4'} header={t(`${translationsForReportDPS4583Columns}.cmpAd4`)} />
+          <Column field={'cmpTel'} header={t(`${translationsForReportDPS4583Columns}.cmpTel`)} />
+          <Column field={'valid_F'} header={t(`${translationsForReportDPS4583Columns}.valid_F`)} />
+          <Column field={'valid_To'} header={t(`${translationsForReportDPS4583Columns}.valid_To`)} />
+          <Column field={' cmpSta'} header={t(`${translationsForReportDPS4583Columns}. cmpSta`)} />
         </DataTable>
       </ Box>
     </SimpleCard>

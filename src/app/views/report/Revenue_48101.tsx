@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue48101: string = "reports.revenue_48101"
+const translationsForReportRevenue48101Columns: string = "reports.revenue_48101.columns"
 
 const Revenue_48101 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   const handleSubmit = async (data: SearchData) => {
     try {
@@ -34,7 +41,7 @@ const Revenue_48101 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 48101">
+    <SimpleCard title={t(`${translationsForReportRevenue48101}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -58,11 +65,11 @@ const Revenue_48101 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'cuonam'} header={'CUONAM '} />
-          <Column field={'curcod'} header={'CURCOD'} />
-          <Column field={'curdsc'} header={'CURDSC'} />
-          <Column field={'amtval'} header={'AMTVAL'} />
-          <Column field={'arrnam'} header={'ARRNAM'} />
+          <Column field={'cuonam'} header={t(`${translationsForReportRevenue48101Columns}.cuonam`)} />
+          <Column field={'curcod'} header={t(`${translationsForReportRevenue48101Columns}.curcod`)} />
+          <Column field={'curdsc'} header={t(`${translationsForReportRevenue48101Columns}.curdsc`)} />
+          <Column field={'amtval'} header={t(`${translationsForReportRevenue48101Columns}.amtval`)} />
+          <Column field={'arrnam'} header={t(`${translationsForReportRevenue48101Columns}.arrnam`)} />
         </DataTable>
       </Box>
     </SimpleCard>

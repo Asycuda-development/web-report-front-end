@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportRevenue4173: string = "reports.revenue_4173"
+const translationsForReportRevenue4173Columns: string = "reports.revenue_4173.columns"
 
 const Revenue_4173 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -36,7 +43,7 @@ const Revenue_4173 = () => {
   };
 
   return (
-    <SimpleCard title="Revenue Report 4173">
+    <SimpleCard title={t(`${translationsForReportRevenue4173}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -62,18 +69,18 @@ const Revenue_4173 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'deptOffNam'} header={'Departure Office Name '} />
-          <Column field={'destOff'} header={'Destination Office Name'} />
-          <Column field={'expCty'} header={'Country of Export Code'} />
-          <Column field={'destCty'} header={'Country of Destination Code'} />
-          <Column field={'transitType'} header={'Transit Type'} />
-          <Column field={'hsCod'} header={'HSCode'} />
-          <Column field={'dsc'} header={'Description'} />
-          <Column field={'regNo'} header={'Reg_NO'} />
-          <Column field={'regDat'} header={'Reg_Date'} />
-          <Column field={'cod'} header={'Tax Code'} />
-          <Column field={'nam'} header={'Tax DSC'} />
-          <Column field={'tot'} header={'Total Payment'} />
+          <Column field={'deptOffNam'} header={t(`${translationsForReportRevenue4173Columns}.deptOffNam`)} />
+          <Column field={'destOff'} header={t(`${translationsForReportRevenue4173Columns}.destOff`)} />
+          <Column field={'expCty'} header={t(`${translationsForReportRevenue4173Columns}.expCty`)} />
+          <Column field={'destCty'} header={t(`${translationsForReportRevenue4173Columns}.destCty`)} />
+          <Column field={'transitType'} header={t(`${translationsForReportRevenue4173Columns}.transitType`)} />
+          <Column field={'hsCod'} header={t(`${translationsForReportRevenue4173Columns}.hsCod`)} />
+          <Column field={'dsc'} header={t(`${translationsForReportRevenue4173Columns}.dsc`)} />
+          <Column field={'regNo'} header={t(`${translationsForReportRevenue4173Columns}.regNo`)} />
+          <Column field={'regDat'} header={t(`${translationsForReportRevenue4173Columns}.regDat`)} />
+          <Column field={'cod'} header={t(`${translationsForReportRevenue4173Columns}.cod`)} />
+          <Column field={'nam'} header={t(`${translationsForReportRevenue4173Columns}.nam`)} />
+          <Column field={'tot'} header={t(`${translationsForReportRevenue4173Columns}.tot`)} />
         </DataTable>
       </Box>
     </SimpleCard>

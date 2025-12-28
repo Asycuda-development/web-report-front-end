@@ -6,11 +6,18 @@ import { useEffect, useRef, useState } from 'react';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
 import { SimpleCard } from '../../components';
 import { ROWS_PER_PAGE } from '../../utils/constant';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4280: string = "reports.transit_4280"
+const translationsForReportTransit4280Columns: string = "reports.transit_4280.columns"
 
 const Transit_4280 = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false)
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { }, []);
 
@@ -36,7 +43,7 @@ const Transit_4280 = () => {
   };
 
   return (
-    <SimpleCard title="Transit Report 4280">
+    <SimpleCard title={t(`${translationsForReportTransit4280}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
@@ -59,10 +66,10 @@ const Transit_4280 = () => {
           stripedRows
           showGridlines
         >
-          <Column field={'cuo_nam3'} header={'Office '} />
-          <Column field={'DIFF'} header={'Difference'} />
-          <Column field={'Entry'} header={'	Registered'} />
-          <Column field={'Exit'} header={'Exit'} />
+          <Column field={'cuo_nam3'} header={t(`${translationsForReportTransit4280Columns}.cuo_nam3`)} />
+          <Column field={'DIFF'} header={t(`${translationsForReportTransit4280Columns}.DIFF`)} />
+          <Column field={'Entry'} header={t(`${translationsForReportTransit4280Columns}.Entry`)} />
+          <Column field={'Exit'} header={t(`${translationsForReportTransit4280Columns}.Exit`)} />
         </DataTable>
       </Box>
     </SimpleCard>

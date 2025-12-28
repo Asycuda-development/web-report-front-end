@@ -6,10 +6,17 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
 import { ReportHeaderInputs, SearchData } from 'src/app/components/report-header-inputs';
+import { useTranslation } from 'react-i18next';
+
+const translationsForBasedOnError: string = "errors"
+const translationsForBasedOn: string = "basedOn"
+const translationsForReportTransit4263: string = "reports.transit_4263"
+const translationsForReportTransit4263Columns: string = "reports.transit_4263.columns"
 
 const Transit_4263 = () => {
   const [reportData, setReportData] = useState([]);
   const tableRef: any = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => { });
 
@@ -30,7 +37,7 @@ const Transit_4263 = () => {
   };
 
   return (
-    <SimpleCard title="4263- Transit">
+    <SimpleCard title={t(`${translationsForReportTransit4263}.title`)}>
       <ReportHeaderInputs
         showStartDate
         showEndDate
